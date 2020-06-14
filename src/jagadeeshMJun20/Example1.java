@@ -13,7 +13,7 @@ public class Example1 {
 		example1.name = "Maulik";
 		
 		Example1 example2 = new Example1(); // name = "K" 
-		example2.name = "Krishna";
+		
 		
 		example1.displayData(); //
 	}
