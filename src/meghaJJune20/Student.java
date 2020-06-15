@@ -6,22 +6,17 @@ public class Student {
 	String name2 = "Harsh";
 	int rno2 = 2;
 	
-	void display()
-	{
+	void display(){
 		System.out.println(name);
 		System.out.println(rno);
-		
-	}
-	void display2()
-	{
+		}
+	void display2(){
 		System.out.println(name2);
 		System.out.println(rno2);
 	}
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
 		Student s1 = new Student();
 		s1.display();
 		s1.display2();
 	}
-
 }
