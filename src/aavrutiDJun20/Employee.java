@@ -8,7 +8,6 @@ public class Employee {
 	int deptId;
 	
 	void setData(int employeeID,String employeeName,double empSalary,int empDeptId) {
-		
 		empid = employeeID;
 		empname = employeeName;
 		salary = empSalary;
