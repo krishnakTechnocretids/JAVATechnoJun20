@@ -57,8 +57,7 @@ public class Employee {
 	
 	public static void main(String[] args) {
 		Employee employee1 = new Employee();
-		Employee employee2 = new Employee();
-		
+		Employee employee2 = new Employee();	
 		employee1.setData(111, "Aastha", 29999, 1);
 		System.out.println("\nDetails of Employee with Emp ID: "+employee1.getEmpId());
 		System.out.println("Name: "+employee1.getEmpName());
