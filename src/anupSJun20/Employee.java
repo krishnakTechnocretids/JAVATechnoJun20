@@ -15,63 +15,42 @@ public class Employee {
 		String empname;
 		double salary;
 		int deptId;
-		void setData(String ename,int eid, double sal,int dName)
-		{
+		void setData(String ename,int eid, double sal,int dName){
 			empname = ename;
 			empid = eid;
 			salary = sal;
 			deptId = dName;
 		}
-		String getEmpName()
-		{
+		
+		String getEmpName(){
 			return empname;
 		}
-		int getEmpID()
-		{
-			
+		
+		int getEmpID(){
 			return empid;
 		}
-		String getEmployeeBand()
-		{
-			
-			if(salary > 30000)
-			{
-				return "Band A";
-			}
-			else
-			{
-				return "Band D";
-			}
 		
-		}
-		String getEmployeeDeptName()
-		{
-			
-			if(deptId ==1)
-			{
-				return "IT";
-			}
-			else if(deptId == 2)
-			{
-				return "Finance";
-			}
+		String getEmployeeBand(){
+			if(salary > 30000)
+				return "Band A";
 			else
-			{
-				return "Support Team";
-			}
-			
+				return "Band D";
 		}
-		boolean isEligibleForIncrement()
-		{
+		
+		String getEmployeeDeptName(){
+			if(deptId ==1)
+				return "IT";
+			else if(deptId == 2)
+				return "Finance";
+			else
+				return "Support Team";
+		}
+		
+		boolean isEligibleForIncrement(){
 			if (deptId == 1 || salary<30000)
-			{
 				return true;
-			}
-			else {
+			else
 				return false;
-			}
-
-			
 		}
 		
 		public static void main(String[] args) {
@@ -82,12 +61,10 @@ public class Employee {
 			System.out.println("Employee ID = " +employee1.getEmpID());
 			System.out.println("Employee Band = " +employee1.getEmployeeBand());
 			System.out.println("Employee Dept Name = " +employee1.getEmployeeDeptName());
-			if(employee1.isEligibleForIncrement() == true) {
+			if(employee1.isEligibleForIncrement() == true)
 				System.out.println("Employee is eligible for Increment");	
-			}
-			else {
+			else
 				System.out.println("Employee is not eligible for Increment");	
-			}
 			
 			Employee employee2 = new Employee();
 			employee2.setData("Amita Rout",234,50000,2);
@@ -96,12 +73,9 @@ public class Employee {
 			System.out.println("Employee ID = " +employee2.getEmpID());
 			System.out.println("Employee Band = " +employee2.getEmployeeBand());
 			System.out.println("Employee Dept Name = " +employee2.getEmployeeDeptName());
-			if(employee2.isEligibleForIncrement() == true) {
+			if(employee2.isEligibleForIncrement() == true)
 				System.out.println("Employee is eligible for Increment");	
-			}
-			else {
+			else
 				System.out.println("Employee is not eligible for Increment");	
-			}
 		}
-
-	}
+}
