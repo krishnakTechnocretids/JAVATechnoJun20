@@ -12,7 +12,6 @@ g) Create a method called isEligibleForIncrement which will return boolean value
 package pranitaPJun20;
 
 public class Employee {
-	
 	int empId,deptId;
 	String empName ;
 	double salary;
@@ -34,8 +33,7 @@ public class Employee {
 		 return empId;
 	 }
 //create a method called getEmployeeBand(), if salary is greater then 30,000 then return "Band A" otherwise return "Band D".
-	 String getEmployeeBand(){
-		 
+	 String getEmployeeBand(){	 
 		 if(salary>30000)
 		 {
 			 System.out.println("Emplyee band is: Band A ");
@@ -52,7 +50,6 @@ public class Employee {
  //anything apart from 1 and 2, return department name as "Support team".
 	 
 	 String getEmployeeDeptName(){
-		 
 		 if(deptId==1){
 			 System.out.println("Employee department is :IT");
 			return "IT" ;
@@ -64,22 +61,17 @@ public class Employee {
 		 else{
 			 System.out.println("Employee department is: Support team");
 			 return "Support team";
-		 }
-		 
+		 } 
 	 }
-	 
 //Create a method called isEligibleForIncrement which will return boolean value, if deptId is 1 or salary is less then 30,000 return true 
-
 	boolean isEligibleForIncrement(){
 		if(deptId==1 || salary<30000)
-		{
-			
+		
 			return(true);
-		}
-		else{
+		
+		else
 			
-			return(false);
-		}	
+			return(false);	
 	}
 	
 //main method will print Employee is eligible for increment, otherwise print "not eligible for increment" message.
@@ -92,11 +84,11 @@ public class Employee {
 		employee.getEmployeeBand();
 		employee.getEmployeeDeptName();
 		employee.isEligibleForIncrement();
-		if(employee.isEligibleForIncrement() == true) {
+		if(employee.isEligibleForIncrement() == true) 
 			System.out.println("Employee is eligible for increment");
-		}else {
+		else 
 			System.out.println("Employee is not eligible for increment");
-		}
+		
 		
 		//to print other details in main method
 		/*System.out.println("Employee ID: "+employee1.getEmpId());
@@ -106,7 +98,6 @@ public class Employee {
 		 */
 		 
 		System.out.print("\n");
-		
 		System.out.println("Second Employee details:");
 		Employee employee1 =new Employee();
 		employee1.setData(545185,"Pranita",30000,2);
@@ -115,11 +106,11 @@ public class Employee {
 		employee1.getEmployeeBand();
 		employee1.getEmployeeDeptName();
 		employee1.isEligibleForIncrement();
-		if(employee1.isEligibleForIncrement() == true) {
+		if(employee1.isEligibleForIncrement() == true) 
 			System.out.println("Employee is eligible for increment");
-		}else {
+		else 
 			System.out.println("Employee is not eligible for increment");
-		}
+		
 	}
 }
 
