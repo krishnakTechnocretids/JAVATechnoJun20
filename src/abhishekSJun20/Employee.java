@@ -22,14 +22,14 @@ public class Employee {
 	}
 
 	String getEmployeeBand() {
-		if(salary>=30000) {
+		if(salary>=30000) 
 			return "Band A";	
-		}else
+		else
 			return "Band D";
 	}
 
 	String getEmployeeDeptName() {
-		if(deptId==1) {
+		if(deptId==1){
 			return "IT";
 		}else if(deptId==2)
 			return "Finance";
