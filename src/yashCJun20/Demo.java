@@ -2,15 +2,14 @@ package yashCJun20;
 
 public class Demo {
 	
-	String Student;
+	String student;
 	
-	void Display () {
+	void display () {
 		
 	}
-
+	
 	public static void main(String[] args) {
 		
-
-}
+	}
 
 }
