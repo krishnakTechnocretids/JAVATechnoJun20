@@ -31,12 +31,10 @@ public class EmployeeReturn {
 	}
 //if salary is greater then 30,000 then return Band A otherwise return Band D.
 	String getEmployeeBand(){
-	if(sal>30000){
+	if(sal>30000)
 		return "Band A";
-	}	
-	else{
+	else
 		return "Band D";
-	}
 	}
 //if employee deptid is 1 return IT as department name, 
 //if deptid is 2 then return department name as Finance, 
@@ -56,13 +54,11 @@ public class EmployeeReturn {
 //Employee is eligible for increment, otherwise print not eligible for increment message	
 	
 	boolean isEligibleForIncrement(){
-		if(dept==1 || sal<30000){
+		if(dept==1 || sal<30000)
 			return true;
 			//System.out.print.ln(name + "is eligible for increament");
-		}
-		else{
+		else
 			return false;
-		}
 		}
 		
 		void displayInfoofEmployee(String nameOfEmp, int idOfEmp, double salOfEmp, int deptOfEmp){
