@@ -60,14 +60,11 @@ public class Employee {
 		System.out.println(" Id : "+ employee1.empId);
 		System.out.println(" Employee Band : "+ employee1.getEmployeeBand());
 		System.out.println(" Department : "+ employee1.getEmployeeDeptName());
-		
 		if(employee1.isEligibleForIncrement())
 			System.out.println(" Employee is eligible for increment");
 		else
 			System.out.println(" Not eligible for increment");
-		
 		Employee employee2 = new Employee();
-		
 		employee2.setData(78389, "Swaati", 35000, 1); // Employee 2 
 		System.out.println("\n--Employee 2 Details--");
 		System.out.println(" Name : " + employee2.empName);
