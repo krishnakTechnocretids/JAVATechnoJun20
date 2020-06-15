@@ -2,13 +2,13 @@ package madhuraMJun20;
 
 public class DisplayMethod {
 	
-	void Display() {
+	void display() {
 		System.out.println("Madhura");
 	}
 	
 	public static void main(String [] args) {
 		DisplayMethod displayMethod = new DisplayMethod();
-		displayMethod.Display();
+		displayMethod.display();
 	}
 
 }
