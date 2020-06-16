@@ -69,6 +69,7 @@ class Employee{
 		Employee employee1 = new Employee();
 		employee0.setData(1,"M",1,2);
 		employee1.setData(3,"S",3,4);
+
 		
 	}
 }
