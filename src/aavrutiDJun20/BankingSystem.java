@@ -15,7 +15,6 @@ public class BankingSystem {
 		if(userCreditAmount>=0) {
 			currentBalance = currentBalance + userCreditAmount;
 			System.out.println("Credit Amount : " + userCreditAmount );
-			System.out.println("Bank Balance  : " + currentBalance );
 			allUsersCreditCnt++;
 			return ++creditCount;
 		}
@@ -30,7 +29,6 @@ public class BankingSystem {
 			allUsersDebitCnt++;
 			System.out.println("Debit Amount  : " + userDebitAmount );
 			currentBalance = currentBalance - userDebitAmount;
-			System.out.println("Bank Balance  : " + currentBalance );
 			return ++debitCount;
 		}
 		else {
