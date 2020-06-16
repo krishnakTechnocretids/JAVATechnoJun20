@@ -12,6 +12,9 @@ public class BankingSystem {
 	}
 
 	void debitAmt(int debitAmt){
+		if(balance<=0) {
+			System.out.println("\n Insufficient funds in account. Withdrawal is not possible"); 
+		}
 		balance -= debitAmt;
 		debit++;
 		allDebit++;
@@ -45,7 +48,7 @@ public class BankingSystem {
 	public static void main(String[] args) {
 		BankingSystem bankingSystem1 = new BankingSystem();
 
-		bankingSystem1.setAmount(10);
+		bankingSystem1.setAmount(40);
 		bankingSystem1.debitAmt(2); 
 		bankingSystem1.creditAmt(3);
 		bankingSystem1.creditAmt(2);
