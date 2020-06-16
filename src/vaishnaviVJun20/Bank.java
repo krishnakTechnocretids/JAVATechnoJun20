@@ -1,7 +1,6 @@
 package vaishnaviVJun20;
 
-public class Bank {
-    
+public class Bank {   
 	int creditCount = 0;
 	int debitCount = 0;
 	int printBalanceCount = 0;
@@ -18,32 +17,27 @@ public class Bank {
 		}
 		else 
 			System.out.println("Insufficient Balance");
-	}
-	
+	}	
 	void creditAmount(int credit) {
 		balance = balance+credit;
 		creditCount++;	
 		creditCount1++;
-	}
-	
+	}	
 	void getCurrentBalance() {
 		System.out.println("Current Balance is:"+balance);
 		printBalanceCount++;
 		printBalanceCount1++;
-	}
-	
+	}	
 	void individualTransactionSummary(){
 		System.out.println("Credit- "+creditCount+" times");
 		System.out.println("Debit- "+debitCount+" times");
 		System.out.println("PrintBalance- "+printBalanceCount+" times");		
-	}
-	
+	}	
 	void allTransactionSummary() {
 		System.out.println("Credit- "+creditCount1+" times");
 		System.out.println("Debit- "+debitCount1+" times");
 		System.out.println("PrintBalance- "+printBalanceCount1+" times");
 	}
-
 	public static void main(String[] args) {
 		Bank bank = new Bank();
 		Bank bank1 = new Bank();
@@ -67,5 +61,4 @@ public class Bank {
 		System.out.println("All Transaction summary: ");
 		bank.allTransactionSummary();		
 	}
-
 }
