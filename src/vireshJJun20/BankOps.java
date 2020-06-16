@@ -5,7 +5,6 @@ public class BankOps {
 	static int allCredit=0;
 	static int allDebit=0;
 	static int allPrintBal=0;
-	
 	int creditCnt=0;
 	int	debitCnt= 0;
 	int printCnt=0;
