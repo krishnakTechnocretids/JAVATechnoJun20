@@ -18,23 +18,32 @@ package palakSJun20;
 
 public class BankingSystem {
 	String customerName;
-	int customerCredit , customerDebit , customerBalance;
+	int customerBalance;
 	int customerCreditCount , customerDebitCount , customerPrintBalanceCount;
 	static int creditCount, debitCount, printBalanceCount;
 	
-	void setCustomerName(String customerName){
+	void setCustomerData(String customerName , int customerBalance){
 		this.customerName = customerName;
+		this.customerBalance = customerBalance;
 	}
 	
-	int debitTransaction(int debitAmount){
-		customerDebitCount++;
-		debitCount++;
-		return this.customerBalance = customerBalance - debitAmount;
+	void debitTransaction(int debitAmount){
+		if(customerBalance < debitAmount )
+			System.out.println("You have insufficient balance to withdraw the amount ");
+		else {
+			customerDebitCount++;
+			debitCount++;
+			this.customerBalance = customerBalance - debitAmount;
+		}
 	}
-	int creditTransaction(int creditAmount){
-		customerCreditCount++;
-		creditCount++;
-		return this.customerBalance = customerBalance + creditAmount;
+	void creditTransaction(int creditAmount){
+		if(creditAmount <= 0)
+			System.out.println("Amount should be more than 0");
+		else {
+			customerCreditCount++;
+			creditCount++;
+			this.customerBalance = customerBalance + creditAmount;
+		}
 	}
 	void printBalance(){
 		customerPrintBalanceCount++;
@@ -43,10 +52,10 @@ public class BankingSystem {
 	
 	void individualTransactionSummary(){
 		System.out.println("\nTransaction Summary of Customer " + customerName);
-		System.out.println("Credit : " +customerCreditCount +" Times");
-		System.out.println("Debit : " + customerDebitCount + " Times");
-		System.out.println("Print Balance : "+ customerPrintBalanceCount +" Times");
-		//System.out.println("Customer current Balance is : " + customerBalance);
+		System.out.println("Credit : " +customerCreditCount +" Times\n"+
+		"Debit : " + customerDebitCount + " Times\n" +
+		"Print Balance : "+ customerPrintBalanceCount +" Times\n"+
+		"Customer current Balance is : " + customerBalance);
 	}
 	void allTransactionSummary(){
 		System.out.println("\nAll Transactions Summary");
@@ -58,8 +67,8 @@ public class BankingSystem {
 
 	public static void main(String[] args) {
 		BankingSystem bankingSystem1 = new BankingSystem(); // Customer 1
-		bankingSystem1.setCustomerName("Palak");
-		bankingSystem1.creditTransaction(1000);
+		bankingSystem1.setCustomerData("Palak",1000);
+		bankingSystem1.creditTransaction(500);
 		bankingSystem1.printBalance();
 		bankingSystem1.debitTransaction(500);
 		bankingSystem1.creditTransaction(1000);
@@ -68,7 +77,7 @@ public class BankingSystem {
 		
 		BankingSystem bankingSystem2 = new BankingSystem(); // Customer 2
 		bankingSystem2.creditTransaction(1000);
-		bankingSystem2.setCustomerName("Palash");
+		bankingSystem2.setCustomerData("Palash",2000);
 		bankingSystem2.debitTransaction(500);
 		bankingSystem2.creditTransaction(500);
 		bankingSystem2.creditTransaction(800);
