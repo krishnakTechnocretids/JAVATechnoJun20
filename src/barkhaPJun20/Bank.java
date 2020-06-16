@@ -9,10 +9,10 @@ public class Bank {
 	static int overallCreditCount=0;
 	static int overallBalanceCount=0;
 	
-	int initialAmnt;
 	int debitAmnt;
 	int creditAmnt;
 	int currentBalance;
+	
 	
 	int user;
 	
@@ -41,10 +41,7 @@ public class Bank {
 	}
 	void individualTransactionSummary(){
 		System.out.println();
-		if (user==1)
-			 System.out.println("Customer1 Transaction Summary: Debit "  +debitCount +" times, Credit " +creditCount +" times, Print balance "+balanceCount);
-		if (user==2)
-			 System.out.println("Customer2 Transaction Summary: Debit "  +debitCount +" times, Credit " +creditCount +" times, Print balance "+balanceCount);
+		System.out.println("Customer" +user +" Transaction Summary: Debit "  +debitCount +" times, Credit " +creditCount +" times, Print balance "+balanceCount);
 	}	
 	void allTransactionSummary(){
 		System.out.println();
