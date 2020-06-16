@@ -50,7 +50,7 @@ public class Bankingsystem {
 			bankingsystem.creditAmount(100);
 			bankingsystem.debitAmount(50);
 			bankingsystem.debitAmount(50);
-			//bankingsystem.printBalance();
+			bankingsystem.printBalance();
 			bankingsystem.individualTransactionSummary("User1");
 		Bankingsystem bankingsystem1 = new Bankingsystem();{
 			bankingsystem1.creditAmount(100);
