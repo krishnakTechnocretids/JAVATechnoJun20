@@ -9,6 +9,7 @@ f) create a method called getEmployeeDeptName, if employee deptid is 1 return "I
 g) Create a method called isEligibleForIncrement which will return boolean value, if deptId is 1 or salary is less then 30,000 return true and main method will print Employee is eligible for increment, otherwise print not "eligible for increment" message.
 
 */
+package maheshKJun20;
 
 class Employee{
 	int empid;
@@ -28,8 +29,8 @@ class Employee{
 		return empName;
 	}
 	
-	int getEmpId){
-		return empId
+	int getEmpId(){
+		return empid;
 	}
 	
 	String getEmployeeBand(){
@@ -63,11 +64,11 @@ class Employee{
 		}
 	}
 	
-	public statis void main(String[] args){
+	public static void main(String[] args){
 		Employee employee0 = new Employee();
 		Employee employee1 = new Employee();
-		employee0.setData();
-		employee1.setData();
+		employee0.setData(1,"M",1,2);
+		employee1.setData(3,"S",3,4);
 		
 	}
 }

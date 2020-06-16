@@ -1,4 +1,6 @@
-class Calculator
+package apurvaJun20;
+
+public class Calculator
 {
 
 	int x=10;
