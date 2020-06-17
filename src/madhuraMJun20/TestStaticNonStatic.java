@@ -8,9 +8,8 @@ public class TestStaticNonStatic {
 		return sumAns;
 	}
 	double average(double a, double b, double c) {
-		double avgAns= (a+b+c)/3;
+		double avgAns= sum(a,b,c)/3;
 		System.out.println("Average of the marks is : " +avgAns);		
-		sum(a,b,c);
 		return avgAns;
 	}
 	static boolean isAnswerAboveExpectation(double avgAns) {
