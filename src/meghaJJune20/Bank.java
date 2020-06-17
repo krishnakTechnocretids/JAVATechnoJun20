@@ -7,9 +7,9 @@ public class Bank {
 	int countbalance;
 	int userid;
 	
-	static int debittotal=0;
-	static int credittotal=0;
-	static int baltotal=0;
+	static int debittotal;
+	static int credittotal;
+	static int baltotal;
 		
 	void setData( int userid1,int balance)
 	{
@@ -38,11 +38,8 @@ public class Bank {
 	void individualTransactionSummary()
 	{
 		System.out.println();
-		if(userid==1)
-			System.out.println("User1 Transaction Summary : Debit "+countdebit +" time, Credit " +countcredit +" times, Print Balance "+baltotal);
 		
-		if(userid==2)
-			System.out.println("User2 Transaction Summary : Debit " +countdebit +" times, Credit " +countcredit +" times, Print Balance "+baltotal);
+			System.out.println("User"+userid+ " Transaction Summary : Debit "+countdebit +" time, Credit " +countcredit +" times, Print Balance "+baltotal);
 		
 	}
 	void allTransactionSummary()
