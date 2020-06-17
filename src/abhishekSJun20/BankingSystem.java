@@ -16,20 +16,29 @@ Output:
 All transaction summary : Credit - 7 times, Debit - 3 times, printBalance - 1 time*/
 public class BankingSystem {
 	String customerName;
+	double accBalance;
 	int creditCount, debitCount, balancePrintCount;
 	static int totalCreditCount, totalDebitCount, totalBalancePrintCount;
 
-	void debitAmount() {
-		debitCount++;
-		totalDebitCount++;
+		void debitAmount(double subBal) {
+		if(subBal <= accBalance) {
+			accBalance -= subBal;
+			debitCount++;
+			totalDebitCount++;
+		}else {
+			System.out.println("\n"+customerName+"! Insufficient Balance in your account!*");
+		}
 	}
 
-	void creditAmount() {
+	void creditAmount(double addBal) {
+		creditCount++;
+		accBalance += addBal;
 		creditCount++;
 		totalCreditCount++;
 	}
 
 	void printBalance() {
+		System.out.println("Account Balance for "+customerName+": "+accBalance);
 		balancePrintCount++;
 		totalBalancePrintCount++;
 	}
@@ -42,18 +51,10 @@ public class BankingSystem {
 		System.out.println();
 	}
 
-	void allTransactionSummary() {
+	static void allTransactionSummary() {
 		System.out.println("Complete Transaction Summary for the Banking System:-");
 		System.out.println("Total Credits: "+totalCreditCount);
-		System.out.println("Total Debits: "+balancePrintCount);
-		System.out.println("Total Balance Printed: "+totalBalancePrintCount);
-		System.out.println();
-	}
-
-	static void allTransactionStats() {
-		System.out.println("Complete Transaction Summary for the Banking System:-");
-		System.out.println("Total Credits: "+totalCreditCount);
-		System.out.println("Total Debits: "+totalDebitCount);
+		System.out.println("Total Debits: "+totalBalancePrintCount);
 		System.out.println("Total Balance Printed: "+totalBalancePrintCount);
 		System.out.println();
 	}
@@ -61,33 +62,25 @@ public class BankingSystem {
 	public static void main(String []args) {
 		BankingSystem bankingSystem1=new BankingSystem();
 		bankingSystem1.customerName="Radhe";
-        //bankingSystem1 transactions
-		bankingSystem1.creditAmount();
-		bankingSystem1.creditAmount();
-		bankingSystem1.debitAmount();
+		//bankingSystem1 transactions
+		bankingSystem1.creditAmount(5000.25);
+		bankingSystem1.creditAmount(250.50);
+		bankingSystem1.debitAmount(1200.50);
 		bankingSystem1.printBalance();
-		bankingSystem1.individualTransactionSummary();
-		
+        bankingSystem1.individualTransactionSummary();  
+
 		BankingSystem bankingSystem2 = new BankingSystem();
 		bankingSystem2.customerName="Krishna";
 		//bankingSystem2 transactions
-		bankingSystem2.creditAmount();
-		bankingSystem2.creditAmount();
-		bankingSystem2.creditAmount();
-		bankingSystem2.creditAmount();
-		bankingSystem2.creditAmount();
-		bankingSystem2.debitAmount();
+		bankingSystem2.creditAmount(1100.25);
+		bankingSystem2.debitAmount(1350.00);
 		bankingSystem2.printBalance();
-		bankingSystem2.debitAmount();
+		bankingSystem2.debitAmount(250.25);
 		bankingSystem2.printBalance();
-        bankingSystem2.individualTransactionSummary();
+		bankingSystem2.individualTransactionSummary();
 
-		//Calling allTransactionSummary method with object reference
-		bankingSystem2.allTransactionSummary();
-
-		//Calling allTransactionSummary method with object reference
-		bankingSystem1.allTransactionSummary();
 		
+		BankingSystem.allTransactionSummary();
+
 	}
 }
-
