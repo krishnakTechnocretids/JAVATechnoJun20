@@ -1,13 +1,13 @@
 package vaishnaviVJun20;
 
 public class Bank {   
-	int creditCount = 0;
-	int debitCount = 0;
-	int printBalanceCount = 0;
-	static int creditCount1 = 0;
-	static int debitCount1 = 0;
-	static int printBalanceCount1 = 0;
-	int balance = 50000;
+	int creditCount;
+	int debitCount;
+	int printBalanceCount;
+	static int creditCount1;
+	static int debitCount1;
+	static int printBalanceCount1;
+	int balance;
 	
 	void debitAmount(int debit) {
 		if(balance>= debit) {
@@ -40,21 +40,21 @@ public class Bank {
 	}
 	public static void main(String[] args) {
 		Bank bank = new Bank();
-		Bank bank1 = new Bank();
-		bank.debitAmount(10000);
+		Bank bank1 = new Bank();		
 		bank.creditAmount(20000);
-		bank.creditAmount(3000);		
+		bank.creditAmount(3000);
+		bank.debitAmount(10000);
 		bank.getCurrentBalance();
 		System.out.print("User 1 transaction summary: ");
 		bank.individualTransactionSummary();
-		System.out.println("----------------------------------");
-		bank1.debitAmount(10000);
-		bank1.debitAmount(2000);
+		System.out.println("----------------------------------");		
 		bank1.creditAmount(20000);
 		bank1.creditAmount(3000);
 		bank1.creditAmount(2000);
 		bank1.creditAmount(200);
 		bank1.creditAmount(500);
+		bank1.debitAmount(10000);
+		bank1.debitAmount(2000);
 		System.out.print("User 2 transaction summary: ");
 		bank1.individualTransactionSummary();
 		System.out.println("----------------------------");
