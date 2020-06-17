@@ -1,4 +1,3 @@
-package maheshKJun20;
 /*
 Create Employee class having 4 instance variable empid & empname, salary (double type), deptId.
 a) create 2 objects of Employee class.
@@ -29,8 +28,8 @@ class Employee{
 		return empName;
 	}
 	
-	int getEmpId(){
-		return empid;
+	int getEmpId){
+		return empId
 	}
 	
 	String getEmployeeBand(){
@@ -64,11 +63,11 @@ class Employee{
 		}
 	}
 	
-	public static void main(String[] args){
+	public statis void main(String[] args){
 		Employee employee0 = new Employee();
 		Employee employee1 = new Employee();
-		employee0.setData(1,"mahesh",1,2);
-		employee1.setData(2,"m",2,4);
+		employee0.setData();
+		employee1.setData();
 		
 	}
 }
