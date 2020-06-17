@@ -19,7 +19,7 @@ All transaction summary : Credit - 7 times, Debit - 3 times, printBalance - 1 ti
 
 package harshadBJun20;
 
-class BankingSystem{
+public class BankingSystem{
 	
 	int debitIndividualCount,creditIndividualCount,balanceIndividualCount, balanceAmt;
 	static int debitTotalCount=0, creditTotalCount=0, balanceTotalCount=0;
@@ -33,16 +33,25 @@ class BankingSystem{
 	
 	//Method to Debit the Amount from Balance
 	void debitAmount(int debitAmt){
-		this.balanceAmt= this.balanceAmt - debitAmt;
-		debitIndividualCount++;
-		debitTotalCount++;
+		if(debitAmt<=this.balanceAmt && debitAmt>0) {
+			this.balanceAmt= this.balanceAmt - debitAmt;
+			debitIndividualCount++;
+			debitTotalCount++;
+		}else {
+			System.out.println("User"+userId+": Insufficient balance or Could not debit the amount.");
+		}
 	}
 	
 	//Method to Credit the Amount to Balance
 	void creditAmount(int creditAmt){
-		this.balanceAmt= this.balanceAmt + creditAmt;
-		creditIndividualCount++;
-		creditTotalCount++;
+		if(creditAmt>0) {
+			this.balanceAmt= this.balanceAmt + creditAmt;
+			creditIndividualCount++;
+			creditTotalCount++;
+		}else {
+			System.out.println("User"+userId+": Incorrect Amount. Please provide amount greater than 0.");
+		}
+		
 	}
 	
 	//Method to Print balance Amount w.r.to user
@@ -57,13 +66,7 @@ class BankingSystem{
 	//Method to Print individual transaction summary
 	void individualTransactionSummary(){
 		
-		if(userId == 1){
-			System.out.println("User1 transaction summary : " +"Credit: " +creditIndividualCount+" times, " +"Debit: " + debitIndividualCount+" times," +" Print Balance: "+balanceIndividualCount+" times");
-		}
-		if(userId == 2){
-			System.out.println("User2 transaction summary : " +"Credit: " +creditIndividualCount+" times, " +"Debit: " + debitIndividualCount+" times," +" Print Balance: "+balanceIndividualCount+" times");
-		}
-				
+		System.out.println("User"+userId+" transaction summary : " +"Credit: " +creditIndividualCount+" times, " +"Debit: " + debitIndividualCount+" times," +" Print Balance: "+balanceIndividualCount+" times");
 		System.out.println();
 	}
 	
@@ -90,7 +93,7 @@ class BankingSystem{
 		bankingSystem2.creditAmount(500);
 		bankingSystem2.creditAmount(2500);
 		bankingSystem2.creditAmount(500);
-		bankingSystem2.creditAmount(2500);
+		bankingSystem2.creditAmount(500);
 		bankingSystem2.debitAmount(500);
 		bankingSystem2.debitAmount(1500);
 		bankingSystem2.printBalance();
