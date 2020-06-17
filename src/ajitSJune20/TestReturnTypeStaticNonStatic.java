@@ -3,16 +3,15 @@ package ajitSJune20;
 public class TestReturnTypeStaticNonStatic {
 
 	double sum(double var1, double var2, double var3) {
-
-		System.out.println(
-				"Sum of three numbers    (" + var1 + " , " + var2 + " , " + var3 + "): " + (var1 + var2 + var3));
-		return (var1 + var2 + var3);
+			double sum=var1 + var2 + var3;
+		System.out.println("Sum of three numbers    (" + var1 + " , " + var2 + " , " + var3 + "): " + sum);
+		return sum;
 	}
 
 	double average(double var1, double var2, double var3) {
-
-		System.out.println("\nAverage of three numbers(" + var1 + " , " + var2 + " , " + var3 + "): " + (var1 + var2 + var3) / 3);
-		return sum(var1, var2, var3) / 3;
+		double average=sum(var1,var2,var3)/3;
+		System.out.println("Average of three numbers(" + var1 + " , " + var2 + " , " + var3 + "): " + average);
+		return average;
 	}
 
 	static boolean isAnswerAboveExpecation(double average) {
@@ -34,7 +33,7 @@ public class TestReturnTypeStaticNonStatic {
 		if (average > 80)
 			return "Grade A";
 		else
-			return "Grade ";
+			return "Grade B";
 	}
 
 	public static void main(String[] args) {
