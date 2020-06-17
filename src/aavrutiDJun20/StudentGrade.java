@@ -16,8 +16,7 @@ public class StudentGrade {
 
 	//calculate average of 3 marks and return average marks
 	double average(double marks1,double marks2,double marks3) {
-		double sumOfMarks = sum(marks1,marks2,marks3); //Call sum method to take out sum of all 3 marks
-		double averageOfMarks = sumOfMarks/3;
+		double averageOfMarks = sum(marks1,marks2,marks3)/3; //Call sum method to take out sum of all 3 marks
 		System.out.println("Average mark is: " + averageOfMarks);
 		return averageOfMarks;
 	}
