@@ -29,32 +29,26 @@ public class AverageSum {
 	}
 	 
 	 double avg(double x,double y,double z){
-		 AverageSum sumobject = new AverageSum();
-		 double avg=  (sumobject.summation(x, y, z)/3);
+
+		 double avg=  (summation(x, y, z)/3);
 		 System.out.println("Avg is "+ avg);
 		 return avg;
 	 }
 	 
 		 static  boolean isAnswerAboveExpecation(double avg){
-		 if(avg>50){
-			 System.out.println("above expectation");
+		 if(avg>50)
 			 return true;
-		 }
-		 else{
-			 System.out.println("below expectatiom");
+		 else
 			 return false;
-		 }
 		 }
 		
 	   static boolean isEligible(double avg){
-			if(avg>50 || avg%2==0){
-			System.out.println("is eligible");
+			if(avg>50 || avg%2==0)
 			return true;
-			}
-			else{
-				System.out.println("is not eligible");
+			
+			else
 				return false;
-			}
+			
 		}
 		
 		static String getYourGrade(double avg){
@@ -68,10 +62,17 @@ public class AverageSum {
 		
 		public static void main(String[] args) {
 			AverageSum averageSum = new AverageSum();
-			double average= averageSum.avg(5, 5, 5);
-			isAnswerAboveExpecation(average);
-			isEligible(average);
-			//getYourGrade(average);
+			double average= averageSum.avg(110, 100, 60.00);
+			if(isAnswerAboveExpecation(average)==true)
+				 System.out.println("Result is above expectation");
+				 else
+				 System.out.println("Result is below expectation");
+			 
+			if(isEligible(average)== true)
+				 System.out.println("person is eligible");
+				else
+				System.out.println("person is not eligible");	
+			
 			System.out.println(getYourGrade(average));
 			
 			//AverageSum.isAnswerAboveExpecation(averageSum.avg(5, 5, 5));
