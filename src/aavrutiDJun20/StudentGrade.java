@@ -49,7 +49,7 @@ public class StudentGrade {
 	public static void main(String[] args) {
 		StudentGrade studentGrade = new StudentGrade();
 		
-		System.out.println("\nDetail's of Shivam are as below:\n");
+		System.out.println("\nDetails of Shivam are as below:\n");
 		double totalAvgMarks = studentGrade.average(50,60,90); //Calculate average Marks of student		
 		
 		//Print whether answer is as per expectation or not
