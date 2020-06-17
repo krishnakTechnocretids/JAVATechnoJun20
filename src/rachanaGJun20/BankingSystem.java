@@ -22,28 +22,45 @@ public class BankingSystem {
 	int debitcounts;
 	int creditcounts;
 	int printbalancecounts;
+	int balance;
 
-	static int totaldebitcounts = 0;
-	static int totalcreditcounts = 0;
-	static int totalprintbalcounts = 0;
+	static int totaldebitcounts;
+	static int totalcreditcounts;
+	static int totalprintbalcounts;
+	
+	void setBalance(int bal) {
+		balance = bal;
+		System.out.println("Initial Balance Amount is : "+balance);
+	}
 
-	void debitAmount() {
+	void debitAmount(int dbtamount) {
+		System.out.println("User wants to debit: "+dbtamount);
+		
+		if(balance >=dbtamount) {
+			balance=balance -  dbtamount;
+			System.out.println("User debited: "+dbtamount);
+		}
+		else
+			System.out.println("Insufficient balance!");
+		
 		debitcounts++;
 		totaldebitcounts++;
 	}
 
-	void creditAmount() {
+	void creditAmount(int crdtamount) {
+		balance=balance + crdtamount;
+		System.out.println("User credited: "+crdtamount);
 		creditcounts++;
 		totalcreditcounts++;
 	}
 
 	void printBalance() {
+		System.out.println("Remining balance: "+balance);
 		printbalancecounts++;
 		totalprintbalcounts++;
 	}
 
-	void individualTransactionSummary(String username) {
-		System.out.println("Transaction Summary for user : " + username);
+	void individualTransactionSummary() {
 		System.out.println("Debit: " + debitcounts + "\n" + "Credit: " + creditcounts + "\n" + "print Balance: "
 				+ printbalancecounts);
 	}
@@ -58,22 +75,28 @@ public class BankingSystem {
 
 		BankingSystem bankingsystem1 = new BankingSystem();
 		BankingSystem bankingsystem2 = new BankingSystem();
-
+		
 		// Banking for user Amit
-		bankingsystem1.debitAmount();
-		bankingsystem1.debitAmount();
-		for (int j = 0; j <= 3; j++) {
-			bankingsystem1.creditAmount();
-		}
+		System.out.println("Transaction summary for user Amit");
+		bankingsystem1.setBalance(1000);
+		bankingsystem1.debitAmount(1000);
 		bankingsystem1.printBalance();
-		bankingsystem1.individualTransactionSummary("Amit");
+		bankingsystem1.debitAmount(500);
+		bankingsystem1.creditAmount(500);
+		bankingsystem1.printBalance();
+		bankingsystem1.individualTransactionSummary();
 
 		// Banking for user Sarika
-		for (int i = 1; i <= 5; i++) {
-			bankingsystem2.creditAmount();
-		}
-		bankingsystem2.debitAmount();
-		bankingsystem2.individualTransactionSummary("Sarika");
+		System.out.println("Transaction summary for user Sarika");
+		bankingsystem2.setBalance(2000);
+		bankingsystem2.creditAmount(200);
+		bankingsystem2.creditAmount(500);
+		bankingsystem2.creditAmount(200);
+		bankingsystem2.creditAmount(500);
+		bankingsystem2.printBalance();
+		bankingsystem2.debitAmount(1500);
+		bankingsystem2.printBalance();
+		bankingsystem2.individualTransactionSummary();
 
 		allTransactionSummary();
 
