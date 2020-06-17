@@ -1,14 +1,16 @@
 package abhijitMJun20;
 
 public class Bankingsystem {
-	int accountbalance=1000;
-	static int credittransactionsummary=0,debittransactionsummary=0,printbalancesummary=0;
-	int creditcount=0,debitcount=0,printBalancecount=0;
+	int accountbalance;
+	static int credittransactionsummary,debittransactionsummary,printbalancesummary;
+	int creditcount,debitcount,printBalancecount;
 	
 	void debitAmount(int debitamount) { 
 		accountbalance=accountbalance-debitamount;
+		if(accountbalance != 0){
 		debitcount++;
 		debittransactionsummary++;
+		}
 		}
 	
 	void creditAmount( int creditamount ) {
@@ -18,7 +20,7 @@ public class Bankingsystem {
 		}
 	
 	void printBalance() { 
-		//System.out.println("Current balcance of user1 " + accountbalance);
+		
 		printBalancecount++;
 		printbalancesummary++;
 	}
@@ -33,9 +35,9 @@ public class Bankingsystem {
   
 	public static void main(String[] args) {
 		Bankingsystem b1= new Bankingsystem();
+		b1.creditAmount(700);
 		b1.debitAmount(500);
 		b1.debitAmount(50);
-		b1.creditAmount(700);
 		b1.creditAmount(200);
 		b1.printBalance();
 		System.out.println("user1");
