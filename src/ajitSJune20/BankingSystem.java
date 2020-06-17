@@ -2,8 +2,8 @@ package ajitSJune20;
 
 public class BankingSystem {
 
-	int debitCount = 0, creditCount = 0, printBalanceCount = 0, currentBalance = 0;
-	static int totalDebitCount = 0, totalCreditCount = 0, TotalPrintBalanceCount = 0;
+	int debitCount, creditCount, printBalanceCount, currentBalance;
+	static int totalDebitCount, totalCreditCount, TotalPrintBalanceCount;
 
 	int creditAmount(int creditAmt) {
 		currentBalance = currentBalance + creditAmt;
@@ -14,7 +14,7 @@ public class BankingSystem {
 	}
 
 	int debitAmount(int debitAmt) {
-		if (debitAmt >= 0 && debitAmt <= currentBalance) {
+		if (debitAmt > 0 && debitAmt < currentBalance) {
 			System.out.println("Debit Amount  : " + debitAmt);
 			currentBalance = currentBalance - debitAmt;
 			totalDebitCount++;
