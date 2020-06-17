@@ -21,20 +21,28 @@ package nikhilMJun20;
 
 public class BankingSystem {
 	String custName;
+	double accBalance;
 	int creditCalled, debitCalled, balancePrintCalled;
 	static int totalCreditCalled, totalDebitCalled, totalBalancePrintCalled;
 	
-	void credit() {
+	void credit(double addBal) {
+		accBalance += addBal;
 		creditCalled++;
 		totalCreditCalled++;
 	}
 	
-	void debit() {
-		debitCalled++;
-		totalDebitCalled++;
+	void debit(double subBal) {
+		if(subBal <= accBalance) {
+			accBalance -= subBal;
+			debitCalled++;
+			totalDebitCalled++;
+		}else {
+			System.out.println("\n*"+custName+"! Insufficient Balance in your account!*");
+		}
 	}
 	
 	void balancePrint() {
+		System.out.println("Account Balance for "+custName+": "+accBalance);
 		balancePrintCalled++;
 		totalBalancePrintCalled++;
 	}
@@ -43,12 +51,8 @@ public class BankingSystem {
 		System.out.println("\nTransaction Summary for "+custName+":-\nCredits: "+creditCalled+"\nDebits: "+debitCalled+"\nBalance Printed: "+balancePrintCalled);
 	}
 	
-	void allTransactionSummary() {
+	static void allTransactionSummary() {
 		System.out.println("\nComplete Transaction Summary for the Banking System:-"+"\nTotal Credits: "+totalCreditCalled+"\nTotal Debits: "+totalDebitCalled+"\nTotal Balance Printed: "+totalBalancePrintCalled);
-	}
-	
-	static void allTransactionStats() {
-		System.out.println("\nComplete Transaction Summary for the Banking System (Using static method):-"+"\nTotal Credits: "+totalCreditCalled+"\nTotal Debits: "+totalDebitCalled+"\nTotal Balance Printed: "+totalBalancePrintCalled);
 	}
 	
 	public static void main(String[] args) {
@@ -59,26 +63,26 @@ public class BankingSystem {
 		bankingSystem2.custName="Tony Stark";
 		
 		//bankingSystem1 transactions
-		bankingSystem1.credit();
-		bankingSystem1.credit();
-		bankingSystem1.debit();
+		bankingSystem1.credit(2500.25);
+		bankingSystem1.credit(250.50);
+		bankingSystem1.debit(1200.50);
 		bankingSystem1.balancePrint();
 		
 		bankingSystem1.individualTransactionsSummary();
 		
 		//bankingSystem2 transactions
-		bankingSystem2.credit();
-		bankingSystem2.debit();
+		bankingSystem2.credit(1000.25);
+		bankingSystem2.debit(1300.00);
 		bankingSystem2.balancePrint();
-		bankingSystem2.debit();
+		bankingSystem2.debit(250.25);
 		bankingSystem2.balancePrint();
 		
 		bankingSystem2.individualTransactionsSummary();
 		
 		//Calling allTransactionSummary method with object reference
-		bankingSystem1.allTransactionSummary();
+		//bankingSystem1.allTransactionSummary();
 		
 		//Calling allTransactionStats static method without any reference object
-		allTransactionStats();
+		BankingSystem.allTransactionSummary();
 	}
 }
