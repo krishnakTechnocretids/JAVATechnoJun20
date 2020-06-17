@@ -1,6 +1,6 @@
 /*Assignment 8 : 16th Jun 2020
 
-Create a Banking System which has following functionality.
+Create a bank1ing System which has following functionality.
 
 Create two object to perform below scenario.
 1) Method to Debit amount
@@ -9,8 +9,8 @@ Create two object to perform below scenario.
 4) individualTransactionSummary() method should show how many times individually debit, credit & printBalance method called .
 Hint : Create 3 non static instance variable.
 Output:
-user1 transaction summary : Credit - 2 times, Debit - 1 times, printBalance - 1 time
-user2 transaction summary : Credit - 5 times, Debit - 2 times, printBalance - 0 time
+bank1 transaction summary : Credit - 2 times, Debit - 1 times, printBalance - 1 time
+bank2 transaction summary : Credit - 5 times, Debit - 2 times, printBalance - 0 time
 
 5) allTransactionSummary() method should show by both users total how many times debit, credit & printBalance method get called.
 Hint : Create 3 static variable will be required.
@@ -21,53 +21,71 @@ All transaction summary : Credit - 7 times, Debit - 3 times, printBalance - 1 ti
 package anshuKJun20;
 
 public class Bank {
-	int totalCA;
-	int totalDA;
-	int currentbalance;
-   static int credittimes=0;
-   static int debitttimes=0;
-   static int printbalnc=0;
+	static int countalldebits,countallcredits,countallprintbalance,countusers;
+	int countdebits,countcredits,countprintministatement,balance;
+	   
+  void initialBAlance(int amount) {
+	  countusers++;
+	  System.out.println("Intial Balance of user "+countusers+" is "+amount);
+	  balance= amount;
+	  }
+   void debitAmount(int debit){
+	    System.out.println("Debited "+debit);
+		if(balance<debit){
+			System.out.println("Sorry you Don,t have sufficient Balance in your Account.");
+		}else {
+			balance = balance-debit;
+		}
+		countdebits++;
+		countalldebits++;
+	}
    
-   //Here debit 1 and 2 means user debited different amount in 2 times.
-   void debitAmount(int debit1, int debit2, int debit3,int debit4){
-		int debitamount = debit1 +debit2+debit3+debit4;
-		totalDA=debitamount;
+	void creditAmount(int credit){
+		balance = balance+ credit;
+		System.out.println("Credited"+credit);
+		countcredits++;
+		countallcredits++;
+		
 	}
-   //Here debit 1 and 2 means user credited different amount in 5 times.
-	void creditAmount(int credit1,int credit2, int credit3, int credit4, int credit5){
-		int creditamount = credit1+credit2+credit3+credit4+credit5;
-		totalCA=creditamount;
+	void printBalance(){
+		System.out.println("Your Balance is "+balance);
+		countprintministatement++;
+		countallprintbalance++;
 	}
-	void printBalance(int balance){
-		currentbalance= balance-totalDA+totalCA;
-		System.out.println("Current Balnce in User's Account are"+currentbalance);
-	}
-	void individualTransactionSummary(int credittime,int debittime,int printb) {
-		credittimes =credittimes+ credittime;
-		debitttimes =debitttimes+ debittime;
-		printbalnc = printbalnc+printb;
-		System.out.println("User credited "+credittime+" times, Debited "+debittime+"times and Print balnce"+printb);
+	void individualTransactionSummary() {
+		System.out.println("user"+countusers+" Transaction Summary is: Credit: "+countcredits+"times, Debit: "+countdebits+" times and he needs PrintBalance "+countprintministatement+"times.");
 	}
 	
 	void allTransactionSummary(){
-		System.out.println( "Total credited "+credittimes+" times, Total Debited "+debitttimes+"times and Total Print balnce"+printbalnc+" times.");
+		System.out.println("All Transaction Summary is: Credit: "+countallcredits+"times, Debit: "+countalldebits+" times and PrintBalance"+countallprintbalance+" times.");
 	}
 	public static void main(String[] args) {
-		System.out.println('\n'+"--------User 1 Details--------");
-		Bank user1 = new Bank();
-		user1.debitAmount(100,0,0,0);
-		user1.creditAmount(100,50,0,0,0);
-		user1.printBalance(1000);
-		user1.individualTransactionSummary(2,1,1);
+		System.out.println('\n'+"----Bank 1 Details---");
+		Bank bank1 = new Bank();
+		bank1.initialBAlance(10000);
+		bank1.debitAmount(2000);
+		bank1.printBalance();
+		bank1.creditAmount(5000);
+		bank1.creditAmount(2000);
+		bank1.printBalance();
+		bank1.individualTransactionSummary();
 		
-		System.out.println('\n'+"--------User 2 Details--------");
-		Bank user2 = new Bank();
-		user2.debitAmount(100,200,0,0);
-		user2.creditAmount(100,50,1500,400,200);
-		user2.printBalance(1500);
-		user2.individualTransactionSummary(5,2,0);
+		System.out.println('\n'+"----Bank 2 Details---");
+		Bank bank2 = new Bank();
+		bank1.initialBAlance(2000);
+		bank2.debitAmount(1000);
+		bank2.creditAmount(2500);
+		bank2.printBalance();
+		bank2.debitAmount(1000);
+		bank2.printBalance();
+		bank2.creditAmount(500);
+		bank2.creditAmount(100);
+		bank2.creditAmount(5000);
+		bank2.creditAmount(1500);
+		bank2.printBalance();
+		bank2.individualTransactionSummary();
 		
-		user2.allTransactionSummary();
+		bank1.allTransactionSummary();
 		
 		
 		
