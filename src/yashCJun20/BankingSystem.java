@@ -23,18 +23,28 @@ class BankingSystem{
 	
 	int indvDebit;
 	int indvCredit;
-	int balance =5000;
+	int balance;
 	int indvBalance;
 	static int debit;
 	static int credit;
-	static int finalbalance;
+	static int finalBalance;
 	
 	
 	void debitAmount(int debtAmt){
 		
-		balance = balance-debtAmt;
-		indvDebit=indvDebit+1;
-		debit=debit+1;
+		
+		if (debtAmt <=balance) {
+			
+			balance = balance-debtAmt;
+			indvDebit=indvDebit+1;
+			debit=debit+1;
+			
+	}
+		
+		else
+			System.out.println("The requested amount cannot be withdraw due to insufficent balance");
+		
+			
 	}
 	
 	void creditAmount(int crdtAmt){
@@ -49,22 +59,23 @@ class BankingSystem{
 		
 		System.out.println("Current Balance " +": " +balance);
 		indvBalance=indvBalance+1;
-		finalbalance=finalbalance+1;
+		finalBalance=finalBalance+1;
 	}
 	
-	void individualTransactionSummary(String user1){
+	
+	void individualTransactionSummary(){
 		
-		if(user1.equals("Yash"))
-		System.out.println ("user1 transaction summary :" + "Credit - "+indvCredit +"times ," +"Debit - "+indvDebit +"times ,"+"Printbalance - "+indvBalance +"times");
 		
-		if(user1.equals("Rohan"))
-		System.out.println ("user2 transaction summary :" + "Credit - "+indvCredit +"times ," +"Debit - "+indvDebit +"times ,"+"Printbalance - "+indvBalance +"times");
+		System.out.println ("Transaction summary :" + "Credit - "+indvCredit +"times ," +"Debit - "+indvDebit +"times ,"+"Printbalance - "+indvBalance +"times");
+		
+		
+		//System.out.println ("user2 transaction summary :" + "Credit - "+indvCredit +"times ," +"Debit - "+indvDebit +"times ,"+"Printbalance - "+indvBalance +"times");
 			
 	}
 	
 	void allTransactionSummary(){
 		
-		System.out.println ("All transaction summary  :" + "Credit - "+credit +"times ," +"Debit - "+debit +"times ,"+"Printbalance - "+finalbalance +"times");
+		System.out.println ("All transaction summary  :" + "Credit - "+credit +"times ," +"Debit - "+debit +"times ,"+"Printbalance - "+finalBalance +"times");
 			
 	}
 	
@@ -75,9 +86,10 @@ class BankingSystem{
 		BankingSystem bankingSystem2 = new BankingSystem();
 		bankingSystem1.creditAmount(1000);
 		bankingSystem1.creditAmount(500);
-		bankingSystem1.debitAmount(500);
+		bankingSystem1.debitAmount(1000);
 		bankingSystem1.printBalance();
-		bankingSystem1.individualTransactionSummary("Yash");
+		System.out.println("Individual Transaction Summary of User1");
+		bankingSystem1.individualTransactionSummary();
 	
 		
 		bankingSystem2.creditAmount(200);
@@ -85,9 +97,10 @@ class BankingSystem{
 		bankingSystem2.creditAmount(100);
 		bankingSystem2.creditAmount(150);
 		bankingSystem2.creditAmount(100);
-		bankingSystem2.debitAmount(500);
-		bankingSystem2.debitAmount(500);
-		bankingSystem2.individualTransactionSummary("Rohan");
+		bankingSystem2.debitAmount(300);
+		bankingSystem2.debitAmount(300);
+		System.out.println("Individual Transaction Summary of User2");
+		bankingSystem2.individualTransactionSummary();
 		bankingSystem2.allTransactionSummary();
 		
     	
