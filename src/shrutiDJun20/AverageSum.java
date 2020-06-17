@@ -55,7 +55,6 @@ public class AverageSum {
 				System.out.println("is not eligible");
 				return false;
 			}
-		
 		}
 		
 		static String getYourGrade(double avg){
