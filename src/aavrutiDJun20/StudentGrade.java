@@ -49,14 +49,14 @@ public class StudentGrade {
 	public static void main(String[] args) {
 		StudentGrade studentGrade = new StudentGrade();
 		
-		System.out.println("\nDetail's of Shivam is as below:\n");
+		System.out.println("\nDetail's of Shivam are as below:\n");
 		double totalAvgMarks = studentGrade.average(50,60,90); //Calculate average Marks of student		
 		
 		//Print whether answer is as per expectation or not
 		if(isAnswerAboveExpectation(totalAvgMarks) == true)
-			System.out.println("Answer is above expectation: Yes");
+			System.out.println("Answers are above expectation: Yes");
 		else
-			System.out.println("Answer is above expectation: No");
+			System.out.println("Answers are above expectation: No");
 		
 		//print whether student is eligible or not
 		if(isEligible(totalAvgMarks) == true)
