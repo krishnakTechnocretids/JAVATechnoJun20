@@ -1,15 +1,30 @@
+/*
+ * //PR 101
+Create a Banking System which has following functionality.
+
+Create two object to perform below scenario.
+1) Method to debit amount
+2) Method to credit amount
+3) Method to printBalance [it will print current balance]
+4) individualTransactionSummary() method should show how many times individually debit, credit & printBalance method called .
+Hint : Create 3 non static instance variable.
+Output:
+user1 transaction summary : Credit - 2 times, Debit - 1 times, printBalance - 1 time
+user2 transaction summary : Credit - 5 times, Debit - 2 times, printBalance - 0 time
+
+5) allTransactionSummary() method should show by both users total how many times debit, credit & printBalance method get called.
+Hint : Create 3 static variable will be required.
+Output:
+All transaction summary : Credit - 7 times, Debit - 3 times, printBalance - 1 time 
+ */
+
 package pranitaPJun20;
 
 public class BankingSystem {
 //Instance Variables
-	int debitCount;
-	int creditCount;
-	int printBalanceCount;
-	int balance;
+	int debitCount,creditCount,printBalanceCount,balance;
 //Static variables
-	static int staticDebitCount;
-	static int staticCreditCount;
-	static int staticPrintBalCount;
+	static int staticDebitCount,staticCreditCount,staticPrintBalCount;
 	
 //Method to Debit amount
 		void debitAmnt(int amountDebited ){
@@ -18,10 +33,18 @@ public class BankingSystem {
 			//debitCount+=1 ;//we can use this command also	
 			staticDebitCount=staticDebitCount+1;
 			balance= balance-amountDebited;
-				if(balance<=100) {
-					System.out.println("Account has insufficient balance");			
-				}
+			if(amountDebited>balance) {
+				System.out.println("Account has insufficient balance");	
 			}
+			else if(amountDebited<=balance) {
+				debitCount= debitCount+1;
+				staticDebitCount=staticDebitCount+1;
+				balance= balance-amountDebited;		
+			}
+			else {
+				System.out.println("Invalid Transaction");
+			}
+		}
 		
 //Method to credit amount
 		void creditAmnt(int amountCredited){
