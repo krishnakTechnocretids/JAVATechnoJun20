@@ -1,14 +1,12 @@
 package barkhaPJun20;
 
 public class StaticNonstatic {
-	 double sum( double x, double y, double z){
-		return (x+y+z);
+	 double sum( double num1, double num2, double num3){
+		return (num1+num2+num3);
 	}	 
-	  double average(double x1, double y1,double z1){
-		StaticNonstatic s2=new StaticNonstatic();
-		double totalAvg= (s2.sum(x1,y1,z1)/3);
-		return totalAvg;
-	}
+	  double average(double no1, double no2,double no3){
+		 return (sum(no1,no2,no3)/3);
+	}	
 	static boolean isAnswerAboveExpectation(double totalAvg){
 		if (totalAvg>50)
 			 return true;	
@@ -28,15 +26,18 @@ public class StaticNonstatic {
 			 return "B grade";
 	 }
 	 public static void main(String[] args) {
-		 StaticNonstatic s1=new StaticNonstatic();
-		 double totalAvg=s1.average(10.59,36.87,500.25);
-		 System.out.println("Total Average of provided numbers are :" +s1.average(10.59,36.87,500.25));
-		 System.out.println("Answer above Expectation is: " +isAnswerAboveExpectation( totalAvg));
-		 System.out.println("Is program is Eligible:" +isEligible(totalAvg));
+		 StaticNonstatic staticNonstatic=new StaticNonstatic();
+		 double totalAvg=staticNonstatic.average(10.59,36.87,500.25);
+		 System.out.println("Total Average of provided numbers is "+staticNonstatic.average(10.59,36.87,500.25));
+		 System.out.println("Answer is above Expectation : " +isAnswerAboveExpectation(totalAvg));
+		 System.out.println("Program is Eligible?:" +isEligible(totalAvg));
 		 System.out.println("Grade is: "+getYourGrade(totalAvg));
 	 }	 
 }	 	
+		
 	
+	
+		
 	 
 		
 		
