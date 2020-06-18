@@ -24,9 +24,7 @@ public class TestStaticNonStaticReturnType{
 	
 	double average(double number1, double number2, double number3){
 		
-		double ansSum;
-		ansSum = sum(number1,number2,number3);
-		return ((ansSum)/3);
+		return ((sum(number1,number2,number3))/3);
 	}
 	
 	static boolean isAnswerAboveExpecation(double avgAnswer){
@@ -36,6 +34,7 @@ public class TestStaticNonStaticReturnType{
 			return false;
 	}
 	
+	//In the below method isAnswerAboveExpecation(avgAnswer) is called in if condition to check avgAnswer>50.
 	static boolean isEligible(double avgAnswer){
 		if(isAnswerAboveExpecation(avgAnswer) || (avgAnswer%2==0))
 			return true;
@@ -55,7 +54,8 @@ public class TestStaticNonStaticReturnType{
 		
 		TestStaticNonStaticReturnType test = new TestStaticNonStaticReturnType();
 		double avgAnswer = test.average(100,80,50);
-		//System.out.println("Value of isAnswerAboveExpecation: "+isAnswerAboveExpecation(avgAnswer));
+		
+		System.out.println("Value of isAnswerAboveExpecation: "+isAnswerAboveExpecation(avgAnswer));
 		
 		if(isEligible(avgAnswer)== true)
 			System.out.println("Student with "+avgAnswer+" average is Eligibe");
