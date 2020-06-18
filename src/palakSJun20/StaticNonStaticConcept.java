@@ -7,9 +7,7 @@ public class StaticNonStaticConcept {
 	}
 	
 	double average(double number1, double number2, double number3){
-		double averageResult=(number1 + number2 + number3) / 3;
-		sum(10.0, 10.5, 10.5);
-		return averageResult;
+		return sum(80.5,80.5,30.5)/3;
 	}
 	
 	static boolean isAnswerAboveExpecation(double averageResult){
