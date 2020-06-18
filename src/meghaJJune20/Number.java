@@ -11,7 +11,7 @@ public class Number {
 	}
 	double average(double x,double y,double z)
 	{
-		double avg=(x+y+z)/3;
+		double avg= sum(x,y,z)/3;
 		System.out.println("Total Average is : " +avg);
 		return avg;
 	}
@@ -35,7 +35,7 @@ public class Number {
 	static String getYourGrade(double avg)
 	{
 		System.out.println("Student Grade ");
-		if (avg >50)
+		if (avg >80)
 			return "Grade A";
 		else
 			return "Grade B";
@@ -43,7 +43,7 @@ public class Number {
 	public static void main(String [] args)
 	{
 		Number number = new Number();
-		double avg=number.average(40,50,50);
+		double avg=number.average(80,50,30);
 		
 		System.out.println();
 		System.out.println(isAnswerAboveExpecation(avg));
