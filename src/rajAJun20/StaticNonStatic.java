@@ -7,8 +7,7 @@ public class StaticNonStatic {
 	    	return sum;
 	    }
 	    double average(double var1, double var2, double var3) {
-	    	double average = (var1 + var2 + var3)/3;
-	    	sum(var1, var2, var3);
+	    	double average = sum(var1 ,var2,var3)/3;
 	    	return average;
 	    }
 	    static boolean isAnswerAboveExpectation(double average) {
