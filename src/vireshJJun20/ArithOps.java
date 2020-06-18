@@ -10,9 +10,9 @@ class ArithOps{
 	}
 	
 	double average(double a, double b, double c){
-		ArithOps ar= new ArithOps();
+		//ArithOps ar= new ArithOps();
 		System.out.println("The given 3 numbers are: " + a +", " +b+ ", " +c);
-		double avAnswer= (ar.sum(a, b, c))/3;
+		double avAnswer= (sum(a, b, c))/3;
 		if(avAnswer >100) {
 			System.out.println("Average of given 3 values exceeds 100%, ie: " +avAnswer+ " please enter new values.");
 			return 00.0;
@@ -27,7 +27,6 @@ class ArithOps{
 		boolean boolExp = false;
 			if (avAnswer> 50){
 				boolExp= true;
-				
 			}
 			else if (avAnswer<50){
 				boolExp= false;
@@ -57,25 +56,27 @@ class ArithOps{
 	
 	public static void main(String[] args){
 		ArithOps arithOps= new ArithOps();
-		double avg= arithOps.average(99.0,99.0,99.0);
-		if (avg!=00.0) {
+		double avg= arithOps.average(50.0,100.0,100.0);
+		if ((avg!=00.0 && avg<=100) && ArithOps.isEligible(avg)==true) {
 			if(ArithOps.isEligible(avg)== true) {
 				System.out.println("Is Eligible: Yes (Average is more than 50 or divisible by 2)");
 			}
-			else
+			else {
 				System.out.println("Is Eligible: No (Average is less than or equals 50 or not divisible by 2)");
-				//System.out.println("Is Eligible: " + ArithOps.isEligible(avg));
-				System.out.println("Grades achieved: " + ArithOps.getYourGrade(avg));
-				if(ArithOps.isAnswerAboveExpecation(avg)== true) {
-					System.out.println("Is answer above expectation: Yes (Average is greater than 50)");
 				}
-				else {
-					System.out.println("Is answer above expectation: No (Average is less than or equals 50)");
+				//if(ArithOps.isEligible(avg)==true) {
+					System.out.println("Grades achieved: " + ArithOps.getYourGrade(avg));
+					if(ArithOps.isAnswerAboveExpecation(avg)== true) {
+						System.out.println("Is answer above expectation: Yes (Average is greater than 50)");
+					}
+					else {
+						System.out.println("Is answer above expectation: No (Average is less than or equals 50)");
+					}
 				}
-			}
 		else {
+			//System.out.println("Is Eligible: No");
 			System.out.println(" ");
-		}
-		}
+		}	
+	}
 }
 
