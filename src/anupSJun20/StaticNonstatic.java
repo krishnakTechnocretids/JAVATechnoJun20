@@ -18,9 +18,7 @@ public class StaticNonstatic {
 		return (subject1+subject2+subject3);
 	}
 	double average(double subject1,double subject2, double subject3) {
-		sum(subject1,subject2, subject3);
-		double result = (subject1+subject2+subject3)/3;
-		return result;
+		return sum(subject1,subject2, subject3)/3;
 	}
 	static boolean isAnswerAboveExpecation(double result) {
 		if(result>50)
