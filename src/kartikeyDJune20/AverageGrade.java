@@ -55,7 +55,7 @@ public class AverageGrade {
 
 			System.out.println("Student grade is " + getYourGrade(avg));
 		} else
-			System.out.println("Marks entered are invalid: Please correct");
+			System.out.println("Marks entered are invalid or zero: Please correct");
 	}
 
 }
