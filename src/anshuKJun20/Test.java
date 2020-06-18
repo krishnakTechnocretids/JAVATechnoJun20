@@ -26,8 +26,8 @@ public class Test {
 		  return(number1+number2+number3);
 	}
 	 double average(double number1,double number2, double number3) {
-		  double answer=  sum(number1,number2,number3)/3;
-		   return answer;
+		  return  sum(number1,number2,number3)/3;
+		   
 	}
 	
 	 static boolean isAnswerAboveExpecation(double answerfromaverage){
@@ -52,10 +52,11 @@ public class Test {
 		 Test test = new Test();
 		  double average = test.average(200.12,100.00,120.00);
 		 System.out.println("Your average is "+average);
-		 
 		  // Is Answer Above Expecation calling
-		   Test.isAnswerAboveExpecation(average);
-		   
+		   if(Test.isAnswerAboveExpecation(average)==true)
+		        System.out.println("Excellent");
+		   else
+		    	System.out.println("Work Hard");
 			// Print Is Eligible Method 
 		 if(Test.isEligible(average)==true)
 			 System.out.println("You are Eligible ");
