@@ -55,7 +55,7 @@ class MathOperation{
 		
 	 MathOperation mathOperation = new MathOperation();
 	 double ans=mathOperation.average(20.00,30.00,40.00);
-	 isAnswerAboveExpecation(ans);
+	 System.out.println("Avg answer is above expecatation " + ": "+isAnswerAboveExpecation(ans));
 	 if (isEligible(ans) == true)
 		 System.out.println ("Student is eligible");
 	 else
