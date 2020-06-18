@@ -47,4 +47,6 @@ public class TestStatic {
 			System.out.println(TestStatic.getYourGrade(isans1));
 			
 		}
-	}
+		
+}
+	
