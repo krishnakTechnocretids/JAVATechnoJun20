@@ -28,22 +28,18 @@ public class BankingSystem {
 	
 //Method to Debit amount
 		void debitAmnt(int amountDebited ){
-			debitCount= debitCount+1;
-			//debitCount++ ; //we can use this also
-			//debitCount+=1 ;//we can use this command also	
-			staticDebitCount=staticDebitCount+1;
-			balance= balance-amountDebited;
 			if(amountDebited>balance) {
 				System.out.println("Account has insufficient balance");	
 			}
 			else if(amountDebited<=balance) {
 				debitCount= debitCount+1;
+				//debitCount++ ; //we can use this also
+				//debitCount+=1 ;//we can use this command also	
 				staticDebitCount=staticDebitCount+1;
 				balance= balance-amountDebited;		
 			}
-			else {
+			else 
 				System.out.println("Invalid Transaction");
-			}
 		}
 		
 //Method to credit amount
