@@ -1,4 +1,3 @@
-package maheshKJun20;
 /*
 Create Employee class having 4 instance variable empid & empname, salary (double type), deptId.
 a) create 2 objects of Employee class.
@@ -10,6 +9,7 @@ f) create a method called getEmployeeDeptName, if employee deptid is 1 return "I
 g) Create a method called isEligibleForIncrement which will return boolean value, if deptId is 1 or salary is less then 30,000 return true and main method will print Employee is eligible for increment, otherwise print not "eligible for increment" message.
 
 */
+package maheshKJun20;
 
 class Employee{
 	int empid;
@@ -67,8 +67,9 @@ class Employee{
 	public static void main(String[] args){
 		Employee employee0 = new Employee();
 		Employee employee1 = new Employee();
-		employee0.setData(1,"mahesh",1,2);
-		employee1.setData(2,"m",2,4);
+		employee0.setData(1,"M",1,2);
+		employee1.setData(3,"S",3,4);
+
 		
 	}
 }
