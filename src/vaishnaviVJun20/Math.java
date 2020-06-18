@@ -1,13 +1,11 @@
 package vaishnaviVJun20;
 
 public class Math {
-    double sum(double variable1, double variable2, double variable3) {
-    	double sum = variable1+variable2+variable3;
-    	return sum;
+    double sum(double number1, double number2, double number3) {
+    	return number1+number2+number3;
     }
-    double average(double variable1, double variable2, double variable3) {
-    	System.out.println("Sum of three variable is: " +sum(variable1,variable2,variable3));
-    	double average = (variable1+variable2+variable3)/3;
+    double average(double number1, double number2, double number3) {
+    	double average = sum(number1,number2,number3)/3;
     	return average;
     }
     static boolean isAnswerAboveExpectation(double average) {
