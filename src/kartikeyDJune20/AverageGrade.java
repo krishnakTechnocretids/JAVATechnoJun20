@@ -1,6 +1,6 @@
 package kartikeyDJune20;
 
-public class AverageSumGrade {
+public class AverageGrade {
 	double sum(double frst, double second, double thrd) {
 		double sum = frst + second + thrd;
 		return sum;
@@ -38,7 +38,7 @@ public class AverageSumGrade {
 	}
 
 	public static void main(String[] args) {
-		AverageSumGrade averageSumGarde = new AverageSumGrade();
+		AverageGrade averageSumGarde = new AverageGrade();
 		double avg = averageSumGarde.average(99, 0.20, 30);
 
 		if (avg != 0) {
