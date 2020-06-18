@@ -5,19 +5,16 @@ public class Number {
 	double sum(double x,double y,double z)
 	{
 		double totalsum=x+y+z;
-		System.out.println("Sum Total is : " +totalsum);
 		return totalsum;
 		
 	}
 	double average(double x,double y,double z)
 	{
 		double avg= sum(x,y,z)/3;
-		System.out.println("Total Average is : " +avg);
 		return avg;
 	}
 	static boolean isAnswerAboveExpecation(double avg)
 	{
-		System.out.println("Expectation ");
 		if(avg > 50)
 			return true;
 		else
@@ -26,7 +23,6 @@ public class Number {
 	}
 	static boolean isEligible(double avg)
 	{
-			System.out.println("Eligible ");
 			if(avg>50 || avg%2==0)
 				return true;
 			else
@@ -34,7 +30,6 @@ public class Number {
 	}
 	static String getYourGrade(double avg)
 	{
-		System.out.println("Student Grade ");
 		if (avg >80)
 			return "Grade A";
 		else
@@ -43,14 +38,20 @@ public class Number {
 	public static void main(String [] args)
 	{
 		Number number = new Number();
-		double avg=number.average(80,50,30);
+		double avg=number.average(10,20,30);
 		
 		System.out.println();
-		System.out.println(isAnswerAboveExpecation(avg));
-		System.out.println();
-		System.out.println(isEligible(avg));
-		System.out.println();
-		System.out.println(getYourGrade(avg));
+		if(Number.isAnswerAboveExpecation(avg) == true)
+			System.out.println("Your Performance is above Expectation.");
+		else
+			System.out.println("You need to put more efforts.");
+		
+		if(Number.isEligible(avg) == true)
+			System.out.println("You are Eligible.");
+		else
+			System.out.println("You are not Eligible.");
+		
+		System.out.println("Your Result is : "+getYourGrade(avg));
 		
 	}
 	
