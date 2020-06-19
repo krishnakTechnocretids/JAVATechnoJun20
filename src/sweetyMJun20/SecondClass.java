@@ -1,18 +1,15 @@
 package sweetyMJun20;
 
 public class SecondClass {
-  void thirdMethod()
-	  {   
-	  ThirdClass thirdclass=new ThirdClass();
-	      thirdclass.sixthMethod();
-		  System.out.println("In third method");
-	  }
-	  static void forthMethod()
-	  {
-		  FirstClass.secondMethod();
-		  SecondClass secondclass=new SecondClass();
-		  secondclass.thirdMethod();
-		  System.out.println("In forth method");
-	  }
-	 }
+  void thirdMethod(){   
+   System.out.println("In Second Class: non static Third method() and calling sixthMethod() of ThirdClass");
+   ThirdClass thirdclass=new ThirdClass();
+   thirdclass.sixthMethod();
+ }
+   static void forthMethod(){   
+	System.out.println("In Second Class :Static forthMethod() and calling thirdMethod() of SecondClass");
+	 SecondClass secondclass=new SecondClass();
+	 secondclass.thirdMethod();
+ }
+}
 

@@ -1,15 +1,12 @@
 package sweetyMJun20;
 
 public class ThirdClass {
-	
-	  static void fifthMethod()
-	  {   ForthClass.sevenMethod();
-		  System.out.println("In fifth Method");
-	  }
-	  void sixthMethod()
-	  {   ThirdClass.fifthMethod();
-	      ForthClass.eightMethod();
-	      System.out.println("In sixth method");
-	  }
-	  
-	}
+  static void fifthMethod(){   
+    System.out.println("In Third Class : static fifthMethod() and calling eightMethod() of ForthClass");
+	ForthClass.eightMethod();
+   }
+  void sixthMethod(){
+	System.out.println("In Third Class: Non-static sixthMethod() and calling fifthMethod() of Third Class ");
+	ThirdClass.fifthMethod();
+  }
+ }
