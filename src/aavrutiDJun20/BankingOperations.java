@@ -147,6 +147,16 @@ public class BankingOperations {
 		System.out.println("BOB Bank Debit Operation   : " + debitBOBCnt);
 		System.out.println("SBI Bank Debit Operation   : " + debitSBICnt);
 	}
+	
+	String suggestionMsg() {
+		if(allBankCreditCnt > allBankDebitCnt) {
+			return "*I appreciate your money management skill*";
+		}
+		else
+		{
+			return "*Please spend money wisely*";
+		}
+	}
 		
 	public static void main(String[] args) {
 		BankingOperations bankingOperations = new BankingOperations();
@@ -187,14 +197,8 @@ public class BankingOperations {
 		bankingOperations.printBankBalance();
 		
 		//Print comment on all over bank transactions
-		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		if(allBankCreditCnt > allBankDebitCnt) {
-			System.out.println("\n*I appreciate your money management skill*");
-		}
-		else
-		{
-			System.out.println("\n*Please spend money wisely*");
-		}
+		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+		System.out.println(bankingOperations.suggestionMsg());
 		
 		//print Credit Operation count
 		bankingOperations.bankCreditOperations();
