@@ -67,8 +67,10 @@ public class BankingOpsWithSwitchCaseUserInput {
 		if(amount>0) {
 			switch(bankName) {
 			case "ICICI" :
+			case "icici" :
 				switch(operation) {
 				case "Debit":
+				case "debit":
 					if(iciciBalance>=amount) {
 						iciciBalance -= amount;
 						iciciDebitCnt++;
@@ -77,6 +79,7 @@ public class BankingOpsWithSwitchCaseUserInput {
 						System.out.println("Insufficient Balance...Could not debit "+amount+" from ICICI bank account");
 					break;
 				case "Credit":
+				case "credit":
 					iciciBalance += amount;
 					iciciCreditCnt++;
 					creditTotalCount++;
@@ -86,8 +89,10 @@ public class BankingOpsWithSwitchCaseUserInput {
 				}
 				break;
 			case "HDFC" :
+			case "hdfc" :
 				switch(operation) {
 				case "Debit":
+				case "debit":
 					if(hdfcBalance>=amount) {
 						hdfcBalance -= amount;
 						hdfcDebitCnt++;
@@ -96,6 +101,7 @@ public class BankingOpsWithSwitchCaseUserInput {
 						System.out.println("Insufficient Balance...Could not debit"+amount+"  from HDFC bank account");
 					break;
 				case "Credit":
+				case "credit":
 					hdfcBalance += amount;
 					hdfcCreditCnt++;
 					creditTotalCount++;
@@ -105,8 +111,10 @@ public class BankingOpsWithSwitchCaseUserInput {
 				}
 				break;
 			case "SBI" :
+			case "sbi" :
 				switch(operation) {
 				case "Debit":
+				case "debit":
 					if(sbiBalance>=amount) {
 						sbiBalance -= amount;
 						sbiDebitCnt++;
@@ -115,6 +123,7 @@ public class BankingOpsWithSwitchCaseUserInput {
 						System.out.println("Insufficient Balance...Could not debit "+amount+ " from SBI bank account");
 					break;
 				case "Credit":
+				case "credit":
 					sbiBalance += amount;
 					sbiCreditCnt++;
 					creditTotalCount++;
@@ -124,8 +133,10 @@ public class BankingOpsWithSwitchCaseUserInput {
 				}
 				break;
 			case "BOB" :
+			case "bob" :
 				switch(operation) {
 				case "Debit":
+				case "debit":
 					if(bobBalance>=amount) {
 						bobBalance -= amount;
 						bobDebitCnt++;
@@ -134,6 +145,7 @@ public class BankingOpsWithSwitchCaseUserInput {
 						System.out.println("Insufficient Balance...Could not debit "+amount+" from BOB bank account");
 					break;
 				case "Credit":
+				case "credit":
 					bobBalance += amount;
 					bobCreditCnt++;
 					creditTotalCount++;
