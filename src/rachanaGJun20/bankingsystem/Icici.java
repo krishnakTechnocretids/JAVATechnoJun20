@@ -1,24 +1,23 @@
-package rachanaGJun20;
+package rachanaGJun20.bankingsystem;
 
-public class Sbi {
+public class Icici {
 
 	double balance;
 	static int debitCount;
 	static int creditCount;
-
+	
 	int individualCrediCount;
 	int individualDebitCount;
-
+	
 	void debitOperation(double dbtAmount) {
 
 		if (balance >= dbtAmount) {
 			debitCount++;
 			individualDebitCount++;
 			balance = BankOperation.debitOperation(balance, dbtAmount);
-			System.out.println(
-					"SBI;Your Account is debited by amount: " + dbtAmount + " RemainingBalance is: " + balance);
+			System.out.println("ICICI;Your Account is debited by amount: " + dbtAmount + " RemainingBalance is: " + balance);
 		} else {
-			System.out.println("SBI;Insufficient Balance!");
+			System.out.println("ICICI;Insufficient Balance!");
 		}
 
 	}
@@ -27,8 +26,7 @@ public class Sbi {
 		creditCount++;
 		individualCrediCount++;
 		balance = BankOperation.creditOperation(balance, crdtAmount);
-		System.out
-				.println("SBI;Your Account is credited by amount: " + crdtAmount + " RemainingBalance is: " + balance);
+		System.out.println("ICICI;Your Account is credited by amount: " + crdtAmount + " RemainingBalance is: " + balance);
 	}
 
 	double getBalance() {
@@ -36,11 +34,14 @@ public class Sbi {
 	}
 
 	String getBankMessage() {
-		if (individualCrediCount > individualDebitCount) {
-			return "SBI: I appreciate your money management skill.";
-
+		if(individualCrediCount > individualDebitCount ) { 
+			return "ICICI: I appreciate your money management skill."; 
+			
 		} else {
-			return "SBI: Please spend money wisely";
+			return "ICICI: Please spend money wisely";
 		}
 	}
+
+	
+	
 }

@@ -22,7 +22,7 @@
 
          f) A Method which should return "*I appreciate your money management skill*" message if credit operation count is more than debit operation count else return "*Please spend money wisely*" and print this message in main method.*/
 
-package rachanaGJun20;
+package rachanaGJun20.bankingsystem;
 
 public class Person {
 

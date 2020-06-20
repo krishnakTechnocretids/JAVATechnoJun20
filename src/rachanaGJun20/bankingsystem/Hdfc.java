@@ -1,4 +1,4 @@
-package rachanaGJun20;
+package rachanaGJun20.bankingsystem;
 
 public class Hdfc {
 
