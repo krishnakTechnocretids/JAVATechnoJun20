@@ -1,8 +1,4 @@
-package kARAN1595;
-
-public class BankAccount {
-
-	/*Assignment 11 :  19th Jun 2020
+/*Assignment 11 :  19th Jun 2020
 
 	A person has total 4 accounts in ICICI, HDFC, BOB, SBI one in each.
 	          a) Person can debit or credit amount from respective bank.
@@ -27,6 +23,14 @@ public class BankAccount {
 	                             BOB bank Debit Operation - 4
 
 	         f) A Method which should return "*I appreciate your money management skill*" message if credit operation count is more than debit operation count else return "*Please spend money wisely*" and print this message in main method.*/
+
+
+
+package kARAN1595;
+
+public class BankAccount {
+
+	
 	
 	int iciciCreditCount,iciciDebitCount;
 	int hdfcCreditCount,hdfcDebitCount;
