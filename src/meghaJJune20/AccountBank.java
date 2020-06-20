@@ -1,5 +1,7 @@
 package meghaJJune20;
 
+import java.util.Scanner;
+
 public class AccountBank
 {
 	String bankname;
@@ -103,27 +105,46 @@ public class AccountBank
 	public static void main(String[] args)
 	{
 		AccountBank accountbank = new AccountBank();
-		accountbank.overalloperations("ICICI", 700, "Credit");
-		accountbank.overalloperations("ICICI", 50, "Debit");
-		accountbank.individualBankoperations();
+		Scanner scanner =new Scanner(System.in);
+		String status="";
+		do {
+			System.out.println("Which operation do you want to perform? (Debit/Credit)");
+			String operation=scanner.next();
+			
+			System.out.println("Which Bank do you want? (ICICI/SBI,BOB/HDFC)");
+			String operationbank=scanner.next();
+			
+			System.out.println("Please enter the amount : ");
+			int amount = scanner.nextInt();
+			accountbank.overalloperations(operation, amount, operationbank);
+			
+			System.out.println("Do you want to continue : (Yes/NO)");
+			status=scanner.next();
+		    }while(status.equals("Yes"));
+			{
+				System.out.println("Program End");
+			}
+			
+		//accountbank.overalloperations("ICICI", 700, "Credit");
+		//accountbank.overalloperations("ICICI", 50, "Debit");
+		//accountbank.individualBankoperations();
 		
-		AccountBank accountbank1 = new AccountBank();
-		accountbank1.overalloperations("SBI", 540, "Credit");
-		accountbank1.overalloperations("SBI", 650, "Debit");
-		accountbank1.individualBankoperations();
+		//AccountBank accountbank1 = new AccountBank();
+		//accountbank1.overalloperations("SBI", 540, "Credit");
+		//accountbank1.overalloperations("SBI", 650, "Debit");
+		//accountbank1.individualBankoperations();
 		
-		AccountBank accountbank2 = new AccountBank();
-		accountbank2.overalloperations("BOB",160, "Credit");
-		accountbank2.overalloperations("BOB",104, "Debit");
-		accountbank2.individualBankoperations();
+		//AccountBank accountbank2 = new AccountBank();
+		//accountbank2.overalloperations("BOB",160, "Credit");
+		//accountbank2.overalloperations("BOB",104, "Debit");
+		//accountbank2.individualBankoperations();
 		
-		AccountBank accountbank3 = new AccountBank();
-		accountbank3.overalloperations("HDFC",155, "Credit");
-		accountbank3.overalloperations("HDFC",150, "Debit");
-		accountbank3.individualBankoperations();
+		//accountbank3.overalloperations("HDFC",155, "Credit");
+		//accountbank3.overalloperations("HDFC",150, "Debit");
+		//accountbank3.individualBankoperations();
 		
-		accountbank.totalbalance();
-		accountbank.totalOperations();
-		accountbank.messageDisplay();
+		//accountbank.totalbalance();
+		//accountbank.totalOperations();
+		//accountbank.messageDisplay();
 	}
 }
