@@ -16,7 +16,7 @@ public class BankScanner {
 	int hdfcCreditCount,hdfcDebitCount;
 	int sbiCreditCount,sbiDebitCount;
 	int bobCreditCount,bobDebitCount;
-	 int totalCreditCount,totalDebitCount;
+	int totalCreditCount,totalDebitCount;
 	int iciciAccountBalance,hdfcAccountBalance;
 	int sbiAccountBalance,bobAccountBalance;
 	int totalAccountBalance;
