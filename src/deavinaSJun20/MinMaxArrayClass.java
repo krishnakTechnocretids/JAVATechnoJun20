@@ -21,7 +21,7 @@ public class MinMaxArrayClass {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter size of Array");
-		 size = scanner.nextInt();
+		size = scanner.nextInt();
 		int[] Arr = new int[size];
 		System.out.println("Enter first element");
 		Arr[0] = scanner.nextInt();

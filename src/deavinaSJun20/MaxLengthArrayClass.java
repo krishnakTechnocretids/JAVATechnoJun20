@@ -4,7 +4,18 @@ import java.util.Scanner;
 
 public class MaxLengthArrayClass {
 	static int maxlength = 0;
-	static String longeststring;
+	String longeststring;
+	static int size;
+
+	void findlongeststring(String[] Arr) {
+		for (int index = 0; index < Arr.length; index++) {
+			if (Arr[index].length() > maxlength) {
+				maxlength = Arr[index].length();
+				longeststring = Arr[index];
+			}
+		}
+		System.out.println(longeststring + " is longest String with length : " + maxlength);
+	}
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -15,14 +26,8 @@ public class MaxLengthArrayClass {
 			System.out.println("Enter Name " + (index + 1));
 			Arr[index] = scanner.next();
 		}
-
-		for (int index = 0; index < size; index++) {
-			if (Arr[index].length() > maxlength) {
-				maxlength = Arr[index].length();
-				longeststring = Arr[index];
-			}
-		}
-		System.out.println(longeststring + " is longest String with length : " + maxlength);
+		MaxLengthArrayClass maxLengthArrayClass = new MaxLengthArrayClass();
+		maxLengthArrayClass.findlongeststring(Arr);
 		scanner.close();
 	}
 
