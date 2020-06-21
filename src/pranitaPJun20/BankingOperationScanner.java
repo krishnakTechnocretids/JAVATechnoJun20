@@ -160,51 +160,43 @@ public class BankingOperationScanner {
 	public static void main(String[] args) {
 		BankingOperationScanner bankingOperationScanner = new BankingOperationScanner();
 		Scanner scanner = new Scanner(System.in);
-		for(int i=1;i<=2;i++) {
-			System.out.println("Enter amount to be credited to ICICI bank account : ");
-			double amount = scanner.nextDouble();
-			bankingOperationScanner.bankOperation("ICICI",amount,"Credit");
-		}
 		
-		for(int i=1;i<=2;i++) {
-			System.out.println("Enter amount to be debited from ICICI bank account : ");
-			double amount = scanner.nextDouble();
-			bankingOperationScanner.bankOperation("ICICI",amount,"Debit");
-		}
-		
-		for(int i=1;i<=2;i++) {
-			System.out.println("Enter amount to be credited to HDFC bank account : ");
-			double amount = scanner.nextDouble();
-			bankingOperationScanner.bankOperation("HDFC",amount,"Credit");
-		}
-		
-		for(int i=1;i<=2;i++) {
-			System.out.println("Enter amount to be debited from HDFC bank account : ");
-			double amount = scanner.nextDouble();
-			bankingOperationScanner.bankOperation("HDFC",amount,"Debit");
-		}
-		
-		for(int i=1;i<=4;i++) {
-			System.out.println("Enter amount to be credited to BOB bank account : ");
-			double amount = scanner.nextDouble();
-			bankingOperationScanner.bankOperation("BOB",amount,"Credit");
-		}
-		
-		for(int i=1;i<=4;i++) {
-			System.out.println("Enter amount to be debited from BOB bank account : ");
-			double amount = scanner.nextDouble();
-			bankingOperationScanner.bankOperation("BOB",amount,"Debit");
-		}
-		
-		System.out.println("Enter amount to be credited from SBi bank account : ");
-		double amount1 = scanner.nextDouble();
-		bankingOperationScanner.bankOperation("SBI",amount1,"Credit");
-		
-		System.out.println("Enter amount to be debited from SBI bank account : ");
-		double amount = scanner.nextDouble();
-		bankingOperationScanner.bankOperation("SBI",amount,"Debit");
-		scanner.close();
+		String status="";
+		do {
+				System.out.println("\nEnter the bank name which you want to access-  ICICI /HDFC /BOB /SBI");
+				String bankname = scanner.next();
+				
+				System.out.println("What would you like to do? Credit/Debit");
+				String operation = scanner.next();
+				 if(operation.equals("Credit")) {
+					 System.out.println("How many times you want to do credit operation");
+					 int creditCount = scanner.nextInt();
+					 int count=1;
+					 	while(count<=creditCount) {
+					 		System.out.println("Enter amount to be credited: ");
+					 		double amount = scanner.nextDouble();
+					 		bankingOperationScanner.bankOperation(bankname,amount,operation);
+					 		count++;
+					 }
+				 }
+				 else if(operation.equals("Debit")) {
+					 System.out.println("Enter the number of times you want to do debit operation");
+					 int debitCount = scanner.nextInt();
+					 	for(int index=1;index<=debitCount;index++) {
+					 			System.out.println("Enter amount to be debited: ");
+					 			double amount = scanner.nextDouble();
+					 			bankingOperationScanner.bankOperation(bankname,amount,operation); 
+					 }
+				 }
+				 else {
+					 System.out.println("Invalid Operation");
+				 }
+				 System.out.println("\nWould you like to continue? (Y/N)");
+					status = scanner.next();
+				
+				}while(status.equals("Y"));
 	
+		
 		bankingOperationScanner.displayTotalBalance();
 		
 		bankingOperationScanner.displayTotalCreditDebitCount();
@@ -213,7 +205,8 @@ public class BankingOperationScanner {
 		
 		bankingOperationScanner.displayIndividualDebitCount();
 		
-		System.out.println("\n"+bankingOperationScanner.displayBankresponse());		
+		System.out.println("\n"+bankingOperationScanner.displayBankresponse());	
+		scanner.close();
 	}
 }
 		
