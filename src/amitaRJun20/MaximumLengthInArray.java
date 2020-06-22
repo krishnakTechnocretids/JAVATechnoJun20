@@ -1,6 +1,6 @@
-/*Assigment 2 :
-A) Find the name having maximum length from user given array [use scanner class to take names and size of an array].
-package amitaRJun20;*/
+/*Assigment 2 : 
+A) Find the name having maximum length from user given array [use scanner class to take names and size of an array].*/
+package amitaRJun20;
 
 import java.util.Scanner;
 
