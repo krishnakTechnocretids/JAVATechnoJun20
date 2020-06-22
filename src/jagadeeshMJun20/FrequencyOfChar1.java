@@ -1,15 +1,15 @@
 package jagadeeshMJun20;
 import java.util.Scanner;
 public class FrequencyOfChar1 {
-	int getFrequency(String[] name, char ch) {
-		int count=1;
+	void getFrequency(String[] name, char ch) {	
 		for(int index=0;index<name.length;index++) {
+			int count=0;
 			for(int i=0;i<name[index].length();i++) {
 			if(name[index].charAt(i) == ch)
 				count++;
 			}
+			System.out.println(name[index] + ": count of '"+ch+"' char : "+count);
 		}	
-		return count;
 	}
 	public static void main(String[] args) {
 		FrequencyOfChar1 frequencyOfChar1 = new FrequencyOfChar1();
@@ -24,6 +24,7 @@ public class FrequencyOfChar1 {
 			name[index]=scanner.next();
 		}
 			scanner.close();
-			System.out.println(frequencyOfChar1.getFrequency(name,ch));
+			frequencyOfChar1.getFrequency(name,ch);
+			
 	}
 }
