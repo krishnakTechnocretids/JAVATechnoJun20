@@ -7,16 +7,19 @@ public class NumberArrayOperation {
 	
 public static void main(String[] args){
 	
-	NumberArrayOperation arrayoperatio = new NumberArrayOperation();
+	NumberArrayOperation arrayoperation = new NumberArrayOperation();
 	// Ask for client
 	System.out.println("How many elements you want to enter:");
 	// Scan Client Output
 	int num = scanner.nextInt();
 	
 	int[] intArray = new int[num];//array length.
-	arrayoperatio.insertArrayElement(intArray);
-	 int maxnum=arrayoperatio.getMaxNumber(intArray);
+	arrayoperation.insertArrayElement(intArray);
+	 int maxnum=arrayoperation.getMaxNumber(intArray);
    System.out.println("Maximun number is "+maxnum);
+   
+   int minnum=arrayoperation.getMinimumNumber(intArray);
+   System.out.println("Mininum number is "+minnum);
 }
 void insertArrayElement(int[] intArray)
 {
@@ -35,4 +38,15 @@ int getMaxNumber(int[] intArray)
 	}
 	 return max;
    }
+int getMinimumNumber(int[] intArray) {
+	int min=intArray[0];
+	for(int index=1;index<intArray.length;index++){
+		if(min>intArray[index]){
+			min=intArray[index];
+		}
+	}
+	 return min;
+	 
 }
+}
+ 
