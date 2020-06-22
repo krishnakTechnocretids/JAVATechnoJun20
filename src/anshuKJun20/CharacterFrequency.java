@@ -26,23 +26,25 @@ public class CharacterFrequency {
 	 }
 	 
 	void countFrequencyCharacter(String[] input) {
-		int count=0;
+		int totalcount=0;
 		 System.out.println("Which charcter  do you want to count: ");
 		 char ch = scanner.next().charAt(0);
 		 for(int index=0; index<input.length;index++) {
 			 String strtomatch =input[index];
-			
+			 int count=0;
 			 for(int character=0;character<strtomatch.length();character++)
 			 {
+				 
 				 if(ch==strtomatch.charAt(character))
 				 {
-					 count++;
+					count++;
+					totalcount++;
 				 }
 			 }
-		}
-		 System.out.println("Character you entered comes "+count+" times ");
-	}
-	  
+			 System.out.println("Frequency Of Character "+ch+ " are " +count+ " times in" +input[index]);
+		    }
+		System.out.println("Total Frequency Of Character  "+ch+ " are " +totalcount+" times  in "+input.length+" elements of string array");
 	
   }
+}
 
