@@ -4,20 +4,21 @@ import java.util.Scanner;
 
 public class FreqCharacter {
 	void frequencyChar(String[] input, char ch){
-		int count=0;
+		int count;
 		for(int i=0; i < input.length; i++){
+			count=0;
 			for(int index=0;index<input[i].length();index++){
 				if(input[i].charAt(index) == ch){
 					count++;
 				}
 			}
+			if(count==0){
+				System.out.println("You enter a invalid character: " + ch);
+			}else{
+				System.out.println("Frequency of character in name :" + input[i] + " is: " + count);
+			} 
 		}
-		if(count==0){
-		System.out.println("You enter a invalid character: " + ch);
-		}
-		else {
-		System.out.println("Frequency of character in input is: " + count);
-		}
+		
 	}
 	
 	public static void main(String[] args){
