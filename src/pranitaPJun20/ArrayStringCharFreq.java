@@ -5,36 +5,40 @@ import java.util.Scanner;
 public class ArrayStringCharFreq {
 	
 	void findArrayCharFreq(String[] input,char ch) {
-		int count=0;
+		int totalCount=0;
+		
 		//first for loop is for selecting string element(name/word) index-wise
 		for(int index=0;index<input.length;index++) {
 			//second for loop is for finding char using the length of the name entered
+			int count=0;
 			for(int i=0;i<input[index].length();i++) {
 				
 				if(input[index].charAt(i)==ch) {
 					count++;
-				}
+					totalCount++;
+				}		
+			}
+			System.out.println("\nFrequency of "+ch+" in name "+input[index]+" is :"+count);
 		}
-	}
-		System.out.println("\nFrequency of "+ch+" is: "+count);	
+		System.out.println("\nFrequency of "+ch+" in array is :"+totalCount);
 	}
 		
 		/*not working properly
 		 * void findArrayCharFreqOther(String[] input,char ch) {
-			int count1=0;
+			int finalCount=0;
 			String findCh = String.valueOf(ch);
-			//first for loop is for selecting string element(name/word) index-wise
+			
 			for(int index=0;index<input.length;index++) {
-				//second for loop is for finding char using the length of the name entered
+				int count=0;
 				for(int i=0;i<input[index].length();i++) {
 					
-					if(input[index].equalsIgnoreCase(findCh));
+					if((input[index].charAt(i)).equalsIgnoreCase(findCh));
 						count1++;	
+						totalCount++;
 			}
 		}
 			System.out.println("\nFrequency of "+ch+" is: "+count1);	
 	}*/
-	
 	
 	public static void main(String[] args) {
 		ArrayStringCharFreq arrayStringCharFreq = new ArrayStringCharFreq();
