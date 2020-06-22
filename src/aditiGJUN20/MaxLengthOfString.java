@@ -14,7 +14,7 @@ public class MaxLengthOfString {
 	int arraySize;
 	
 	// Method to take names from user..
-	void getString() {
+	void setString() {
 		Scanner scanner=new Scanner(System.in);
 		
 		System.out.println("How many Names do you want to Enter?");
@@ -37,17 +37,14 @@ public class MaxLengthOfString {
 			if(longestString.length() < name[index].length())
 				longestString=name[index];
 		}
-		
 		return longestString;
 	}
 	
 	public static void main(String[] args) {
 		MaxLengthOfString maxLengthOfString=new MaxLengthOfString();
-		maxLengthOfString.getString();
+		maxLengthOfString.setString();
 		System.out.println("Entered name ->"+maxLengthOfString.stringMaxLength()+" is longest and it has "
 		+maxLengthOfString.stringMaxLength().length()+" characters");
-		
-
 	}
 
 }
