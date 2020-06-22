@@ -5,14 +5,16 @@ import java.util.Scanner;
 public class CharFrequency {
 		
 	void findCharFreq(String[] input, char ch) {
-		int count=0;
+		
 		for(int arrIndex =0;arrIndex < input.length ;arrIndex++) {
+			int count=0;
 			for(int index=0; index < input[arrIndex].length();index++) {
 				if(input[arrIndex].charAt(index) == ch) 
 					count++;
-			}
+				
+			}System.out.println("Frquency of " +ch+ " in " +input[arrIndex]+ " --> " +count);
 		}
-		System.out.println("Frquency of " +ch+ " is : " +count);
+		
 	}
 	
 	public static void main(String[] args) {
