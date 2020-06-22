@@ -1,5 +1,4 @@
 package technoCredits.stringDemo;
-
 import java.util.Scanner;
 
 public class CharFreq {
