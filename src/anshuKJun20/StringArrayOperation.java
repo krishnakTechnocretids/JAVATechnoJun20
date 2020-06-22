@@ -9,35 +9,51 @@ public class StringArrayOperation {
 		
 		StringArrayOperation stringarrayoperation = new StringArrayOperation();
 		// Client Enter Value 
-		System.out.println("How many elements of String do you want to Enter:");
+		System.out.println("How many elements of string do you want to enter:");
 		// Scan Client Output
 		int strname = scanner.nextInt();
 		  // Declare String
 		String[] namearray = new String[strname];
 		// operation call
 		 stringarrayoperation.insertNameGivenByClient(namearray);
-		String[] maximumLength = stringarrayoperation.getMaxLength(namearray);
-		// print Name + Length of array 
-		System.out.println("The Maximum Lenth Of Array is "+maximumLength + namearray.length);
+		 stringarrayoperation.printMaxLength(namearray);
+		 stringarrayoperation.printMinLength(namearray);
+		
 		}
 	// Method For Intiallize Array
-	String[] insertNameGivenByClient(String[] namearray){
+	 String[] insertNameGivenByClient(String[] namearray){
 		for(int index =0;index < namearray.length;index++) {
 			// Client Intialize array
-			System.out.println("Please Enter Your Element Name" +(index+1)+":");
+			System.out.println("Please enter your  name" +(index+1)+":");
 			// Scan Client Output
 			namearray[index] = scanner.next();
 		}return namearray;
 	}  
 	//Method for Getting MaxLength
-	String[] getMaxLength(String[] namearray){
+	void printMaxLength(String[] namearray){
+	      int maxlength=0;
 		for(int index = 0; index < namearray.length;index++) {
-			int maxlength;
+			
 			if(namearray.length>0) {
-				 maxlength = namearray.length;
+				 maxlength = namearray[index].length();
 			}else
 				System.out.println("Please enter valid Input");
-		}return namearray;
+		}
+		
+		System.out.println("Maxmium lenth = "+ maxlength);
 	}
-}///End
+	void printMinLength(String[] namearray){
+		
+		int minlength=namearray[0].length();
+		for(int index = 1; index < namearray.length;index++) {
+			
+			if(minlength<namearray[0].length()) {
+				 minlength = namearray[index].length();
+			  }
+			}
+		
+		System.out.println("Minimum lenth = "+ minlength);
+		}
+	}
+///End
 
