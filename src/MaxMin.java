@@ -4,7 +4,7 @@ public class MaxMin {
 	
 	void maximum(int[] input) {
 		int max = input[0];
-		for(int index=0; index<input.length; index++) {
+		for(int index=1; index<input.length; index++) {
 			if(input[index]>max)
 				max = input[index];
 		}
@@ -13,7 +13,7 @@ public class MaxMin {
 	
 	void minimum(int[] input) {
 		int min = input[0];
-		for(int index=0; index<input.length; index++) {
+		for(int index=1; index<input.length; index++) {
 			if(input[index]<min)
 				min = input[index];
 		}

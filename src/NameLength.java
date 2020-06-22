@@ -4,7 +4,7 @@ public class NameLength {
 	
 	void printLength(String[] input) {
 		String max = input[0];
-		for(int index=0; index<input.length;index++) {
+		for(int index=1; index<input.length;index++) {
 			if(input[index].length() > max.length())
 				max = input[index];
 		}
