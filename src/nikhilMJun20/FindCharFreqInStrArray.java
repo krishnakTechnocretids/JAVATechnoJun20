@@ -10,13 +10,14 @@ public class FindCharFreqInStrArray {
 		
 		for(int arrElementIndex=0; arrElementIndex < strArray.length; arrElementIndex++) {
 			//String buffStr = strArray[arrElementIndex];
+			chFreq = 0;
 			for(int index=0; index < strArray[arrElementIndex].length(); index++) {
 				//String strCh = String.valueOf(strArray[arrElementIndex].charAt(index));
 				if(String.valueOf(strArray[arrElementIndex].charAt(index)).equalsIgnoreCase(findCh))
 					chFreq++;
 			}
+			System.out.println("Frequency of "+findCh+" Character in the String "+strArray[arrElementIndex]+" = " +chFreq);
 		}
-		System.out.println("Frequency of "+findCh+" Character in the String Array = "+chFreq);
 	}
 	
 	public static void main(String[] args) {
