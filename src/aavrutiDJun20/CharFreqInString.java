@@ -7,18 +7,19 @@ import java.util.Scanner;
 public class CharFreqInString {
 	
 	void charFreqCount(String[] input,char ch) {
-		int count = 0;
+		System.out.println("\nCount of the character '" + ch + "' is : ");
 		for(int index=0;index<input.length;index++) {
+			int count = 0;
 			for(int index2=0;index2<input[index].length();index2++) {
 				if(input[index].charAt(index2) == ch)
 					count++;
 			}
+			System.out.println(input[index] + " --> " + count);
 		}
-		System.out.println("Total count of Character " + ch + " is : " + count);
 	}
 		
 	public static void main(String[] args) {
-		CharFreqInString CharFreqInString = new CharFreqInString();
+		CharFreqInString charFreqInString = new CharFreqInString();
 		Scanner scanner = new Scanner(System.in);
 		
 		int arraySize;
@@ -41,7 +42,7 @@ public class CharFreqInString {
 		System.out.println("Enter the character for which you want to find frequency : ");
 		char ch = (scanner.next().toLowerCase()).charAt(0);
 				
-		CharFreqInString.charFreqCount(inputString,ch);
+		charFreqInString.charFreqCount(inputString,ch);
 		
 		scanner.close();
 	}
