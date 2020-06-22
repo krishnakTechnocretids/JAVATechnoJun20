@@ -35,13 +35,11 @@ public class CharFreqInString {
 		
 		for(int index=0;index<inputString.length;index++) {
 			System.out.println("Please enter string " + (index+1) + " : ");
-			inputString[index] = scanner.next();
-			inputString[index] = inputString[index].toLowerCase();
+			inputString[index] = scanner.next().toLowerCase();
 		}
 		
 		System.out.println("Enter the character for which you want to find frequency : ");
-		char ch = (scanner.next()).charAt(0);
-		ch = Character.toLowerCase(ch);
+		char ch = (scanner.next().toLowerCase()).charAt(0);
 				
 		CharFreqInString.charFreqCount(inputString,ch);
 		
