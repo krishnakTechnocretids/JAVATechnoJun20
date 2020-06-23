@@ -15,21 +15,16 @@ import java.util.Scanner;
 public class SumOfEven {
 
 	void sumEven(int[] num){
-		//int count = 0;
 		int sum=0;
 		for(int index = 0; index<num.length ; index++){
 			if(num[index]%2==0)
 				sum = sum+num[index];
 		}
-		//System.out.println(int[] num);
 		System.out.println("Sum of even inputs:" +sum);
-		
-		
 	}
 	public static void main(String[] args) {
 		SumOfEven sumOfEven = new SumOfEven();
 		Scanner scanner = new Scanner(System.in);
-		//int size= scanner.nextInt();
 		System.out.println("How many inputs you want to provide");
 		int size= scanner.nextInt();
 		int[] number = new int[size];
@@ -37,12 +32,8 @@ public class SumOfEven {
 		System.out.println("Input"+(index+1));
 		number[index]=scanner.nextInt();
 		}
-		//System.out.println( Arrays.toString( arr ));
-		System.out.println(Arrays.toString(number));
+		System.out.println("Inputs provided by user " +Arrays.toString(number));//spent 10 mint extra to find this code.
 		sumOfEven.sumEven(number);
-		
-		
-		scanner.close();
-		
+		scanner.close();	
 	}
 }
