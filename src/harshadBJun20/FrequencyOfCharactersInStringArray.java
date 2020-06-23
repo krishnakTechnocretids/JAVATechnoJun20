@@ -18,7 +18,7 @@ public class FrequencyOfCharactersInStringArray{
 			}
 			
 			//System.out.println("Name "+(index+1)+" : "+name[index]+" ---> "+freqCount);
-			System.out.println(ch+" occurs in "+"Name "+(index+1)+" : "+name[index]+" ---> "+freqCount+ " times");
+			System.out.println(freqChar+" occurs in "+"Name "+(index+1)+" : "+name[index]+" ---> "+freqCount+ " times");
 		}
 	}
 	
