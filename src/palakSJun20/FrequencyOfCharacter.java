@@ -26,13 +26,13 @@ import java.util.Scanner;
 	///Finding Character from Array String using Ignore Case 
 	void findCharacterFromArrayAnotherMethod(String[] array , char findCh){
 		String name = null;
-		int count = 0;
+		
 		String findChar = String.valueOf(findCh);
 		for (int i = 0; i < array.length; i++) {
 			name = array[i];
-			
-			for (int j = 0; j < name.length(); j++) {
-				if(name.equalsIgnoreCase(findChar))
+			int count = 0;
+			for (int j = 0; j < array[i].length(); j++) {
+				if(String.valueOf(name.charAt(j)).equalsIgnoreCase(findChar))
 					count++;
 			}
 				System.out.println("Name is " + name +" character "+ findChar + " --> "+ count);
