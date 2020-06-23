@@ -41,7 +41,7 @@ public class PositiveNegativeIntOps {
 	}
 	
 	// Method which counts positive and negative integers
-	// 
+	// It also calculates the sum of positive and negetive integers and returns the difference
 	int getPositivenegativeNumAndDiff(int[] inputArray) {
 		int diff=0;
 		for(int index=0;index<inputArray.length;index++) {
