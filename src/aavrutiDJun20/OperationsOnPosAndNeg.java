@@ -1,3 +1,6 @@
+//posAndNegSum() method - Sum of positive and Negative numbers using array provided by user
+//posAndNegCount() method - count of total Positive and Negative Number using array provided by user
+
 package aavrutiDJun20;
 
 import java.util.Scanner;
