@@ -14,16 +14,14 @@ package nikhilMJun20;
 public class CharClassify {
 	void findCharType(String str) {
 		int digitCnt=0, upperCnt=0, lowerCnt=0, specialCnt=0;
-		
+		  
 		for(int index=0; index<str.length(); index++) {
 			if(Character.isDigit(str.charAt(index)))
 				digitCnt++;
-			else if(Character.isLetter(str.charAt(index))) {
-				if(Character.isLowerCase(str.charAt(index)))
+			else if(Character.isLowerCase(str.charAt(index)))
 					lowerCnt++;
-				else
+			else if (Character.isUpperCase(str.charAt(index)))
 					upperCnt++;
-				}
 			else
 				specialCnt++;
 		}
