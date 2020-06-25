@@ -5,7 +5,7 @@ package ajitSJune20;
 public class CountLetDigSpclChar {
 	
 	void displayCount(String str) {
-		int upper = 0, lower = 0, digit = 0, special = 0, letter=0; 
+		int upper = 0, lower = 0, digit = 0, special = 0; 
 		
 		for(int index=0;index<str.length();index++) {
 			char ch=str.charAt(index);
@@ -15,8 +15,6 @@ public class CountLetDigSpclChar {
 				upper++;
 			else if(Character.isLowerCase(ch))
 				lower++;
-			else if(Character.isLetter(ch))
-				letter++;
 			else
 				special++;
 		}
@@ -24,7 +22,7 @@ public class CountLetDigSpclChar {
 		System.out.println("Total UpperCase:----> "+upper);
 		System.out.println("Total LowerCase:----> "+lower);
 		System.out.println("Total SpecialChar:--> "+special); */
-		System.out.println("Total Digit:--------> "+digit + "\nTotal Letters:------> "+letter+ "\nTotal UpperCase:----> "+upper+"\nTotal LowerCase:----> "+lower+"\nTotal SpecialChar:--> "+special);
+		System.out.println("Total Digit:--------> "+digit + "\nTotal Letters:------> "+(upper+lower)+ "\nTotal UpperCase:----> "+upper+"\nTotal LowerCase:----> "+lower+"\nTotal SpecialChar:--> "+special);
 	}
 
 	public static void main(String[] args) {
