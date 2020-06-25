@@ -10,7 +10,6 @@ Total Special char: 2*/
 package palakSJun20;
 
 public class CountCharacterFromString {
-	static int totalCount = 0;
 	
 	void countDifferentCharacters(String string){
 		int digitCount = 0 , upperCaseCount = 0 , lowerCaseCount = 0 , specialCharacterCount = 0;
@@ -20,17 +19,15 @@ public class CountCharacterFromString {
 					digitCount++;
 				else if(Character.isUpperCase(ch)) {
 					upperCaseCount++;
-					totalCount++;
 				}
 				else if(Character.isLowerCase(ch)) {
-					lowerCaseCount++;
-					totalCount++;
+					lowerCaseCount++;	
 				}
 				else 
 					specialCharacterCount++;
 			}
 			System.out.println("Total Digit : " + digitCount +"\n"+ "Total UpperCase : "+ upperCaseCount+"\n"+"Total LowerCase : "+lowerCaseCount
-					+"\n"+ "Total Special Char : "+specialCharacterCount+"\n"+ "Total Letters : " + totalCount);
+					+"\n"+ "Total Special Char : "+specialCharacterCount+"\n"+ "Total Letters : " + (upperCaseCount+lowerCaseCount));
 		}
 
 	public static void main(String[] args) {

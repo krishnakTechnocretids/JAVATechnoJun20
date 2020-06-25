@@ -26,12 +26,21 @@ public class FirstLastIndexOfCharacters {
 		}
 	}
 	
+	void FirstAndLast(String input){
+		for (int index = 0; index < input.length(); index++) {
+			char ch = input.charAt(index);
+			int count = 0;	
+			if( index == input.indexOf(ch) && input.indexOf(ch) < input.lastIndexOf(ch)  )
+				System.out.print(ch+ " -> First Index = "+ input.indexOf(ch) + " Last Index = "+ input.lastIndexOf(ch) +"\n");
+		}
+	}
+	
 	public static void main(String[] args) {
 		String string = "technocredits";
 		FirstLastIndexOfCharacters indexOfCharacters = new FirstLastIndexOfCharacters();
 		System.out.println("Input : " + string);
-		indexOfCharacters.findFirstAndLastIndex(string);
-
+		//indexOfCharacters.findFirstAndLastIndex(string);
+		indexOfCharacters.FirstAndLast(string);
 	}
 
 }
