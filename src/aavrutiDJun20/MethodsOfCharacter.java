@@ -15,22 +15,18 @@ public class MethodsOfCharacter {
 			char ch = input.charAt(index);
 			if(Character.isDigit(ch) == true) 
 				digitCnt++;
-			else if(Character.isUpperCase(ch) == true) {
+			else if(Character.isUpperCase(ch) == true)
 				upperCaseCnt++;
-			    letterCnt++;
-			}
-			else if(Character.isLowerCase(ch) == true) {
-				lowerCaseCnt++;			
-				letterCnt++;
-			}
+			else if(Character.isLowerCase(ch) == true)
+				lowerCaseCnt++;
 			else
 				specialChar++;
 		}
-		System.out.println("Total digit        : " + digitCnt);
-		System.out.println("Total Letters      : " + letterCnt);
+		System.out.println("Total Digit        : " + digitCnt);
+		System.out.println("Total Letters      : " + (upperCaseCnt+lowerCaseCnt));
 		System.out.println("Total Uppercase    : " + upperCaseCnt);
 		System.out.println("Total Lowercase    : " + lowerCaseCnt);
-		System.out.println("Total Special char : " + specialChar);
+		System.out.println("Total Special Char : " + specialChar);
 	}
 	
 	public static void main(String[] args) {
