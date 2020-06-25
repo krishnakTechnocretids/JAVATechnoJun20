@@ -83,7 +83,7 @@ public class CharFreqInStringArray {
 		String str=scanner.next();
 		charFreqInStringArray.findAllCharFreqinString(str);
 		
-		// Taking String Array input from user to find frequency of all characters for all the elements of an Array
+		// Taking String Array input from user to find frequency of all characters.
 		System.out.println("How many Names/Value you want to enter in Array?");
 		int arraySize=scanner.nextInt();
 		String[] strArray= new String[arraySize];
