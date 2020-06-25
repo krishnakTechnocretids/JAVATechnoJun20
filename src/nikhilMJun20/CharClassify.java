@@ -13,21 +13,21 @@ package nikhilMJun20;
 
 public class CharClassify {
 	void findCharType(String str) {
-		int digitCnt=0, letterCnt=0, upperCnt=0, lowerCnt=0, specialCnt=0;
+		int digitCnt=0, upperCnt=0, lowerCnt=0, specialCnt=0;
 		
 		for(int index=0; index<str.length(); index++) {
-			if(Character.isDigit(str.charAt(index))) {
+			if(Character.isDigit(str.charAt(index)))
 				digitCnt++;
-			}else if(Character.isLetter(str.charAt(index))) {
-				letterCnt++;
+			else if(Character.isLetter(str.charAt(index))) {
 				if(Character.isLowerCase(str.charAt(index)))
 					lowerCnt++;
 				else
 					upperCnt++;
-			}else
+				}
+			else
 				specialCnt++;
 		}
-		System.out.println("String Given: "+str+"\n\nTotal Digits: "+digitCnt+"\nTotal Letters: "+letterCnt+"\nTotal Lower Case Letters: "+lowerCnt+"\nTotal Upper Case Letters: "+upperCnt+"\nTotal Special Characters: "+specialCnt);
+		System.out.println("String Given: "+str+"\n\nTotal Digits: "+digitCnt+"\nTotal Letters: "+(lowerCnt+upperCnt)+"\nTotal Lower Case Letters: "+lowerCnt+"\nTotal Upper Case Letters: "+upperCnt+"\nTotal Special Characters: "+specialCnt);
 	}
 	
 	public static void main(String[] args) {
