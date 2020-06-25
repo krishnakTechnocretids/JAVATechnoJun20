@@ -18,19 +18,19 @@ public class IndexOfEx2 {
 			char ch = input.charAt(i);
 			if(Character.isDigit(ch))
 					digitCount++;	
-			else if(Character.isLetter(ch))
+			else if(Character.isLetter(ch)){
 				totalCount++;
 	
-			else if(Character.isLowerCase(ch))
+		if(Character.isLowerCase(ch))
 				lowerCount++;
 			
-			else if(Character.isUpperCase(ch))
+		 if(Character.isUpperCase(ch))
 				upperCount++;
 			
 			else 
 				specialCount++;
 		}	
-			
+		}
 		System.out.println("Count of digit in the given string is "+ digitCount);
 		System.out.println("Count of uppercase in the given string is "+ upperCount);
 		System.out.println("Count of lowercase in the given string is "+ lowerCount);
