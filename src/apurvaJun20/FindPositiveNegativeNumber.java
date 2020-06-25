@@ -25,7 +25,7 @@ public class FindPositiveNegativeNumber {
 				 negativeCount++;
 		}
 	}
-		System.out.println("Number of Positive integers enterd="+positiveCount+"\n Number of Negative integers enterd="+negativeCount);
+		System.out.println("Number of Positive integers entered="+positiveCount+"\n Number of Negative integers entered="+negativeCount);
 		
 		return intSum;
 		
