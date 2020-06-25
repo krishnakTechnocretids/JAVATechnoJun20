@@ -10,7 +10,7 @@ public class ArrayFreqOfNumber {
 			if(array[index] == number) 
 				count++;	
 		}
-			if(count == number)
+			if(count == 0)
 				System.out.println("Given Number " + number + " is not present in predefined array " );
 			else 
 				System.out.println("Given Number " + number + " is present in predefined array with frequency " + count);
