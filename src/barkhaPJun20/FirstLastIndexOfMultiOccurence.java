@@ -3,13 +3,13 @@ package barkhaPJun20;
 public class FirstLastIndexOfMultiOccurence {
 	
 	void findFirstLastIndex(String name) {
-		for(int outerIndex=0; outerIndex<name.length(); outerIndex++) {
-			char ch=name.charAt(outerIndex);
+		for(int index=0; index<name.length(); index++) {
+			char ch=name.charAt(index);
 			
-			if(outerIndex==name.indexOf(ch)) {
+			if(index==name.indexOf(ch)) {
 				
 				if (name.indexOf(ch)!=name.lastIndexOf(ch))
-			System.out.println(ch+" -> First Index in String is: "+name.indexOf(ch) +" & Last Index in String is: "+name.lastIndexOf(ch));	
+			System.out.println(ch+""+"(" +name +") -> First Index in String is: "+name.indexOf(ch) +" & Last Index in String is: "+name.lastIndexOf(ch));	
 				}
 			}
 		}
