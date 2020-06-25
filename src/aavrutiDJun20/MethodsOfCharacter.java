@@ -6,7 +6,6 @@ public class MethodsOfCharacter {
 
 	void verifyMethodsOfCharacter(String input) {
 		int digitCnt = 0;
-		int letterCnt = 0;
 		int upperCaseCnt = 0;
 		int lowerCaseCnt = 0;
 		int specialChar = 0;
