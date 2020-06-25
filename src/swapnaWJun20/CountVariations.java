@@ -5,7 +5,6 @@ public class CountVariations {
 	void checkInput(String name)
 	{
 		int dCount = 0;
-		int letterCount = 0;
 		int uCount = 0;
 		int lCount = 0;
 		int specialCount = 0;
@@ -18,19 +17,16 @@ public class CountVariations {
 
 			if(Character.isDigit(ch)) 
 				dCount++;
-			else if (Character.isLetter(ch)) 
-				letterCount++;
-			else
-				specialCount++;
-
-			if(Character.isLowerCase(ch)) 
+			else if(Character.isLowerCase(ch)) 
 				lCount++;
 			else if(Character.isUpperCase(ch))
 				uCount++;
+			else
+				specialCount++;
 		}
 
 		System.out.println("\nTotal Digits: "+ dCount +
-				"\nTotal Letters: " + letterCount+
+				"\nTotal Letters: " + (uCount+lCount)+
 				"\nTotal Uppercase: " + uCount+
 				"\nTotal Lowercase: " +lCount +
 				"\nTotal Special char: "+specialCount);
