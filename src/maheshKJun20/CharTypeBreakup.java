@@ -6,20 +6,18 @@ public class CharTypeBreakup {
 		//Method will find the number of Digits, Letters, Special Character, Uppercase letter and lowercase letter from the input string
 		System.out.println("Input String value: " + str);
 		int countDigit = 0, countLetters =0, countUppercase =0, countLowercase = 0, countSpecialChar =0;
-		for (int index=0;index<str.length();index++) {			if (Character.isDigit(str.charAt(index))) {
+		for (int index=0;index<str.length();index++) {			
+			if (Character.isDigit(str.charAt(index))) {
 				countDigit++;
-			}else if (Character.isLetter(str.charAt(index))) {
-				countLetters++;
-				if (Character.isUpperCase(str.charAt(index))) {
-					countUppercase++;
-				}else {
-					countLowercase++;
-				}
+			}else if (Character.isUpperCase(str.charAt(index))) {
+				countUppercase++;
+			}else if(Character.isLowerCase(str.charAt(index))) {
+				countLowercase++;
 			}else {
 				countSpecialChar++;
 			}
 		}
-		System.out.println("Total Digits: " + countDigit + "\nTotal Lettes: " + countLetters + "\nTotal UpperCase: " + countUppercase + "\nTotal LowerCase: " + countLowercase + "\nTotal Special Character: " + countSpecialChar + "\n");
+		System.out.println("Total Digits: " + countDigit + "\nTotal Lettes: " + (countUppercase+countLowercase) + "\nTotal UpperCase: " + countUppercase + "\nTotal LowerCase: " + countLowercase + "\nTotal Special Character: " + countSpecialChar + "\n");
 	}
 	
 	public static void main(String[] args) {
