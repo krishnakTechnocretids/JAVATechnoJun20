@@ -13,24 +13,22 @@ Total Lowercase: 3
 Total Special char: 2*/
 
 public class CountOfCharsUsingWrapper{
-	int digitCount,letterCount,uppercaseCount,lowercaseCount,specialCharCount;
+	int digitCount,uppercaseCount,lowercaseCount,specialCharCount;
 	void printCountOfChars(String str1) {
 		
 		for(int index=0;index<str1.length();index++){
+			
 			if(Character.isDigit(str1.charAt(index))==true)
-				digitCount++;
-			else if(Character.isLetter(str1.charAt(index))==true)
-				letterCount++;
-			else
-				specialCharCount++;
+				digitCount++;  			
 			if(Character.isUpperCase(str1.charAt(index))==true)
 				uppercaseCount++;
 			if(Character.isLowerCase(str1.charAt(index))==true)
 				lowercaseCount++;	
+			specialCharCount = (str1.length() - digitCount - uppercaseCount - lowercaseCount);
 			
 		}
 		System.out.println("Total digit: "+digitCount);
-		System.out.println("Total Letter: "+letterCount);
+		System.out.println("Total Letter: "+(uppercaseCount + lowercaseCount));
 		System.out.println("Total Uppercase: "+uppercaseCount);
 		System.out.println("Total Lowercase: "+lowercaseCount);
 		System.out.println("Total Special char: "+specialCharCount);

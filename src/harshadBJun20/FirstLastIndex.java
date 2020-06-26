@@ -18,16 +18,8 @@ public class FirstLastIndex{
 		for(int index=0;index<str.length();index++){
 			char ch = str.charAt(index);
 			if(index == str.indexOf(ch) && index!=str.lastIndexOf(ch)){
-				System.out.print(ch+" -> first index = "+index);
-				//if(index == str.indexOf(ch)) {
-					for(int j=0;j<str.length();j++){
-						if(j==str.lastIndexOf(ch)){
-							System.out.println(" last index = "+j);
-						}
-					}			
-				//}
-			}
-				
+				System.out.println(ch+" -> first index = "+str.indexOf(ch)+ " last index = "+str.lastIndexOf(ch));
+			}				
 		}
 	}
 	public static void main(String args[]){
@@ -36,5 +28,4 @@ public class FirstLastIndex{
 		
 		firstLastIndex.returnFirstIndex(name);
 	}
-
 }			
