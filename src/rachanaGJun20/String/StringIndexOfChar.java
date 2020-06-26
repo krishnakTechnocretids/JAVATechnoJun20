@@ -16,17 +16,9 @@ public class StringIndexOfChar {
 													// occurrence is more than one
 
 		for (int i = 0; i < str.length(); i++) {
-			int charcount = 0;
-			if (i == str.indexOf(str.charAt(i))) {
-				for (int j = 0; j < str.length(); j++) {
-					if (str.charAt(i) == str.charAt(j))
-						charcount++;
-				}
-			}
-			if (charcount > 1)
+			if (i == str.indexOf(str.charAt(i)) && i != str.lastIndexOf(str.charAt(i)))
 				System.out.println(str.charAt(i) + "-> First index = " + str.indexOf(str.charAt(i)) + "Last index = "
 						+ str.lastIndexOf(str.charAt(i)));
-
 		}
 	}
 
