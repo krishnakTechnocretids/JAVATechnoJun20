@@ -3,15 +3,15 @@ package vireshJJun20.Assignment17;
 public class StringMembers {
 
 	void CheckString(String str){
-		int cLetter=0;
+		//int cLetter=0;
 		int cLower=0;
 		int cUpper=0;
 		int cDigit=0;
 		int cOther=0;
 		for (int i=0; i<str.length(); i++){
-			if(Character.isLetter(str.charAt(i))){
+			/*if(Character.isLetter(str.charAt(i))){
 				cLetter++;
-			}
+			}*/
 			if (Character.isLowerCase(str.charAt(i))){
 				cLower++;
 			}
@@ -27,7 +27,7 @@ public class StringMembers {
 		}
 		
 		System.out.println(" - Total Digit: " + cDigit);
-		System.out.println(" - Total Letters: " + cLetter);	
+		System.out.println(" - Total Letters: " + (cUpper+cLower));	
 		System.out.println(" - Total Uppercase: " + cUpper);
 		System.out.println(" - Total Lowercase: " + cLower);
 		System.out.println(" - Total Special char: " + cOther);
