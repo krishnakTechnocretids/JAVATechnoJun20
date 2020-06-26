@@ -17,19 +17,17 @@ public class CharacterMethods {
 		int specialChar = 0;
 		for(int index = 0;index<str.length();index++) {
 			char ch = str.charAt(index);
-			if (Character.isDigit(ch)==true)
+			if (Character.isDigit(ch))
 				digitCount++;
-			else if(Character.isLetter(ch) == true) {
-			if(Character.isUpperCase(ch) == true)
+			else if (Character.isUpperCase(ch))
 				uppercase++;
-			else
+			else if (Character.isLowerCase(ch))
 				lowercase++;
-			}
 			else
 				specialChar++;
 		}
 		System.out.println(" Total digit : "+ digitCount + "\n Total Letters: " + (uppercase+lowercase) + "\n Total Uppercase: "+ uppercase);
-		System.out.println(" Total Lowercase : "+ lowercase + "\n Total Special Char " + specialChar);
+		System.out.println(" Total Lowercase: "+ lowercase + "\n Total Special Char " + specialChar);
 	}
 	public static void main(String[] args) {
 		String str = "1rRpd3F9#K(E";
