@@ -4,7 +4,6 @@ public class CheckCharacterMethods {
 	
 	void testCharMethod(String name,char ch) {
 		int digitCount=0;
-		int letterCount=0;
 		int upperCaseCount=0;
 		int lowerCaseCount=0;
 		int specialCharCount=0;
@@ -14,7 +13,6 @@ public class CheckCharacterMethods {
 				digitCount++;
 			}
 			else if(Character.isLetter(name.charAt(index))) {
-				letterCount++;
 				if(Character.isUpperCase(name.charAt(index))) 
 					upperCaseCount++;
 				else 
@@ -25,7 +23,7 @@ public class CheckCharacterMethods {
 		}
 		System.out.println("The given string is "+name);
 		System.out.println("total Digit : "+digitCount);
-		System.out.println("Total Letters : "+letterCount);
+		System.out.println("Total Letters : "+(upperCaseCount+lowerCaseCount));
 		System.out.println("Total Uppercase : "+upperCaseCount);
 		System.out.println("Total Lowercase : "+lowerCaseCount);
 		System.out.println("Total Special Character : "+specialCharCount);	
