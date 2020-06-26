@@ -6,10 +6,7 @@ public class Example4 {
 	public static void main(String[] args) {
 		String msg1 = "Hello ";
 		String msg2 = " hello  ";
-		String msg3 = "Hello";
-		
-		StringBuffer sb = new StringBuffer("Hello this is technocredits");
-		System.out.println(sb.reverse());
+		String msg3 = "Hello";	
 		msg1 = msg1.trim().toLowerCase();
 		msg2 = msg2.trim().toLowerCase();
 		

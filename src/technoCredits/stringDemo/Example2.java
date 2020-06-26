@@ -1,7 +1,6 @@
 package technoCredits.stringDemo;
 
 public class Example2 {
-	
 	public static void main(String[] args) {
 		String[] arr = {"Maulik", "Krishna", "Maulik", "Techno", "Maulik", "Techno"};
 		String input = "aashta"; // == // .equals

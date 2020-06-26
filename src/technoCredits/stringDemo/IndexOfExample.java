@@ -1,7 +1,6 @@
 package technoCredits.stringDemo;
 
 public class IndexOfExample {
-
 	static void printIndex() {
 		String name = "technocredits";
 		for(int index=0;index<name.length();index++) {

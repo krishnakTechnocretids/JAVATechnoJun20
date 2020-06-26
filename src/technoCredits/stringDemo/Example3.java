@@ -1,7 +1,6 @@
 package technoCredits.stringDemo;
 
 public class Example3 {
-
 	public static void main(String[] args) {
 		String input1 = "";
 		System.out.println(input1.length());

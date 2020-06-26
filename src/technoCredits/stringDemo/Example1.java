@@ -1,7 +1,6 @@
 package technoCredits.stringDemo;
 
 public class Example1 {
-
 	static void printCharFreq(String name) {
 		for(int j=0;j<name.length();j++) {
 			char ch = name.charAt(j);
