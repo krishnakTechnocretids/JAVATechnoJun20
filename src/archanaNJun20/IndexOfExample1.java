@@ -6,27 +6,24 @@ public class IndexOfExample1 {
 	{
 		int digitCount=0;
 		int uCount=0;
-		int lCount=0;
 		int loCount=0;
 		int spCount=0;
 
 		for(int index=0;index<input.length();index++){
 			char ch=input.charAt(index);
-			if(Character.isDigit(ch)) 
+				if(Character.isDigit(ch)) 
 				digitCount++;
-			else  if(Character.isLetter(ch)) {
-				lCount++;
 				if(Character.isUpperCase(ch)) 
 					uCount++;
 				if(Character.isLowerCase(ch))
 					loCount++;
-			}
-			else{
+			
+			else {
 				spCount++;
 			}
 		}
 		System.out.println("Total digit "+digitCount);
-		System.out.println("Total Letter "+lCount);
+		System.out.println("Total Letter "+(uCount+loCount));
 		System.out.println("Total Uppercase  "+uCount);
 		System.out.println("Total lowercase "+loCount);
 		System.out.println("Total Character "+spCount);

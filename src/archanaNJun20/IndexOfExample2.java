@@ -6,16 +6,10 @@ public class IndexOfExample2 {
 	{
 		for(int index=0;index<input.length();index++){
 			char ch=input.charAt(index);
-			int count=0;
-			if(index==input.indexOf(ch))
-				for(int index1=0;index1<input.length();index1++) {
-					if(ch==input.charAt(index1)){
-						count++;
+					if(index==input.indexOf(ch))
+					if(input.indexOf(ch)!=input.lastIndexOf(ch)){
+						System.out.println(ch +" first index ="+ input.indexOf(ch) +"  Last index ="+input.lastIndexOf(ch));
 					}
-				}
-			if(count>1){
-				System.out.println(ch +" first index ="+ input.indexOf(ch) +"  Last index ="+input.lastIndexOf(ch));
-			}
 		}
 	}
 	public static void main(String[] args) {
