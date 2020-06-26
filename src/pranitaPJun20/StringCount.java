@@ -33,18 +33,18 @@ public class StringCount {
 			if(Character.isDigit(ch)) 
 				countDigit++;
 			
-			else if(Character.isLetter(ch)) {
-				countLetter++;
-				if(Character.isUpperCase(ch))
-					countUppercase++;
-				else
-					countLowerCase++;
-			}
+			else if(Character.isLowerCase(ch))
+				countLowerCase++;
+			
+			else if (Character.isUpperCase(ch))
+				countUppercase++;
+			
 			else
 				countSpecial++;
 					
 	}
-		System.out.println("\nTotal Digit: "+countDigit+"\nTotal Letters: "+countLetter+"\nTotal Uppercase:"+countUppercase+"\nTotal Lowercase:"+countLowerCase+"\nTotal Special char:"+countSpecial);
+		System.out.println("\nTotal Digit: "+countDigit+"\nTotal Letters: "+(countLowerCase+countUppercase)+"\nTotal Uppercase:"+countUppercase+"\nTotal Lowercase:"+countLowerCase+"\nTotal Special char:"+countSpecial);
+	
 }
 	
 	
