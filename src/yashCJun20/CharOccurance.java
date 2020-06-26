@@ -8,18 +8,15 @@ public class CharOccurance {
 		{
 		char ch=name.charAt(i);
 		if(i == name.indexOf(ch) && i!=name.lastIndexOf(ch)){
-			System.out.print(ch+" -> first index = "+i);
-		for(int index=0;index<name.length();index++) {
-			if(index==name.lastIndexOf(ch)){
-				System.out.println(" last index = "+index);
+			System.out.print(ch+" -> first index = "+name.indexOf(ch));
+			System.out.println(" Last index = "+name.lastIndexOf(ch));
+			
 			}
 		}
 		
 		}
-		}
 		
-	}
-
+	
 	public static void main(String[] args) {
 		
 		CharOccurance charOccurance = new CharOccurance();
