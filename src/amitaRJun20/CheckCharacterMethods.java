@@ -2,22 +2,20 @@ package amitaRJun20;
 
 public class CheckCharacterMethods {
 	
-	void testCharMethod(String name,char ch) {
+	void testCharMethod(String name) {
 		int digitCount=0;
 		int upperCaseCount=0;
 		int lowerCaseCount=0;
 		int specialCharCount=0;
 		
 		for(int index=0;index<name.length();index++) {
-			if(Character.isDigit(name.charAt(index))) {
+			char ch=name.charAt(index);
+			if(Character.isDigit(ch)) 
 				digitCount++;
-			}
-			else if(Character.isLetter(name.charAt(index))) {
-				if(Character.isUpperCase(name.charAt(index))) 
-					upperCaseCount++;
-				else 
-					lowerCaseCount++;
-				}			
+			else if(Character.isUpperCase(ch))
+				upperCaseCount++;
+			else if(Character.isLowerCase(ch))
+				lowerCaseCount++;			
 			else 
 				specialCharCount++;
 		}
@@ -32,7 +30,6 @@ public class CheckCharacterMethods {
 	public static void main(String[] args) {
 		CheckCharacterMethods charMethod=new CheckCharacterMethods();
 		String input=new String("1rRpd3F9#K(E");
-		char ch=input.charAt(0);
-		charMethod.testCharMethod(input,ch);
+		charMethod.testCharMethod(input);
 	}
 }
