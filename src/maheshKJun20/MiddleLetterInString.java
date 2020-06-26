@@ -8,7 +8,7 @@ Output : r is middle character in Harsh
 
 package maheshKJun20;
 
-public class PrintMiddleLetterInString {
+public class MiddleLetterInString {
 
 	void displayMiddleLetterInWord(String str) {
 		//Method to display middle letter of each work in String
@@ -21,8 +21,8 @@ public class PrintMiddleLetterInString {
 	}
 	
 	public static void main(String[] args) {
-		PrintMiddleLetterInString printMiddleLetterInString = new PrintMiddleLetterInString();
+		MiddleLetterInString middleLetterInString = new MiddleLetterInString();
 		String str = "Harsh Maulik";
-		printMiddleLetterInString.displayMiddleLetterInWord(str);
+		middleLetterInString.displayMiddleLetterInWord(str);
 	}
 }
