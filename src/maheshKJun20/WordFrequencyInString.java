@@ -17,6 +17,7 @@ package maheshKJun20;
 public class WordFrequencyInString {
 	
 	void displayWordFrequency(String str) {
+		//This Method was created before the explanation in the call. Keeping it just to get reviewed how efficient this logic is
 		//Method to Count Frequency of all words in String
 		String[] strArray = str.split(" ");
 		for (int index=0; index<strArray.length;index++) {
@@ -35,10 +36,29 @@ public class WordFrequencyInString {
 		}
 	}
 	
+	void displayWordFrequencyNew(String str) {
+		//This Method is created as per the explanation given by Maulik
+		//Method to Count Frequency of all words in String
+		String[] strArray = str.split(" ");
+		for (int index=0; index<strArray.length;index++) {
+			int countOfWord = 1;
+			if (!strArray[index].equals("*")) {
+				for (int innerIndex=(index+1);innerIndex<strArray.length;innerIndex++) {
+					if (strArray[index].equals(strArray[innerIndex])) {
+						countOfWord++;
+						strArray[innerIndex] = "*";
+					}
+				}
+				System.out.println("Frequency of '" + strArray[index] + "' is: " + countOfWord);
+			}
+			
+		}
+	}
+	
 	public static void main(String[] args) {
 		WordFrequencyInString wordFrequencyInString = new WordFrequencyInString();
 		String str = "Tech_no Hi T_EchNo H_I Tech hi_";
-		wordFrequencyInString.displayWordFrequency(str.toLowerCase().replace("_", ""));
+		wordFrequencyInString.displayWordFrequencyNew(str.toLowerCase().replace("_", ""));
 	}
 
 }
