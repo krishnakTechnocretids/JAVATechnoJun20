@@ -56,14 +56,19 @@ public class DifferIndexFromArray {
 		DifferIndexFromArray differIndexFromArray = new DifferIndexFromArray();
 		int[] array1 = {10,2,9,14,3};
 		int[] array2 = {10,2,18,14,3};
+		System.out.println("Find first differ index from given arrays Output : ");
 		differIndexFromArray.findFirstDifferIndex(array1 , array2);
+		System.out.println("---------------------------------------------");
 		
 		int[] array3 ={10,2,9,14,3};
 		int[] array4 = {10,2,18,14,13};
+		System.out.println("Find all differ index from given arrays Output : " );
 		differIndexFromArray.findAllDifferIndex(array3, array4); 
+		System.out.println("----------------------------------------------");
 		
 		int[] array5 = {10,2,9,14,3}; 
 		int[] array6 = {10,2,18,14,3};
+		System.out.println("Find max value at differed index Output : ");
 		differIndexFromArray.findMaxValueAtDifferIndex(array5, array6);
 	}
 
