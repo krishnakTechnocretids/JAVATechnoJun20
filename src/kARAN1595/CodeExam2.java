@@ -11,8 +11,6 @@ public class CodeExam2 {
 	      String str = "1Hh9PR34QP";
 	      for(int i=0; i<str.length();i++){
 	        char ch = str.charAt(i);
-	        System.out.println("Character at :"+ch);
-	        
 	        //char to integer
 			if(Character.isDigit(ch)) {
 				count++;
