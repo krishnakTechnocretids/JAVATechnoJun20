@@ -3,19 +3,12 @@ package aasthaJJun20;
 public class PrimeNumbers {
 	//a) Given number is prime or not. 
 		boolean isPrimeNumber(int num){
-			boolean flag = true;
 			for(int index = 2; index <= Math.sqrt(num); index++){
 				if(num%index == 0){
-					flag = false;
-					return flag;
+					return false;
 				}
 			}
-			if(flag == true){
-				return flag;
-			}
-			else{
-				return flag;
-			}
+			return true;
 		}
 		
 		// b) Print total count of prime numbers between 2->100.
