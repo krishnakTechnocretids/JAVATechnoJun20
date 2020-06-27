@@ -14,18 +14,19 @@ public class SumOfDigitFromString {
 		int sum = 0;
 		for (int i = 0; i < string.length(); i++) {
 			if (Character.isDigit(string.charAt(i))) {
-				 String s = string.valueOf(string.charAt(i));
-				 int  a = Integer.parseInt(s);
-				 sum = sum + a;
+				 String input = string.valueOf(string.charAt(i));
+				 int  digit = Integer.parseInt(input);
+				 sum = sum + digit;
 			}	
 		}
-		 System.out.println("Output :" +sum);	 
+		 System.out.println("Sum of Digit is : " +sum);	 
 	}
 	
 
 	public static void main(String[] args) {
 		String string = "1Hh9PR34QP";
 		SumOfDigitFromString sumOfDigitFromString = new SumOfDigitFromString();
+		System.out.println("Input : "+string);
 		sumOfDigitFromString.findSumOfDigit(string);
 		
 
