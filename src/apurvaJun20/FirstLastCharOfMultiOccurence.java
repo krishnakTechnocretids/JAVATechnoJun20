@@ -16,11 +16,8 @@ public class FirstLastCharOfMultiOccurence {
 				else
 					special++;
 			}
-			System.out.println("Total Digit:--------> "+digit);
-			System.out.println("Total UpperCase:----> "+upper);
-			System.out.println("Total LowerCase:----> "+lower);
-			System.out.println("Total SpecialChar:--> "+special); 
-			System.out.println("Total Digit:--------> "+digit + "\nTotal Letters:------> "+(upper+lower)+ "\nTotal UpperCase:----> "+upper+"\nTotal LowerCase:----> "+lower+"\nTotal SpecialChar:--> "+special);
+			
+			System.out.println("String Given: "+str+"\nTotal Digit:--------> "+digit + "\nTotal Letters:------> "+(upper+lower)+ "\nTotal UpperCase:----> "+upper+"\nTotal LowerCase:----> "+lower+"\nTotal SpecialChar:--> "+special);
 		}
 
 		public static void main(String[] args) {
