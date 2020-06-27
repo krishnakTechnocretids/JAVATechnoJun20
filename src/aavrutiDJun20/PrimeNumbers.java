@@ -22,7 +22,7 @@ public class PrimeNumbers {
 		for(int index=2;index<101;index++) {
 			boolean flag = true;
 			for(int index2=(index+1)/2;index2>=2;index2--) {
-				if(index%index2==0 && index2 != index)
+				if(index%index2==0)
 					flag = false;
 			}
 			if(flag==true) {
