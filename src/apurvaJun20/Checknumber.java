@@ -10,10 +10,10 @@ public class Checknumber {
 					count++;
 					}
 			}
-			if(count>0) 
+			
 				System.out.println("Given number " + num + " is present in predefined array with frequency " +count );
-			    else
-		    	System.out.println("Given number " + num + " is not present in predefined array");
+			 
+		    	
 		}
 		public static void main(String[] args) {
 			Checknumber checknumber= new Checknumber();
