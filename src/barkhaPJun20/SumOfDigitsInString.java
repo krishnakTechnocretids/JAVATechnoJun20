@@ -3,7 +3,7 @@ package barkhaPJun20;
 public class SumOfDigitsInString {
 	
 	
-	void addition(String name) {
+	void addDigitsInString(String name) {
 	
 		int num;
 		int sum=0;
@@ -25,7 +25,7 @@ public class SumOfDigitsInString {
 		SumOfDigitsInString sumofdigits=new SumOfDigitsInString();
 		String name="1HhQ9PR34";
 		
-		sumofdigits.addition(name);
+		sumofdigits.addDigitsInString(name);
 	}
 
 }
