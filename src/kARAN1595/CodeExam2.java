@@ -16,10 +16,11 @@ public class CodeExam2 {
 				temp= String.valueOf(ch);
 				int number1=Integer.parseInt(temp);
 				sum=sum+number1;
-			     System.out.println("sum of integer"+sum );
+			     
 			}
+			
             }
-	       
+	      System.out.println("sum of integer"+sum );
 	      }
 	      
 
