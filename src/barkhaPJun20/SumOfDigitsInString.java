@@ -1,6 +1,6 @@
 package barkhaPJun20;
 
-public class CountDigitsInString {
+public class SumOfDigitsInString {
 	
 	
 	void addition(String name) {
@@ -22,10 +22,10 @@ public class CountDigitsInString {
 	}
 	
 	public static void main(String[] args) {
-		CountDigitsInString sunofdigits=new CountDigitsInString();
+		SumOfDigitsInString sumofdigits=new SumOfDigitsInString();
 		String name="1HhQ9PR34";
 		
-		sunofdigits.addition(name);
+		sumofdigits.addition(name);
 	}
 
 }
