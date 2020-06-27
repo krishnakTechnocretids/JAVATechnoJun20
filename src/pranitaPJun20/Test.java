@@ -14,21 +14,16 @@ public class Test {
 	}
 		
 	void findSumDigitCharString(String input) {
-		int countDigit=0;
 		int sum=0;
-		String temp ="";
-
 		for(int index=0; index<input.length(); index++) {
 			char ch = input.charAt(index);
 				if(Character.isDigit(ch)) {
-					countDigit++;
-					temp= String.valueOf(ch);
-					int number1=Integer.parseInt(temp);
+					String convertedChar= String.valueOf(ch);
+					int number1=Integer.parseInt(convertedChar);
 					sum=sum+number1;
 				}
 		}
 			System.out.println("Sum of the digits in input string:"+sum);
-			System.out.println("Count of the digits in input string:"+countDigit);
 			
 
 	}
