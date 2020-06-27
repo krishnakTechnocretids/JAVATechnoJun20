@@ -5,7 +5,7 @@ public class CodeExam2 {
 	 public static void main(String args[])
 	   {
 		 int sum=0;
-		 int count=0;
+		
 		 String temp="";
 	      // Using charAt() method
 	      String str = "1Hh9PR34QP";
@@ -13,7 +13,6 @@ public class CodeExam2 {
 	        char ch = str.charAt(i);
 	        //char to integer
 			if(Character.isDigit(ch)) {
-				count++;
 				temp= String.valueOf(ch);
 				int number1=Integer.parseInt(temp);
 				sum=sum+number1;
