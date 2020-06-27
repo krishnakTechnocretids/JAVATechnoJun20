@@ -7,9 +7,9 @@ public class MaxValueAtDiffIndex {
 			
 			for (int index=0; index<arr1.length; index++) {
 				if (arr1[index]>arr2[index] ) {
-					System.out.println("Biggest number at unmatching index is: " +arr1[index]);
+					System.out.println("Biggest number at unmatching index "+index+" from ("+arr1[index]+","+arr2[index] +")" +" is: "+arr1[index]);
 				}if (arr1[index]<arr2[index])	
-					System.out.println("Biggest number at unmatching index is: "+arr2[index]);
+					System.out.println("Biggest number at unmatching index "+index+" from ("+arr1[index]+","+arr2[index] +")" +" is: "+arr2[index]);
 			}		
 		}else
 			System.out.println("Both Arrays are not matching.");		
