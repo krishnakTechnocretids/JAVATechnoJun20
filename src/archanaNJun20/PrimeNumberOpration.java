@@ -3,11 +3,11 @@ package archanaNJun20;
 import java.util.Scanner;
 
 public class PrimeNumberOpration {
-	void primeOperation(){
+	void primeOperation(int start,int end){
 		int count=0;
 		int sum=0;
 		System.out.println("Prime Numbers between 2->100 :");
-		for(int index=2;index<=100;index++)	{
+		for(int index=start;index<=end;index++)	{
 			boolean flag=isPrimeNumber(index);
 			if(flag==true){ 
 				count++;
@@ -39,7 +39,7 @@ public class PrimeNumberOpration {
 			System.out.println("given number is Prime");
 		else
 			System.out.println("given number is not Prime");
-		primeNumberOpration.primeOperation();
+		primeNumberOpration.primeOperation(2,100);
 		sc.close();
 	}
 }

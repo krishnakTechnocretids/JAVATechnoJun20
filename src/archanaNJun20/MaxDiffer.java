@@ -1,7 +1,7 @@
 package archanaNJun20;
 
 public class MaxDiffer {
-	static void differIndex(int[] arr1,int arr2[])	{
+	static void printMaxdiffer(int[] arr1,int arr2[])	{
 		if(arr1.length==arr2.length) {
 			for(int index =0; index <arr1.length; index++){
 				if(arr1[index]!=arr2[index]){
@@ -18,6 +18,6 @@ public class MaxDiffer {
 	public static void main(String[] args) {
 		int []arr1={10,2,9,14,3};
 		int[] arr2={10,2,18,14,3};
-		differIndex(arr1, arr2);
+		printMaxdiffer(arr1, arr2);
 	}
 }

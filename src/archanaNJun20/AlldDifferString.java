@@ -1,7 +1,7 @@
 package archanaNJun20;
 
 public class AlldDifferString {
-		static void differIndex(String[] arr1, String[] arr2){
+		static void printAllDifferString(String[] arr1, String[] arr2){
 				if(arr1.length==arr2.length) {
 			for(int index =0; index <arr1.length; index++){
 				if(arr1[index].length()!=arr2[index].length()){
@@ -15,6 +15,6 @@ public class AlldDifferString {
 	public static void main(String[] args) {
 				String[] arr1= {"Maulik", "Harsh", "Krishna", "Technocredits"};
 		String[] arr2={"Maulik","Harsh","Technocredits","Krishna"};
-		differIndex(arr1, arr2);
+		printAllDifferString(arr1, arr2);
 	}
 }
