@@ -1,8 +1,15 @@
+/*Create a class to satisfy below requirements.
+a) Given number is prime or not.
+b) Print total count of prime numbers between 2->100.
+c) Find sum of all prime numbers between 2->100
+d) Find avg of prime numbers between 2->100
+*/
+
 package nikhilMJun20;
 
-import java.util.Scanner;
-
 public class PrimeNumbers {
+	int primeSum, primeCnt;
+	
 	void isPrime(int num) {
 		boolean flag = true;
 		for(int div=2; div<=Math.sqrt(num); div++) {
@@ -11,41 +18,31 @@ public class PrimeNumbers {
 				break;
 			}
 		}
-		if(flag == true)
-			System.out.print(num+" is a Prime Number.");
-		else
-			System.out.println(num+" is NOT a Prime Number.");
+		if(flag == true) {
+			System.out.println(+num+" is a Prime Number.");
+			primeCnt++;
+			primeSum += num;
+		}
 	}
 	
-	void findPimNumbers() {
-		boolean flag = true;
-		int primeSum=0, primeCnt=0;
-		System.out.println("\n\nPrime numbers within 2 to 100:-");
-		for(int num=2; num<=100; num++) {
-			flag = true;
-			for(int div=2; div<=Math.sqrt(num); div++) {
-				if(num % div == 0) {
-					flag = false;
-					break;
-				}
-			}
-			if(flag == true) {
-				System.out.print(num+" ");
-				primeCnt++;
-				primeSum += num;
-			}
+	void findPimeNumbers(int startNum, int endNum) {
+		primeSum=0; 
+		primeCnt=0;
+		for(int num=startNum; num<=endNum; num++) {
+			isPrime(num);
 		}
-		System.out.println("\n\nCount of Prime numbers within 2 to 100 : "+primeCnt+"\nSum of Prime numbers within 2 to 100 : "+primeSum+"\nAverage of Prime numbers within 2 to 100 : "+(primeSum/primeCnt));
-	}
-		
+		System.out.println("\nCount of Prime numbers within 2 to 100 : "+primeCnt+"\nSum of Prime numbers within 2 to 100 : "+primeSum+"\nAverage of Prime numbers within 2 to 100 : "+(primeSum/primeCnt));
+	}		
 	
 	public static void main(String[] args) {
 		PrimeNumbers primeNumbers = new PrimeNumbers();
-		Scanner scanner = new Scanner(System.in);
+		int num = 13, startNum=2, endNum=100;
 		
-		System.out.println("This program will find out if entered integer is Prime number or not.\nAlso, second part of this program will display all the prime numbers within a number range.\n\nPlease enter a number:");
-		primeNumbers.isPrime(scanner.nextInt());
+		System.out.println("This program will find out if entered integer is Prime number or not.\nAlso, second part of this program will display all the prime numbers within a number range.\n");
+				
+		primeNumbers.isPrime(num);
 		
-		primeNumbers.findPimNumbers();
+		System.out.println("\n\nPrime numbers within "+startNum+" to "+endNum+":-");
+		primeNumbers.findPimeNumbers(startNum, endNum);
 	}
 }

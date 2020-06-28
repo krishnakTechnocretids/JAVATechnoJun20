@@ -9,11 +9,19 @@ package nikhilMJun20;
 
 public class AllDiffIndex {
 	void displayAllDiffIndex(int[] arr1, int[] arr2) {
-		for(int index=0; index<arr1.length; index++) {
-			if(arr1[index]!=arr2[index]) {
-				System.out.println("Array values are not matching at index : "+index);
+		boolean flag = true;
+		if(arr1.length == arr2.length) {
+			for(int index=0; index<arr1.length; index++) {
+				if(arr1[index]!=arr2[index]) {
+					System.out.println("Array values are not matching at index : "+index);
+					flag=false;
+				}
 			}
-		}
+			if(flag==true)
+				System.out.println("Array 1 and Array 2 are identical.");
+		}else
+			System.out.println("\nArray 1 and Array 2 are not matching in length.");
+		
 	}
 	
 	public static void main(String[] args) {
