@@ -1,54 +1,44 @@
 package rajAJun20;
 
 public class PrimeNumberOperations {
+	int sum = 0 ;
+	int count = 0 ;
 	
-	void numberIsPrimeOrNot(int number){
+	boolean primeNumber(int number){
 		boolean flag = false;
 		for (int index = 2; index < number/Math.sqrt(number); index++) {
-			if (number % 2 == 0) {
+			if (number % index == 0) {
 				flag = true;
 				break;
 			}
 		}
-		if (flag == true) {
-			System.out.println("Number "+number+ " is not Prime");
-		}
-		else 
-			System.out.println("Number "+ number+ " is Prime");
+		return flag;
+	}	
+	void numberIsPrimeorNot(int number) {
+		if (primeNumber(number) == false)
+			System.out.println(number + " is a Prime number");
+		else
+			System.out.println(number + " is not a prime number");
 	}
 	
 	int totalCountOfPrimeNumbers(){
-		int count = 0;
-		for (int i = 2; i < 100; i++) {
-			boolean flag = false;
-			for (int j = 2; j < i ; j++) {
-				if(i % j == 0 ) {
-					flag = true;
-					break;
-				}
-			}
-			if(flag == false){
-				count++;
-			}
+		
+		for (int index = 2; index < 100; index++) {
+			if(primeNumber(index) == false) {
+				count++ ;
+			} 
 		}
-		return count;
+			return count;	
 	}
 
 	int sumOfPrimeNumbers(){
-		int sum = 0;
-		for (int i = 2; i < 100; i++) {
-			boolean flag = false;
-			for (int j = 2; j < i; j++) {
-				if ( i%j == 0) {
-					flag = true;
-					break;
-				}
-			}
-			if (flag == false) {
-				sum = sum + i;
+		
+		for(int index = 2 ; index < 100 ; index++ ) {
+			if(primeNumber(index) == false)	{
+			sum = sum + index;	
 			}
 		}
-		return sum;
+			return sum;
 	}
 
 	void avgOfPrimeNumbers(){
@@ -58,9 +48,9 @@ public class PrimeNumberOperations {
 	public static void main(String[] args) {
 		PrimeNumberOperations primeNumberOperations = new PrimeNumberOperations();
 		int number = 23;
-		primeNumberOperations.numberIsPrimeOrNot(number);
-		System.out.println("Count of Prime numbers are :" + primeNumberOperations.totalCountOfPrimeNumbers());
-		System.out.println("Sum of Prime numbers are : " + primeNumberOperations.sumOfPrimeNumbers());	
+		primeNumberOperations.numberIsPrimeorNot(number);
+		System.out.println("Total count of prime numbers between 2-100 are :" +primeNumberOperations.totalCountOfPrimeNumbers());
+		System.out.println("Sum of prime numbers are : " + primeNumberOperations.sumOfPrimeNumbers());	
 		primeNumberOperations.avgOfPrimeNumbers();
 	}
 }

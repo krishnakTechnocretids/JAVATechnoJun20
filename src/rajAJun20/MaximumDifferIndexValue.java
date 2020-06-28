@@ -3,19 +3,19 @@ package rajAJun20;
 public class MaximumDifferIndexValue {
 	
 	void maxValueOfDifferIndex(int[] arr1 , int[] arr2) {
-		if(arr1.length == arr2.length) {
-			for(int index = 0 ; index < arr1.length ; index++) {
-				if(arr1[index] != arr2[index]) {
-					System.out.println("Numbers are not matching at index : " + index);
-				if(arr1[index] > arr2[index]) 
-					System.out.println("From ( " + arr1[index]+ "," + arr2[index] + " ) Maximum value is : " +arr1[index]);
-				else 
-					System.out.println("From ( " + arr1[index]+ "," + arr2[index] + " ) Maximum value is : " +arr2[index]);
+			if(arr1.length == arr2.length) {
+				for(int index = 0 ; index < arr1.length ; index++) {
+					if(arr1[index] != arr2[index]) {
+						if(arr1[index] > arr2[index]) 
+							System.out.println("Values of arrays are not matching at index -> " + index + ", From (" + arr1[index] + "," + arr2[index] + ") max value is " + arr1[index]);
+						else
+							System.out.println("Values of arrays are not matching at index -> " + index + ", From (" + arr1[index] + "," + arr2[index] + ") max value is " + arr2[index]);
+					}
 				}
-			}
-		}
-	}
-
+			} else
+					System.out.println("Arrays are not identical");
+		} 	
+			
 	public static void main(String[] args) {
 		MaximumDifferIndexValue maxDifferIndexValue = new MaximumDifferIndexValue();
 		

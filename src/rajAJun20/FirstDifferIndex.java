@@ -8,11 +8,14 @@ public class FirstDifferIndex {
 				for(int index = 0 ; index < arr1.length ; index++ ) {
 					if(arr1[index] != arr2[index]) {
 						System.out.println("Numbers of both the arrays are not matching at index : " + index);
+						break ;
 					}
 				}
+			} else {
+				System.out.println("Arrays are not identical");
 			}
+		
 	}
-	
 	
 	public static void main(String[] args) {
 		FirstDifferIndex firstDifferIndex = new FirstDifferIndex();

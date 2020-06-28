@@ -4,9 +4,10 @@ public class AllDifferIndexString {
 	
 	void allDifferIndexOfStringArray(String[] arr1 , String[] arr2){
 		
-		if(arr1.length == arr2.length) {
+		if(arr1.length == arr2.length) {       //if (!s1[i].equals(s2[i]))
+
 			for(int index = 0 ; index < arr1.length ; index++ ) {
-				if(arr1[index] != arr2[index]) {
+				if(!arr1[index].equals(arr2[index])) {
 					System.out.println("String Values are not matching at index -> " + index + " , [arr1 value is " + arr1[index] + ", arr2 value is " + arr2[index] + "]" );
 				}
 			}

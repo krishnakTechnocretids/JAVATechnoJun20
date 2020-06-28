@@ -10,6 +10,8 @@ public class AllDifferIndex {
 					System.out.println("Numbers of both the arrays are not matching at index : " + index);
 				}
 			}
+		} else {
+			System.out.println("Arrays are not identical");
 		}
 	}
 
