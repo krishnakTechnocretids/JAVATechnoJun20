@@ -11,21 +11,20 @@ hint:- (1*1*1)+(5*5*5)+(3*3*3)
 package suparnaNJune20;
 public class ArmstrongNo {
 	void findarmstron(int input) {
-		int amstrongNum = input, sum = 0;
-		System.out.println("Orignal  number " + input);
+		int armstrongNum= input, sum = 0;
+		//System.out.println("Orignal  number " + input);
 		while (input != 0) {
 			sum += (input % 10) * (input % 10) * (input % 10);
 			input = input / 10;
 		}
-		if (amstrongNum == sum)
-			System.out.println(amstrongNum + " is Armstrong No");
+		if (armstrongNum== sum)
+			System.out.println(armstrongNum+ " is Armstrong No");
 		else
-			System.out.println(amstrongNum + " is not Armstrong No");
+			System.out.println(armstrongNum+ " is not Armstrong No");
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int input = 153;
-		ArmstrongNo armstron = new ArmstrongNo();
-		armstron.findarmstron(input);
+		 new ArmstrongNo().findarmstron(input);
 	}
 }

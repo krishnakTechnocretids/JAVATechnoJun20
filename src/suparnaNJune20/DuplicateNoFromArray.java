@@ -8,8 +8,7 @@ package suparnaNJune20;
 public class DuplicateNoFromArray {
 
 	void displayArray(int[] arrayInt) {
-		System.out.println("Input:");
-		System.out.print(+arrayInt[0]);
+		System.out.println("Input:" + arrayInt[0]);
 		for (int index = 1; index < arrayInt.length; index++) {
 			System.out.print(" , " + arrayInt[index]);
 		}
@@ -17,8 +16,8 @@ public class DuplicateNoFromArray {
 	}
 
 	void findDuplicateNo(int[] arrayInt) {
-		int noCnt = 1;
-		boolean noFind = false;
+		int noCnt;
+		boolean noFind ;
 		for (int outerIndex = 0; outerIndex < arrayInt.length - 1; outerIndex++) {
 			noFind = false;
 			noCnt = 1;
@@ -27,7 +26,7 @@ public class DuplicateNoFromArray {
 				if ((arrayInt[innerIndex] == arrayInt[outerIndex]) && (arrayInt[innerIndex] != -1)
 						&& (arrayInt[outerIndex]) != -1) {
 					noFind = true;
-					noCnt ++;
+					noCnt++;
 					arrayInt[innerIndex] = -1;
 				}
 			if (noFind)

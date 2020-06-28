@@ -15,9 +15,14 @@ public class FindMissingNoFromArrya {
 		}
 		System.out.println("\n");
 	}
+
 	void finMissingNo(int[] arrayInt) {
 		boolean findNo = false;
-		for (int outerIndex = 1; outerIndex < 10; outerIndex++) {
+		if (arrayInt.length != 10) {
+			System.out.println("Arrya element should be 10");
+			return;
+	}
+		for (int outerIndex = 1; outerIndex <= 10; outerIndex++) {
 			findNo = false;
 			for (int innerIndex = 0; innerIndex < arrayInt.length; innerIndex++)
 				if (arrayInt[innerIndex] == outerIndex) {
@@ -28,9 +33,10 @@ public class FindMissingNoFromArrya {
 				System.out.println(outerIndex + " is missing in array");
 		}
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arrayInt = { 2, 6, 9, 3, 5, 8, 1, 7, 1, 10 };
+		int[] arrayInt = { 2, 6, 9, 3, 5, 8, 1, 7 };
 		FindMissingNoFromArrya missingNo = new FindMissingNoFromArrya();
 		missingNo.displayArray(arrayInt);
 		missingNo.finMissingNo(arrayInt);
