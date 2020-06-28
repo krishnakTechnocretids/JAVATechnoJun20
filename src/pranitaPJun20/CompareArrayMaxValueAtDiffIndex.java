@@ -7,28 +7,25 @@
 package pranitaPJun20;
 
 public class CompareArrayMaxValueAtDiffIndex {
-	
+
 	public static void main(String[] args) {
-		int[] arr1 = {10,2,9,14,3};
-		int[] arr2 = {10,2,18,14,3};
-		
+		int[] arr1 = { 10, 2, 9, 14, 3 };
+		int[] arr2 = { 10, 2, 18, 14, 3 };
+
 		CompareArrayMaxValueAtDiffIndex CompareArrayMaxValueAtDiffIndex = new CompareArrayMaxValueAtDiffIndex();
-		CompareArrayMaxValueAtDiffIndex.findMaxValueDifferIndex(arr1,arr2);
+		CompareArrayMaxValueAtDiffIndex.findMaxValueDifferIndex(arr1, arr2);
 	}
-	
-	void findMaxValueDifferIndex(int[] input1,int[] input2) {
-		
-		if(input1.length==input2.length) {
-			int max=0;
-			for(int index=0;index<input1.length;index++) {
-				if(input1[index] != input2[index]) {
-					System.out.println("Values are not matching at index : "+index);
-					max = input1[index];
-					if(input2[index]>max)
-						max=input2[index];
-					
-					System.out.println("From "+input1[index]+","+input2[index]+" max value is "+max);
-					
+
+	void findMaxValueDifferIndex(int[] input1, int[] input2) {
+		if (input1.length == input2.length) {
+			for (int index = 0; index < input1.length; index++) {
+				if (input1[index] != input2[index]) {
+					System.out.println("Values are not matching at index : " + index);
+					int max = input1[index];
+					if (input2[index] > max)
+						max = input2[index];
+					System.out.println("From " + input1[index] + "," + input2[index] + " max value is " + max);
+
 				}
 			}
 		}
