@@ -8,6 +8,7 @@ public class SumOperation {
 			for (int j =0; j<input.length; j++) {
 				if(input[i]+input[j]==gNum) {
 					System.out.println("(" + input[i] +"," + input[j] + ")");
+					input[j]=(7);
 				}
 			}
 		}	
