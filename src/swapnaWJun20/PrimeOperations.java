@@ -8,18 +8,13 @@ package swapnaWJun20;
 
 public class PrimeOperations {
 
-	void totalCount(int a, int b) {
+	void findPrimeNumberInGivenRange(int first, int last) {
+
 		int sum = 0;
 		int count = 0;
-		for (int start = a; start < b; start++) {
-			boolean flag = false;
-			for (int index = 2; index <= Math.sqrt(start); index++) {
-				if (start % index == 0) {
-					flag = true;
-					break;
-				}
-			}
-			if (flag == false) {
+		for (int start = first; start <= last; start++) {
+			boolean flag = isPrime(start);
+			if (flag == true) {
 				count++;
 				sum = sum + start;
 				System.out.println(start + " is the prime no");
@@ -27,27 +22,30 @@ public class PrimeOperations {
 		}
 		System.out.println("Total count of prime numbers is : " + count);
 		System.out.println("Sum of prime numbers is : " + sum);
-		System.out.println("AVerage of prime numbers is : " + (sum / count));
+		System.out.println("Average of prime numbers is : " + (sum / count));
 	}
 
-	void isPrime(int number) {
+	boolean isPrime(int number) {
 		boolean flag = true;
 		for (int index = 2; index < number; index++) {
 			if (number % index == 0)
 				flag = false;
-			else
-				flag = true;
 		}
+		return flag;
+	}
+
+	void isPrimeNo(int number) {
+		boolean flag = isPrime(number);
 		if (flag = true)
-			System.out.println(number + " no is not prime");
+			System.out.println(number + " is not prime");
 		else
-			System.out.println(number + " no is prime");
+			System.out.println(number + "  is prime");
 	}
 
 	public static void main(String[] args) {
 
 		PrimeOperations primeOperations = new PrimeOperations();
-		primeOperations.isPrime(12);
-		primeOperations.totalCount(2, 100);
+		primeOperations.isPrimeNo(12);
+		primeOperations.findPrimeNumberInGivenRange(2, 100);
 	}
 }
