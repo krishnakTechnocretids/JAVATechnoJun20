@@ -9,10 +9,9 @@ package aditiGJUN20;
 
 public class FindMaxAtDifferIndex {
 	void getMaxAtDifferIndex(int[] arr1, int[] arr2) {
-		int max=0;
 		if(arr1.length==arr2.length) {
 			for(int index=0;index<arr1.length;index++) {
-				max=arr1[index];
+				int max=arr1[index];
 				if(arr1[index] != arr2[index]) {
 					if(arr2[index]>max)
 						max=arr2[index];

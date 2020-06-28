@@ -11,7 +11,7 @@ package aditiGJUN20;
 public class AllDifferIndexInArray {
 	
 	// Method to find array index which has different element value 
-		void getAllDifferIndex(int[] arr1, int[] arr2) {
+		void findAllDifferIndex(int[] arr1, int[] arr2) {
 			if(arr1.length==arr2.length) {
 				for(int index=0;index<arr1.length;index++) {
 					if(arr1[index]!=arr2[index])
@@ -28,6 +28,6 @@ public class AllDifferIndexInArray {
 			System.out.println("All differ Index: ");
 			System.out.println("arr1={10,2,9,14,3}\n" + 
 					"arr2={10,2,18,14,13}");
-			allDifferIndexInArray.getAllDifferIndex(arr1, arr2);
+			allDifferIndexInArray.findAllDifferIndex(arr1, arr2);
 		}
 }
