@@ -9,40 +9,42 @@ public class PrimeNumber {
 	int count;
 	int sum;
 
-	void isPrimeNumber(int num) {
-		boolean flag = false;
+	boolean isPrimeNumber(int num) {
+		boolean flag = true;
 		for (int i = 2; i <= num / 2; i++) {
 			if (num % i == 0) {
-				flag = true;
+				flag = false;
 				break;
 			}
 		}
-		if (flag == false) {
-			System.out.println(num + " is a prime number");
-			count++;
-		} else
-			System.out.println(num + " is not a prime number");
+		return flag;
+	}
+	
+	void findPrimeNum(int num) {
+		boolean flag=isPrimeNumber(num);
+		if(flag==true)
+			System.out.println(num+" is a Prime number");
+		else
+			System.out.println(num+ " is not a prime number");
 	}
 
 	void countPrime(int num1, int num2) {
 		for (int i = num1; i <= num2; i++) {
-			isPrimeNumber(i);
+			boolean flag = isPrimeNumber(i);
+			if (flag == true) {
+				count++;
+				System.out.println(i);
+			}
 		}
 		System.out.println("Total Prime numbers between 2->100 : " + count);
 	}
 
 	void sumOfPrimeNum(int num1, int num2) {
 		boolean flag;
-		for (int i = num1; i <= num2; i++) {
-			flag = true;
-			for (int j = num1; j <= i / 2; j++) {
-				if (i % j == 0) {
-					flag = false;
-					break;
-				}
-			}
+		for (int index = num1; index <= num2; index++) {
+			flag = isPrimeNumber(index);
 			if (flag == true)
-				sum = sum + i;
+				sum = sum + index;
 		}
 		System.out.println("Sum of all Prime numbers between " + num1 + "->" + num2 + " : " + sum);
 	}
@@ -54,9 +56,13 @@ public class PrimeNumber {
 	public static void main(String[] args) {
 		PrimeNumber primeNumber = new PrimeNumber();
 		int num = 16;
+		int num1 = 2;
+		int num2 = 100;
 		primeNumber.isPrimeNumber(num);
-		primeNumber.countPrime(2, 100);
-		primeNumber.sumOfPrimeNum(2, 100);
-		primeNumber.avgPrimeNum(2, 100);
+		primeNumber.findPrimeNum(num);
+		System.out.println("Prime numbers between " + num1 + " -> " + num2 + " are : ");
+		primeNumber.countPrime(num1, num2);
+		primeNumber.sumOfPrimeNum(num1, num2);
+		primeNumber.avgPrimeNum(num1, num2);
 	}
 }

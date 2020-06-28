@@ -11,6 +11,7 @@ public class FirstDifferIndex {
 			for (int i = 0; i < arr1.length; i++) {
 				if (arr1[i] != arr2[i]) {
 					System.out.println("Values are not matching at index -> " + i);
+					break;
 				}
 
 			}
