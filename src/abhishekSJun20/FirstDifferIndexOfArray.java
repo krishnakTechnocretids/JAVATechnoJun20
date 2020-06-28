@@ -8,12 +8,13 @@ package abhishekSJun20;
 
 public class FirstDifferIndexOfArray {
 
-	void differIndexValueInIndex(int[] arr1, int[] arr2) {
+	int differIndexValueInIndex(int[] arr1, int[] arr2) {
 
 		for (int index = 0; index < arr1.length; index++) {
 			if (arr1[index] != arr2[index])
 				System.out.println("Values are not matching at index -> " + index);
 		}
+		return 0;
 	}
 
 	public static void main(String[] args) {

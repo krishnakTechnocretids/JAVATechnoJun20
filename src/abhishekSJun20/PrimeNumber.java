@@ -16,8 +16,9 @@ public class PrimeNumber {
 		for (int index = 2; index <= Math.sqrt(num); index++) {
 			if (num % index == 0) {
 				return 0;
-			}
+			}	
 		}
+		System.out.println("The prime number is :" +num);
 		return num;
 	}
 
