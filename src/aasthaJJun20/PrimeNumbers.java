@@ -1,51 +1,38 @@
 package aasthaJJun20;
 
 public class PrimeNumbers {
-	//a) Given number is prime or not. 
-		boolean isPrimeNumber(int num){
-			for(int index = 2; index <= Math.sqrt(num); index++){
-				if(num%index == 0){
-					return false;
-				}
+	boolean isPrimeNumber(int num){
+		for(int index = 2; index <= Math.sqrt(num); index++){
+			if(num%index == 0){
+				return false;
 			}
-			return true;
 		}
-		
-		// b) Print total count of prime numbers between 2->100.
-		int findTotalPrimeInRange(int start, int end){
-			int count = 0;
-			for(int index = start; index <= end; index++){
-				if(isPrimeNumber(index))
-					count++;
+		return true;
+	}
+	
+	void displayPrimeNumber(int num){
+		if(isPrimeNumber(num))
+			System.out.println("Given number "+num+" is a prime number");
+		else
+			System.out.println("Given number "+num+" is not a prime number");
+	}
+	
+	void displayCountSumAvg(int start, int end){
+		int count = 0, sum = 0;
+		for(int index = start; index <= end; index++){
+			if(isPrimeNumber(index)){
+				count++;
+				sum += index;
 			}
-			return count;
 		}
+		System.out.println("There are total "+count+" prime numbers in range ("+start+","+end+")");
+		System.out.println("The sum of all the prime numbers in range ("+start+","+end+") = "+sum);
+		System.out.println("The average of all the prime numbers in range ("+start+","+end+") = "+(Double.valueOf(sum)/Double.valueOf(count)));
+	}
 		
-		//c) Find sum of all prime numbers between 2->100
-		int findSumOfPrimesInRange(int start, int end){
-			int sum = 0;
-			for(int index = start; index <= end; index++){
-				if(isPrimeNumber(index))
-					sum += index;
-			}
-			return sum;
-		}
-		
-		//d) Find avg of prime numbers between 2->100
-		double findAvgOfPrimesInRange(int start, int end){
-			return Double.valueOf(findSumOfPrimesInRange(start,end))/Double.valueOf(findTotalPrimeInRange(start,end));
-		}
-		
-		public static void main(String[] args){
-			PrimeNumbers primeNumbers = new PrimeNumbers();
-			int startNum = 2;
-			int endNum = 100;
-			if(primeNumbers.isPrimeNumber(startNum))
-				System.out.println("Given number "+startNum+" is a prime number");
-			else
-				System.out.println("Given number "+startNum+" is not a prime number");
-			System.out.println("There are total "+primeNumbers.findTotalPrimeInRange(startNum,endNum)+" prime numbers in range ("+startNum+","+endNum+")");
-			System.out.println("The sum of all the prime numbers in range ("+startNum+","+endNum+") = "+primeNumbers.findSumOfPrimesInRange(startNum,endNum));
-			System.out.println("The average of all the prime numbers in range ("+startNum+","+endNum+") = "+primeNumbers.findAvgOfPrimesInRange(startNum,endNum));
-		}
+	public static void main(String[] args){
+		PrimeNumbers primeNumbers = new PrimeNumbers();
+		primeNumbers.displayPrimeNumber(2);
+		primeNumbers.displayCountSumAvg(2,100);
+	}
 }
