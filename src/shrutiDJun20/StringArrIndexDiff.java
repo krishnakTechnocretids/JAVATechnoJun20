@@ -10,23 +10,26 @@ package shrutiDJun20;
 public class StringArrIndexDiff {
 	
 	void findDiffStringIndex(String[] input1, String[] input2){
-		String s1 ="";
-		String s2 ="";
+		boolean flag = true;
 		if(input1.length==input2.length){
 		for(int i = 0 ; i < input1.length ; i++){
-		//	for(int j = 0 ; j < input2.length ; j++){
 				if(!input1[i].equals(input2[i])){
-					s1 = input1[i];
-					s2 = input2[i];
-					System.out.println("Values are not matching at index "+ i +" : Array 1 has value " +s1+", Array 2 has value "+ s2);				}		
+					flag = false;
+					System.out.println("Values are not matching at index "+ i +" : Array 1 has value " +input1[i]+", Array 2 has value "+ input2[i]);				}		
 			}
-		}		
+		}	
+		else
+			System.out.println("Arrays are not equal, cannot be compared");
+		
+		if(flag == true)
+			System.out.println("Arrays are equal");
+			
 	}
 
 	public static void main(String[] args) {
 		StringArrIndexDiff StringArrIndexDiff=new StringArrIndexDiff();
-		String[] arr1= {"Maulik", "Harsh", "Krishna", "Technocredits"};
-	     String[]  arr2= {"Maulik","Harsh","Technocredits","Krishna"};
+		String[] arr1= {"Maulik", "Harsh", "Technocredits", "Krishna"};
+	     String[]  arr2= {"Maulik","Harsh", "Krishna", "Technocredits"};
 	     StringArrIndexDiff.findDiffStringIndex(arr1, arr2);
 	     
 		
