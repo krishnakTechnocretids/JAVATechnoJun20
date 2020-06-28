@@ -18,6 +18,7 @@ package aditiGJUN20;
 
 public class IntArraySumPair {
 	void findSumPair(int[] inputArray, int inputSum) {
+		System.out.println("All pairs whose sum=7 is : ");
 		for (int index = 0; index < inputArray.length; index++)
         {
             for (int j = index+1; j < inputArray.length; j++)
