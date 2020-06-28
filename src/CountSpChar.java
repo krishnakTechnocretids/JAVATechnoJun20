@@ -2,17 +2,10 @@
 public class CountSpChar {
 	void displaySpCharCount(String str) {
 		String str1 = str;
-
-		str1 = str1.replace('[', ' ');
-		str1 = str1.replace('{', ' ');
-		str1 = str1.replace(']', ' ');
-		str1 = str1.replace('}', ' ');
-		str1 = str1.replace('_', ' ');
-		str1 = str1.replace(',', ' ');
-
+		str1 = str1.replace("[","").replace("{","").replace("]","").replace("}","").replace("_","").replace(",","");
 		String[] strArray = str1.split(" ");
-		System.out.println("Input: "+str);
-		System.out.println("Output: Number of Special Characters: "+(strArray.length - 1));
+		System.out.println("Input: " + str);
+		System.out.println("Output: Number of Special Characters: " + (strArray.length));
 	}
 
 	public static void main(String[] args) {
