@@ -4,7 +4,7 @@ public class CountDigitsLettersUpperLowerSpecial {
 	
 	void countDigitsLettersUpperLowerSpecialInString(String name) {
 		int countDigit=0; 
-		int countLetters=0;
+		//int countLetters=0;
 		int countUpperCase=0;
 		int countLowerCase=0;
 		int countSpecialChar=0;
