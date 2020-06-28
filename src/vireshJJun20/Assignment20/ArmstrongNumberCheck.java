@@ -26,7 +26,6 @@ public class ArmstrongNumberCheck {
 	}
 	
 	public static void main(String[] args) {
-		ArmstrongNumberCheck armstrongNumberCheck= new ArmstrongNumberCheck();
-		armstrongNumberCheck.getArmstrongNumber(153);
+		new ArmstrongNumberCheck().getArmstrongNumber(153);
 	}
 }

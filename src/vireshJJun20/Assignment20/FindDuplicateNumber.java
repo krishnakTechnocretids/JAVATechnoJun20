@@ -24,11 +24,10 @@ public class FindDuplicateNumber {
 	}
 
 	public static void main(String[] args) {
-		FindDuplicateNumber findDuplicateNumber = new FindDuplicateNumber();
 		int[] ar = { 0, 1, 3, 2, 3 };
-		int DupNumber = findDuplicateNumber.getDuplicateNumber(ar);
-		if ((DupNumber != -1))
-			System.out.println("The first duplicate number in an array is: " + DupNumber);
+		int dupNumber = new FindDuplicateNumber().getDuplicateNumber(ar);
+		if ((dupNumber != -1))
+			System.out.println("The first duplicate number in an array is: " + dupNumber);
 		else
 			System.out.println("There is no duplicate number found in array.");
 	}

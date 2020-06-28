@@ -16,11 +16,10 @@ public class ReverseNumber {
 			output = output + String.valueOf(temp);
 			input = input / 10;
 		}
-		System.out.println("Output: " +output);
+		System.out.println("Output: " + Integer.parseInt(output));
 	}
 
 	public static void main(String[] args) {
-		ReverseNumber reverseNumber = new ReverseNumber();
-		reverseNumber.reverseIntegers(12345);
+		new ReverseNumber().reverseIntegers(12345);
 	}
 }
