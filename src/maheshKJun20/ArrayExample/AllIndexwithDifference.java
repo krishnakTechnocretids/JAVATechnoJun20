@@ -12,16 +12,12 @@ public class AllIndexwithDifference {
 
 	void displayIndexWithDiffValue(int[] intArray1, int[] intArray2) {
 		//Method to display all index with difference in value of 2 interger Arrays
-		boolean flag = true;
 		if(intArray1.length == intArray2.length) {
 			for (int index=0; index<intArray1.length;index++) {
 				if (intArray1[index] != intArray2[index]) {
 					System.out.println("Values are not matching at index: " + index);
-					flag = false;
 				}				
 			}
-			if (flag)
-				System.out.println("Values of all Elements in both Array are equal");
 		}else {
 			System.out.println("Length is 2 Array is not matching");
 		}

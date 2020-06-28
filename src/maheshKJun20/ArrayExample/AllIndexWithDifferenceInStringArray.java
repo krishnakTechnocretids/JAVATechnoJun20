@@ -12,16 +12,12 @@ public class AllIndexWithDifferenceInStringArray {
 	
 	void displayIndexValueWithDiff(String[] strArray1, String[] strArray2) {
 		//Method to display difference in value of each element in String Array. It will also validate if length of 2 arrays is equal before comparison
-		boolean flag = true;
 		if(strArray1.length == strArray2.length) {
 			for (int index=0; index<strArray1.length;index++) {
 				if (!strArray1[index].equalsIgnoreCase(strArray2[index])) {
 					System.out.println("Values are not matching at index -> " + index + ", [strArray1 value is " + strArray1[index] + ", strArray2 value is " + strArray2[index] +"]" );
-					flag = false;
 				}				
 			}
-			if (flag)
-				System.out.println("Values of all Elements in both Array are equal");
 		}else {
 			System.out.println("Length is 2 Array is not matching");
 		}
