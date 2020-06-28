@@ -3,10 +3,13 @@ package vaishnaviVJun20_arrayExamples;
 public class AllDifferIndex {
 	
 	void findAllDifferIndex(int[] array1, int[] array2) {
-		 for(int index=0;index<array1.length;index++) {
+		 if(array1.length == array2.length) {
+		     for(int index=0;index<array1.length;index++) {
 			   if(array1[index]!= array2[index])
 				   System.out.println("Values are not matching at index->" +index);
-		 }	   
+		     }
+		 }else
+			 System.out.println("Arrays are not equal");
 	}
 	
 	public static void main(String[] args) {
