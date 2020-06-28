@@ -1,24 +1,24 @@
 package yashCJun20.Assignment19;
 
-public class DifferIndex {
+public class FindFirstIndex {
 	
-	void toFindDifferIndex (int [] arr1,int [] arr2){
+	void toFindFirstIndex (int [] arr1,int [] arr2) {
 		
 		for (int i=0;i<arr1.length;i++) {
-			
+		
         	if (arr1[i]!=arr2[i]) 
                 System.out.println("Values are not matching at index ->"+ i );
-        
+        	
          }
 			
         }
 		
 	public static void main(String[] args) {
-		DifferIndex differIndex = new DifferIndex();
+		
+		FindFirstIndex findFirstIndex = new FindFirstIndex();
 		int [] arr1 = {10,2,9,14,3};
-		int [] arr2 = {10,2,18,14,13};
-		differIndex.toFindDifferIndex(arr1, arr2);
-
+		int [] arr2 = {10,2,18,14,3};
+		findFirstIndex.toFindFirstIndex(arr1, arr2);
 	}
 
 }

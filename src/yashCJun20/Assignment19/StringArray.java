@@ -6,7 +6,7 @@ public class StringArray {
 		
 		for (int i=0;i<arr1.length;i++) {
 			
-        	if (arr1[i]!=arr2[i]) {
+        	if (!arr1[i].equals(arr2[i])) {
         		System.out.println("Values are not matching at index ->"+ i + ","+"[arr1 value is " +arr1 [i] +"," +"arr2 value is "+arr2 [i]+"]");     
          }
 		}
