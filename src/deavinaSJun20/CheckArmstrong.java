@@ -14,12 +14,10 @@ public class CheckArmstrong {
 	}
 
 	void checkArmstrongNumber(int num) {
-		int temp = 0;
 		int num1 = num;
 		int sum = 0;
 		while (num != 0) {
-			temp = num % 10;
-			sum = sum + (temp * temp * temp);
+			sum = sum + ((num%10) * (num%10) * (num%10));
 			num = num / 10;
 		}
 		if (sum == num1)
