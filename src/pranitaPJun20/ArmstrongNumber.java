@@ -15,9 +15,8 @@ public class ArmstrongNumber {
 		int numExpected= input;
 		int numActual=0;
 		while(input>0) {
-			int lastDigit  = input%10;
+			numActual += Math.pow((input % 10), 3);
 			input=input/10;
-			numActual = numActual+(lastDigit*lastDigit*lastDigit);
 		}
 		if(numExpected==numActual) {
 			System.out.println("Given number "+numExpected+" is Armstrong number");

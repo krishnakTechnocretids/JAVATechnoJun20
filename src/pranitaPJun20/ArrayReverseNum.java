@@ -12,8 +12,8 @@ public class ArrayReverseNum {
 		int reverse = 0;
 		int input = number;
 		while (number > 0) {
-			int lastDigit = number % 10;
-			reverse = (reverse * 10) + lastDigit;
+			// int lastDigit = number % 10;
+			reverse = (reverse * 10) + (number % 10);
 			number = number / 10;
 		}
 		System.out.println("Revesre of number " + input + " is: " + reverse);

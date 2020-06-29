@@ -6,8 +6,9 @@ you need to write a Java program to find that missing number in an array.
 package pranitaPJun20;
 
 public class ArrayFindMissingNum20 {
-	int sumActual = 0;
+	// Method to find single missing number
 	void findMissingNumber(int[] input, int sumExpected) {
+		int sumActual = 0;
 		for (int index = 0; index < input.length; index++) {
 			sumActual = sumActual + input[index];
 		}
