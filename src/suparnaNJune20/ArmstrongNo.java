@@ -24,7 +24,7 @@ public class ArmstrongNo {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int input = 153;
-		 new ArmstrongNo().findarmstron(input);
+		//int input = 153;
+		 new ArmstrongNo().findarmstron(153);
 	}
 }
