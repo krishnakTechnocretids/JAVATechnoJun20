@@ -6,11 +6,12 @@ public class ReverseInteger {
 	
 	void reverseIntegerNumber(int num) {
 		System.out.print("Reverse number is:");
+		int reverse = 0;
 		while(num>0) {
-			int reverse = num%10;
+			reverse = 10*reverse+(num%10);
 			num = num/10;
-			System.out.print(reverse);
 		}		
+		System.out.print(reverse);
 	}
 
 	public static void main(String[] args) {

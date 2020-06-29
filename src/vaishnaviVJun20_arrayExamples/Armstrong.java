@@ -8,10 +8,8 @@ public class Armstrong {
 		int Originalnumber = input;
 		int sum =0;
 		while(input>0) {
-			int num = input%10;
+			sum += Math.pow((input % 10), 3);
 			input = input/10;
-			int result = num*num*num;
-			sum += result;
 		}	
 		if(sum == Originalnumber)
 			System.out.println(Originalnumber +" is a armstrong number");
