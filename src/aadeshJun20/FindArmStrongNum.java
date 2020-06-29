@@ -9,9 +9,9 @@ public class FindArmStrongNum{
 			temp = temp/10;
 		}
 		if (num == aNum){
-			System.out.println(num + " is an Armstrong Number");
+			System.out.println(num + " is an Armstrong Number.");
 		} 	else {
-			System.out.println(num + " is not an Armstrong Number");
+			System.out.println(num + " is not an Armstrong Number.");
 		 }
 	}
 	public static void main(String[] args){

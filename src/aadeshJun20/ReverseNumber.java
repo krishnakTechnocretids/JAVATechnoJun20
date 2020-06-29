@@ -13,6 +13,6 @@ package aadeshJun20;
 	public static void main(String[] args){
 		ReverseNumber reverse = new ReverseNumber();
 		int num = 12345;
-		System.out.println(" Reverse of " + num + " is: " + reverse.displayReverseNumber(num));
+		System.out.println(" Reverse of " + num + " is:- " + reverse.displayReverseNumber(num));
 	}
 }

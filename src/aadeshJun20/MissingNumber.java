@@ -5,7 +5,7 @@ public class MissingNumber {
 	void displayMissingNumber(int[] intArr) {
 
 		boolean flag;
-		System.out.println(" Missing Numbers are : ");
+		System.out.println(" Missing Numbers are :- ");
 		for (int index=1; index<=10; index++) {
 			flag = true;
 			for (int j=0; j<intArr.length; j++) {

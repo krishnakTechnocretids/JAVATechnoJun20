@@ -4,7 +4,7 @@ public class DuplicateNumber{
 
 	void reverseDisplay(int[] intArr){
 
-		System.out.print(" Reverse number from back : ");
+		System.out.print(" Reverse number from back :- ");
 		for (int i = 0; i < intArr.length; i++){
 			for (int j = i + 1; j < intArr.length; j++){
 				if (intArr[i] == intArr[j]){
