@@ -4,7 +4,7 @@ public class DuplicateNumberinArray {
 
 	void FindDuplicateNumber(int[] input) {
 		boolean flag = false;
-		// int dup = 0; //{ 1, 2,3,4, 4, 3, 6 };
+		// int dup = 0; 
 		for (int index = 0; index < input.length; index++) {
 			for (int index2 = index + 1; index2 < input.length; index2++) {
 				if (input[index] == input[index2]) {
@@ -13,7 +13,6 @@ public class DuplicateNumberinArray {
 					flag = true;
 					return;// only if we have to find one duplicate number
 				}
-
 			}
 		}
 		if (flag == false)
