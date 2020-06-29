@@ -7,22 +7,25 @@ hint:- (1*1*1)+(5*5*5)+(3*3*3)
 1+125+27
 153*/
 public class ArmstrongNumberProgram {
-	int checkArmstrongNumber(int num) {
+	void checkArmstrongNumber(int num) {
 		int seperateNum=0, sum=0;
+		int number=num;
 		while(num>0) {
 			seperateNum = num % 10;
 			num = num / 10;
 			sum += (seperateNum*seperateNum*seperateNum);
 		}
-		return sum;
+		
+		if(number==sum) 
+			System.out.println(number+" is an armstrong number");
+		else 
+			System.out.println(number+" is not an armstrong number");
+		
 	}
 	public static void main(String[] args) {
 		ArmstrongNumberProgram armstrongNumberProgram = new ArmstrongNumberProgram();
-		int num = 153;
-		int sum = armstrongNumberProgram.checkArmstrongNumber(num);
-		if(num==sum) {
-			System.out.println(num+" is an armstrong number");
-		}else 
-			System.out.println(num+" is not an armstrong number");
-	}
+		//int num = 153;
+		armstrongNumberProgram.checkArmstrongNumber(153);
+		armstrongNumberProgram.checkArmstrongNumber(141);
+	}	
 }

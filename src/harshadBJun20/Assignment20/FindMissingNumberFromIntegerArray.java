@@ -17,7 +17,8 @@ public class FindMissingNumberFromIntegerArray {
 	public static void main(String[] args) {
 		FindMissingNumberFromIntegerArray findMissingNumberFromIntegerArray = new FindMissingNumberFromIntegerArray();
 		int[] arr= {1,8,3,10,6,7,5,9,4};
-		int missingNum = findMissingNumberFromIntegerArray.findMissingNumber(arr);
-		System.out.println("Missing number in the given array is: "+missingNum);
+		System.out.println("Missing number in the given array is: "+findMissingNumberFromIntegerArray.findMissingNumber(arr));
+		//int missingNum = findMissingNumberFromIntegerArray.findMissingNumber(arr);
+		//System.out.println("Missing number in the given array is: "+missingNum);
 	}
 }

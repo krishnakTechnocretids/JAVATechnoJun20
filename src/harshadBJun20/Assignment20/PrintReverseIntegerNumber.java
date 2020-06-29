@@ -5,13 +5,13 @@ Input:- 12345
 Output:- 54321*/
 public class PrintReverseIntegerNumber {
 	void printReverseNumbers(int num) {
-		int seperateNum=0;
-		System.out.println("Reverse order Number: ");
+		int seperateNum=0, reversedNum = 0;
 		while(num>0) {
 			seperateNum = num % 10;
-			num = num / 10;
-			System.out.print(seperateNum);
+			reversedNum = reversedNum * 10 + seperateNum;
+			num = num / 10;	
 		}
+		System.out.println("Reverse order Number: "+reversedNum);
 	}
 	public static void main(String[] args) {
 		PrintReverseIntegerNumber printReverseIntegerNumber = new PrintReverseIntegerNumber();
