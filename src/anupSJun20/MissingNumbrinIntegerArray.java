@@ -11,9 +11,8 @@ public class MissingNumbrinIntegerArray {
 			sumofArray = sumofArray+num[index];
 		}
 		return overallSum - sumofArray;
-		
-		
 	}
+	
 	public static void main(String[] args) {
 		int[] num = {1,2,3,4,5,7,10,9,8};
 		System.out.println("The missing number is : " + findTheMissingNumber(num,1,10));
