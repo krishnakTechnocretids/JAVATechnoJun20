@@ -1,19 +1,21 @@
 package barkhaPJun20;
 
 public class FindMissingNumInArray {
+	int arraySum=0;
+	int originalSum=0;
 	
-	void printMissingNumInArray(int[] num) {
-		for (int index=0; index<num.length-1; index++) {
-			
-			if (num[index+1]!=num[index]+1) {
-				System.out.println("Missing number in Array is: "+(num[index]+1));
-				break;
-				}
-			}	
+	void printMissingNumInArray(int[] arrayNum) {
+		for (int index=0; index<arrayNum.length; index++) {
+			arraySum=arraySum+arrayNum[index];
+		}
+		for (int num=1; num<=10; num++) {
+			originalSum=originalSum+num;
+		}
+		System.out.println("Missing number in Array 1-10 (Not in Sequence) is:" +(originalSum-arraySum));
 	}		
 	public static void main(String[] args) {
 		FindMissingNumInArray findMissingNumInArray=new FindMissingNumInArray();
-		int[] array= {1,2,3,4,5,6,707,8,9,10};
+		int[] array= {2,3,5,4,7,1,9,8,10};
 		findMissingNumInArray.printMissingNumInArray(array);
 	}
-}
+}		
