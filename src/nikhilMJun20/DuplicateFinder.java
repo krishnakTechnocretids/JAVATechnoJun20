@@ -18,7 +18,6 @@ public class DuplicateFinder {
 	
 	public static void main(String[] args) {
 		int[] intArray = {0, 3, 1, 2, 3};
-		
 		new DuplicateFinder().findDuplicate(intArray);
 	}
 }

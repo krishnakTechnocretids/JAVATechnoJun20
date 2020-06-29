@@ -11,7 +11,7 @@ package nikhilMJun20;
 
 public class ArmstrongNumber {
 	void isArmstrong(int num) {
-		int isArm = num, sum = 0;
+		int isArm = num, sum=0;
 		while(num>0) {
 			sum += Math.pow((num % 10), 3);
 			num = num/10;
@@ -25,7 +25,6 @@ public class ArmstrongNumber {
 	public static void main(String[] args) {
 		//Other Armstrong Numbers : 370, 371, 407
 		int num = 153;
-		
 		new ArmstrongNumber().isArmstrong(num);
 	}
 }
