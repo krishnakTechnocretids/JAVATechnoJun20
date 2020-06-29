@@ -12,7 +12,6 @@ public class ReverseInteger {
 			System.out.print(lastDigit); //it will print 5 then 4 and so on... it is just printing no calculation
 		}	
 	}	
-		
 	void printReverseInt2(int originalNumber) {
 		//Printing reverse order by exact Calculation
 		int num=originalNumber;
