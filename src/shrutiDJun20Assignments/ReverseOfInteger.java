@@ -13,7 +13,7 @@ public class ReverseOfInteger {
 			number2 = number2/10;
 			
 		}
-		System.out.print(revnum);
+		System.out.print("Reverse of integer " +12345 +" --> "+revnum);
 	}
 	public static void main(String[] args) {
 		ReverseOfInteger reverseOfInteger = new ReverseOfInteger();
