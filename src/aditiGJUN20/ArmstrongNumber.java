@@ -11,12 +11,12 @@ hint:- (1*1*1)+(5*5*5)+(3*3*3)
 package aditiGJUN20;
 
 public class ArmstrongNumber {
-	
-	//Method to check number is Armstrong or not.. 
+
+	// Method to check number is Armstrong or not..
 	void checkArmstrongNum(int number) {
 		int sum = 0, inputNum = number;
 		while (number > 0) {
-			sum = (int) (sum+( Math.pow((number % 10), 3)));
+			sum = (int) (sum + (Math.pow((number % 10), 3)));
 			number = number / 10;
 		}
 		if (inputNum == sum)
