@@ -28,8 +28,8 @@ public class NumbersAndArrays {
 	void findDuplicateInArray(int[] input) {
 		displayArray(input);
 		for (int index = 0; index < input.length; index++) {
-			for (int innerIndex = 1; innerIndex < input.length; innerIndex++) {
-				if (input[index] == input[innerIndex] && index != innerIndex) {
+			for (int innerIndex = index+1; innerIndex < input.length; innerIndex++) {
+				if (input[index] == input[innerIndex]) {
 					System.out.println("Duplicate number is: " + input[index]);
 					return;
 				}
@@ -38,14 +38,16 @@ public class NumbersAndArrays {
 	}
 
 	// Program 3: WAP to revers number (Consider Input as Integer not as String).
-	void displayReverseInteger(int num) {
-		System.out.print("Reverse of given number " + num + " is: ");
-		while (num > 0) {
-			System.out.print(num % 10);
+	void displayReverseInteger(int num){
+		System.out.print("Reverse of given number "+num+" is: ");
+		int reversedNum = 0;
+		while(num > 0){
+			reversedNum = (reversedNum*10)+(num%10);
 			num /= 10;
 		}
+		System.out.println(reversedNum);
 	}
-
+	
 	// Program 4: WAP to check if a number is Armstrong or not. Note: It can only handle a 3 digit number
 	void isArmstrong(int num) {
 		int result = 0;
