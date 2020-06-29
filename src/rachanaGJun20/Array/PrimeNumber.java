@@ -8,37 +8,27 @@ package rachanaGJun20.Array;
 
 import java.util.Scanner;
 
-public class PrimeNumberClass {
+public class PrimeNumber {
 
-	void findIsNumberPrime(int number) {
+	boolean isNumberPrime(int number) {
 
 		boolean flag = true;
 		for (int i = 2; i <= number / 2; i++) {
 			if (number % i == 0) {
 				flag = false;
-				break;
+				return flag;
 			}
 		}
-		if (flag == true)
-			System.out.println("Number is Prime\n");
-		else
-			System.out.println("Number is not Prime\n");
+		return flag;
 	}
 
 	int findcountOfPrimeNumbers() {
 		boolean flag;
 		int primenumbercount = 0;
 		for (int num = 2; num <= 100; num++) {
-			flag = true;
-			for (int j = 2; j <= num / 2; j++) {
-				if (num % j == 0) {
-					flag = false;
-					break;
-				}
-			}
+			flag = isNumberPrime(num);
 			if (flag == true) {
 				primenumbercount++;
-
 			}
 		}
 		System.out.println("Count of prime numbers between 2 to 100: " + primenumbercount);
@@ -49,16 +39,9 @@ public class PrimeNumberClass {
 		boolean flag;
 		int primenumbersum = 0;
 		for (int num = 2; num <= 100; num++) {
-			flag = true;
-			for (int j = 2; j <= num / 2; j++) {
-				if (num % j == 0) {
-					flag = false;
-					break;
-				}
-			}
+			flag = isNumberPrime(num);
 			if (flag == true) {
 				primenumbersum = primenumbersum + num;
-
 			}
 		}
 		System.out.println("Sum of prime numbers between 2 to 100: " + primenumbersum);
@@ -71,16 +54,20 @@ public class PrimeNumberClass {
 	}
 
 	public static void main(String[] args) {
-		PrimeNumberClass primenumberclass = new PrimeNumberClass();
-		int primenumbercount = primenumberclass.findcountOfPrimeNumbers();
-		int sumOfPrimeNumbers = primenumberclass.findSumOfPrimeNumbers();
-		primenumberclass.findAverageOfPrimeNumber(sumOfPrimeNumbers, primenumbercount);
-		System.out.println("Please enter a number");
+		PrimeNumber primenumber = new PrimeNumber();
+		int primenumbercount = primenumber.findcountOfPrimeNumbers();
+		int sumOfPrimeNumbers = primenumber.findSumOfPrimeNumbers();
+		primenumber.findAverageOfPrimeNumber(sumOfPrimeNumbers, primenumbercount);
 		Scanner scanner = new Scanner(System.in);
-		int number = scanner.nextInt();
-		primenumberclass.findIsNumberPrime(number);
-		System.out.println("Please enter a number");
-		primenumberclass.findIsNumberPrime(scanner.nextInt());
+		for(int i=1;i<=2;i++) {
+			System.out.println("Please enter a number");
+			int number = scanner.nextInt();
+			if(primenumber.isNumberPrime(number))
+				System.out.println("Number is Prime");
+			else
+				System.out.println("Number is not prime");
+			
+		}
 		scanner.close();
 	}
 
