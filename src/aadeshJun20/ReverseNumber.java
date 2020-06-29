@@ -1,7 +1,7 @@
 package aadeshJun20;
 
  public class ReverseNumber{
-	int displayReverseNum(int num){
+	int displayReverseNumber(int num){
 		int rNum= 0;
 		while (num> 0) {
 			rNum = (rNum*10) + (num%10);
@@ -13,6 +13,6 @@ package aadeshJun20;
 	public static void main(String[] args){
 		ReverseNumber reverse = new ReverseNumber();
 		int num = 12345;
-		System.out.println(" Reverse of " + num + " is: " + reverse.displayReverseNum(num));
+		System.out.println(" Reverse of " + num + " is: " + reverse.displayReverseNumber(num));
 	}
 }

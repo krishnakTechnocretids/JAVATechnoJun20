@@ -1,11 +1,11 @@
 package aadeshJun20;
 
-public class ArmStrong{
+public class FindArmStrongNum{
 	void ArmStrongNum(int num){
 
 		int aNum = 0, temp = num;
-			while (temp > 0){
-			aNum += ((temp % 10)*(temp % 10)*(temp % 10));
+		while (temp > 0) {
+			aNum += ((temp % 10) * (temp % 10) * (temp % 10));
 			temp = temp/10;
 		}
 		if (num == aNum){
@@ -15,8 +15,8 @@ public class ArmStrong{
 		 }
 	}
 	public static void main(String[] args){
-		ArmStrong armStrong = new ArmStrong();
+		FindArmStrongNum findArmStrongNum = new FindArmStrongNum();
 		int num = 153;
-		armStrong.ArmStrongNum(num);
+		findArmStrongNum.ArmStrongNum(num);
 	 }
 }

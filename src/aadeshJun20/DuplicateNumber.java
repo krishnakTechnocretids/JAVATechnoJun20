@@ -16,7 +16,7 @@ public class DuplicateNumber{
 
 	public static void main(String[] args){
 		DuplicateNumber duplicate = new DuplicateNumber();
-		int[] intArr = { 8, 3, 7, 6, 5 };
+		int[] intArr = { 8, 5, 7, 6, 5 };
 		duplicate.reverseDisplay(intArr);
 	}
 } 

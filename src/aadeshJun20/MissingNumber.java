@@ -2,29 +2,29 @@ package aadeshJun20;
 
 public class MissingNumber {
 
-	void displayMissingNum(int[] intArr) {
+	void displayMissingNumber(int[] intArr) {
 
 		boolean flag;
 		System.out.println(" Missing Numbers are : ");
-		for (int i=1; i<=10; i++) {
+		for (int index=1; index<=10; index++) {
 			flag = true;
 			for (int j=0; j<intArr.length; j++) {
-				if (i == intArr[j]) {
+				if (index == intArr[j]) {
 					flag = true;
 					 break;
 				}
 				flag = false;
 			}
 			if(!flag) {
-				System.out.println(i);
+				System.out.println(index);
 			}
 		}
 	}
 
 	public static void main(String[] args) {
-		MissingNumber missingNum = new MissingNumber();
+		MissingNumber missingNumber = new MissingNumber();
 		int[] intArr = {1,2,5,6,8,9};
-		missingNum.displayMissingNum(intArr);
+		missingNumber.displayMissingNumber(intArr);
 	}
 
 } 
