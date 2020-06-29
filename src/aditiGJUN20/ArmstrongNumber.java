@@ -27,10 +27,7 @@ public class ArmstrongNumber {
 
 	public static void main(String[] args) {
 		ArmstrongNumber armstrongNumber = new ArmstrongNumber();
-		int inputNum1 = 153;
-		armstrongNumber.checkArmstrongNum(inputNum1);
-		int inputNum2 = 10111;
-		armstrongNumber.checkArmstrongNum(inputNum2);
+		armstrongNumber.checkArmstrongNum(153);
+		armstrongNumber.checkArmstrongNum(10111);
 	}
-
 }

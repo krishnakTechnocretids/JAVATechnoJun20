@@ -22,10 +22,7 @@ public class ReverseNumber {
 	
 	public static void main(String[] args) {
 		ReverseNumber reverseNumber=new ReverseNumber();
-		int inputNum=12345;
-		System.out.println("Reverse Number of input integer "+inputNum+" is: "+reverseNumber.getReverseNum(inputNum));
-		
-		int inputNum1=455322;
-		System.out.println("Reverse Number of input integer "+inputNum1+" is: "+reverseNumber.getReverseNum(inputNum1));
+		System.out.println("Reverse Number of input integer 12345 is: "+reverseNumber.getReverseNum(12345));
+		System.out.println("Reverse Number of input integer 455322 is: "+reverseNumber.getReverseNum(455322));
 	}
 }

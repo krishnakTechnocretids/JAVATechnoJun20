@@ -7,7 +7,7 @@ a program to find that duplicate number. For example, if an array with length
 package aditiGJUN20;
 
 public class DuplicateNumInArray {
-	// Method to find 
+	// Method to find exact one duplicate element (First Duplicate element)
 	int getDuplicateNumber(int[] intArray) {
 		int duplicateNum = 0;
 		for (int index1 = 0; index1 < intArray.length; index1++) {
@@ -23,16 +23,15 @@ public class DuplicateNumInArray {
 
 	public static void main(String[] args) {
 		DuplicateNumInArray duplicateNumInArray = new DuplicateNumInArray();
-		
-		int[] inputArray1 = {0,3,1,2,3};// Input1
-		System.out.println("Input Array:{0,3,1,1,2,3}");
+
+		int[] inputArray1 = { 0, 3, 1, 2, 3 };// Input1
+		System.out.println("Input Array:{ 0, 3, 1, 2, 3 }");
 		System.out.println(
 				"For given input Array duplicate NUmber is: " + duplicateNumInArray.getDuplicateNumber(inputArray1));
-		
-		int[] inputArray2 = {0,3,1,2,3};// Input2
-		System.out.println("Input Array:{0,3,1,2,3}");
+
+		int[] inputArray2 = { 0, 0, 1, 2, 3 };// Input2
+		System.out.println("Input Array:{ 0, 0, 1, 2, 3 }");
 		System.out.println(
 				"For given input Array duplicate NUmber is: " + duplicateNumInArray.getDuplicateNumber(inputArray2));
-		
 	}
 }
