@@ -3,10 +3,7 @@ package madhuraMJun20.scannerClass;
 
 public class ArmstrongNum {
 	void findArmstrong(int input) {
-		int sumOfCube = 0;
-		int cube = 0;
-		int num1 = 0;
-		int givenNum = input;
+		int sumOfCube = 0;int cube = 0;	int num1 = 0;int givenNum = input;
 
 		while (givenNum != 0) {
 			num1 = givenNum % 10;
