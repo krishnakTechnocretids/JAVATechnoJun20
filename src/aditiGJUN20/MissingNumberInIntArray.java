@@ -23,7 +23,7 @@ public class MissingNumberInIntArray {
 	public static void main(String[] args) {
 		MissingNumberInIntArray missingNumberInIntArray = new MissingNumberInIntArray();
 		// input- 1
-		int[] inputarray1 = { 1, 4, 2, 7, 5, 6, 8 };
+		int[] inputarray1 = { 3, 4, 2, 7, 5, 6, 8 };
 		System.out.println("Input Array = {1, 4, 2, 7, 5, 6, 8}");
 		missingNumberInIntArray.findMissingNumber(inputarray1);
 
@@ -31,5 +31,6 @@ public class MissingNumberInIntArray {
 		int[] inputarray2 = { 11, 12, 17, 13, 14, 16 };
 		System.out.println("\nInput Array = { 11, 12, 17, 13, 14, 16 }");
 		missingNumberInIntArray.findMissingNumber(inputarray2);
+
 	}
 }

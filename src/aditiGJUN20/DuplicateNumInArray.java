@@ -24,7 +24,7 @@ public class DuplicateNumInArray {
 	public static void main(String[] args) {
 		DuplicateNumInArray duplicateNumInArray = new DuplicateNumInArray();
 
-		int[] inputArray1 = { 0, 3, 1, 2, 3 };// Input1
+		int[] inputArray1 = { 0, 3, 1, 2, 3,2 };// Input1
 		System.out.println("Input Array:{ 0, 3, 1, 2, 3 }");
 		System.out.println(
 				"For given input Array duplicate NUmber is: " + duplicateNumInArray.getDuplicateNumber(inputArray1));
