@@ -8,13 +8,13 @@ public class ReverseIntegerNumbers {
 
 	//Method to Reverse the integer Numbers
 	void reverseInteger(int number) {
-		int reverse = 0;
+		int reverse = 0; 
 		int temp = number;
 		while (temp > 0) {
-			reverse = temp % 10;
+			reverse = reverse*10+(temp % 10);	
 			temp = temp / 10;
-			System.out.print(reverse);
 		}
+		System.out.print(reverse);
 	}
 	public static void main(String[] args) {
 		ReverseIntegerNumbers integerNumbers = new ReverseIntegerNumbers();

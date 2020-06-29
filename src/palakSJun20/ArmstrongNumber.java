@@ -4,7 +4,7 @@ public class ArmstrongNumber {
 
 	//Method to find Number is armstrong number or not
 	void findArmstrongNumber(int number) {
-		int remainder = 0 , temp = 0; 
+		int remainder = 0 , temp = number; 
 		int sum = 0;
 		while (temp > 0) {
 			remainder = temp % 10 ;
