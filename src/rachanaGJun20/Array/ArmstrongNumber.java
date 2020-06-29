@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class ArmstrongNumber {
 
-	//method will find whether given number is Armstrong 
+	// method will find whether given number is Armstrong
 	boolean isArmstrongNumber(int number) {
 		int remainder = 0;
-		int sum = 0;
+		double sum = 0;
 		int givenNumber = number;
 
 		while (number != 0) {
 			remainder = number % 10;
 			number = number / 10;
-			sum = sum + (remainder * remainder * remainder);
+			sum = sum + Math.pow(remainder, 3);
 		}
 		return (givenNumber == sum);
 	}
