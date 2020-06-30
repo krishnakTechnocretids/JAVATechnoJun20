@@ -1,5 +1,5 @@
 /*Program 2: To print first n Fibonacci Numbers.
-Input n = 5
+Input n = 6
 Output = 1 1 2  3  5  8 
 
 Input: n = 10 
@@ -9,20 +9,19 @@ package amitaRJun20;
 public class FibonacciNumbers {
 
 	//method to display fibonacci series of input numbers
-	void displayFibonacciNumbers(int number) {
-		
+	void displayFibonacciNumbers(int number) {	
 		int startnum = 0, nextnum = 1, sum = 0;
-		System.out.print(" " + nextnum);
-		for (int index = 1; index <= number; index++) {
+		System.out.print(nextnum+" ");
+		for (int index = 0; index< number-1; index++) {
 			sum = startnum + nextnum;
-			System.out.print(" " + sum);
+			System.out.print(sum+" ");
 			startnum = nextnum;
 			nextnum = sum;
 		}
 	}
 	public static void main(String[] args) {
 		FibonacciNumbers fibonaccinumbers = new FibonacciNumbers();
-		int inputnumber = 5;
+		int inputnumber = 6 ;
 		System.out.println("Display first " + inputnumber + " Fibonacci series ");
 		fibonaccinumbers.displayFibonacciNumbers(inputnumber);
 		
