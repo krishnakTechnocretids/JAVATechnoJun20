@@ -1,4 +1,4 @@
-//print Fibonnaci series
+//print Fibonacci series
 package aavrutiDJun20;
 
 public class FibonacciSeries {
@@ -7,7 +7,7 @@ public class FibonacciSeries {
 		int fibonacciCount = 1;
 		int num1 = 0;
 		int num2 = 1;
-		System.out.println("Fibonnaci Series for input " + totalNum + " is:\n");
+		System.out.println("Fibonacci Series for input " + totalNum + " is:\n");
 		do {
 			System.out.print(num2 + " ");
 			num2 = num1 + num2;
@@ -18,7 +18,6 @@ public class FibonacciSeries {
 
 	public static void main(String[] args) {
 		FibonacciSeries fibonacciSeries = new  FibonacciSeries();
-		int totalNum = 10;
-		fibonacciSeries.printFibonacciSeries(totalNum);
+		fibonacciSeries.printFibonacciSeries(10);
 	}
 }
