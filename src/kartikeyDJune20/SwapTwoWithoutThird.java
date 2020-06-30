@@ -10,7 +10,7 @@ public class SwapTwoWithoutThird {
 	}
 
 	public static void main(String[] args) {
-		SwapTwoWithoutThird.swapTwoNum(10, 20);
+		SwapTwoWithoutThird.swapTwoNum(49, 94);
 	}
 
 }
