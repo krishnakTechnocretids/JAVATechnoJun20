@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class FibonacciSeries {
 
-	static void printFibonacci(int maxNumber) {
+	static void printFibonacci(int n) {
 		int previousNumber = 1;
 		int nextNumber = 1;
-		System.out.println("\nFirst " + maxNumber + " elements in fibonacci series are :");
-		for (int i = 1; i <= maxNumber; ++i) {
+		System.out.println("\nFirst " + n + " elements in fibonacci series are :");
+		for (int i = 1; i <= n; ++i) {
 			System.out.print(previousNumber + " ");
 			int sum = previousNumber + nextNumber;
 			previousNumber = nextNumber;
@@ -17,10 +17,10 @@ public class FibonacciSeries {
 	}
 
 	public static void main(String[] args) {
-		System.out.print("Enter Number upto which Fibonacci series to Print:");
+		System.out.print("Enter count upto which Fibonacci series to Print:");
 		Scanner scanner = new Scanner(System.in);
-		int maxNumber = scanner.nextInt();
-		printFibonacci(maxNumber);
+		int n = scanner.nextInt();
+		printFibonacci(n);
 		scanner.close();
 	}
 
