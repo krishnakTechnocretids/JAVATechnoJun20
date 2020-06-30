@@ -17,31 +17,31 @@ and so on!
 package pranitaPJun20;
 
 public class FibonacciSeries {
-//Method to find Fibonacci series for given no of terms
-	static void printFibonacciNumbers(int num1, int num2, int length) {
-		int iterationValue = 2;// iteration starts from 3rd term
-		int term1 = num1;
-		int term2 = num2;
-		System.out.print(term1 + "," + term2);// Printing values at index 0 and 1
-		while (iterationValue < length) {
-			int term3 = term1 + term2;
-			System.out.print("," + term3);
-			term1 = term2;
-			term2 = term3;
-			iterationValue++;
+	static void printFibonacciNumbers(int totalTerms) {
+		System.out.println("\nFibonacci series to display first "+totalTerms+" numbers:");
+		int previousNum = 0, nextNum = 1, sum = 0;
+		for (int index = 0; index < totalTerms; index++) {
+			System.out.print(nextNum + " ");
+			sum = previousNum + nextNum;
+			previousNum = nextNum;
+			nextNum = sum;
 		}
-		/*
-		 * for(int iterationValue=2;iterationValue<=n;iterationValue++) { int
-		 * term3=term1+term2; System.out.print(","+term3); term1=term2; term2=term3; }
-		 */
+	}
+	/*static void printFibonacciNumbers(int range) {
+	System.out.println("\nFibonacci series to display first "+range+" numbers:");
+	int term1 = 0, term2 = 1;
+	System.out.print(term2);
+	//generation starts from third term.hence iterationValue=2
+	for (int iterationValue = 2; iterationValue <=range; iterationValue++) {
+		int term3 = term1 + term2;
+		System.out.print(" " + term3);
+		term1 = term2;
+		term2 = term3;
 	}
 
+}*/
 	public static void main(String[] args) {
-		int term1 = 1, term2 = 1;
-		int totalTerms1 = 6, totalTerms2= 10;
-		System.out.println("\nFibonacci series for "+totalTerms1+" terms");
-		FibonacciSeries.printFibonacciNumbers(term1, term2, totalTerms1);
-		System.out.println("\nFibonacci series for "+totalTerms2+" terms");
-		FibonacciSeries.printFibonacciNumbers(term1, term2, totalTerms2);
+		FibonacciSeries.printFibonacciNumbers(5);
+		FibonacciSeries.printFibonacciNumbers(10);
 	}
 }
