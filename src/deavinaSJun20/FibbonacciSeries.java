@@ -13,8 +13,8 @@ public class FibbonacciSeries {
 	}
 
 	private void fibbonacciSeries(int num) {
-		int firstnum = 0;
-		int secondnum = 1;
+		int firstnum= 1;
+		int secondnum=1;
 		System.out.println("Fibbonacci Series for first " + num + " numbers is --->");
 		System.out.print(firstnum);
 		for (int index = 1; index <= num; index++) {
