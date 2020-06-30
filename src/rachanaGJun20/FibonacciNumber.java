@@ -13,9 +13,10 @@ public class FibonacciNumber {
 
 		for (int index = 1; index <= limit; index++) {
 			System.out.print(" " + nextNum);
+		
 			nextNum = start + previousNum;
+			start = previousNum;
 			previousNum = nextNum;
-			start = nextNum - start;
 		}
 	}
 
