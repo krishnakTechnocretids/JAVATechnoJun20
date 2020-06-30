@@ -15,6 +15,7 @@ and so on! */
 
 public class FibonacciSeries {
 	static void calculateFibonacciSeries(int input) {
+		System.out.println("\nThe output for fibonacci series for "+ input + " is ");
 		int first = 0;
 		int second = 1;
 		int result;
@@ -27,6 +28,7 @@ public class FibonacciSeries {
 	}
 
 	public static void main(String[] args) {
+		calculateFibonacciSeries(6);
 		calculateFibonacciSeries(10);
 	}
 }
