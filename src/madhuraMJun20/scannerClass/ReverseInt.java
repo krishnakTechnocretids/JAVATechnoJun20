@@ -1,15 +1,19 @@
-/*WAP to revers number (Consider Input as Integer not as String).*/
+/*WAP to reverse number (Consider Input as Integer not as String).*/
 
 package madhuraMJun20.scannerClass;
 
 public class ReverseInt {
 
 	void findReverse(int input) {
+		int reverseNum = 0;
+		int mod = 0;
+
 		while (input > 0) {
-			int num1 = input % 10;
+			mod = input % 10;
 			input = input / 10;
-			System.out.print(num1);
+			reverseNum = mod + reverseNum * 10;
 		}
+		System.out.println("Reverse Number is " + reverseNum);
 	}
 
 	public static void main(String[] args) {

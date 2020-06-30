@@ -2,9 +2,9 @@
 package madhuraMJun20.scannerClass;
 
 public class MissingNumberInArray {
-	void findMissingNum(int[] arr, int[] num1) {
+	void findMissingNum(int[] arr) {
 		int sumArr = 0;
-		int totalSum = (num1.length * (num1.length + 1)) / 2;
+		int totalSum = ((arr.length+1) * ((arr.length + 1)+1)) / 2;
 		for (int index = 0; index < arr.length; index++) {
 			sumArr += arr[index];
 		}
@@ -15,7 +15,6 @@ public class MissingNumberInArray {
 	public static void main(String[] args) {
 		MissingNumberInArray missingNumberInArray = new MissingNumberInArray();
 		int[] arr = { 1, 2, 8, 7, 6, 9, 4, 3, 10 };
-		int[] num1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		missingNumberInArray.findMissingNum(arr, num1);
+		missingNumberInArray.findMissingNum(arr);
 	}
 }

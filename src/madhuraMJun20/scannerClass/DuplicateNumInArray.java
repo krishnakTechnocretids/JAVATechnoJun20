@@ -3,10 +3,10 @@ package madhuraMJun20.scannerClass;
 
 public class DuplicateNumInArray {
 	void findDuplicate(int[] num) {
-		for (int i = 0; i < num.length; i++) {
-			for (int j = i + 1; j < num.length; j++) {
-				if (num[i] == num[j])
-					System.out.println(num[i] + " is a duplicate number");
+		for (int index = 0; index < num.length; index++) {
+			for (int innerIndex = index + 1; innerIndex < num.length; innerIndex++) {
+				if (num[index] == num[innerIndex])
+					System.out.println(num[index] + " is a duplicate number");
 			}
 		}
 	}
