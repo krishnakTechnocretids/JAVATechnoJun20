@@ -8,6 +8,7 @@ package palakSJun20;
 
 public class FibonacciNumbers {
 
+	//Method to print to Fibonacci Series
 	void printFibonacciSeries(int input) {
 		int i = 0;
 		int num1 = 0, num2 = 1, sum = 0;
@@ -26,6 +27,7 @@ public class FibonacciNumbers {
 
 	public static void main(String[] args) {
 		FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();
+		// Calling Method to print Fibonacci Series
 		fibonacciNumbers.printFibonacciSeries(5);
 		fibonacciNumbers.printFibonacciSeries(10);
 	}
