@@ -2,9 +2,7 @@
 Input: num1= 10, num2 =20
 output: num1=20, num2 =10*/
 
-
 package archanaNJun20;
-
 public class SwapNumbers {
 	void swapNumber(int num1,int num2){
 		System.out.println("Before swap--> num1: "+num1 +" num2: "+num2);
