@@ -7,22 +7,16 @@ public class FibonacciSeries {
 	}
 
 	private void calculateFibonacciSeries(int input) {
+		System.out.println("Fibonacci Series for " + input + " numbers : ");
+		int first = 0;
+		int second = 1;
+		int result = 0;
 
-		if (input == 0) {
-			System.out.println("0");
-		} else if (input == 1) {
-			System.out.println("0 1");
-		} else {
-			int first = 0;
-			int second = 1;
-			int result;
-			System.out.print("1 ");
-			for (int index = 0; index < input; index++) {
-				result = first + second;
-				System.out.print(result + " ");
-				first = second;
-				second = result;
-			}
+		for (int index = 0; index < input; index++) {
+			result = first + second;
+			System.out.print(second + " ");
+			first = second;
+			second = result;
 		}
 	}
 }

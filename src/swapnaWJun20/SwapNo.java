@@ -8,7 +8,6 @@ public class SwapNo {
 		num2 = num1 - num2;
 		num1 = num1 - num2;
 		System.out.println("Output : num1 : " + num1 + ", Two : " + num2);
-
 	}
 
 	public static void main(String[] args) {
