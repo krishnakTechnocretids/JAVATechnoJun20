@@ -6,7 +6,7 @@ public class FibbonacciSeries {
 		int num1=0;
 		int num2=1;
 		int sum;
-		System.out.println("Fibbonacci Series is :");
+		System.out.println("Fibbonacci Series of order "+order +" is: ");
 		for (int numCount=0; numCount<=order; numCount++) {
 			sum=num1+num2;                   //0+1  sum=1
 			num1=num2;                       //num1=1
