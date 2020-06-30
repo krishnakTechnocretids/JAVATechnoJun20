@@ -12,8 +12,7 @@ public class SwapTwoNumbers {
 	
 	public static void main(String[] args) {
 		SwapTwoNumbers swapTwoNumbers = new SwapTwoNumbers();
-		int num1 = 10, num2 = 20;
-		swapTwoNumbers.displayValueAfterSwapping(num1, num2);
+		swapTwoNumbers.displayValueAfterSwapping(10, 20);
 	}
 
 }
