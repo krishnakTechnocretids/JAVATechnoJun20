@@ -14,7 +14,6 @@ public class SwapTwoNum {
 
 	public static void main(String[] args) {
 		SwapTwoNum swapTwoNum = new SwapTwoNum();
-		int num1 = 10, num2=20;
-		swapTwoNum.swapTwoNumbers(num1, num2);
+		swapTwoNum.swapTwoNumbers(10, 20);
 	}
 }

@@ -18,7 +18,6 @@ public class Fibonacci {
 	
 	public static void main(String[] args) {
 		Fibonacci fibonacci = new Fibonacci();
-        int input=10;
-        fibonacci.printFibonacciNumbers(input);
+        fibonacci.printFibonacciNumbers(10);
 	}
 }
