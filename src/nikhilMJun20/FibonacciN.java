@@ -21,7 +21,7 @@ public class FibonacciN {
 	void displayFibonacci(int order) {
 		System.out.println("\nFibonacci Series of Order "+order+":-\n");
 		int num1=1,num2=1,num3=0;
-		for(int index=0; index<order; index++) {
+		for(int index=0; index<=order; index++) {
 			if(index<2)
 				System.out.print(num1+" ");
 			else {
@@ -35,7 +35,7 @@ public class FibonacciN {
 	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("This prgram will display Fibonacci series of the order you have asked.\nPlease enter order of the Fibonacci series:- \n(i.e. How many Fibonacci series numbers you want to be displayed?) ");
+		System.out.println("This prgram will display Fibonacci series of the order you have asked.\nPlease enter order of the Fibonacci series:-");
 		new FibonacciN().displayFibonacci(scanner.nextInt());
 		scanner.close();
 	}
