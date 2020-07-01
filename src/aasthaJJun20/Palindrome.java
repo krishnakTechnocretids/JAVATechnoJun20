@@ -20,7 +20,7 @@ public class Palindrome {
 		for (int index = input.length()-1; index >= 0; index--) {
 			result += String.valueOf(input.charAt(index));
 		}
-		if (input.equalsIgnoreCase(result))
+		if (input.equals(result))
 			System.out.println("Given string " + input + " is palindrome.");
 		else
 			System.out.println("Given string " + input + " is not a palindrome.");
@@ -32,7 +32,7 @@ public class Palindrome {
 		palindrome.checkPalindromeNumber(45654);
 		palindrome.checkPalindromeNumber(56789);
 		System.out.println("\nProgram:2 Output:---------------------------------");
-		palindrome.checkPalindromeString("RadAr");
+		palindrome.checkPalindromeString("radar");
 		palindrome.checkPalindromeString("technocredits");
 	}
 }
