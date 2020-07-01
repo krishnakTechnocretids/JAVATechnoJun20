@@ -13,7 +13,8 @@ public class SwipeNo {
 		no1 = no1 - no2;
 		System.out.println("After swap No1 = " + no1 + " No2 = " + no2);
 	}
+
 	public static void main(String[] args) {
-	SwipeNo.swipe2No(10, 20);
-}
+		SwipeNo.swipe2No(10, 20);
+	}
 }
