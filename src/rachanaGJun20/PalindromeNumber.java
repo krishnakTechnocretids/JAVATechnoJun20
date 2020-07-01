@@ -34,14 +34,14 @@ public class PalindromeNumber {
 		boolean flag;
 		System.out.println("Please enter Number to check");
 		flag = palindromenumber.isNumberPalindrome(scanner.nextInt());
-		if (flag == true) {
+		if (flag) {
 			System.out.println("Number is palindrome");
 		} else {
 			System.out.println("Number is not palindrome");
 		}
 		System.out.println("Please enter Number to check");
 		flag = palindromenumber.isNumberPalindrome(scanner.nextInt());
-		if (flag == true) {
+		if (flag) {
 			System.out.println("Number is palindrome");
 		} else {
 			System.out.println("Number is not palindrome");
