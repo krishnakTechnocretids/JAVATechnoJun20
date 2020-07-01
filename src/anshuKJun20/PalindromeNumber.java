@@ -6,8 +6,7 @@ public class PalindromeNumber {
 		while (number > 0) {
 			int remainder = number % 10;
 			number = number / 10;
-			add = add * 10;
-			add += remainder;
+			add = add * 10 + remainder;
 		}
 		if (add == number1) {
 			System.out.println("Given number " + number1 + " is palindrome.");
