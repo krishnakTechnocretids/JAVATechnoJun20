@@ -18,8 +18,8 @@ public class PalindromeInteger {
 	void findPalindromeInt(int input){ //123
 		int revNum=0, mod=0, origNum= input ;
 		while(input!=0){
-			mod= input%10; // 3 >> 2 >> 1
-			revNum= revNum*10 + mod; // 3 >> 32 >> 321 
+			//mod= input%10; // 3 >> 2 >> 1
+			revNum= (revNum*10) + (input%10); // 3 >> 32 >> 321 
 			input= input/10; // 12 >> 1 >> 0
 		}
 		if (revNum==origNum)
