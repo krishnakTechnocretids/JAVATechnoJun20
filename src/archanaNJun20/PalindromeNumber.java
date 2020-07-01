@@ -1,9 +1,10 @@
 package archanaNJun20;
 
 public class PalindromeNumber {
-	int rev=0;
-	void palindromeNumber(int number){
+
+	void printPalindromeNumber(int number){
 		int oNumber=number;
+		int rev=0;
 		while(number>0){
 			int mod=number%10;
 			rev=(rev*10)+mod;
@@ -16,7 +17,7 @@ public class PalindromeNumber {
 	}
 	public static void main(String[] args) {
 		PalindromeNumber palindromeNumber=new PalindromeNumber();
-		palindromeNumber.palindromeNumber(45654);
-		palindromeNumber.palindromeNumber(56789);
+		palindromeNumber.printPalindromeNumber(45654);
+		palindromeNumber.printPalindromeNumber(56789);
 	}
 }
