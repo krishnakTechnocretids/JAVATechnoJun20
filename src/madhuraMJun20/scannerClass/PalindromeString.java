@@ -2,18 +2,13 @@ package madhuraMJun20.scannerClass;
 
 /*Verify given String is palindrome or not. 
 Input: radar
-Output : Given string radar is palindrome.
-
-Input: technocredits
-Output: Given string technocredits is not palindrome.
-*/
+Output : Given string radar is palindrome.*/
 public class PalindromeString {
 
 	void findPalindrome(String input) {
 		String newString = "";
 		for (int i = input.length() - 1; i >= 0; i--) {
-			char ch = input.charAt(i);
-			newString += String.valueOf(ch);
+			newString += String.valueOf(input.charAt(i));     // output = output + input.charAt(index);
 		}
 		if (input.equals(newString))
 			System.out.println("Given string " + input + " is a palindrome.");
