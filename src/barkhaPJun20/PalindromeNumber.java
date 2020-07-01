@@ -18,7 +18,7 @@ public class PalindromeNumber {
 	}
 	public static void main(String[] args) {
 		PalindromeNumber palindromeNumber=new PalindromeNumber();
-		int num=45654;
-		palindromeNumber.palindromeNumber(num);
+		//int num=45654;
+		palindromeNumber.palindromeNumber(45654);
 	}
 }
