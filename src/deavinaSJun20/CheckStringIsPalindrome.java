@@ -15,10 +15,10 @@ public class CheckStringIsPalindrome {
 	void checkStringIsPalindrome(String name) {
 		String reverse = "";
 		String name1 = name;
-		for (int i = name.length() - 1; i >= 0; i--) {
-			reverse = reverse + String.valueOf(name.charAt(i));
+		for (int index = name.length() - 1; index >= 0; index --) {
+			reverse = reverse + String.valueOf(name.charAt(index));
 		}
-		if (name1.equals(reverse))
+		if (name1.equalsIgnoreCase (reverse))
 			System.out.println("Given string " + name1 + " is Palindrome");
 		else
 			System.out.println("Given string " + name1 + " is not Palindrome");
