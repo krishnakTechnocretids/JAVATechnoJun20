@@ -12,7 +12,7 @@ public class PalindromeNumber {
 		int initialNum = input;
 		int revNum = 0;
 		while (input > 0) {
-			revNum = revNum * 10 + input % 10;
+			revNum = (revNum * 10) + (input % 10);
 			input = input / 10;
 		}
 		if (initialNum == revNum)
