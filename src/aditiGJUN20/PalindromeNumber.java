@@ -26,7 +26,7 @@ public class PalindromeNumber {
 		else
 			System.out.println("Entered number " + inputNum + " is not palindrome");
 	}
-
+	
 	public static void main(String[] args) {
 		PalindromeNumber palindromeNumber = new PalindromeNumber();
 		Scanner scanner = new Scanner(System.in);
