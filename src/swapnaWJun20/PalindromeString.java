@@ -3,17 +3,14 @@ package swapnaWJun20;
 public class PalindromeString {
 
 	void findPalindromeNumber(String input) {
-		String input1 = input;
-		String reverse = "" ;
-
+		String reverse = "";
 		for (int index = input.length() - 1; index >= 0; index--) {
 			reverse += input.charAt(index);
 		}
-
-		if (input1.equals(reverse))
-			System.out.println("Input : "+input + " is Palindrome");
+		if (input.equals(reverse))
+			System.out.println("Input : " + input + " is Palindrome");
 		else
-			System.out.println("Input : "+input + " is not Palindrome");
+			System.out.println("Input : " + input + " is not Palindrome");
 	}
 
 	public static void main(String[] args) {

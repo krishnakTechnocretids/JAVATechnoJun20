@@ -5,16 +5,14 @@ public class PalindromeNo {
 	void findPalindromeNumber(int number) {
 		int number1 = number;
 		int temp = 0;
-		int mod = 0;
 		while (number1 > 0) {
-			mod = number1 % 10;
+			temp = temp * 10 + number1 % 10;
 			number1 = number1 / 10;
-			temp = mod + temp * 10;
 		}
 		if (temp == number)
-			System.out.println("Input : "+number + " is Palindrome");
+			System.out.println("Input : " + number + " is Palindrome");
 		else
-			System.out.println("Input : "+number + " is not Palindrome");
+			System.out.println("Input : " + number + " is not Palindrome");
 	}
 
 	public static void main(String[] args) {
