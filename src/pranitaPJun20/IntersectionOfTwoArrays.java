@@ -19,7 +19,10 @@ public class IntersectionOfTwoArrays {
 
 	// Find out commomn elements from both the given arrays
 	void getIntersectionOfArray(double[] array1, double[] array2) {
-		double[] tempIntersectionArray = new double[(array1.length)];
+		int length = array2.length;
+		if(array1.length<array2.length)
+		length = array1.length;
+		double[] tempIntersectionArray = new double[length];
 		for (int outerIndex = 0; outerIndex < array1.length; outerIndex++) {
 			for (int index = 0; index < array2.length; index++) {
 				if (array1[outerIndex] == array2[index]) {
