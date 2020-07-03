@@ -1,42 +1,33 @@
-package maheshKJun20;
+package maheshKJun20.ArrayExample;
 
 public class ArrayIntersection {
 	
 	int count=0;
+	
+	//Method to find Intersection of 2 Arrays
 	void findArrayIntersection(double[] arr1, double[] arr2) {
-		double[] intersectionOfArray = new double[arr1.length];
-		int counter =0;
+		double[] intersectionOfArray = new double[arr1.length + arr2.length];
+		String[] tempStringArray = new String[arr1.length + arr2.length];
 		for(int index=0;index<arr1.length;index++) {
-			for(int innerIndex=0;innerIndex<arr2.length;innerIndex++) {
-				if(arr2[innerIndex] == arr1[index]) {
-					intersectionOfArray[counter] = arr1[index];
-					counter++;
+			if(tempStringArray[index] != "@") {
+				for(int innerIndex=0;innerIndex<arr2.length;innerIndex++) {
+					if(arr2[innerIndex] == arr1[index]) {
+						intersectionOfArray[count] = arr1[index];
+						tempStringArray[innerIndex] = "@";
+						count++;
+						break;
+					}
 				}
 			}
+			
 		}	
-		intersectionOfArray = findUniqueValueArray(intersectionOfArray);
 		intersectionOfArray = removeExtraValueArray(intersectionOfArray);
 		displayArrayElements(intersectionOfArray);
 	}
 	
-	double[] findUniqueValueArray(double[] tempintersectionOfArray) {
-		for(int index=0;index<tempintersectionOfArray.length;index++) {
-			if (tempintersectionOfArray[index]>0) {
-				for(int innerIndex=index+1;innerIndex<tempintersectionOfArray.length;innerIndex++) {
-					if (tempintersectionOfArray[innerIndex] == tempintersectionOfArray[index] ) {
-						tempintersectionOfArray[innerIndex] = 0;
-					}
-				}
-			}else {
-				count++;
-			}
-		}
-		return tempintersectionOfArray;
-	}
-	
-	
+	//Method to Remove 0 Values from Array
 	double[] removeExtraValueArray(double[] tempintersectionOfArray) {
-		double[] finalArray = new double[tempintersectionOfArray.length - count];
+		double[] finalArray = new double[count];
 		int counter = 0;
 		for (int index=0;index<tempintersectionOfArray.length;index++) {
 			if (tempintersectionOfArray[index] != 0) { 
@@ -47,6 +38,7 @@ public class ArrayIntersection {
 		return finalArray;
 	}
 	
+	//Method to display Elements of Array
 	void displayArrayElements(double[] intersectionOfArray){
 		System.out.print("Output: ");
 		for (int index=0;index<intersectionOfArray.length;index++) {

@@ -12,7 +12,7 @@ public class ArrayUnion {
 		displayArrayElements(unionOfArray);
 	}
 	
-	//Method to find and Unique values to new Array
+	//Method to find Unique values in a Array
 	double[] findUniqueValueArray(double[] arr, double[] tempUnionArray) {
 		boolean checkDuplicateValue;
 		for(int index=0;index<arr.length;index++) {
