@@ -3,11 +3,16 @@ package anshuKJun20;
 import java.util.Arrays;
 
 public class IntersectionOfArray {
-
+   
 	double[] getIntersectionArray(double[] arr1, double[] arr2) {
-		double[] tempArr = new double[arr2.length];
+		if(arr1.length<arr2.length) {
+			double[] tempArr = new double[arr1.length];
+		}else {
+			double[] tempArr = new double[arr2.length];
+		}
 		int count = 0;
 		for (int outerindex = 0; outerindex < arr2.length; outerindex++) {
+			
 			for (int innerindex = 0; innerindex < arr1.length; innerindex++) {
 				if (arr2[outerindex] == arr1[innerindex]) {
 					tempArr[count] = arr2[outerindex];
