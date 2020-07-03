@@ -14,34 +14,31 @@ public class IntersectionOfTwoArray {
 			arrayLength = array2.length;
 		
 		double[] tempIntersectionArray = new double[arrayLength];
-		String[] str = new String[arrayLength];
-		str[0] = "";
+		double[] tempDuplicationArray = new double[arrayLength];
 		
 		for(int outerIndex=0;outerIndex<array1.length;outerIndex++) {			
-				for(int innerIndex=0;innerIndex<array2.length-1;innerIndex++) {
-					if(array1[outerIndex] == array2[innerIndex]) {
-						tempIntersectionArray[numberCnt] = array2[innerIndex];
-						numberCnt++;
-					}
-				}
-		}
-		
-		for(int outerIndex=0;outerIndex<numberCnt;outerIndex++) {
-			boolean isNumberDuplicate = false;
-			if(str[outerIndex] != "*") {
-				for(int innerIndex=outerIndex+1;innerIndex<numberCnt;innerIndex++) {
-					if(tempIntersectionArray[outerIndex]==tempIntersectionArray[innerIndex]) {
-						isNumberDuplicate = true;
-						str[innerIndex] = "*";
-					}
-				}
-				if(isNumberDuplicate == true) {
-					tempIntersectionArray[duplicateNumberCnt] = tempIntersectionArray[outerIndex];
-					duplicateNumberCnt++;
+			for(int innerIndex=0;innerIndex<array2.length;innerIndex++) {
+				if(array1[outerIndex] == array2[innerIndex] ) {
+					tempIntersectionArray[numberCnt] = array2[innerIndex];
+					numberCnt++;
 				}
 			}
+		}
+				
+		for(int outerIndex=0;outerIndex<numberCnt;outerIndex++) {
+			boolean isNumberDuplicate = false;
+			for(int innerIndex=0;innerIndex<duplicateNumberCnt;innerIndex++) {
+				if(tempIntersectionArray[outerIndex]==tempDuplicationArray[innerIndex]) {
+					isNumberDuplicate = true;
+					break;
+				}
+			}
+			if(isNumberDuplicate == false) {
+				tempDuplicationArray[duplicateNumberCnt] = tempIntersectionArray[outerIndex];
+				duplicateNumberCnt++;
+			}
 		}		
-		return tempIntersectionArray;
+		return tempDuplicationArray;
 	}
 	
 	//Create new array without 0.0 in the array
@@ -66,8 +63,8 @@ public class IntersectionOfTwoArray {
 	
 	public static void main(String[] args) {
 		IntersectionOfTwoArray intersectionOfTwoArray = new IntersectionOfTwoArray();
-		double[] array1 = {10.45, 14.0, 10.45, 18.35, 88.88, 54.10, 18.35, 10.45, 18.35};
-		double[] array2 = {17.20, 13.30, 10.45, 18.35, 84.33, 10.45, 13.30, 18.35};
+		double[] array1 = {10.45, 14.0, 18.35, 88.88, 54.10, 18.35, 14.0, 16.0, 17.0};
+		double[] array2 = {17.20, 13.30, 10.45, 18.35, 84.33, 13.30, 14.0, 15.0};
 		
 		intersectionOfTwoArray.display(intersectionOfTwoArray.getIntersectionOfArray(array1, array2));
 	}
