@@ -18,7 +18,8 @@ public class UnionOfArraysUsingMethod {
 		boolean flag;
 		for (int outerIndex = 0; outerIndex < array1.length; outerIndex++) {
 			flag = true;
-			for (int index = 0; index < tempUnionArray.length; index++) {
+			//for (int index = 0; index < tempUnionArray.length; index++) {
+			for (int index = 0; index < countUnionArray; index++) {
 				if (tempUnionArray[index] == array1[outerIndex]) {
 					flag = false;
 					break;
@@ -31,7 +32,8 @@ public class UnionOfArraysUsingMethod {
 		}
 		for (int outerIndex = 0; outerIndex < array2.length; outerIndex++) {
 			flag = true;
-			for (int index = 0; index < tempUnionArray.length; index++) {
+			//for (int index = 0; index < tempUnionArray.length; index++) {
+			for (int index = 0; index < countUnionArray; index++) {
 				if (tempUnionArray[index] == array2[outerIndex]) {
 					flag = false;
 					break;

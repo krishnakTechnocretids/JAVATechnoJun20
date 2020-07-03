@@ -41,7 +41,8 @@ public class IntersectionOfTwoArrays {
 		double[] resultArray = new double[countOfTempArray];
 		for (int outerIndex = 0; outerIndex < countOfTempArray; outerIndex++) {
 			boolean flag = true;
-			for (int index = 0; index < countOfTempArray; index++) {
+			//for (int index = 0; index < countOfTempArray; index++) {
+			for (int index = 0; index < countOfResultArray; index++) {
 				if (resultArray[index] == tempIntersectionArray[outerIndex]) {
 					flag = false;
 					break;
