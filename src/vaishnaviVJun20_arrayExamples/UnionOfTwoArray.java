@@ -2,8 +2,6 @@ package vaishnaviVJun20_arrayExamples;
 
 //Find union of two arrays.
 
-import java.lang.reflect.Array;
-
 public class UnionOfTwoArray {
 	int count;
 	
@@ -18,42 +16,29 @@ public class UnionOfTwoArray {
 		}
 	}
 	
-	void getUnionOfArrays(double[] arr1, double[] arr2) {
-		boolean flag = true;
-		double[] tempUnionArray = new double[arr1.length+arr2.length];	
-	
-		for(int outerIndex=0;outerIndex<arr1.length;outerIndex++) {	
-			flag = true;
-			for(int innerIndex=0;innerIndex<tempUnionArray.length;innerIndex++) {				
-			     if(tempUnionArray[innerIndex] == arr1[outerIndex]) 	    	
-			    	 flag = false;                 			    		    	 
-			}
-			if(flag == true) {
-				tempUnionArray[count] = arr1[outerIndex];
-				count++;
+	 double[] getUnionOfArrays(double[] tempUnionArray, double[] array) {
+		 boolean flag = true;
+		 for(int outerIndex=0;outerIndex<array.length;outerIndex++) {	
+				flag = true;
+				for(int innerIndex=0;innerIndex<tempUnionArray.length;innerIndex++) {				
+				     if(tempUnionArray[innerIndex] == array[outerIndex]) 	    	
+				    	 flag = false;                 			    		    	 
+				}
+				if(flag == true) {
+					tempUnionArray[count] = array[outerIndex];
+					count++;
+				}	
 			}	
-		}
-		
-		for(int outerIndex=0;outerIndex<arr2.length;outerIndex++) {	
-			flag = true;
-			for(int innerIndex=0;innerIndex<tempUnionArray.length;innerIndex++) {				
-			     if(tempUnionArray[innerIndex] == arr2[outerIndex]) 	    	
-			    	 flag = false;                 			    		    	 
-			}
-			if(flag == true) {
-				tempUnionArray[count] = arr2[outerIndex];
-				count++;
-			}	
-		}
-		
-		findUniqueNumberArray(tempUnionArray);
-
-	}
+		 return tempUnionArray;
+	 }
 
 	public static void main(String[] args) {
         double array1[] = {10.45,14.0,18.35,88.88,54.10,18.35};
         double array2[] = {17.20,13.30,10.45,18.35,84.33,13.30};
-        new UnionOfTwoArray().getUnionOfArrays(array1, array2);
+        double[] tempUnionArray = new double[array1.length+array2.length];
+        UnionOfTwoArray unionOfTwoArray = new UnionOfTwoArray();
+        tempUnionArray = unionOfTwoArray.getUnionOfArrays(tempUnionArray,array1);
+		tempUnionArray = unionOfTwoArray.getUnionOfArrays(tempUnionArray,array2);
+		unionOfTwoArray.findUniqueNumberArray(tempUnionArray);               
 	}
-
 }
