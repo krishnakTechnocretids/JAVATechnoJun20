@@ -43,15 +43,15 @@ public class IntersectionOfArray {
 		for (int index = 0; index < finalIntersectionArray.length; index++) {
 			finalIntersectionArray[index] = intersectionArray[index];
 		}
-		System.out.print(Arrays.toString(finalIntersectionArray));
+		System.out.print("\nIntersetion Array : " + Arrays.toString(finalIntersectionArray));
 	}
 
 	public static void main(String[] args) {
 		IntersectionOfArray intersectionOfArray = new IntersectionOfArray();
 		double[] arr1 = { 10.45, 14.0, 18.35, 88.88, 54.10, 18.35 };
 		double[] arr2 = { 17.20, 13.30, 10.45, 18.35, 84.33, 13.30 };
-		System.out.println("Array 1 " + Arrays.toString(arr1));
-		System.out.println("Array 2 " + Arrays.toString(arr2));
+		System.out.println("Array 1 : " + Arrays.toString(arr1));
+		System.out.println("Array 2 : " + Arrays.toString(arr2));
 		intersectionOfArray.findIntersectionInArrays(arr1, arr2);
 
 	}

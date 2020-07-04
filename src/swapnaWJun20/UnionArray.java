@@ -35,13 +35,15 @@ public class UnionArray {
 		for (int index = 0; index < unionArray.length; index++) {
 			unionArray[index] = tempUnionArray[index];
 		}
-		System.out.print(Arrays.toString(unionArray));
+		System.out.print("\nUnion Array : " + Arrays.toString(unionArray));
 	}
 
 	public static void main(String[] args) {
 		UnionArray unionArray = new UnionArray();
 		double arr1[] = { 10.45, 14.0, 18.35, 88.88, 54.10, 18.35 };
 		double arr2[] = { 17.20, 13.30, 10.45, 18.35, 84.33, 13.30 };
+		System.out.println("Array 1 : " + Arrays.toString(arr1));
+		System.out.println("Array 2 : " + Arrays.toString(arr2));
 		unionArray.findUnionOfTwoArrays(arr1, arr2);
 	}
 }
