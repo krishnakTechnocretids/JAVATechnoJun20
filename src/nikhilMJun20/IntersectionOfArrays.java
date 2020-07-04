@@ -55,18 +55,13 @@ public class IntersectionOfArrays {
 	}
 	
 	void findUniqueNumberArray(double[] tempIntersectionArray, double[] array1, double[] array2) {
-		boolean isNumberPresent = false;
 		for(int index=0; index<array1.length; index++) {
-			isNumberPresent = false;
 			for(int innerIndex=0; innerIndex<array2.length; innerIndex++) {
 				if(array2[innerIndex] == array1[index]) {
-					isNumberPresent = true;
+					tempIntersectionArray[count] = array1[index];
+					count++;
 					break;
 				}
-			}
-			if(isNumberPresent == true) {
-				tempIntersectionArray[count] = array1[index];
-				count++;
 			}
 		}
 	}
