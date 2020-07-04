@@ -50,7 +50,7 @@ public class ArrayUnion {
 		double[] array1 = { 10.45, 14.0, 18.35, 88.88, 54.10, 18.35 };
 		double[] array2 = { 17.20, 13.30, 10.45, 18.35, 84.33, 13.30 };
 		System.out.println("Array 1 "+Arrays.toString(array1));
-		System.out.println("Array 1 "+Arrays.toString(array1));
+		System.out.println("Array 2 "+Arrays.toString(array2));
 		arrayUnion.findArrayUnion(array1, array2);
 
 	}
