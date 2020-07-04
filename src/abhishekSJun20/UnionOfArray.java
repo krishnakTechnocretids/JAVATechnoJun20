@@ -24,7 +24,6 @@ public class UnionOfArray {
 		for (int outerindex = 0; outerindex < arr2.length; outerindex++) {
 			for (int innerindex = count; innerindex <= count; innerindex++) {
 				if (unionOfTwoArr[innerindex] != arr2[outerindex]) {
-					flag = isNumberUnique(unionOfTwoArr, arr2[outerindex]);
 					if (!flag) {
 						unionOfTwoArr[count] = arr2[outerindex];
 						count++;

@@ -9,10 +9,10 @@ Method Signature : double[] getIntersectionOfArray(double[] arr1, double[] arr2)
 public class IntersectionOfArray  {
     int count = 0;
 	void findIntersectionOfArray(double[] arr1, double[] arr2) {
-		int sizeOfIntersectionArray = arr1.length + arr2.length;
+		int sizeOfIntersectionArray = arr1.length + arr2.length;//comment
 		double[] arr3 = new double[sizeOfIntersectionArray];
 		// compared first Array arr1 with arr2 and formed new array arr3 with common elements of arr1 and arr2
-		for (int outerindex = 0; outerindex < arr1.length; outerindex++) {
+		for (int outerindex = 0; outerindex < arr1.length-1; outerindex++) {
 			for (int innerindex = 0; innerindex < arr2.length; innerindex++) {
 				if (arr1[outerindex] == arr2[innerindex]) {
 					arr3[count] = arr1[outerindex];
@@ -20,20 +20,8 @@ public class IntersectionOfArray  {
 				}
 			}
 		}
-		//from arr3 find duplicate elements and replace duplicates with zero
-		int elementCount = 0;
-		for (int outerindex = 0; outerindex < count; outerindex++) {
-			for (int innerindex = outerindex + 1; innerindex < count; innerindex++) {
-				if (arr3[outerindex] == arr3[innerindex]) {
-					arr3[innerindex] = 0;
-				}
-			}
-			if (arr3[outerindex] > 0) {
-				elementCount++;
-			}
-		}
 		//removed all zeros from an intersection of array and formed new array with nonzero elements
-		double[] intersectionOfTwoArray = new double[elementCount];
+		double[] intersectionOfTwoArray = new double[count];
 		int newindex = 0;
 		for (int index = 0; index < arr3.length; index++) {
 			if (arr3[index] > 0) {
@@ -49,7 +37,7 @@ public class IntersectionOfArray  {
 		System.out.print("{");
 		for (int index = 0; index < intersectionOfTwoArray.length; index++) {
 			System.out.print("" + intersectionOfTwoArray[index]+ "");
-			if (index < intersectionOfTwoArray.length - 1) {
+			if (index < intersectionOfTwoArray.length) {
 				System.out.print(",");
 			}
 		}
