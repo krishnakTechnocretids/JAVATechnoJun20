@@ -1,10 +1,9 @@
 package archanaNJun20;
 
 public class ArrayUnion {
-	int arraycount=0;
-	double[] getUnionOfArray(double[] array1,double[] array2){
+		double[] getUnionOfArray(double[] array1,double[] array2){
 		int arraycount=0;
-		double[] array3 = new double[(array1.length + array2.length)];
+			double[] array3 = new double[(array1.length + array2.length)];
 		boolean flag;
 		for (int outerIndex = 0; outerIndex < array1.length; outerIndex++) {
 			flag = true;
@@ -39,7 +38,7 @@ public class ArrayUnion {
 		boolean flag=true;
 		System.out.print("Union of Arrays : ");
 		for (int outerIndex=0;outerIndex<array3.length; outerIndex++){
-			for(innerIndex=1;innerIndex<outerIndex;innerIndex++){
+			for(innerIndex=0;innerIndex<outerIndex;innerIndex++){
 				if(array3[outerIndex]==array3[innerIndex])
 					flag=false;
 			}
@@ -53,7 +52,7 @@ public class ArrayUnion {
 		double[] array1= {10.45, 14.0, 18.35, 88.88, 54.10, 18.35};
 		double[] array2= {17.20, 13.30, 10.45, 18.35, 84.33, 13.30};
 
-		double[]  array3=arrayUnion.getUnionOfArray(array1,array2);
+		double[] array3=arrayUnion.getUnionOfArray(array1,array2);
 		arrayUnion.printUniqueNumberArray(array3);
 	}
 }

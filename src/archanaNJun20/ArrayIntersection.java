@@ -4,7 +4,7 @@ public class ArrayIntersection {
 	double[] getIntersectionOfArray(double[] array1, double[] array2){		
 		int  arraycount=0;
 		int length=0;
-		if(array1.length>array2.length)
+		if(array1.length<array2.length)
 			length= array1.length;
 		else
 			length=array2.length;
