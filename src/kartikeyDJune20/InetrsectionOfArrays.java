@@ -12,26 +12,26 @@ public class InetrsectionOfArrays {
 
 		double[] tempIntersectionArry = new double[lenTempArray];
 		int cnt = 0;
-		Arrays.sort(arrInput1);
-		Arrays.sort(arrInput2);
+	//	Arrays.sort(arrInput1);
+	//	Arrays.sort(arrInput2);
 		for (int indexFirstArray = 0; indexFirstArray < arrInput1.length; indexFirstArray++) {
 			boolean isNumDuplicateinFirstArray = false;
-			for (int indexInnerFirst = indexFirstArray + 1; indexInnerFirst < arrInput1.length; indexInnerFirst++) {
-				if (arrInput1[indexFirstArray] == arrInput1[indexInnerFirst]) {
+			for (int indexInnerFirst =0; indexInnerFirst < arrInput1.length; indexInnerFirst++) {
+				if (arrInput1[indexFirstArray] != arrInput1[indexInnerFirst] || indexFirstArray==indexInnerFirst) {
+					isNumDuplicateinFirstArray = false;
+				}else
 					isNumDuplicateinFirstArray = true;
-					break;
-				}
+					
 			}
 			if (isNumDuplicateinFirstArray == false) {
 
 				for (int indexSecArray = 0; indexSecArray < arrInput2.length; indexSecArray++) {
 					boolean isNumDupInSecondArray = false;
-					for (int indexInnerSecond = indexSecArray
-							+ 1; indexInnerSecond < arrInput2.length; indexInnerSecond++) {
-						if (arrInput2[indexSecArray] == arrInput2[indexInnerSecond]) {
-							isNumDupInSecondArray = true;
-							break;
-						}
+					for (int indexInnerSecond =0; indexInnerSecond < arrInput2.length; indexInnerSecond++) {
+						if (arrInput2[indexSecArray] != arrInput2[indexInnerSecond] || indexSecArray==indexInnerSecond) {
+							isNumDupInSecondArray = false;
+						}else
+							isNumDupInSecondArray = true;						
 					}
 					if (isNumDupInSecondArray == false) {
 						if (arrInput1[indexFirstArray] == arrInput2[indexSecArray]) {

@@ -6,29 +6,37 @@ public class UnionOfArrays {
 
 	static void unionOfArray(double[] arrInput1, double[] arrInput2) {
 		double[] tempUnionArray = new double[arrInput1.length + arrInput2.length];
-		Arrays.sort(arrInput1);
-		Arrays.sort(arrInput2);
+	//	Arrays.sort(arrInput1);
+	//	Arrays.sort(arrInput2);
 		int cnt = 0;
 		for (int indexArray = 0; indexArray < arrInput1.length; indexArray++) {
 			boolean flagFirstArray = true;
-			for (int indexInnerArray = indexArray + 1; indexInnerArray < arrInput1.length; indexInnerArray++) {
-				if (arrInput1[indexArray] == arrInput1[indexInnerArray]) {
+			for (int indexInnerArray = 0; indexInnerArray < arrInput1.length; indexInnerArray++) {
+				if ((indexArray ==indexInnerArray)|| arrInput1[indexArray] != arrInput1[indexInnerArray] ) {
+					flagFirstArray = true;
+					
+				}else {
 					flagFirstArray = false;
-					break;
 				}
+				
 			}
 			if (flagFirstArray == true) {
+				
+//				System.out.println(arrInput1[indexArray]);
+				
 				cnt++;
 				tempUnionArray[cnt - 1] = arrInput1[indexArray];
 			}
 		}
 		for (int indexArray = 0; indexArray < arrInput2.length; indexArray++) {
 			boolean flagSecArray = true;
-			for (int indexInnerArray = indexArray + 1; indexInnerArray < arrInput2.length; indexInnerArray++) {
-				if (arrInput2[indexArray] == arrInput2[indexInnerArray]) {
-					flagSecArray = false;
-					break;
+			for (int indexInnerArray = 0; indexInnerArray < arrInput2.length; indexInnerArray++) {
+				if (arrInput2[indexArray] != arrInput2[indexInnerArray] ||indexArray== indexInnerArray) {
+					flagSecArray = true;
 				}
+				else
+					 flagSecArray = false;
+					
 			}
 			if (flagSecArray == true) {
 				boolean flagTempUnionArray = true;
@@ -61,3 +69,5 @@ public class UnionOfArrays {
 	}
 
 }
+
+
