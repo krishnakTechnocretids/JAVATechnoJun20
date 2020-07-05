@@ -1,4 +1,4 @@
-
+package suparnaNJune20.CodingExam;
 public class SecondMaxNo {
 
 	void fndSecondMaxNo(int number[]) {
