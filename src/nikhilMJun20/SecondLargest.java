@@ -5,7 +5,7 @@ public class SecondLargest {
 		int temp=0;
 		for(int index=0; index<array.length; index++) {
 			for (int innerIndex = index+1; innerIndex<array.length; innerIndex++) {
-				if(array[index]>array[innerIndex]) {
+				if(array[index]<array[innerIndex]) {
 					temp = array[index];
 					array[index] = array[innerIndex];
 					array[innerIndex] = temp;
