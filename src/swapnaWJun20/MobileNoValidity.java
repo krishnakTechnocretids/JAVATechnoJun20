@@ -12,10 +12,9 @@ public class MobileNoValidity {
 		}
 		return flag;
 	}
-	
+
 	void checkMobileNo(String mobNo) {
 		if (mobNo.length() > 14 || mobNo.length() < 10) {
-			checkAlphabet(mobNo);
 			System.out.println("\n" + mobNo + " : Mobile no is invalid.");
 		} else {
 			if (mobNo.length() == 10 && mobNo.startsWith("9") || mobNo.startsWith("8") || mobNo.startsWith("7")) {
@@ -43,11 +42,7 @@ public class MobileNoValidity {
 				else
 					System.out.println("\n" + mobNo + " : Mobile no is invalid.");
 			} else {
-				checkAlphabet(mobNo);
-				if (flag == true)
-					System.out.println("\n" + mobNo + " : Mobile no is valid.");
-				else
-					System.out.println("\n" + mobNo + " : Mobile no is invalid.");
+				System.out.println("\n" + mobNo + " : Mobile no is invalid.");
 			}
 		}
 	}
