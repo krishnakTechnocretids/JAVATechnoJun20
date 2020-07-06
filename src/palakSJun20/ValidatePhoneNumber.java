@@ -16,20 +16,24 @@ package palakSJun20;
 public class ValidatePhoneNumber {
 
 	void validatePhoneNumber(String pNumber) {
-	
+
 		// 1st Case - +91 9765463742 have to check for + sign
 		boolean flag = false;
+		String specialCharacter = "!@#$%^&*()-/`~:<>/?|=.,";
 		if (pNumber.startsWith("+") && pNumber.length() == 14) {
-
 			for (int index = 1; index < pNumber.length(); index++) {
 				if ((Character.isDigit((pNumber.charAt(index))) || Character.isSpaceChar((pNumber.charAt(index))))
+						&& (!(specialCharacter.contains(Character.toString(pNumber.charAt(index)))))
 						&& (!(Character.isLetter(pNumber.charAt(index))))) {
 					flag = true;
-				} else
+				} else {
 					System.out.println(pNumber + " Number is Invalid");
+					flag = false;
+					break;
+				}
 			}
 			if (flag == true) {
-				System.out.println("Number "+pNumber+" is Valid");
+				System.out.println("Number " + pNumber + " is Valid");
 			}
 		}
 
@@ -45,53 +49,53 @@ public class ValidatePhoneNumber {
 				}
 			}
 			if (flag == true) {
-				System.out.println("Number "+pNumber+" is Valid");
+				System.out.println("Number " + pNumber + " is Valid");
 			}
 		}
-		
+
 		// 3rd Case - 976 546 3742
 		else if (pNumber.startsWith("9") && pNumber.length() == 12) {
 			for (int index = 0; index < pNumber.length(); index++) {
 				flag = false;
-				if (Character.isDigit(pNumber.charAt(index))
-						|| Character.isSpaceChar((pNumber.charAt(index))) && (!(Character.isLetter(pNumber.charAt(index))))) {
+				if (Character.isDigit(pNumber.charAt(index)) || Character.isSpaceChar((pNumber.charAt(index)))
+						&& (!(Character.isLetter(pNumber.charAt(index))))) {
 					flag = true;
 				} else {
-					System.out.println("Number "+pNumber+" is Invalid");
+					System.out.println("Number " + pNumber + " is Invalid");
 					break;
 				}
 			}
 			if (flag == true)
-				System.out.println("Number "+pNumber+" is Valid");
+				System.out.println("Number " + pNumber + " is Valid");
 		}
-		
+
 		// 4th Case - 9765463742
-		else if (pNumber.startsWith("9") &&  pNumber.length() == 10) {
+		else if (pNumber.startsWith("9") && pNumber.length() == 10) {
 			for (int index = 0; index < pNumber.length(); index++) {
 				flag = false;
 				if (Character.isDigit(pNumber.charAt(index)) && (!(Character.isLetter(pNumber.charAt(index))))) {
 					flag = true;
 				} else {
-					System.out.println("Number "+pNumber+" is Invalid");
+					System.out.println("Number " + pNumber + " is Invalid");
 					break;
 				}
 			}
 			if (flag == true)
-				System.out.println("Number "+pNumber+" is Valid");
-		}
-		else
-			System.out.println("Number "+pNumber+" is  Invalid");
+				System.out.println("Number " + pNumber + " is Valid");
+		} else
+			System.out.println("Number " + pNumber + " is  Invalid");
 	}
 
 	public static void main(String[] args) {
 		ValidatePhoneNumber phoneNumber = new ValidatePhoneNumber();
-		phoneNumber.validatePhoneNumber("+91 9754463742");
-		phoneNumber.validatePhoneNumber("09765463742");
+		phoneNumber.validatePhoneNumber("+91 9765463742");
+		phoneNumber.validatePhoneNumber("09765464742");
 		phoneNumber.validatePhoneNumber("976 546 3742");
 		phoneNumber.validatePhoneNumber("9765463742");
-		phoneNumber.validatePhoneNumber("9765463A42"); // Invalid 
-		phoneNumber.validatePhoneNumber("976546342"); // Invalid 
-		phoneNumber.validatePhoneNumber("6976546342"); // Invalid 
+		phoneNumber.validatePhoneNumber("+91 9765463@42");
+		phoneNumber.validatePhoneNumber("9765463A42"); // Invalid
+		phoneNumber.validatePhoneNumber("976546342"); // Invalid
+		phoneNumber.validatePhoneNumber("6976546342"); // Invalid
 	}
 
 }
