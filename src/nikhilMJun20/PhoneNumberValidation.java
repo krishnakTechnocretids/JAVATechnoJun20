@@ -56,7 +56,6 @@ public class PhoneNumberValidation {
 	}
 	
 	boolean containsLetter(String phNo) {
-		phNo = phNo.replaceAll(" ", "");
 		for(int index=0; index<phNo.length(); index++) {
 			if(Character.isLetter(phNo.charAt(index))) {
 				return true;
