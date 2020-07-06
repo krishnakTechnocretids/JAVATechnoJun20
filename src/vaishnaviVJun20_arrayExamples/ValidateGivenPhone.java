@@ -20,7 +20,7 @@ public class ValidateGivenPhone {
 	void validateGivenPhoneNumber(String[] array) {
 		for(int index=0;index<array.length;index++) {
 			if(array[index].length() == 14 || array[index].length() == 12 || array[index].length() == 11 || array[index].length() ==10) {
-				if(array[index].charAt(startsWith) == '+' || array[index].charAt(startsWith) == '0'   || array[index].charAt(startsWith) == '9' || array[index].charAt(startsWith) == '7' || array[index].charAt(startsWith) == '8') {
+				if(array[index].substring(0,4).equals("+91 ") || array[index].charAt(startsWith) == '0'   || array[index].charAt(startsWith) == '9' || array[index].charAt(startsWith) == '7' || array[index].charAt(startsWith) == '8') {
 					for(int innerIndex=0;innerIndex<array[index].length();innerIndex++) {
 						if(Character.isLetter(array[index].charAt(innerIndex))) {
 							flag = false;
