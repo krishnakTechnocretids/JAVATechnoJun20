@@ -28,7 +28,7 @@ public class ValidatePhoneNumber {
 	//Method to validate the country code is valid or not
 	boolean isValidCountryCode(String countryCode) {
 		boolean flag = true;
-		if (!String.valueOf(countryCode.charAt(0)).equals("+") || !String.valueOf(countryCode.charAt(1)).equals("9") || !String.valueOf(countryCode.charAt(2)).equals("1") || !String.valueOf(countryCode.charAt(3)).equals(" ")) {
+		if (!String.valueOf(countryCode.charAt(0)).equals("+") && !String.valueOf(countryCode.charAt(1)).equals("9") && !String.valueOf(countryCode.charAt(2)).equals("1") && !String.valueOf(countryCode.charAt(3)).equals(" ")) {
 			flag = false;
 		}
 		return flag;
