@@ -56,8 +56,10 @@ public class PhoneNumberValidation {
 	}
 	
 	boolean containsLetter(String phNo) {
+		//Replacing '+' sign and spaces with 0 and then, checking for digits
+		phNo = phNo.replaceAll("\\+", "0").replaceAll(" ", "0");
 		for(int index=0; index<phNo.length(); index++) {
-			if(Character.isLetter(phNo.charAt(index))) {
+			if(!Character.isDigit(phNo.charAt(index))) {
 				return true;
 			}
 		}
