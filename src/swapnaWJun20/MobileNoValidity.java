@@ -17,27 +17,24 @@ public class MobileNoValidity {
 		if (mobNo.length() > 14 || mobNo.length() < 10) {
 			System.out.println("\n" + mobNo + " : Mobile no is invalid.");
 		} else {
-			if (mobNo.length() == 10 && mobNo.startsWith("9") || mobNo.startsWith("8") || mobNo.startsWith("7")) {
-				checkAlphabet(mobNo);
-				if (flag == true)
+			if (mobNo.length() == 10 && !mobNo.contains(" ") && mobNo.startsWith("9") || mobNo.startsWith("8")
+					|| mobNo.startsWith("7")) {
+				if (checkAlphabet(mobNo) == true)
 					System.out.println("\n" + mobNo + " : Mobile no is valid.");
 				else
 					System.out.println("\n" + mobNo + " : Mobile no is invalid.");
-			} else if (mobNo.length() == 11 && mobNo.startsWith("0")) {
-				checkAlphabet(mobNo);
-				if (flag == true)
+			} else if (mobNo.length() == 11 && !mobNo.contains(" ") && mobNo.startsWith("0")) {
+				if (checkAlphabet(mobNo) == true)
 					System.out.println("\n" + mobNo + " : Mobile no is valid.");
 				else
 					System.out.println("\n" + mobNo + " : Mobile no is invalid.");
 			} else if (mobNo.length() == 12 && mobNo.charAt(3) == ' ' && mobNo.charAt(7) == ' ') {
-				checkAlphabet(mobNo);
-				if (flag == true)
+				if (checkAlphabet(mobNo) == true)
 					System.out.println("\n" + mobNo + " : Mobile no is valid.");
 				else
 					System.out.println("\n" + mobNo + " : Mobile no is invalid.");
 			} else if (mobNo.startsWith("+91") && mobNo.length() == 14) {
-				checkAlphabet(mobNo);
-				if (flag == true)
+				if (checkAlphabet(mobNo) == true)
 					System.out.println("\n" + mobNo + " : Mobile no is valid.");
 				else
 					System.out.println("\n" + mobNo + " : Mobile no is invalid.");
@@ -59,6 +56,7 @@ public class MobileNoValidity {
 		mobileNoValidity.checkMobileNo("0765463742");// invalid
 		mobileNoValidity.checkMobileNo("99897  83742"); // invalid
 		mobileNoValidity.checkMobileNo("998 97 83742");// invalid
-		mobileNoValidity.checkMobileNo("998 979 S7Y2");// invalid
+
+		mobileNoValidity.checkMobileNo("979 567894");// invalid
 	}
 }
