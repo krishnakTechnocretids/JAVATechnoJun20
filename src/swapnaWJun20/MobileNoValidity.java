@@ -9,6 +9,7 @@ public class MobileNoValidity {
 		for (int i = 0; i < mobNo.length(); i++) {
 			if (Character.isAlphabetic(mobNo.charAt(i)))
 				flag = false;
+			break;
 		}
 		return flag;
 	}
@@ -56,7 +57,8 @@ public class MobileNoValidity {
 		mobileNoValidity.checkMobileNo("0765463742");// invalid
 		mobileNoValidity.checkMobileNo("99897  83742"); // invalid
 		mobileNoValidity.checkMobileNo("998 97 83742");// invalid
-
+		mobileNoValidity.checkMobileNo("998 967 654");// invalid
 		mobileNoValidity.checkMobileNo("979 567894");// invalid
+
 	}
 }
