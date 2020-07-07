@@ -69,27 +69,10 @@ public class PhoneNumberValidation {
 	}
 	public static void main(String[] args) {
 		PhoneNumberValidation phoneNumberValidation=new PhoneNumberValidation();
-		System.out.println("phone number of length :10");
-		phoneNumberValidation.checkPhoneNumberValidation("9028553461");
-		phoneNumberValidation.checkPhoneNumberValidation("90 8553461");
-		phoneNumberValidation.checkPhoneNumberValidation("90y8553461");
-		phoneNumberValidation.checkPhoneNumberValidation("2028553461");
-		System.out.println("\n" +"phone number of length :11");
-		phoneNumberValidation.checkPhoneNumberValidation("09028553461");
-		phoneNumberValidation.checkPhoneNumberValidation("090 8553461");
-		phoneNumberValidation.checkPhoneNumberValidation("90y8553461");
-		phoneNumberValidation.checkPhoneNumberValidation("1028553461");
-		phoneNumberValidation.checkPhoneNumberValidation("02028553461");
-		System.out.println("\n" +"phone number of length :12");
-		phoneNumberValidation.checkPhoneNumberValidation("902 855 3461");
-		phoneNumberValidation.checkPhoneNumberValidation("9028 55 3461");
-		phoneNumberValidation.checkPhoneNumberValidation("90i 855 3461");
-		phoneNumberValidation.checkPhoneNumberValidation("202 855 3461");
-		System.out.println("\n" +"phone number of length :14");
-		phoneNumberValidation.checkPhoneNumberValidation("+91 9028553461");
-		phoneNumberValidation.checkPhoneNumberValidation("+91 90 8553461");
-		phoneNumberValidation.checkPhoneNumberValidation("+91 90y8553461");
-		phoneNumberValidation.checkPhoneNumberValidation("+91 9028553461");
-		phoneNumberValidation.checkPhoneNumberValidation("+91 2028553461");
+		String input[]= {"9028553461","90 8553461","90y8553461","2028553461","09028553461","90y8553461","1028553461","02028553461","090 8553461","902 855 3461"
+				,"90i 855 3461","202 855 3461","+91 9028553461","+91 90 8553461","+91 90y8553461","+91 2028553461"};
+		for(int index=0;index<input.length;index++)	{
+			phoneNumberValidation.checkPhoneNumberValidation(input[index]);
+		}
 	}
 }
