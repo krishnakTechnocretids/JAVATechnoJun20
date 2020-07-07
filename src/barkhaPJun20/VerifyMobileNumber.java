@@ -12,7 +12,7 @@ public class VerifyMobileNumber {
 		System.out.println("Mobile Number provided to validate is: "+num);
 		//Exa.+91 9765463742
 		if (num.length()==14) {
-			if (num.startsWith("+91")&& num.charAt(4)=='9' && isNumber(num.substring(4)) && isNumber(num)) {
+			if (num.startsWith("+91")&& num.charAt(4)=='9' && isNumber(num.substring(4))) {
 				
 					System.out.println("Number is Valid");
 			} else 
@@ -49,6 +49,6 @@ public static void main(String[] args) {
 		VerifyMobileNumber  mobileNumber=new VerifyMobileNumber ();
 		//String mobileNum="+91 9765463742";
 		//System.out.println("Mobile Number provided to validate is: "+mobileNum);
-		mobileNumber.validMobileNumber("907 65 46372");
+		mobileNumber.validMobileNumber("+91 8565463742");
 	}
 }	
