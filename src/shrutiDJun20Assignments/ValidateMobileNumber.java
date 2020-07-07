@@ -4,8 +4,9 @@ public class ValidateMobileNumber {
 	void checkForValidNumber(String number) {
 
 		boolean flag = false;
+		number = number.replace(" ","");
 
-		if (number.length() >= 10 && number.length() <= 14) {
+		if (number.length() >= 10 && number.length() < 14) {
 			if (number.startsWith("9") || number.startsWith("8")
 					|| number.startsWith("7") || number.startsWith("+")
 					|| number.startsWith("0")) {
@@ -38,7 +39,7 @@ public class ValidateMobileNumber {
 		validateMobileNumber.checkForValidNumber("9765463742");
 		System.out.println();
 		validateMobileNumber.checkForValidNumber("9765463A42");
-		validateMobileNumber.checkForValidNumber("976546342");
+		validateMobileNumber.checkForValidNumber("+91  456789");
 		validateMobileNumber.checkForValidNumber("6976546342");
 	}
 }
