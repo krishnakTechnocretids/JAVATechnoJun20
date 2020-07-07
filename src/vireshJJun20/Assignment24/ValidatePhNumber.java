@@ -4,12 +4,12 @@ public class ValidatePhNumber {
 
 	boolean flag=true;
 
-	boolean isNumCorrect(String num) {
-		if (num.length() >= 10 && num.length()<=14) {
-			if (num.length() == 10) {
-				if (num.charAt(0) == '9' || num.charAt(0) == '8' || num.charAt(0) == '7') {
-					for (int index=0; index< num.length(); index++) {
-						if (!Character.isDigit(num.charAt(index))) {
+	boolean isNumCorrect(String phNum) {
+		if (phNum.length() >= 10 && phNum.length()<=14) {
+			if (phNum.length() == 10) {
+				if (phNum.charAt(0) == '9' || phNum.charAt(0) == '8' || phNum.charAt(0) == '7') {
+					for (int index=0; index< phNum.length(); index++) {
+						if (!Character.isDigit(phNum.charAt(index))) {
 							flag=false;
 							break;
 						}
@@ -19,19 +19,19 @@ public class ValidatePhNumber {
 				else
 					flag= false;
 			}
-			if (num.length() == 14) {
-				for (int index = 0; index < num.length(); index++) {
+			if (phNum.length() == 14) {
+				for (int index = 0; index < phNum.length(); index++) {
 
-					if (num.charAt(index) == '+' && num.charAt(3) == ' ') {
+					if (phNum.charAt(index) == '+' && phNum.charAt(3) == ' ') {
 						flag = true;
 						break;
 					} else
 						flag = false;
 				}
 			}
-			if (num.length() == 12) {
-				for (int index = 0; index < num.length(); index++) {
-					if (num.charAt(3) == ' ' && num.charAt(7) == ' ') {
+			if (phNum.length() == 12) {
+				for (int index = 0; index < phNum.length(); index++) {
+					if (phNum.charAt(3) == ' ' && phNum.charAt(7) == ' ') {
 						flag = true;
 						break;
 					} else
@@ -39,11 +39,11 @@ public class ValidatePhNumber {
 				}
 			}
 
-			if (num.length() == 11) {
-				if (num.charAt(0) == '0') {
-					if (num.charAt(1) == '9' || num.charAt(1) == '8' || num.charAt(1) == '7') {
-						for (int index = 2; index < num.length(); index++) {
-							if (!Character.isDigit(num.charAt(index))) {
+			if (phNum.length() == 11) {
+				if (phNum.charAt(0) == '0') {
+					if (phNum.charAt(1) == '9' || phNum.charAt(1) == '8' || phNum.charAt(1) == '7') {
+						for (int index = 2; index < phNum.length(); index++) {
+							if (!Character.isDigit(phNum.charAt(index))) {
 								flag = false;
 								break;
 							}
