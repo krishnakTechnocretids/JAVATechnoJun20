@@ -4,15 +4,15 @@ public class ValidateMobileNumber {
 	void checkForValidNumber(String number) {
 
 		boolean flag = false;
-		number = number.replace(" ","");
+		String mobileNumber = number;
+		mobileNumber = mobileNumber.replace(" ", "");
 
-		if (number.length() >= 10 && number.length() < 14) {
-			if (number.startsWith("9") || number.startsWith("8")
-					|| number.startsWith("7") || number.startsWith("+")
-					|| number.startsWith("0")) {
-				for (int index = 1; index < number.length(); index++) {
-					if (Character.isDigit(number.charAt(index))
-							|| Character.isSpaceChar(number.charAt(index)))
+		if (mobileNumber.length() >= 10 && mobileNumber.length() < 14) {
+			if (mobileNumber.startsWith("9") || mobileNumber.startsWith("8")
+					|| mobileNumber.startsWith("7") || mobileNumber.startsWith("+")
+					|| mobileNumber.startsWith("0")) {
+				for (int index = 1; index < mobileNumber.length(); index++) {
+					if (Character.isDigit(mobileNumber.charAt(index)))
 						flag = true;
 					else {
 						flag = false;
@@ -23,7 +23,7 @@ public class ValidateMobileNumber {
 				flag = false;
 		} else
 			flag = false;
-		
+
 		if (flag == true)
 			System.out.println(number + " is valid");
 		else
