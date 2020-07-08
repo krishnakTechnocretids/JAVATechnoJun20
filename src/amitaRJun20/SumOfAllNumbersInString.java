@@ -5,26 +5,24 @@ Input: J7yu9y8h1h8j4b7j3jjb6
 Ouput: Sum of all numbers in String is: 54*/
 package amitaRJun20;
 
-import java.util.Arrays;
-
 public class SumOfAllNumbersInString {
 	
 	int sum = 0;
 	
 	//method to display sum of all numbers in input String
-	void displaySum(String input) {
+	int displaySum(String input) {
 		for (int index = 0; index < input.length(); index++) {
 			if (Character.isDigit(input.charAt(index))) {
-				int number = Integer.parseInt(String.valueOf(input.charAt(index)));
-				sum += number;
+				//sum += Integer.parseInt(String.valueOf(input.charAt(index)));
+				//another method 
+				sum += Character.getNumericValue(input.charAt(index));
 			}
 		}
-		System.out.println("Sum of all numbers in String is : "+sum);
+		return sum;
 	}
 
 	public static void main(String[] args) {
-		String input = "J7yu9y8h1h8j4b7j3jjb6";
-		System.out.println("The input string is "+input);
-		new SumOfAllNumbersInString().displaySum(input);
+		System.out.println("The input string is "+"J7yu9y8h1h8j4b7j3jjb6");
+		System.out.println("Sum of all numbers in String is : "+new SumOfAllNumbersInString().displaySum("J7yu9y8h1h8j4b7j3jjb6"));
 	}
 }
