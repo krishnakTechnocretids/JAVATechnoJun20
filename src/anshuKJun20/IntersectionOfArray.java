@@ -3,12 +3,12 @@ package anshuKJun20;
 import java.util.Arrays;
 
 public class IntersectionOfArray {
-   
+	double[] tempArr;
 	double[] getIntersectionArray(double[] arr1, double[] arr2) {
 		if(arr1.length<arr2.length) {
-			double[] tempArr = new double[arr1.length];
+			tempArr = new double[arr1.length];
 		}else {
-			double[] tempArr = new double[arr2.length];
+			tempArr = new double[arr2.length];
 		}
 		int count = 0;
 		for (int outerindex = 0; outerindex < arr2.length; outerindex++) {
