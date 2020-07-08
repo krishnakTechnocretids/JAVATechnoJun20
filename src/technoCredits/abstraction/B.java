@@ -1,6 +1,6 @@
 package technoCredits.abstraction;
 
-public class B implements A {
+public abstract class B implements A {
 
 	@Override
 	public void m1() {
@@ -22,9 +22,7 @@ public class B implements A {
 		return false;
 	}
 	
-	void m5() {
-		System.out.println(A.x);
-		System.out.println("This is Class B's extra method");
-	}
+	
+	abstract public boolean m5();
 
 }
