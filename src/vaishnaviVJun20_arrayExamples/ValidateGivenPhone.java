@@ -15,32 +15,73 @@ Note : phone number is given in String format. */
 
 public class ValidateGivenPhone {
 	int startsWith;
-	boolean flag = true;
 	
-	void validateGivenPhoneNumber(String[] array) {
-		for(int index=0;index<array.length;index++) {
-			if(array[index].length() == 14 || array[index].length() == 12 || array[index].length() == 11 || array[index].length() ==10) {
-				if(array[index].substring(0,4).equals("+91 ") || array[index].charAt(startsWith) == '0'   || array[index].charAt(startsWith) == '9' || array[index].charAt(startsWith) == '7' || array[index].charAt(startsWith) == '8') {
-					for(int innerIndex=0;innerIndex<array[index].length();innerIndex++) {
-						if(Character.isLetter(array[index].charAt(innerIndex))) {
-							flag = false;
-							System.out.println(array[index] +":  This phone number is Invalid");
-						}	
-					}
-					if(flag == true)
-						System.out.println(array[index] +":  This phone number is Valid");
+	void validateGivenPhoneNumber(String phoneNo) {
+		    switch(phoneNo.length()){
+		    case 14:
+		    	if(containsLetter(phoneNo) == false && validateCountryCode(phoneNo) == true) {
+					System.out.println(phoneNo+" is a valid Phone Number");
+				}else {
+					System.out.println(phoneNo+" is NOT a valid Phone Number");
 				}
-				else
-					System.out.println(array[index] +":  This phone number is invalid");
-			}
-			else
-				System.out.println(array[index] +":  This phone number is invalid");
-		}
+				break;
+				
+		    case 12:
+		    	if(phoneNo.charAt(3) == ' ' && phoneNo.charAt(7) == ' ' &&  containsLetter(phoneNo) == false && validateCountryCode(phoneNo) == true) {
+		    		System.out.println(phoneNo+" is a valid Phone Number");
+				}else {
+					System.out.println(phoneNo+" is NOT a valid Phone Number");
+				}
+				break;
+				
+		    case 10:
+		    	if(containsLetter(phoneNo) == false && validateCountryCode(phoneNo) == true) {
+		    		System.out.println(phoneNo+" is a valid Phone Number");
+				}else {
+					System.out.println(phoneNo+" is NOT a valid Phone Number");
+				}
+				break;
+		   
+		    case 11:
+		    	if(containsLetter(phoneNo) == false && validateCountryCode(phoneNo) == true) {
+		    		System.out.println(phoneNo+" is a valid Phone Number");
+				}else {
+					System.out.println(phoneNo+" is NOT a valid Phone Number");
+				}
+				break;
+		    
+		    default:
+				System.out.println(phoneNo+" is NOT a valid Phone Number.");
+				break;	
+				
+		    }		
 	}
-
+	
+	boolean containsLetter(String phNo)
+	{
+		phNo = phNo.replaceAll("\\+", "0").replaceAll(" ", "0");
+		for(int index=0;index<phNo.length();index++) {
+			if(!Character.isDigit(phNo.charAt(index))) 
+			    return true;
+		}
+		     return false;
+	}
+	
+	boolean validateCountryCode(String phNo) {
+		for(int index=0;index<phNo.length();index++) {
+			if(phNo.substring(0,4).equals("+91 ") || phNo.charAt(startsWith) == '0'   || phNo.charAt(startsWith) == '9' || phNo.charAt(startsWith) == '7' || phNo.charAt(startsWith) == '8') {
+				return true;
+			}	
+		}
+		return false;
+	}
+	
+	
 	public static void main(String[] args) {
 		ValidateGivenPhone validateGivenPhone = new ValidateGivenPhone();
 		String[] phoneNo =  {"+91 9765463742","09765463742","976 546 3742","9765463742","9765463A42","976546342","6976546342"};
-		validateGivenPhone.validateGivenPhoneNumber(phoneNo);
+		for(int index=0;index<phoneNo.length;index++) {
+		validateGivenPhone.validateGivenPhoneNumber(phoneNo[index]);
+		}
 	}
 }
