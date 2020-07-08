@@ -5,13 +5,12 @@ package abhishekSJun20;
  */
 
 public class SumOfNumbersInString {
-//
+
 	void sumOfNumber(String input) {
 		int sum = 0;
 		for (int index = 0; index < input.length(); index++) {
 			if (Character.isDigit(input.charAt(index))) {
-				int number = Integer.parseInt(String.valueOf(input.charAt(index)));
-				sum += number;
+				sum += Integer.parseInt(String.valueOf(input.charAt(index)));
 			}
 		}
 		System.out.println("Sum of all numbers in String is : " + sum);
