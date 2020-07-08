@@ -9,10 +9,9 @@ public class TestIntSuminString {
 
 	void calculateSumOfDigitsInString(String input) {
 		int sum = 0;
-		for (int i = 0; i < input.length(); i++) {
-			if (Character.isDigit(input.charAt(i))) {
-				String ch = String.valueOf(input.charAt(i));
-				sum = sum + Integer.parseInt(ch);
+		for (int index = 0; index < input.length(); index++) {
+			if (Character.isDigit(input.charAt(index))) {
+				sum = sum + Integer.parseInt(String.valueOf(input.charAt(index)));
 			}
 		}
 		System.out.println("Sum of all digits: " + sum);
