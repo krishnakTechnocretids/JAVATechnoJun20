@@ -2,7 +2,7 @@ package yashCJun20.Assignment25;
 
 public class SumOfAllNumbersInString {
 	
-	void sum (String name) {
+	void toCalculateSumOfAllNumbersInString (String name) {
 		
 			int sum=0;
 			for(int i=0;i<name.length();i++) {
@@ -15,9 +15,9 @@ public class SumOfAllNumbersInString {
 			System.out.println("Sum of all numbers in String is: "+sum);	
 		}
 	public static void main(String[] args) {
-		SumOfAllNumbersInString sumOfallNumbersInString = new SumOfAllNumbersInString();
+		SumOfAllNumbersInString sumOfAllNumbersInString = new SumOfAllNumbersInString();
 		String string="J7yu9y8h1h8j4b7j3jjb6";
-		sumOfallNumbersInString.sum(string);
+		sumOfAllNumbersInString.toCalculateSumOfAllNumbersInString(string);
 	}
 
 }
