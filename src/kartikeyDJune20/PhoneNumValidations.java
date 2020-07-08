@@ -1,8 +1,6 @@
 package kartikeyDJune20;
 
-public class PhoneNumValidations {
-	
-		
+public class PhoneNumValidations {		
 		void phoneNumValidation(String number) {
 			int numLength=number.length();
 			boolean isNumValid=false;
@@ -21,8 +19,7 @@ public class PhoneNumValidations {
 						break;
 					}			
 				}
-			}
-			
+			}		
 			if(isNumValid==true)
 				System.out.println(number+ " is valid");
 			else {
@@ -34,7 +31,5 @@ public class PhoneNumValidations {
 			PhoneNumValidations phoneNumberValidations= new PhoneNumValidations();
 			String num="97116738n9";
 			phoneNumberValidations.phoneNumValidation(num);
-			
 		}
-
 	}
