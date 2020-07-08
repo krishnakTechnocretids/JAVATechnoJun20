@@ -4,16 +4,16 @@ public class CodeExam4 {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 10, 33, 56, 43, 99, 21 };
-		int largest = arr[0];
-		int secondLargest = arr[0];
+		int array[] = { 10, 33, 56, 43, 99, 21 };
+		int largest = array[0];
+		int secondLargest = array[0];
 
-		for (int index = 0; index < arr.length; index++) {
-			if (arr[index] > largest) {
+		for (int index = 0; index < array.length; index++) {
+			if (array[index] > largest) {
 				secondLargest = largest;
-				largest = arr[index];
-			} else if (arr[index] > secondLargest) {
-				secondLargest = arr[index];
+				largest = array[index];
+			} else if (array[index] > secondLargest) {
+				secondLargest = array[index];
 			}
 		}
 		System.out.println("Second largest number is:" + secondLargest);
