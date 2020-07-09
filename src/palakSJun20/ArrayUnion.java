@@ -16,8 +16,7 @@ public class ArrayUnion {
 		double[] tempArray3 = new double[array1.length + array2.length]; // length =12
 		
 		// Calling Method to find Unique Number Array
-		tempArray3 = findUniqueNumberArray(array1, tempArray3);
-		tempArray3 = findUniqueNumberArray(array2, tempArray3);
+		tempArray3 = findUniqueNumberArray(array2 ,findUniqueNumberArray(array1, tempArray3));
 		
 		double[] unionArray = new double[count];
 	
