@@ -17,7 +17,7 @@ public class SumOfConsecutiveIntegersInString {
 		String temp = "";
 		for (int index = 0; index < input.length(); index++) {
 			if (Character.isDigit(input.charAt(index))) {
-				temp += String.valueOf(input.charAt(index));
+				temp += (input.charAt(index));
 			} else {
 				if (temp.length() != 0) {
 					sum += Integer.parseInt(temp);
