@@ -32,7 +32,6 @@ public class StringNumberOperation {
 		numberOperation.findSumOfNumber(input1);
 		String input2 = "P6Rr29T2E3";
 		System.out.println("Given String is-->" + input2);
-		numberOperation.findSumOfNumber(input2);
-
+		numberOperation.findSumOfNumber(input2); 
 	}
 }
