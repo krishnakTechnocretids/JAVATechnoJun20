@@ -17,7 +17,7 @@ public class ArrayIntersectionMetho2 {
 
 	void findIntersectionOfArray(double[] array1, double[] array2) {
 		int size = 0;
-		if (array1.length > array2.length)
+		if (array1.length < array2.length)
 			size = array1.length;
 		else
 			size = array2.length;
