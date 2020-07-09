@@ -1,5 +1,8 @@
 package vaishnaviVJun20_arrayExamples;
 
+//WAP to sum all the numbers in given string.
+//Example: P71Rr29T2E in this string consider 71 as one number and not 7 and 1
+
 public class SumOfAllIntegers {
 	
 	void findSumOfAllIntegersInGivenString(String str) {
@@ -16,14 +19,16 @@ public class SumOfAllIntegers {
 				}
 			}			
 		}
-		if(temp!= null)
+		if(temp.length()!=0)
 			sum += Integer.parseInt(temp);
 		
 		System.out.println("Addition is : " +sum);
 	}
 
 	public static void main(String[] args) {
-		new SumOfAllIntegers().findSumOfAllIntegersInGivenString("J7yu91y81h1h8j41b756j3jjb6");
+		SumOfAllIntegers sumOfAllIntegers = new SumOfAllIntegers();		
+		sumOfAllIntegers.findSumOfAllIntegersInGivenString("P71Rr29T2E");
+		sumOfAllIntegers.findSumOfAllIntegersInGivenString("P6Rr29T2E3");
 	}
 
 }
