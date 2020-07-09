@@ -10,12 +10,9 @@ public class SumOfNumbersInString {
 	
 	void calSumOfNumbers(String str) {
 		int sumOfDigit=0;
-		int digit=0;
 		for(int index=0;index<str.length();index++) {
-			if(!Character.isLetter(str.charAt(index))) {
-				String charValue = String.valueOf(str.charAt(index));
-				digit = Integer.parseInt(charValue);
-				sumOfDigit +=digit;
+			if(Character.isDigit(str.charAt(index))) {
+				sumOfDigit += Character.getNumericValue(str.charAt(index));
 			}
 		}
 		System.out.println("Sum of all numbers in String is: "+sumOfDigit);
