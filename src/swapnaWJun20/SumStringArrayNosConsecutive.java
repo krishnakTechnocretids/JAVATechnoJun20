@@ -13,7 +13,7 @@ public class SumStringArrayNosConsecutive {
 		System.out.println("Input : " + number);
 		for (int index = 0; index < number.length(); index++) {
 			if (Character.isDigit(number.charAt(index))) {
-				temp += String.valueOf(number.charAt(index));
+				temp += Character.getNumericValue((number.charAt(index)));
 			} else {
 				if (temp.length() != 0) {
 					sum += Integer.parseInt(temp);
