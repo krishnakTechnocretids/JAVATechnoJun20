@@ -22,6 +22,8 @@ public class SumOFNoFromStr {
 					} else {
 						sum = sum + tempNo;
 						break;
+						
+						
 					}
 				}
 			}
