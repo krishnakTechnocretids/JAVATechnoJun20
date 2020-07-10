@@ -6,18 +6,20 @@ public class SumOfNumbersInString {
 	
 	int findSumOfNumbers(String input) {
 		System.out.println("Input --> " + input);
-		String tempDigit = "0";
+		String tempDigit = "";
 		int sum=0;
 		for(int index=0;index<input.length();index++) {
 			if(Character.isDigit(input.charAt(index))) {
 				tempDigit += input.charAt(index);
 			}
 			else {
-				sum += Integer.parseInt(tempDigit);
-				tempDigit = "0";
+				if(tempDigit.length()>0) {
+					sum += Integer.parseInt(tempDigit);
+					tempDigit = "";
+				}
 			}	
 		}
-		if(!tempDigit.equals("0"))
+		if(!tempDigit.equals(""))
 			sum += Integer.parseInt(tempDigit);
 		return sum;
 	}
