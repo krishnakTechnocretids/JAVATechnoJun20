@@ -4,17 +4,22 @@ import java.util.Arrays;
 
 public class TreeProgram {
 	int count = 0;
+
 	void compare(int[] array) {
-		for (int index = 0; index < array.length-1; index++) {
-			if (array[index] < array[index+1]) {
+		int max = array[0];
+		for (int index = 0; index < array.length; index++) {
+			if (max < array[index]) {
 				count++;
+				max = array[index];
 			}
 		}
-		System.out.println(Arrays.toString(array) + " --> " +count);
+		System.out.println("Input " +Arrays.toString(array));
+		System.out.println("Total Visible Tree  --> " + count);
 	}
+
 	public static void main(String[] args) {
 		TreeProgram treeProgram = new TreeProgram();
-		int[] array = {3,5,5,11,9,10,13,12};
+		int[] array = { 3, 5, 5, 11, 9, 99, 10, 13, 12 };
 		treeProgram.compare(array);
 	}
 }
