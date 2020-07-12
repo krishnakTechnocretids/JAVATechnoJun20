@@ -2,8 +2,8 @@ package nikhilMJun20;
 
 public class VisibleTrees {
 	void printVisibleTrees(int[] intArr) {
-		int visibles = 0, maxTall = 0;
-		for(int index=0; index<intArr.length; index++) {
+		int visibles = 1, maxTall = intArr[0];
+		for(int index=1; index<intArr.length; index++) {
 			if(intArr[index]>maxTall) {
 				maxTall = intArr[index];
 				visibles++;
