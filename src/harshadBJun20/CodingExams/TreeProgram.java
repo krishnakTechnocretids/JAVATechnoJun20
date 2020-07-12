@@ -5,13 +5,14 @@ public class TreeProgram {
 	int max,count;
 	void countNumOfTreesVisible(int[] arr) {
 		max=arr[0];
-		for(int index=0;index<arr.length;index++) {
-			if(arr[index]>=max) {
+		count=1;
+		for(int index=1;index<arr.length;index++) {
+			if(arr[index]>max) {
 				max = arr[index];
-					count++;
+				count++;			
 			}
 		}
-		System.out.println(count-1);
+		System.out.println("Count of trees visible is: "+count);
 	}
 	
 	public static void main(String[] args) {
