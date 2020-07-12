@@ -3,14 +3,14 @@ package aasthaJJun20;
 
 public class  TreeProgram{
 	void displayVisibleTrees(int[] input) {
-		int count = 0, tallest = 0;
-		for(int index = 0; index < input.length; index++) {
+		int count = 1, tallest = input[0];
+		for(int index = 1; index < input.length; index++) {
 			if(input[index] > tallest) {
 				tallest = input[index];
 				count++;
 			}
 		}
-		System.out.println(count);
+		System.out.println("Total no. of visible trees : "+count);
 	}
 	
 	public static void main(String[] args) {
