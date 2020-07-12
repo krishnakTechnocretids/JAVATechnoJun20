@@ -1,10 +1,10 @@
 package rajAJun20;
 
 public class TreeProgram {
-	
-	int count = 1;
 
 	void displayVisibleTrees(int[] array) {
+		int count = 1;
+		
 		int max= array[0];
 		for(int index = 1; index < array.length; index++) {
 			if(array[index] > max) {
