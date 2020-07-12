@@ -5,7 +5,7 @@ public class TreeProgram {
 	
 	void howManyTreesYouCanSee(int[] treeArray) {
 		int max=treeArray[0];
-		for(int index=0;index<treeArray.length;index++) {
+		for(int index=1;index<treeArray.length;index++) {
 			if(treeArray[index]>max) {
 				max=treeArray[index];
 				count++;
