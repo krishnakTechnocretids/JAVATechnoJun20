@@ -2,9 +2,12 @@ package shrutiDJun20CodeExams;
 
 public class VisibilitySequence {
 	void findVisibleTrees(int[] input) {
-		int count = 0;
-		for (int i = 0; i < input.length - 1; i++) {
-			if (input[i] < input[i + 1]) {
+		int count = 1;
+		int max = input[0];
+		for (int i = 1; i < input.length; i++) {
+			
+			if (max < input[i]) {
+				max = input[i];
 				count = count + 1;
 			}
 		}
