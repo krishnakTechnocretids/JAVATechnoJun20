@@ -1,5 +1,7 @@
 package amitaRJun20;
 
+import java.util.Arrays;
+
 public class TreeProgram {
 	
 	void display(int[] input) {
@@ -7,10 +9,10 @@ public class TreeProgram {
 		int count =1;
 		int max =input[0];
 		
-		for(int i =0; i<input.length; i++) {			
-			if(input[i]>max) {
+		for(int index =0; index<input.length; index++) {			
+			if(input[index]>max) {
 				count++;
-				max = input[i];
+				max = input[index];
 			}
 		}
 		System.out.println("Total tree count is "+count);
