@@ -14,7 +14,7 @@ public class VisibilitySequence {
 		System.out.println("Count of visible trees--> " + count);
 	}
 	public static void main(String[] args) {
-		int input[] = { 3, 5, 5, 11, 9, 10, 13, 14, 16, 1, 1, 100 };
+		int input[] = { 3, 5, 5, 11, 9, 10, 13, 14, 16, 1, 1, 100,1,4 };
 		VisibilitySequence VisibilitySequence = new VisibilitySequence();
 		VisibilitySequence.findVisibleTrees(input);
 	}
