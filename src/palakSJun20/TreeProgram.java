@@ -3,17 +3,17 @@ package palakSJun20;
 import java.util.Arrays;
 
 public class TreeProgram {
-	int count = 0;
 
 	void compare(int[] array) {
 		int max = array[0];
+		int count = 1;
 		for (int index = 0; index < array.length; index++) {
 			if (max < array[index]) {
 				count++;
 				max = array[index];
 			}
 		}
-		System.out.println("Input " +Arrays.toString(array));
+		System.out.println("Input " + Arrays.toString(array));
 		System.out.println("Total Visible Tree  --> " + count);
 	}
 
