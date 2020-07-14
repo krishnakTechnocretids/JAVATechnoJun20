@@ -3,13 +3,13 @@ package shrutiDJun20Assignments;
 public class MeetingRoom {
 
 	String room1 = "Nalanda";
-	static int cnt1 = 0;
+	static double cnt1 = 0;
 	String room2 = "Takshashila";
-	static int cnt2 = 0;
+	static double cnt2 = 0;
 	String room3 = "Agrafort";
-	static int cnt3 = 0;
+	static double cnt3 = 0;
 	String room4 = "PratapGadg";
-	static int cnt4 = 0;
+	static double cnt4 = 0;
 
 	void bookMeetingRoom() {
 		cnt1++;
@@ -25,7 +25,7 @@ public class MeetingRoom {
 			System.out.println("Please enter valid room name");
 	}
 
-	void bookMeetingRoom(String room, int hour) {
+	void bookMeetingRoom(String room, double hour) {
 		if (room.equalsIgnoreCase(room1)) {
 			cnt1 = cnt1 + hour;
 		} else if (room.equalsIgnoreCase(room2)) {
@@ -72,7 +72,7 @@ public class MeetingRoom {
 
 	public static void main(String[] args) {
 		MeetingRoom meetingRoom = new MeetingRoom();
-		meetingRoom.bookMeetingRoom("nalanda", 2);
+		meetingRoom.bookMeetingRoom("nalanda", 2.5);
 		meetingRoom.bookMeetingRoom("nalAnda", 5);
 		meetingRoom.bookMeetingRoom("agrAFort", 5);
 		meetingRoom.bookMeetingRoom();
