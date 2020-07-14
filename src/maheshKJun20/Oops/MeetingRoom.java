@@ -3,7 +3,7 @@ package maheshKJun20.Oops;
 public class MeetingRoom {
 	
 	String[] meetingRoomName = {"Nalanda", "Takshashila", "AgraFort","PratapGadh"};
-	String[][] meetingRoomBooked = new String[4][4];
+	String[][] meetingRoomBooked = new String[4][2];
 	
 	//Method to book default - Nalanda meeting room for 1 hr
 	void bookMeetingRoom(){	
