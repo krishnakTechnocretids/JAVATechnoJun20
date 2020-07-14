@@ -16,11 +16,11 @@ public class BookMeetingRoom {
 			nalandaFlag=true;
 		}
 		else{
-			System.out.println("-->The meeting room  is already booked.");
+			System.out.println(meetingRoom+"-->The meeting room  is already booked.");
 		}
 	}
 	void bookMeetingRoom(String meetingRoom){
-		if(!(meetingRoom.equals("Nalanda"))){
+		if(!meetingRoom.equals("Nalanda") && meetingRoom.equals("Takshashila") || meetingRoom.equals("AgraFort") || meetingRoom.equals("PratapGadh")){
 			if(meetingRoom.equals("Takshashila")&&takshashilaFlag==false){
 				this.meetingRoom="Takshashila";
 				hours=1;
@@ -44,11 +44,12 @@ public class BookMeetingRoom {
 			}
 		}
 		else{
+			
 			System.out.println(meetingRoom +" is Invalid meeting Room ");
 		}
 	}
 	void bookMeetingRoom(String meetingRoom,int hours){
-		if(!meetingRoom.equals("Nalanda")){
+		if(!meetingRoom.equals("Nalanda")&&meetingRoom.equals("Takshashila") || meetingRoom.equals("AgraFort")||meetingRoom.equals("PratapGadh")){
 			if(meetingRoom.equals("Takshashila")&&takshashilaFlag==false){
 				this.meetingRoom="Takshashila";
 				this.hours=hours;
@@ -71,7 +72,8 @@ public class BookMeetingRoom {
 			}
 		}
 		else{
-			System.out.println(meetingRoom +" is Invalid meeting Room ");
+		
+			System.out.println(meetingRoom +" Is Invalid meeting Room ");
 		}
 	}
 	void displayInfo(){
@@ -104,9 +106,9 @@ public class BookMeetingRoom {
 		meetingRoom.bookMeetingRoom();
 		meetingRoom.bookMeetingRoom();
 		meetingRoom.bookMeetingRoom("Nalanda");
-		meetingRoom.bookMeetingRoom("PratapGadh");
 		meetingRoom.bookMeetingRoom("AgraFort",1);
-		meetingRoom.bookMeetingRoom("Takshashila",2);
+		meetingRoom.bookMeetingRoom("dffdf");
+		meetingRoom.bookMeetingRoom("iiiii",2);
 		meetingRoom.displayAvilableMeetingRoomForBooking();
 	}
 }
