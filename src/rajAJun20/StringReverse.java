@@ -1,6 +1,6 @@
 package rajAJun20;
 
-public class ReverseString {
+public class StringReverse {
 	void showReverseString (String str) {
 		System.out.println("Given String is :\n" +str+ " \nReversed String is :- ");
 		for(int index = str.length()-1 ; index >= 0 ; index--)
@@ -8,7 +8,7 @@ public class ReverseString {
 	}
 
 	public static void main(String[] args) {
-		ReverseString stringReverse = new ReverseString();
+		StringReverse stringReverse = new StringReverse();
 
 		String string = "Hello this is technocredits";
 		stringReverse.showReverseString(string);

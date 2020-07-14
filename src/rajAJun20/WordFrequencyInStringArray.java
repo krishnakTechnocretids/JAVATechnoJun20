@@ -1,6 +1,6 @@
 package rajAJun20;
 
-public class WordFrequency {
+public class WordFrequencyInStringArray {
 		void displayWordFreq(String[] strArray) {
 			int wordCnt = 0;
 			for(int index=0; index<strArray.length; index++) {
@@ -19,7 +19,7 @@ public class WordFrequency {
 		}
 
 		public static void main(String[] args) {
-			WordFrequency wordFrequency = new WordFrequency();
+			WordFrequencyInStringArray wordFrequency = new WordFrequencyInStringArray();
 
 			String str = "Tech_no Hi T_EchNo H_I Tech hi_";
 			str = str.replace("_", "");

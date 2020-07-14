@@ -1,6 +1,6 @@
 package rajAJun20;
 
-public class CountSpecialCharacter {
+public class CountSpecialCharacterInWord {
 	void specialCharCount(String str) {
 		
 		String string = str;
@@ -18,7 +18,7 @@ public class CountSpecialCharacter {
 
 	public static void main(String[] args) {
 		
-		CountSpecialCharacter specialCharCount = new CountSpecialCharacter();
+		CountSpecialCharacterInWord specialCharCount = new CountSpecialCharacterInWord();
 
 		String string = "Kr[i{s]hn}_a,Tech";
 		specialCharCount.specialCharCount(string);

@@ -1,6 +1,6 @@
 package rajAJun20;
 
-public class MiddleCharacter {
+public class MiddleCharacterOfWords {
 		void displayMiddleChar(String[] strArray) {
 			int midCharIndex = 0;
 			for(int index = 0; index < strArray.length; index++) {
@@ -13,7 +13,7 @@ public class MiddleCharacter {
 		}
 
 		public static void main(String[] args) {
-			MiddleCharacter middleCharacter = new MiddleCharacter();
+			MiddleCharacterOfWords middleCharacter = new MiddleCharacterOfWords();
 
 			String str = "Harsh Maulik";
 
