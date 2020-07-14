@@ -8,6 +8,7 @@ public class MeetingRoomBookingService {
 		meetingRoomArray[1] = new MeetingRoom().bookMeetingRoom("Takshashila");
 		meetingRoomArray[2] = new MeetingRoom().bookMeetingRoom("AgraFort", 2.5);
 		meetingRoomArray[3] = new MeetingRoom().bookMeetingRoom("Nalanda");
+		meetingRoomArray[3] = new MeetingRoom().bookMeetingRoom("Takshashila", 2.5);
 		//Displaying Meeting Room info
 		System.out.println("\n\nMeeting Room Booking Information:-");
 		for(int index = 0; index<meetingRoomArray.length; index++) {
@@ -15,7 +16,7 @@ public class MeetingRoomBookingService {
 				meetingRoomArray[index].displayInfo();
 			}
 		}
-		//Available rooms info
+		//Displaying Available rooms info
 		MeetingRoom.displayAvilableMeetingRoomForBooking(meetingRoomArray);
 	}
 }

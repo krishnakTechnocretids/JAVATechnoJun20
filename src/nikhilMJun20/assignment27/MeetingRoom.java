@@ -18,20 +18,37 @@ PratapGadh"]
 package nikhilMJun20.assignment27;
 
 public class MeetingRoom {
+	static String[] availableRooms = {"Nalanda", "Takshashila", "AgraFort", "PratapGadh"};
 	String meetingRoomName;
 	double bookingDurationHrs;
 	
+	boolean roomCheck(String meetingRoomName) {
+		for(int index = 0; index<availableRooms.length; index++) {
+			if(meetingRoomName.equals(availableRooms[index])) {
+				availableRooms[index] = "*";
+				return true;
+			}
+		}
+		System.out.println("\n\nRoom "+meetingRoomName+" is NOT available for booking.");
+		return false;
+	}
+	
 	MeetingRoom bookMeetingRoom() {
-		this.meetingRoomName = "Nalanda";
-		this.bookingDurationHrs = 1.0;
+		if(roomCheck("Nalanda")) {
+			this.meetingRoomName = "Nalanda";
+			this.bookingDurationHrs = 1.0;
+		}
 		return this;
 	}
 	
 	MeetingRoom bookMeetingRoom(String meetingRoomName) {
 		if(! meetingRoomName.equals("Nalanda")) {
-			this.meetingRoomName = meetingRoomName;
-			this.bookingDurationHrs = 1.0;
-			return this;
+			if(roomCheck(meetingRoomName)) {
+				this.meetingRoomName = meetingRoomName;
+				this.bookingDurationHrs = 1.0;
+				return this;
+			}else
+				return null;
 		}else {
 			System.out.println("\nThis booking option is NOT available for Room 'Nalanda'.\nChoose default booking option.");
 			return null;
@@ -39,9 +56,12 @@ public class MeetingRoom {
 	}
 	
 	MeetingRoom bookMeetingRoom(String meetingRoomName, double bookingDurationHrs) {
-		this.meetingRoomName = meetingRoomName;
-		this.bookingDurationHrs = bookingDurationHrs;
-		return this;
+		if(roomCheck(meetingRoomName)) {
+			this.meetingRoomName = meetingRoomName;
+			this.bookingDurationHrs = bookingDurationHrs;
+			return this;
+		}else
+			return null;
 	}
 	
 	void displayInfo() {
@@ -49,16 +69,6 @@ public class MeetingRoom {
 	}
 	
 	static void displayAvilableMeetingRoomForBooking(MeetingRoom[] meetingRoomArray) {
-		String[] availableRooms = {"Nalanda", "Takshashila", "AgraFort", "PratapGadh"};
-		for(int index = 0; index<meetingRoomArray.length; index++) {
-			if(meetingRoomArray[index] != null) {
-				for(int innerIndex = 0; innerIndex<availableRooms.length; innerIndex++) {
-					if(meetingRoomArray[index].meetingRoomName.equals(availableRooms[innerIndex])) {
-						availableRooms[innerIndex] = "*";
-					}
-				}
-			}
-		}
 		System.out.println("\n\nCurrently Available Meeting Rooms:-");
 		for(int index = 0; index<availableRooms.length; index++) {
 			if(! availableRooms[index].equals("*")) {
