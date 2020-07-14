@@ -9,6 +9,7 @@ b. Write a method that helps to book a meeting room other than "Nalanda" for def
 c. Write a method which helps to book a meeting room by giving the name of the meeting room and given hrs.
 d. displayInfo() method should print booked meeting room info [i.e. meeting room,
 booked for how many hrs].
+
 e. displayAvilableMeetingRoomForBooking() method will print available meeting room names. 
      [i.e. If Nalanda and Takshashila is booked then this method should print "Available meeting rooms: AgraFort and 
      PratapGadh"] */
@@ -40,13 +41,13 @@ public class MethodOverloadingConcept {
 			} else
 				System.out.println("You cannot book Meeting room " + meetingRoom + "for the day Check Tomorrow");
 
-		} else if (meetingRoom.equalsIgnoreCase("AgraFort")) {
+		} else if (meetingRoom.equalsIgnoreCase(roomName3)) {
 			if (roomAgraHours < 8) {
 				roomAgraHours++;
 			} else
 				System.out.println("You cannot book Meeting room " + meetingRoom + "for the day Check Tomorrow");
 
-		} else if (meetingRoom.equalsIgnoreCase("PratapGadh")) {
+		} else if (meetingRoom.equalsIgnoreCase(roomName4)) {
 			roomPratapHour++;
 		}
 		 else
