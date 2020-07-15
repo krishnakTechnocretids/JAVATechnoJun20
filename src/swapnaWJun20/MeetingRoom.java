@@ -16,72 +16,115 @@ e. displayAvilableMeetingRoomForBooking() method will print available meeting ro
 
 public class MeetingRoom {
 
-	String[] roomNames = { "Nalanda", "Takshashila", "AgraFort", "PratapGadh" };
-	String optedRoom;
-	int optedHours;
+	private static boolean nalandaBookingstatus, takshashilaBookingstatus, agraFortBookingstatus,
+			pratapGadhBookingstatus;
+	private static int nalandaBookingHours, takshashilaBookingHours, agraFortBookingHours, pratapGadhBookingHours;
+
+	enum MEETINGROOMS {
+		NALANDA, TAKSHASHILA, AGRAFORT, PRATAPGADH;
+	}
 
 	void bookMeetingRoom() {
-		optedRoom = "Nalanda";
-		int index = 0;
-		while (index < roomNames.length) {
-			if (roomNames[index].equalsIgnoreCase("Nalanda")) {
-				displayInfo(roomNames[index], 1);
-				roomNames[index] = " ";
-			}
-			index++;
+		if (!nalandaBookingstatus) {
+			System.out.println("Nalanda Room is booked for 1 Hour");
+			nalandaBookingstatus = true;
+			nalandaBookingHours = 1;
+		} else {
+			System.out.println("Nalanda Meeting room is already booked");
+			displayAvailableMeetingRoomForBooking();
 		}
 	}
 
-	void bookMeetingRoom(String room) {
-		optedRoom = room;
-		if (!optedRoom.equalsIgnoreCase("Nalanda")) {
-			for (int index = 0; index < roomNames.length; index++) {
-				if (roomNames[index].equalsIgnoreCase(room)) {
-					displayInfo(roomNames[index], 1);
-					roomNames[index] = " ";
-					break;
-				}
-			}
-		} else if (optedRoom.equalsIgnoreCase("Nalanda"))
-			System.out.println("Nalanda meeting room is not available for booking");
-		else
-			System.out.println("Invalid selection of room");
+	void bookMeetingRoom(MEETINGROOMS meetingRoom) {
+		bookMeetingRoom(meetingRoom, 1);
 	}
 
-	void bookMeetingRoom(String room, int time) {
-		optedRoom = room;
-		optedHours = time;
-		if (!optedRoom.equalsIgnoreCase("Nalanda")) {
-			for (int index = 0; index < roomNames.length; index++) {
-				if (roomNames[index].equalsIgnoreCase(room)) {
-					displayInfo(roomNames[index], optedHours);
-					roomNames[index] = " ";
-					break;
-				}
+	void bookMeetingRoom(MEETINGROOMS meetingRoom, int hours) {
+		if (meetingRoom.equals(MEETINGROOMS.NALANDA)) {
+			if (!nalandaBookingstatus) {
+				System.out.println(meetingRoom + " room is booked for " + hours + " Hour");
+				nalandaBookingstatus = true;
+				nalandaBookingHours = hours;
+			} else {
+				System.out.println(meetingRoom + " room is already booked for " + hours + " Hour");
+				displayAvailableMeetingRoomForBooking();
 			}
-		} else if (optedRoom.equalsIgnoreCase("Nalanda"))
-			System.out.println("Nalanda meeting room is not available for booking");
-		else
-			System.out.println("Invalid selection of room");
+		} else if (meetingRoom.equals(MEETINGROOMS.TAKSHASHILA)) {
+			if (!takshashilaBookingstatus) {
+				System.out.println(meetingRoom + " room is booked for " + hours + " Hour");
+				takshashilaBookingstatus = true;
+				takshashilaBookingHours = hours;
+			} else {
+				System.out.println(meetingRoom + " room is already booked for " + hours + " Hour");
+				displayAvailableMeetingRoomForBooking();
+			}
+		} else if (meetingRoom.equals(MEETINGROOMS.AGRAFORT)) {
+			if (!agraFortBookingstatus) {
+				System.out.println(meetingRoom + " room is booked for " + hours + " Hour");
+				agraFortBookingstatus = true;
+				agraFortBookingHours = hours;
+			} else {
+				System.out.println(meetingRoom + " room is already booked for " + hours + " Hour");
+				displayAvailableMeetingRoomForBooking();
+			}
+		} else if (meetingRoom.equals(MEETINGROOMS.PRATAPGADH)) {
+			if (!pratapGadhBookingstatus) {
+				System.out.println(meetingRoom + " room is booked for " + hours + " Hour");
+				pratapGadhBookingstatus = true;
+				pratapGadhBookingHours = hours;
+			} else {
+				System.out.println(meetingRoom + " room is already booked for " + hours + " Hour");
+				displayAvailableMeetingRoomForBooking();
+			}
+		}
 	}
 
-	void displayInfo(String room, int time) {
-		System.out.println(optedRoom + " room is booked for " + time + " hours");
+	void displayInfo() {
+	//	System.out.println("--------Rooms Booking status----------");
+		if (nalandaBookingstatus)
+			System.out.println("Nalanda room is booked for " + nalandaBookingHours + " hours");
+		if (agraFortBookingstatus)
+			System.out.println("Agrafort room is booked for " + agraFortBookingHours + " hours");
+		if (takshashilaBookingstatus)
+			System.out.println("Takshashila room is booked for " + takshashilaBookingHours + " hours");
+		if (pratapGadhBookingstatus)
+			System.out.println("PratapGadh room is booked for " + pratapGadhBookingHours + " hours");
 	}
 
-	void displayAvilableMeetingRoomForBooking() {
-		for (int index = 0; index < roomNames.length; index++) {
-			if (!roomNames[index].equals(" ")) {
-				System.out.println("Available meeting rooms for booking : " + roomNames[index]);
-			}
+	void displayAvailableMeetingRoomForBooking() {
+	//	System.out.println("---------Available for booking------------");
+		if (nalandaBookingstatus && agraFortBookingstatus && takshashilaBookingstatus && pratapGadhBookingstatus) {
+			System.out.println("All meeting rooms are currently booked .");
+		} else {
+			if (!nalandaBookingstatus)
+				System.out.println("Nalanda meeting room is available.");
+			if (!takshashilaBookingstatus)
+				System.out.println("Takshashila meeting room is available.");
+			if (!agraFortBookingstatus)
+				System.out.println("AgraFort meeting room is available.");
+			if (!pratapGadhBookingstatus)
+				System.out.println("PratapGadh meeting room is available.");
 		}
 	}
 
 	public static void main(String[] args) {
 		MeetingRoom meetingRoom = new MeetingRoom();
 		meetingRoom.bookMeetingRoom();
-		meetingRoom.bookMeetingRoom("AgraFort");
-		meetingRoom.bookMeetingRoom("Takshashila", 5);
-		meetingRoom.displayAvilableMeetingRoomForBooking();
+		System.out.println();
+		meetingRoom.bookMeetingRoom(MEETINGROOMS.AGRAFORT);
+		System.out.println();
+		meetingRoom.bookMeetingRoom(MEETINGROOMS.TAKSHASHILA, 5);
+		System.out.println();
+		meetingRoom.displayInfo();
+		System.out.println();
+		meetingRoom.displayAvailableMeetingRoomForBooking();
+		System.out.println();
+
+		MeetingRoom meetingRoom2 = new MeetingRoom();
+		meetingRoom2.bookMeetingRoom(MEETINGROOMS.NALANDA);
+		System.out.println();
+		meetingRoom.bookMeetingRoom(MEETINGROOMS.PRATAPGADH, 5);
+		System.out.println();
+		meetingRoom2.bookMeetingRoom(MEETINGROOMS.NALANDA);
 	}
 }
