@@ -89,7 +89,7 @@ public class MeetingRoom {
 		}
 	}
 	
-	// Method to display booking info.
+	// Method to display booking info...
 	void displayInfo() {
 		System.out.println("\n---Meeting room Booking information---");
 		if (nalandaBookingStatus)
