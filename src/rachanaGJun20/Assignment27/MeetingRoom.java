@@ -17,13 +17,18 @@ package rachanaGJun20.Assignment27;
 public class MeetingRoom {
 
 	static double roomNalanda = 0, roomTakshashila = 0, roomAgrafort = 0, roomPratapgadh = 0;
-	
-	// overloaded method which will book default 
+
+	// overloaded method which will book default
 	void bookMeetingRoom() {
-		roomNalanda = 1;
-		System.out.println("Your booking is accepted, room Nalanda has been booked for 1 hour");
+		if (checkAvailability("Nalanda", 1)) {
+			roomNalanda = 1;
+			System.out.println("Your booking is accepted, room Nalanda has been booked for 1 hour");
+		} else
+			System.out.println("Nalanda Meeting room is already booked");
 	}
-	//overloaded method which will book meeting room as per user choice for default 1 hr. 
+
+	// overloaded method which will book meeting room as per user choice for default
+	// 1 hr.
 	void bookMeetingRoom(String bookingRoomName) {
 
 		if (checkAvailability(bookingRoomName, 1)) {
@@ -31,7 +36,9 @@ public class MeetingRoom {
 		} else
 			System.out.println("Meeting room " + bookingRoomName + " is already booked");
 	}
-	//overloaded method which will book meeting room for number of hrs, as per user choice 
+
+	// overloaded method which will book meeting room for number of hrs, as per user
+	// choice
 	void bookMeetingRoom(String bookingRoomName, double bookinghrs) {
 
 		if (checkAvailability(bookingRoomName, bookinghrs)) {
@@ -41,6 +48,7 @@ public class MeetingRoom {
 			System.out.println("Meeting room " + bookingRoomName + " is already booked");
 
 	}
+
 	// method will show all booked meeting rooms
 	void displayBookedMeetingRoom() {
 
@@ -54,7 +62,8 @@ public class MeetingRoom {
 		if (roomPratapgadh > 0)
 			System.out.println("Pratapgadh :" + roomPratapgadh + " hour");
 	}
-	//method will show all available meeting rooms
+
+	// method will show all available meeting rooms
 	void displayAvailableMeetingRoom() {
 
 		System.out.println("Available meetingrooms are:");
@@ -67,6 +76,7 @@ public class MeetingRoom {
 		if (roomPratapgadh == 0)
 			System.out.println("Pratapgadh");
 	}
+
 	// method will check meeting room's availability
 	boolean checkAvailability(String meetingRoomBooking, double hr) {
 		meetingRoomBooking = meetingRoomBooking.toUpperCase();
@@ -112,7 +122,6 @@ public class MeetingRoom {
 		meetingroom.bookMeetingRoom("AGRAFORT", 2);
 		meetingroom.displayAvailableMeetingRoom();
 		meetingroom.displayBookedMeetingRoom();
-		
 
 	}
 }
