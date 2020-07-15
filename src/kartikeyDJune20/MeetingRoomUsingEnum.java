@@ -86,7 +86,7 @@ public class MeetingRoomUsingEnum {
 		meetingRoomUsingEnum.displayInfo();
 		System.out.println();
 		meetingRoomUsingEnum.availableMeetingRoom();
-		System.out.println("**********************************************");
+		System.out.println("*****************************************************");
 		MeetingRoomUsingEnum meetingRoomUsingEnum1 = new MeetingRoomUsingEnum();
 		meetingRoomUsingEnum1.bookMeetingRoom();
 		meetingRoomUsingEnum1.bookmeetigRoom(meeetingRooms.TAKSHILA, 3);

@@ -81,7 +81,9 @@ public class MeetingRoom {
 		meetingRoom.bookmeetigRoom("Takshila", 3);
 		meetingRoom.bookmeetigRoom("agrafort");
 		meetingRoom.displayInfo();
+		System.out.println();
 		meetingRoom.availableMeetingRoom();
+		System.out.println("**********************************************");
 	}
 
 }
