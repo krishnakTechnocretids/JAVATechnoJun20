@@ -20,7 +20,7 @@ public class MeetingRoom {
 
 	// overloaded method which will book default
 	void bookMeetingRoom() {
-		if (checkAvailability("Nalanda", 1)) {
+		if (checkAvailabilityAndBook("Nalanda", 1)) {
 			System.out.println("Your booking is accepted, room Nalanda has been booked for 1 hour");
 		} else
 			System.out.println("Nalanda Meeting room is already booked");
@@ -30,7 +30,7 @@ public class MeetingRoom {
 	// 1 hr.
 	void bookMeetingRoom(String bookingRoomName) {
 
-		if (checkAvailability(bookingRoomName, 1)) {
+		if (checkAvailabilityAndBook(bookingRoomName, 1)) {
 			System.out.println("Your Booking is accepted, room " + bookingRoomName + " has been booked for 1 hour.");
 		} else
 			System.out.println("Meeting room " + bookingRoomName + " is already booked");
@@ -40,7 +40,7 @@ public class MeetingRoom {
 	// choice
 	void bookMeetingRoom(String bookingRoomName, double bookinghrs) {
 
-		if (checkAvailability(bookingRoomName, bookinghrs)) {
+		if (checkAvailabilityAndBook(bookingRoomName, bookinghrs)) {
 			System.out.println("Your Booking is accepted, room " + bookingRoomName + " has been booked for "
 					+ bookinghrs + " hour.");
 		} else
@@ -77,7 +77,7 @@ public class MeetingRoom {
 	}
 
 	// method will check meeting room's availability
-	boolean checkAvailability(String meetingRoomBooking, double hr) {
+	private static boolean checkAvailabilityAndBook(String meetingRoomBooking, double hr) {
 		meetingRoomBooking = meetingRoomBooking.toUpperCase();
 
 		switch (meetingRoomBooking) {
