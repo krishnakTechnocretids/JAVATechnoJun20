@@ -120,6 +120,8 @@ public class OverloadingBehaviourMeetingRoomUsing_enum {
 	    overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.TAKSHASHILA, 2);
 		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.PRATPGADH);
 		overloadingBehaviourMeetingRoomUsing_enum.displayInfo();
+		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.PRATPGADH,5);
+		overloadingBehaviourMeetingRoomUsing_enum.displayInfo();
 		overloadingBehaviourMeetingRoomUsing_enum.availableRooms();
 	}
 }
