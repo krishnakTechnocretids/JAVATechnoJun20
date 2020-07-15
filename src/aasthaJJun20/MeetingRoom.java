@@ -76,13 +76,13 @@ public class MeetingRoom {
 	void displayInfo() {
 		System.out.println("Current Booking status:");
 		if (nalandaBookingStatus)
-			System.out.println(" ->NALANDA meeting room is booked for " + nalandaBookingHours + " hr");
+			System.out.println("  ->NALANDA meeting room is booked for " + nalandaBookingHours + " hr");
 		if (takshashilaBookingStatus)
-			System.out.println(" ->TAKSHASHILA meeting room is booked for " + takshashilaBookingHours + " hr");
+			System.out.println("  ->TAKSHASHILA meeting room is booked for " + takshashilaBookingHours + " hr");
 		if (agraFortBookingStatus)
-			System.out.println(" ->AGRAFORT meeting room is booked for " + agraFortBookingHours + " hr");
+			System.out.println("  ->AGRAFORT meeting room is booked for " + agraFortBookingHours + " hr");
 		if (pratapGadhBookingStatus)
-			System.out.println(" ->PRATAPGADH meeting room is booked for " + pratapGadhBookingHours + " hr");
+			System.out.println("  ->PRATAPGADH meeting room is booked for " + pratapGadhBookingHours + " hr");
 	}
 	
 	//method to show the available meeting rooms
@@ -92,13 +92,13 @@ public class MeetingRoom {
 		} else {
 			System.out.println("Below meeting rooms are available for booking");
 			if (!nalandaBookingStatus)
-				System.out.println(" ->NALANDA");
+				System.out.println("  ->NALANDA");
 			if (!takshashilaBookingStatus)
-				System.out.println(" ->TAKSHASHILA");
+				System.out.println("  ->TAKSHASHILA");
 			if (!agraFortBookingStatus)
-				System.out.println(" ->AGRAFORT");
+				System.out.println("  ->AGRAFORT");
 			if (!pratapGadhBookingStatus)
-				System.out.println(" ->PRATAPGADH");
+				System.out.println("  ->PRATAPGADH");
 		}
 	}
 
