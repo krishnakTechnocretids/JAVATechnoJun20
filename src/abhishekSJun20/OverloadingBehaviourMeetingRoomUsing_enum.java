@@ -1,5 +1,4 @@
 package abhishekSJun20;
-
 /*Program to demonstrate overloading behavior.
 Create a class MeetingRoom having method bookMeetingRoom which should provide
 below facility:
@@ -22,55 +21,66 @@ public class OverloadingBehaviourMeetingRoomUsing_enum {
 	}
 
 	void bookMeetingRoom() {
-		if (!nalandaBookingStatus) { // its means room is not yet booked
-			System.out.println("Nalanda Meeting Room is booked for 1 hr.");
-			nalandaBookingStatus = true; // true means room is booked
-			nalandaBookingHours = 1;
-		} else
-			System.out.println("Nalada Meeting Room is already Booked.");
-
+		if (!nalandaBookingStatus) {
+			System.out.println("Nalanda Meeting room is booked for 1 hr");
+			nalandaBookingStatus = true;
+			nalandaBookingHours++;
+		} else {
+			System.out.println("Nalanda Meeting room is already Booked.Try other meeting room");
+			availableRooms();
+		}
 	}
 
 	void bookMeetingRoom(MEETINGROOM roomName) {
-		bookMeetingRoom(roomName, 1);
+		if (roomName == MEETINGROOM.NALANDA)
+			System.out.println("\nUse default method to book Meeting room - Nalanda");
+		else
+			bookMeetingRoom(roomName, 1);
 	}
 
 	void bookMeetingRoom(MEETINGROOM roomName, int hours) {
-		if (roomName.equals(MEETINGROOM.NALANDA)) {
+		if (roomName == MEETINGROOM.NALANDA) {
 			if (!nalandaBookingStatus) {
-				System.out.println(roomName + " Meeting Room is booked for " + hours + " hrs.");
+				System.out.println("\nMeeting room " + roomName + " is booked for " + hours + " hrs.");
 				nalandaBookingStatus = true;
 				nalandaBookingHours = hours;
-			} else
-				System.out.println(roomName + " Meeting Room is already Booked.");
-		} else if (roomName.equals(MEETINGROOM.TAKSHASHILA)) {
+			} else {
+				System.out.println("\nMeeting room " + roomName + " is already booked for " + nalandaBookingHours + " hrs.");
+				availableRooms();
+			}
+		} else if (roomName == MEETINGROOM.TAKSHASHILA) {
 			if (!takshashilaBookingStatus) {
-				System.out.println(roomName + " Meeting Room is booked for " + hours + " hrs.");
+				System.out.println("\nMeeting room " + roomName + " is booked for " + hours + " hrs.");
 				takshashilaBookingStatus = true;
 				takshashilaBookingHours = hours;
-			} else
-				System.out.println(roomName + " Meeting Room is already Booked.");
-
-		} else if (roomName.equals(MEETINGROOM.AGRAFORT)) {
+			} else {
+				System.out.println("\nMeeting room " + roomName + " is already booked for " + takshashilaBookingHours + " hrs.");
+				availableRooms();
+			}
+		} else if (roomName == MEETINGROOM.AGRAFORT) {
 			if (!agraFortBookingStatus) {
-				System.out.println(roomName + " Meeting Room is booked for " + hours + " hrs.");
+				System.out.println("\nMeeting room " + roomName + " is booked for " + hours + " hrs.");
 				agraFortBookingStatus = true;
 				agraFortBookingHours = hours;
-			} else
-				System.out.println(roomName + " Meeting Room is already Booked.");
-		} else if (roomName.equals(MEETINGROOM.PRATPGADH)) {
+			} else {
+				System.out.println("\nMeeting room " + roomName + " is already booked for " + agraFortBookingHours + " hrs.");
+				availableRooms();
+			}
+		} else if (roomName == MEETINGROOM.PRATPGADH) {
 			if (!pratapGadhBookingStatus) {
-				System.out.println(roomName + " Meeting Room is booked for " + hours + " hrs.");
+				System.out.println("\nMeeting room " + roomName + " is booked for " + hours + " hrs.");
 				pratapGadhBookingStatus = true;
 				pratapGadhBookingHours = hours;
-			} else
-				System.out.println(roomName + " Meeting Room is already Booked.");
+			} else {
+				System.out.println("\nMeeting room " + roomName + " is already booked for " + pratapGadhBookingHours + " hrs.");
+				availableRooms();
+			}
 		}
 	}
 
 	void displayInfo() {
 		System.out.println();
-		System.out.println("Booking Details of Rooms: ");
+		System.out.println("--Booking Details of Rooms: ");
 		if (nalandaBookingStatus == true)
 			System.out.println("Nalanda Meeting room is booked for " + nalandaBookingHours + " hrs.");
 		if (takshashilaBookingStatus == true)
@@ -82,24 +92,34 @@ public class OverloadingBehaviourMeetingRoomUsing_enum {
 	}
 
 	void availableRooms() {
-		System.out.println();
-		System.out.println("Availables Rooms are:");
-		if (!nalandaBookingStatus)
-			System.out.println("Nalanda Meeting room is Available.");
-		if (!takshashilaBookingStatus)
-			System.out.println("Takshashila Meeting room is Available.");
-		if (!agraFortBookingStatus)
-			System.out.println("AgraFort Meeting room is Available.");
-		if (!pratapGadhBookingStatus)
-			System.out.println("PratapGadh Meeting room is Available.");
+		if (!nalandaBookingStatus && !takshashilaBookingStatus && !agraFortBookingStatus && !pratapGadhBookingStatus)
+			System.out.println("\nAll meeting romms are currently available for booking\n");
+		else {
+			if (nalandaBookingStatus && takshashilaBookingStatus && agraFortBookingStatus && pratapGadhBookingStatus)
+				System.out.println("\nAll meeting romms are currently Booked\n");
+			else {
+				System.out.println("\n---Meeting room Availabiity information--- \nAvailable Rooms:");
+				if (!nalandaBookingStatus)
+					System.out.println("NALANDA");
+				if (!takshashilaBookingStatus)
+					System.out.println("TAKSHSHILA");
+				if (!agraFortBookingStatus)
+					System.out.println("AGRAFORT");
+				if (!pratapGadhBookingStatus)
+					System.out.println("PRATAPGADH");
+			}
+		}
 	}
 
 	public static void main(String[] args) {
 		OverloadingBehaviourMeetingRoomUsing_enum overloadingBehaviourMeetingRoomUsing_enum = new OverloadingBehaviourMeetingRoomUsing_enum();
-		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom();
-		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.TAKSHASHILA, 2);
-		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.PRATPGADH);
 		overloadingBehaviourMeetingRoomUsing_enum.availableRooms();
+		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom();
+		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.AGRAFORT);
 		overloadingBehaviourMeetingRoomUsing_enum.displayInfo();
+	    overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.TAKSHASHILA, 2);
+		overloadingBehaviourMeetingRoomUsing_enum.bookMeetingRoom(MEETINGROOM.PRATPGADH);
+		overloadingBehaviourMeetingRoomUsing_enum.displayInfo();
+		overloadingBehaviourMeetingRoomUsing_enum.availableRooms();
 	}
 }
