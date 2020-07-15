@@ -9,53 +9,45 @@ d. displayInfo() method should print booked meeting room info [i.e. meeting room
 e. displayAvilableMeetingRoomForBooking() method will print available meeting room names. -done
      [i.e. If Nalanda and Takshashila is booked then this method should print "Available meeting rooms: AgraFort and 
      PratapGadh"] */
-    package jagadeeshMJun20;
+package jagadeeshMJun20;
 public class MeetingRoom {
+	enum MEETINGROOMS {
+		NALANDA, TAKSHASILA, AGRAFORT, PRATAPGADH
+	};
 	static boolean nalandaAvail = true;
 	static boolean takshasilaAvail = true;
 	static boolean agraFortAvail = true;
 	static boolean pratapGadhAvail = true;
-	static int nalandaBookedHours = 0;
-	static int takshasilaBookedHours = 0;
-	static int agraFortBookedHours = 0;
-	static int pratapGadhBookedHours = 0;
-	
+	static int nalandaBookedHours, takshasilaBookedHours, agraFortBookedHours, pratapGadhBookedHours;
 //If any user call method bookMeetingRoom() at that time“Nalanda” meeting room will be booked for 1 hr	
 	void bookMeetingRoom() {
-		if(nalandaAvail == true) {
+		if (nalandaAvail == true) {
 			nalandaAvail = false;
 			nalandaBookedHours++;
+			System.out.println("Nalanda is booked for " + nalandaBookedHours + " hour");
+		} else
+			System.out.println("Nalanda is not available for booking.");
 	}
-	}
-
 //Write a method that helps to book a meeting room other than "Nalanda" for default timing would be 1 hr.
-	void bookMeetingRoom(String meetRoom) {
-		if (meetRoom.equalsIgnoreCase("Takshasila") && takshasilaAvail == true) {
-			takshasilaAvail = false;
-			takshasilaBookedHours++;
-		}
-		if (meetRoom.equalsIgnoreCase("AgraFort") && agraFortAvail == true) {
-			agraFortAvail = false;
-			agraFortBookedHours++;
-		}
-		if (meetRoom.equalsIgnoreCase("Pratapgadh") && pratapGadhAvail == true) {
-			pratapGadhAvail = false;
-			pratapGadhBookedHours++;
-		}
+	void bookMeetingRoom(MEETINGROOMS meetRoom) {
+		bookMeetingRoom( meetRoom, 1);
 	}
 //Write a method which helps to book a meeting room by giving the name of the meeting room and given hrs.
-	void bookMeetingRoom(String meetRoom, int hours) {
-		if (meetRoom.equalsIgnoreCase("Takshasila") && takshasilaAvail == true) {
+	void bookMeetingRoom(MEETINGROOMS meetRoom, int hours) {
+		if (meetRoom == MEETINGROOMS.TAKSHASILA && takshasilaAvail == true) {
 			takshasilaAvail = false;
 			takshasilaBookedHours += hours;
-		} else if (meetRoom.equalsIgnoreCase("AgraFort") && agraFortAvail == true) {
+			System.out.println(meetRoom + " is booked for " + hours + " hours");
+		} else if (meetRoom == MEETINGROOMS.AGRAFORT && agraFortAvail == true) {
 			agraFortAvail = false;
 			agraFortBookedHours += hours;
-		} else if (meetRoom.equalsIgnoreCase("Pratapgadh") && pratapGadhAvail == true) {
+			System.out.println(meetRoom + " is booked for " + hours + " hours");
+		} else if (meetRoom == MEETINGROOMS.PRATAPGADH && pratapGadhAvail == true) {
 			pratapGadhAvail = false;
 			pratapGadhBookedHours += hours;
+			System.out.println(meetRoom + " is booked for " + hours + " hours");
 		} else
-			System.out.println("Meeting room may be invalid or not available for booking ");
+			System.out.println(meetRoom + " is not available for booking ");
 	}
 //displayInfo() method should print booked meeting room info [i.e. meeting room,booked for how many hrs].			
 	void displayInfo() {
@@ -85,14 +77,18 @@ public class MeetingRoom {
 		if (pratapGadhAvail == true)
 			System.out.println("Pratapgadh ");
 	}
-	
+
 	public static void main(String[] agrs) {
 		MeetingRoom mr = new MeetingRoom();
 		mr.bookMeetingRoom();
 		mr.bookMeetingRoom();
-		mr.bookMeetingRoom("Takshasila" );
-		mr.bookMeetingRoom("AgraFort",  4);
+		mr.bookMeetingRoom(MEETINGROOMS.TAKSHASILA);
+		mr.bookMeetingRoom(MEETINGROOMS.TAKSHASILA);
+		mr.bookMeetingRoom(MEETINGROOMS.AGRAFORT, 4);
+		mr.bookMeetingRoom(MEETINGROOMS.AGRAFORT, 4);
 		mr.displayInfo();
 		mr.displayAvilableMeetingRoomForBooking();
+		MeetingRoom mr1 = new MeetingRoom();
+		mr1.bookMeetingRoom(MEETINGROOMS.AGRAFORT, 4);
 	}
 }
