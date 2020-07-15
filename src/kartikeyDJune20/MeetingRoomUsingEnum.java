@@ -1,7 +1,11 @@
 package kartikeyDJune20;
-import java.util.Scanner;
-public class MeetingRoom {
-//	Scanner scanner = new Scanner(System.in);
+
+
+public class MeetingRoomUsingEnum {
+	enum meeetingRooms{
+		
+		NALANDA, TAKSHILA, AGRAFORT, PRATAPGARDH;
+	}
 	static boolean nalandaBooked = false;
 	static boolean takshilaBooked = false;
 	static boolean agraFortBooked = false;
@@ -9,39 +13,38 @@ public class MeetingRoom {
 	static int nalandaBookingTime, takshilaBookingTime, agrafortBookingTime, pratapGrardhBookingTime;
 
 	void bookMeetingRoom() {
-		bookmeetigRoom("Nalanda");
+		bookmeetigRoom(meeetingRooms.NALANDA);
 	}
 
-	void bookmeetigRoom(String roomName, int time) {
-		roomName = roomName.toLowerCase();
+	void bookmeetigRoom(meeetingRooms roomName, int time) {
 		switch (roomName) {
-		case "nalanda":
+		case NALANDA:
 			if (nalandaBooked == false) {
 				nalandaBooked = true;
 				nalandaBookingTime = time;
 			} else
-				System.out.println("Meeting room you want is already booked");
+				System.out.println(roomName+" room you want is already booked for "+nalandaBookingTime+" hrs");
 			break;
-		case "takshila":
+		case TAKSHILA:
 			if (takshilaBooked == false) {
 				takshilaBooked = true;
 				takshilaBookingTime = time;
 			} else
-				System.out.println("Meeting room you want is already booked");
+				System.out.println(roomName+" room you want is already booked for "+takshilaBookingTime+" hrs");
 			break;
-		case "agrafort":
+		case AGRAFORT:
 			if (agraFortBooked == false) {
 				agraFortBooked = true;
 				agrafortBookingTime = time;
 			} else
-				System.out.println("Meeting room you want is already booked");
+				System.out.println(roomName+" room you want is already booked for "+agrafortBookingTime+" hrs");
 			break;
-		case "pratapgardh":
+		case PRATAPGARDH:
 			if (pratapGardhBooked == false) {
 				pratapGardhBooked = true;
 				pratapGrardhBookingTime = time;
 			} else
-				System.out.println("Meeting room you want is already booked");
+				System.out.println(roomName+" room you want is already booked for "+pratapGrardhBookingTime+" hrs");
 			break;
 		default:
 			System.out.println("Meeting room provided is invalid");
@@ -49,13 +52,13 @@ public class MeetingRoom {
 		}
 	}
 
-	void bookmeetigRoom(String roomName) {
+	void bookmeetigRoom(meeetingRooms roomName) {
 		bookmeetigRoom(roomName, 1);
 	}
 
 	void displayInfo() {
 		if (nalandaBooked == true)
-			System.out.println("Nalanada Meeting room is booked for " + nalandaBookingTime + " hrs");
+			System.out.println("Nalanda Meeting room is booked for " + nalandaBookingTime + " hrs");
 		if (pratapGardhBooked == true)
 			System.out.println("PratapGrardh Meeting room is booked for " + pratapGrardhBookingTime + " hrs");
 		if (takshilaBooked == true)
@@ -76,12 +79,23 @@ public class MeetingRoom {
 	}
 
 	public static void main(String[] args) {
-		MeetingRoom meetingRoom = new MeetingRoom();
-		meetingRoom.bookMeetingRoom();
-		meetingRoom.bookmeetigRoom("Takshila", 3);
-		meetingRoom.bookmeetigRoom("agrafort");
-		meetingRoom.displayInfo();
-		meetingRoom.availableMeetingRoom();
+		MeetingRoomUsingEnum meetingRoomUsingEnum = new MeetingRoomUsingEnum();
+		meetingRoomUsingEnum.bookMeetingRoom();
+		meetingRoomUsingEnum.bookmeetigRoom(meeetingRooms.PRATAPGARDH, 3);
+		meetingRoomUsingEnum.bookmeetigRoom(meeetingRooms.AGRAFORT);
+		meetingRoomUsingEnum.displayInfo();
+		System.out.println();
+		meetingRoomUsingEnum.availableMeetingRoom();
+		System.out.println("**********************************************");
+		MeetingRoomUsingEnum meetingRoomUsingEnum1 = new MeetingRoomUsingEnum();
+		meetingRoomUsingEnum1.bookMeetingRoom();
+		meetingRoomUsingEnum1.bookmeetigRoom(meeetingRooms.TAKSHILA, 3);
+		meetingRoomUsingEnum1.bookmeetigRoom(meeetingRooms.AGRAFORT);
+		System.out.println();
+		meetingRoomUsingEnum1.displayInfo();
+		System.out.println();
+		meetingRoomUsingEnum1.availableMeetingRoom();
 	}
+
 
 }
