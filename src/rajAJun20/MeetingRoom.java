@@ -10,9 +10,9 @@ public class MeetingRoom {
 	static int nalandaBookingHours, takshashilaBookingHours, agraFortBookingHours, pratapGadhBookingHours;
 
 	void bookMeetingRoom() {
-		if (!nalandaBookingStatus) { // Meeting room is not booked
+		if (!nalandaBookingStatus) { 
 			System.out.println("Nalanda Meeting Room is booked for 1 hour");
-			nalandaBookingStatus = true; // Meeting room is booked
+			nalandaBookingStatus = true; 
 			nalandaBookingHours = 1;
 		} else
 			System.out.println("Nalada Meeting Room is already booked. Try for other available rooms...!");
