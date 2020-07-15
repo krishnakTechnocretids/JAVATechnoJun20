@@ -30,7 +30,7 @@ public class MeetingRoom {
 		if (!nalandaBookingStatus) {
 			System.out.println("Nalanda Meeting room is booked for 1 hr");
 			nalandaBookingStatus = true;
-			bookedHoursNalanda=1;
+			bookedHoursNalanda = 1;
 		} else {
 			System.out.println("Nalanda Meeting room is already Booked.Try other meeting room");
 			displayAvilableMeetingRoomForBooking();
@@ -52,7 +52,8 @@ public class MeetingRoom {
 				nalandaBookingStatus = true;
 				bookedHoursNalanda = bookingHours;
 			} else {
-				System.out.println("\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursNalanda + " hrs.");
+				System.out.println(
+						"\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursNalanda + " hrs.");
 				displayAvilableMeetingRoomForBooking();
 			}
 		} else if (meetingRoom == MEETINGROOM.TAKSHSHILA) {
@@ -61,7 +62,8 @@ public class MeetingRoom {
 				takshshilaBookingStatus = true;
 				bookedHoursTakshashila = bookingHours;
 			} else {
-				System.out.println("\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursTakshashila + " hrs.");
+				System.out.println(
+						"\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursTakshashila + " hrs.");
 				displayAvilableMeetingRoomForBooking();
 			}
 		} else if (meetingRoom == MEETINGROOM.AGRAFORT) {
@@ -70,7 +72,8 @@ public class MeetingRoom {
 				agraFortBookingStatus = true;
 				bookedHoursAgraFort = bookingHours;
 			} else {
-				System.out.println("\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursAgraFort + " hrs.");
+				System.out.println(
+						"\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursAgraFort + " hrs.");
 				displayAvilableMeetingRoomForBooking();
 			}
 		} else if (meetingRoom == MEETINGROOM.PRATAPGADH) {
@@ -79,7 +82,8 @@ public class MeetingRoom {
 				pratapGadhBookingStatus = true;
 				bookedHoursPratapGadh = bookingHours;
 			} else {
-				System.out.println("\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursPratapGadh + " hrs.");
+				System.out.println(
+						"\nMeeting room " + meetingRoom + " is already booked for " + bookedHoursPratapGadh + " hrs.");
 				displayAvilableMeetingRoomForBooking();
 			}
 		}
