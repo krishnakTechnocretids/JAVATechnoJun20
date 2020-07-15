@@ -21,7 +21,6 @@ public class MeetingRoom {
 	// overloaded method which will book default
 	void bookMeetingRoom() {
 		if (checkAvailability("Nalanda", 1)) {
-			roomNalanda = 1;
 			System.out.println("Your booking is accepted, room Nalanda has been booked for 1 hour");
 		} else
 			System.out.println("Nalanda Meeting room is already booked");
