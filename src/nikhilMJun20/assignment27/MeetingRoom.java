@@ -94,13 +94,17 @@ public class MeetingRoom {
 	
 	static void displayAvilableMeetingRoomsForBooking() {
 		System.out.println("Currently Available Meeting Rooms:-");
-		if(!isNalandaBooked)
-			System.out.println("Nalanda");
-		if(!isTakshashilaBooked)
-			System.out.println("Takshashila");
-		if(!isAgraFortBooked)
-			System.out.println("AgraFort");
-		if(!isPratapGadhBooked)
-			System.out.println("PratapGadh");
+		if(isNalandaBooked && isTakshashilaBooked && isAgraFortBooked && isPratapGadhBooked) {
+			System.out.println("No room is currently available for booking.");
+		}else {
+			if(!isNalandaBooked)
+				System.out.println("Nalanda");
+			if(!isTakshashilaBooked)
+				System.out.println("Takshashila");
+			if(!isAgraFortBooked)
+				System.out.println("AgraFort");
+			if(!isPratapGadhBooked)
+				System.out.println("PratapGadh");
+		}
 	}
 }

@@ -19,6 +19,8 @@ public class MeetingRoomBookingService {
 		//Booking the Meeting Room 2
 		MeetingRoom meetingRoom2 = new MeetingRoom();
 		meetingRoom2.bookMeetingRoom();
+		System.out.println();
+		meetingRoom2.bookMeetingRoom(MEETINGROOM.PRATPGADH);
 		//Displaying Meeting Room info
 		System.out.println();
 		MeetingRoom.displayInfo();
