@@ -23,14 +23,14 @@ public class MeetingRoom {
 		NALANDA, TAKSHSHILA, AGRAFORT, PRATAPGADH
 	}
 
-	static int bookedHoursNalanda = 0, bookedHoursTakshashila = 0, bookedHoursAgraFort = 0, bookedHoursPratapGadh = 0;
+	static int bookedHoursNalanda, bookedHoursTakshashila, bookedHoursAgraFort, bookedHoursPratapGadh;
 	static boolean nalandaBookingStatus, takshshilaBookingStatus, agraFortBookingStatus, pratapGadhBookingStatus;
 
 	void bookMeetingRoom() {
 		if (!nalandaBookingStatus) {
 			System.out.println("Nalanda Meeting room is booked for 1 hr");
 			nalandaBookingStatus = true;
-			bookedHoursNalanda++;
+			bookedHoursNalanda=1;
 		} else {
 			System.out.println("Nalanda Meeting room is already Booked.Try other meeting room");
 			displayAvilableMeetingRoomForBooking();
@@ -40,7 +40,7 @@ public class MeetingRoom {
 	void bookMeetingRoom(MEETINGROOM meetingRoom) {
 
 		if (meetingRoom == MEETINGROOM.NALANDA)
-			System.out.println("\nUse default method to book Meeting room - Nalanda");
+			System.out.println("\nUse default method to book Meeting room - Nalanda for one hour duration");
 		else
 			bookMeetingRoom(meetingRoom, 1);
 	}
@@ -120,7 +120,7 @@ public class MeetingRoom {
 	public static void main(String[] args) {
 		MeetingRoom meetingRoom = new MeetingRoom();
 		meetingRoom.displayAvilableMeetingRoomForBooking();
-		meetingRoom.bookMeetingRoom();
+		meetingRoom.bookMeetingRoom(MEETINGROOM.NALANDA);
 		meetingRoom.bookMeetingRoom();
 		meetingRoom.bookMeetingRoom(MEETINGROOM.AGRAFORT);
 		meetingRoom.displayInfo();
