@@ -19,11 +19,12 @@ e. displayAvailableMeetingRoomForBooking() method will print available meeting r
 public class MeetingRoom {
 	static boolean nalandaBookingStatus, takshashilaBookingStatus, agraFortBookingStatus, pratapGadhBookingStatus;
 	static int nalandaBookingHours, takshashilaBookingHours, agraFortBookingHours, pratapGadhBookingHours;
+
 	enum MEETINGROOMS {
 		NALANDA, AGRAFORT, TAKSHASHILA, PRATAPGADH
 	}
-	
-	//method to book the default - Nalanda meeting room
+
+	// method to book the default - Nalanda meeting room
 	void bookMeetingRoom() {
 		if (!nalandaBookingStatus) {
 			System.out.println("NALANDA meeting room is booked for 1 hr");
@@ -33,13 +34,13 @@ public class MeetingRoom {
 			System.out.println("NALANDA meeting room is already booked");
 		}
 	}
-	
-	//method to book given meeting room for default time - 1 hr
+
+	// method to book given meeting room for default time - 1 hr
 	void bookMeetingRoom(MEETINGROOMS meetingRoom) {
 		bookMeetingRoom(meetingRoom, 1);
 	}
-	
-	//method to book given meeting room for given no. of hours
+
+	// method to book given meeting room for given no. of hours
 	void bookMeetingRoom(MEETINGROOMS meetingRoom, int hours) {
 		if (meetingRoom == MEETINGROOMS.NALANDA) {
 			if (!nalandaBookingStatus) {
@@ -71,21 +72,25 @@ public class MeetingRoom {
 				System.out.println(meetingRoom + " meeting room is already booked for " + hours + " hr");
 		}
 	}
-	
-	//method to display the current status of all the meeting rooms
+
+	// method to display the current status of all the meeting rooms
 	void displayInfo() {
-		System.out.println("Current Booking status:");
-		if (nalandaBookingStatus)
-			System.out.println("  ->NALANDA meeting room is booked for " + nalandaBookingHours + " hr");
-		if (takshashilaBookingStatus)
-			System.out.println("  ->TAKSHASHILA meeting room is booked for " + takshashilaBookingHours + " hr");
-		if (agraFortBookingStatus)
-			System.out.println("  ->AGRAFORT meeting room is booked for " + agraFortBookingHours + " hr");
-		if (pratapGadhBookingStatus)
-			System.out.println("  ->PRATAPGADH meeting room is booked for " + pratapGadhBookingHours + " hr");
+		if (!nalandaBookingStatus && !takshashilaBookingStatus && !agraFortBookingStatus && !pratapGadhBookingStatus) {
+			System.out.println("All the meeting rooms are available for booking");
+		} else {
+			System.out.println("Current Booking status:");
+			if (nalandaBookingStatus)
+				System.out.println("  ->NALANDA meeting room is booked for " + nalandaBookingHours + " hr");
+			if (takshashilaBookingStatus)
+				System.out.println("  ->TAKSHASHILA meeting room is booked for " + takshashilaBookingHours + " hr");
+			if (agraFortBookingStatus)
+				System.out.println("  ->AGRAFORT meeting room is booked for " + agraFortBookingHours + " hr");
+			if (pratapGadhBookingStatus)
+				System.out.println("  ->PRATAPGADH meeting room is booked for " + pratapGadhBookingHours + " hr");
+		}
 	}
-	
-	//method to show the available meeting rooms
+
+	// method to show the available meeting rooms
 	void displayAvailableMeetingRoomForBooking() {
 		if (nalandaBookingStatus && takshashilaBookingStatus && agraFortBookingStatus && pratapGadhBookingStatus) {
 			System.out.println("Sorry, all the meeting rooms are booked at the moment");
@@ -104,6 +109,7 @@ public class MeetingRoom {
 
 	public static void main(String[] args) {
 		MeetingRoom meetingRoom = new MeetingRoom();
+		meetingRoom.displayInfo();
 		meetingRoom.bookMeetingRoom();
 		System.out.println();
 		meetingRoom.displayAvailableMeetingRoomForBooking();
