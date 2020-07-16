@@ -57,11 +57,11 @@ public class MeetingRoom {
 			}
 		} else if (meetingRoom.equals(MEETINGROOMS.AGRAFORT)) {
 			if (!agraFortBookingstatus) {
-				System.out.println(meetingRoom + " room is booked for " + agraFortMeetingHours + " Hour");
+				System.out.println(meetingRoom + " room is booked for " + hours + " Hour");
 				agraFortBookingstatus = true;
 				agraFortMeetingHours = hours;
 			} else {
-				System.out.println(meetingRoom + " room is already booked for " + hours + " Hour");
+				System.out.println(meetingRoom + " room is already booked for " + agraFortMeetingHours + " Hour");
 				displayAvailableMeetingRoomForBooking();
 			}
 		} else if (meetingRoom.equals(MEETINGROOMS.PRATAPGADH)) {
