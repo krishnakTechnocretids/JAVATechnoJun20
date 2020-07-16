@@ -1,6 +1,6 @@
 package aadeshJun20;
 
-public class SumOfAllNumInString {
+public class SumOfAllNumberInString {
 	
 	void displaySum(String str) {
 		String temp = "0";
@@ -18,7 +18,7 @@ public class SumOfAllNumInString {
 	}
 
 	public static void main(String[] args) {
-		SumOfAllNumInString sum = new SumOfAllNumInString();
+		SumOfAllNumberInString sum = new SumOfAllNumberInString();
 		sum.displaySum("P71Rr29T2E");
 		sum.displaySum("P6Rr29T2E3");
 	}
