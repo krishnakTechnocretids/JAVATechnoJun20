@@ -9,7 +9,7 @@ public class AsciiEx {
 		int sum = 0;
 		for (int index = 0; index < str.length(); index++) {
 			if (str.charAt(index)>= 48 && str.charAt(index)<=57) {
-				sum += Character.getNumericValue(str.charAt(index));
+				sum += str.charAt(index) - '0';
 			}
 		}
 		System.out.println("Sum of all numbers in String is: " +sum);
