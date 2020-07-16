@@ -123,8 +123,8 @@ public class MeetingRoom {
 		MeetingRoom meetingRoom2 = new MeetingRoom();
 		meetingRoom2.bookMeetingRoom(MEETINGROOMS.NALANDA);
 		System.out.println();
-		meetingRoom.bookMeetingRoom(MEETINGROOMS.PRATAPGADH, 5);
+		meetingRoom2.bookMeetingRoom(MEETINGROOMS.PRATAPGADH, 5);
 		System.out.println();
-		meetingRoom2.bookMeetingRoom(MEETINGROOMS.NALANDA);
+		meetingRoom2.bookMeetingRoom(MEETINGROOMS.AGRAFORT);
 	}
 }
