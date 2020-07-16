@@ -4,8 +4,7 @@ public class NumberSumUsingASCII {
 		int sum=0;
 		for (int index=0;index<input.length();index++){
 			int numberAscii = input.charAt(index);
-			if(numberAscii>='0' && numberAscii<='9')
-			{
+			if(numberAscii>='0' && numberAscii<='9'){
 				sum+=input.charAt(index)-'0';
 			}
 		}System.out.println("Sum of all numbers in String is : "+sum);	
