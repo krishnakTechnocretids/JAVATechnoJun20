@@ -7,8 +7,7 @@ public class SumNosUsingASCII {
 		for (int index = 0; index < input.length(); index++) {
 			for (int innerIndex = 48; innerIndex <= 57; innerIndex++)
 				if (input.charAt(index) <= innerIndex) {
-					char ch = input.charAt(index);
-					sum += Character.getNumericValue(ch);
+					sum += Character.getNumericValue(input.charAt(index));
 					break;
 				}
 		}
