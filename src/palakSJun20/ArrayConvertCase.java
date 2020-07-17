@@ -37,8 +37,8 @@ public class ArrayConvertCase {
 	//Printing Array Element
 	void display(String[] result) {
 		System.out.print("{ ");
-		for (int i = 0; i < result.length; i++) {
-			System.out.print(result[i] + ",");
+		for (int index = 0; index < result.length; index++) {
+			System.out.print(result[index] + ",");
 		}
 		System.out.println("}");
 	}
