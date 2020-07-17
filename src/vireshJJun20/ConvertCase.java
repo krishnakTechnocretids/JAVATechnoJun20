@@ -21,16 +21,16 @@ public class ConvertCase {
 	String[] StringConvertCase(String[] inputArray) {
 		String[] outputArray = inputArray;
 		for (int arrIndex = 0; arrIndex < inputArray.length; arrIndex++) {
-			String str = inputArray[arrIndex];
+			//String str = inputArray[arrIndex]; //removed str as per reviewer suggestion
 			String tempString = "";
-			for (int strIndex = 0; strIndex < str.length(); strIndex++) {
+			for (int strIndex = 0; strIndex < inputArray[arrIndex].length(); strIndex++) {
 
-				if (str.charAt(strIndex) >= 65 && str.charAt(strIndex) <= 90) {
-					tempString += (char) ((int) str.charAt(strIndex) + 32);
-				} else if (str.charAt(strIndex) >= 'a' && str.charAt(strIndex) <= 'z') {
-					tempString += (char) ((int) str.charAt(strIndex) - 32);
+				if (inputArray[arrIndex].charAt(strIndex) >= 65 && inputArray[arrIndex].charAt(strIndex) <= 90) {
+					tempString += (char) ((int) inputArray[arrIndex].charAt(strIndex) + 32);
+				} else if (inputArray[arrIndex].charAt(strIndex) >= 'a' && inputArray[arrIndex].charAt(strIndex) <= 'z') {
+					tempString += (char) ((int) inputArray[arrIndex].charAt(strIndex) - 32);
 				} else {
-					tempString2 += str.charAt(strIndex) + " ";
+					tempString2 += inputArray[arrIndex].charAt(strIndex) + " ";
 				}
 			}
 			outputArray[arrIndex] = tempString;
