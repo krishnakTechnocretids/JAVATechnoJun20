@@ -8,7 +8,6 @@ public class Connection {
 		
 	}
 	
-	//String temp = new Connection()
 	static Connection getConnection(){	
 		if(con == null)
 			con = new Connection();
