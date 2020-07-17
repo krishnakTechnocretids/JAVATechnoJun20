@@ -3,6 +3,7 @@ package aavrutiDJun20.array;
 public class ConvertCaseofAllElements {
 
 	void convertCaseOfStrings(String[] arrayInput) {
+		System.out.print("Output --> {");
 		for(int outerIndex=0;outerIndex<arrayInput.length;outerIndex++) {
 			String convertedCaseString = "";
 			for(int innerIndex=0;innerIndex<arrayInput[outerIndex].length();innerIndex++) {
@@ -12,10 +13,7 @@ public class ConvertCaseofAllElements {
 					convertedCaseString += (char)(arrayInput[outerIndex].charAt(innerIndex) - 32);
 			}
 			arrayInput[outerIndex] = convertedCaseString;
-		}
-		System.out.print("Output --> {");
-		for(int index=0;index<arrayInput.length;index++) {
-			System.out.print("\"" + arrayInput[index] + "\", " );
+			System.out.print("\"" + arrayInput[outerIndex] + "\", " );
 		}
 		System.out.print("}");
 	}
