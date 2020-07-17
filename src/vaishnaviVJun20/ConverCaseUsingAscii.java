@@ -13,13 +13,10 @@ public class ConverCaseUsingAscii {
 		for (int index = 0; index < nameArray.length; index++) {
 			String name = "";
 			for (int innerIndex = 0; innerIndex < nameArray[index].length(); innerIndex++) {
-				char ch;
 				if (nameArray[index].charAt(innerIndex) >= 'A' && nameArray[index].charAt(innerIndex) <= 'Z') {
-					ch = (char) (nameArray[index].charAt(innerIndex) + 32);
-					name += ch;
+					name += (char) (nameArray[index].charAt(innerIndex) + 32);
 				} else if (nameArray[index].charAt(innerIndex) >= 97 && nameArray[index].charAt(innerIndex) <= 122) {
-					ch = (char) (nameArray[index].charAt(innerIndex) - 32);
-					name += ch;
+					name += (char) (nameArray[index].charAt(innerIndex) - 32);
 				}
 			}
 			nameArray[index] = name;
@@ -32,7 +29,7 @@ public class ConverCaseUsingAscii {
 		String[] newArray = new ConverCaseUsingAscii().covertCaseInAllElements(array);
 		System.out.print("Output array: {");
 		for (int index = 0; index < newArray.length; index++) {
-			System.out.print(newArray[index] + " ");
+			System.out.print(newArray[index] + ", ");
 		}
 		System.out.print("}");
 	}
