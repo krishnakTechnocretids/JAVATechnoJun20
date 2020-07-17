@@ -1,5 +1,12 @@
 package vaishnaviVJun20;
 
+/*WAP to convert case in all elements of array. 
+Input : 
+String[] array = {"AaVruti", "NiKhil", "AdiTi", "MAhesh", "ArchaNA", "jaGAdeesh"};
+
+Output:
+array = {"aAvRUTI", "nIkHIL","aDItI", "maHESH","aRCHAna","JAgaDEESH"}; */
+
 public class ConverCaseUsingAscii {
 
 	String[] covertCaseInAllElements(String[] nameArray) {
