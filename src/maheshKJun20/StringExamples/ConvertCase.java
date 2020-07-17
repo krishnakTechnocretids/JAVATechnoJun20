@@ -8,14 +8,17 @@ array = {"aAvRUTI", "nIkHIL","aDItI", "maHESH","aRCHAna","JAgaDEESH"};
 
 package maheshKJun20.StringExamples;
 
+import java.util.Arrays;
+
 public class ConvertCase {
 	
 	//Method to Iterate through Array and convert case of each string element
 	void displayArraywithConvertedCase(String[] strArray) {
-		System.out.println("Output is below:");
+		String[] tempArray = new String[strArray.length];
 		for (int index=0;index<strArray.length;index++) {
-			System.out.println(convertCaseInString(strArray[index]));
+			tempArray[index] = convertCaseInString(strArray[index]);
 		}
+		System.out.println("Output: " + Arrays.toString(tempArray));
 	}
 	
 	//Method to convert case of each character in String and return the converted string value. It is using Character class method
@@ -53,6 +56,7 @@ public class ConvertCase {
 	public static void main(String[] args) {
 		ConvertCase convertCase = new ConvertCase();
 		String[] strArray = {"AaVruti", "NiKhil", "AdiTi", "MAhesh", "ArchaNA", "jaGAdeesh"};
+		System.out.println("Input: " + Arrays.toString(strArray));
 		convertCase.displayArraywithConvertedCase(strArray);
 	}
 }
