@@ -21,6 +21,8 @@ public class ChangeTheCase {
 			}else if(str.charAt(index) >= 'A' && str.charAt(index) <= 'Z') {
 				//caseChangedStr += Character.toLowerCase(str.charAt(index));
 				caseChangedStr += (char)(str.charAt(index)+32);
+			}else {
+				caseChangedStr += str.charAt(index);
 			}
 		}
 		return caseChangedStr;
