@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class AsciiConcept_ChangeCaseOfString {
 	
-	String ChangeCaseOfStringElement(String str) {    //"BArKhA"
+	String ChangeCaseOfStringElement(String str) {                       //"BArKhA"
 		String tempStr="";
 		for (int index=0; index<str.length(); index++) {
 			char ch=str.charAt(index);
@@ -12,15 +12,16 @@ public class AsciiConcept_ChangeCaseOfString {
 				tempStr+=(char)(ch+32);
 			}else if (ch>='a' && ch<='z') {
 				tempStr+=(char)(ch-32);
-			}
+			}else
+				System.out.println("No Letters: Invalid Entry");
 		}
-		return tempStr;
+		return tempStr;                                                 //"baRkHa"
 	}
 	void displayChangedCaseOfStringInArray(String[] input) {
 		System.out.println();
 		
 		for (int index=0; index<input.length; index++) {
-			input[index]=ChangeCaseOfStringElement(input[index]);
+			input[index]=ChangeCaseOfStringElement(input[index]);       //input[0]=baRkHa
 		}
 		System.out.println("Output String Array with Converted Case is: "+Arrays.toString(input));
 	}	
