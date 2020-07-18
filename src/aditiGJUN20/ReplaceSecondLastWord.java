@@ -34,7 +34,7 @@ public class ReplaceSecondLastWord {
 	// i.e. for 4th occurance String replaceWord(String input, String
 	// wordToBeReplace, String replaceWith, int occurance) and adjust if condition
 	// accordingly
-	String replaceWord(String input, String wordToBeReplace, String replaceWith) {
+	String getReplacedWordString(String input, String wordToBeReplace, String replaceWith) {
 		System.out.println("\nOriginal String : " + input);
 		String[] resultArray = input.split(" ");
 		int stringOccurance = 0;
@@ -73,7 +73,7 @@ public class ReplaceSecondLastWord {
 		System.out.println("Replaced String: "
 				+ replaceSecondLastWord.getSecongLastWordReplaced(input1, wordToBeReplace, replaceWith));
 		System.out
-				.println("Replaced String: " + replaceSecondLastWord.replaceWord(input2, wordToBeReplace, replaceWith));
+				.println("Replaced String: " + replaceSecondLastWord.getReplacedWordString(input2, wordToBeReplace, replaceWith));
 
 	}
 }
