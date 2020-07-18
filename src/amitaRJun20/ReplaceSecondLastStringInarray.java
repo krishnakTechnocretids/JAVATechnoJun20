@@ -8,22 +8,22 @@ package amitaRJun20;
 
 public class ReplaceSecondLastStringInarray {
 	
-	String replacedSecondLastString(String input, String replaceString) {
-		int newLength = input.replaceAll("Globant", "").length();
-		int totalCount = (input.length() - newLength) / replaceString.length();
+	String replacedSecondLastString(String input, String replaceWord, String replacedWithWord) {
+		int newLength = input.replaceAll(replaceWord, "").length();
+		int totalCount = (input.length() - newLength) / replaceWord.length();
 		String outputString = "";
 		int count = 0;
 		String[] strArray = input.split(" ");
 		if(totalCount<2) {
-			System.out.println("The String has no second last " +replaceString);
+			System.out.println("The String has no second last " +replaceWord+" word");
 			return input;
 		}
 		for (int index = 0; index < strArray.length; index++) {
-			if (strArray[index].equals(replaceString)) {
+			if (strArray[index].equals(replaceWord)) {
 				count++;
 			}
 			if (count == (totalCount - 1)) {
-				strArray[index] = "Technocredits";
+				strArray[index] =replacedWithWord;
 				count++;
 			}
 			outputString += strArray[index]+" ";			
@@ -35,12 +35,12 @@ public class ReplaceSecondLastStringInarray {
 		ReplaceSecondLastStringInarray replaceSecondLastString = new ReplaceSecondLastStringInarray();
 		String input = "Hi Globant Hello Globant Hi Globant GM Globant Hi Globant";
 		System.out.println("The Input String is :   "+input);
-		String replaceString = "Globant";
-		System.out.println("The Output String is :   " + replaceSecondLastString.replacedSecondLastString(input, replaceString));
+		String replaceWord = "Globant";
+		String replacedWithWord = "Technocredits";
+		System.out.println("The Output String is :   " + replaceSecondLastString.replacedSecondLastString(input, replaceWord, replacedWithWord));
 		System.out.println();
 		String input1 = "Hi Globant";
 		System.out.println("The Input String is :    "+input1);
-		String replaceString1 = "Globant";
-		System.out.println("The Output String is : " + replaceSecondLastString.replacedSecondLastString(input1, replaceString1));
+		System.out.println("The Output String is : " + replaceSecondLastString.replacedSecondLastString(input1, replaceWord, replacedWithWord));
 	}
 }
