@@ -7,12 +7,13 @@ public class RepalceSecondLastString {
 	void replaceSecondLastString(String input) {
 		/*
 		 * Second Approach------------> String str1 =
-		 * input.substring(input.lastIndexOf("Globant")); String str2 =
-		 * input.substring(0, input.lastIndexOf("Globant")); String str3 =
-		 * str2.substring(0, str2.lastIndexOf("Globant")); String str4 =
-		 * str2.substring(str2.lastIndexOf("Globant")); String str5 =
-		 * str4.replace("Globant", "Technocredits"); String finalAnsw = str3 + str5 +
-		 * str1; System.out.println("Output---->" + finalAnsw);
+		 * input.substring(input.lastIndexOf("Globant")); 
+		 * String str2 =input.substring(0, input.lastIndexOf("Globant"));
+		 *  String str3 =str2.substring(0, str2.lastIndexOf("Globant"));
+		 *  String str4 = str2.substring(str2.lastIndexOf("Globant"));
+		 *  String str5 = str4.replace("Globant", "Technocredits");
+		 *  String finalAnsw = str3 + str5 +str1; 
+		 * System.out.println("Output---->" + finalAnsw);
 		 */
 
 		// first Approach
