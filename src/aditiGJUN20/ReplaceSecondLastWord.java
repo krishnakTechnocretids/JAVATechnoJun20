@@ -17,7 +17,7 @@ public class ReplaceSecondLastWord {
 
 		if (input.indexOf(wordToBeReplace) == input.lastIndexOf(wordToBeReplace)) {
 			return "Input String \" " + input + "\" can not be processed as wordToBeReplace (" + wordToBeReplace
-					+ ") has 0/1 occurance";
+					+ ") has 0/1 occurrence";
 
 		} else {
 			String tempString1 = input.substring(0, input.lastIndexOf(wordToBeReplace));
@@ -29,28 +29,28 @@ public class ReplaceSecondLastWord {
 
 	}
 
-	// Logic - 2 -> Using conditional statements -> can further enahanced for any
-	// number of Stringoccurance by Adding one more method parameter which user ask
-	// i.e. for 4th occurance String replaceWord(String input, String
-	// wordToBeReplace, String replaceWith, int occurance) and adjust if condition
+	// Logic - 2 -> Using conditional statements -> can further enhanced for any
+	// number of stringOccurence by Adding one more method parameter which user ask
+	// i.e. for 4th occurrence String replaceWord(String input, String
+	// wordToBeReplace, String replaceWith, int occurrence) and adjust if condition
 	// accordingly
 	String getReplacedWordString(String input, String wordToBeReplace, String replaceWith) {
 		System.out.println("\nOriginal String : " + input);
 		String[] resultArray = input.split(" ");
-		int stringOccurance = 0;
+		int stringOccurence = 0;
 		for (int index = 0; index < resultArray.length; index++) {
 			if (resultArray[index].equals(wordToBeReplace))
-				stringOccurance++;
+				stringOccurence++;
 		}
-		if (stringOccurance == 1 || stringOccurance == 0) {
+		if (stringOccurence == 1 || stringOccurence == 0) {
 			return "Input String \" " + input + "\" can not be processed as wordToBeReplace (" + wordToBeReplace
-					+ ") has " + stringOccurance + " occurance";
+					+ ") has " + stringOccurence + " occurrence";
 		} else {
-			stringOccurance = 0;
+			stringOccurence = 0;
 			for (int index = resultArray.length - 1; index >= 0; index--) {
 				if (resultArray[index].equals(wordToBeReplace)) {
-					stringOccurance++;
-					if (stringOccurance == 2) {
+					stringOccurence++;
+					if (stringOccurence == 2) {
 						resultArray[index] = replaceWith;
 						break;
 					}
