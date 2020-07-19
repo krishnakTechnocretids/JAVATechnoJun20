@@ -17,11 +17,11 @@ public class ReplaceTheSecondLast {
 			//Getting sub-string after removing last appearance of Globant
 			String tempStr2 = str.substring(0, str.lastIndexOf(toBeReplaced));
 			//Removing and storing last second-appearance of Globant
-			String tempStr3 = tempStr2.substring(tempStr2.lastIndexOf(toBeReplaced));
+			String tempStr3 = tempStr2.substring(tempStr2.lastIndexOf(toBeReplaced)).replace(toBeReplaced, replacement);
 			//Getting sub-string after removing second-last appearance of Globant
 			String tempStr4 = tempStr2.substring(0, tempStr2.lastIndexOf(toBeReplaced));
 			//Replacing second-last appearance of Globant with Technocredits
-			tempStr3 = tempStr3.replace(toBeReplaced, replacement);
+			//tempStr3 = tempStr3.replace(toBeReplaced, replacement);
 			//Adding the strings		
 			String result = tempStr4 + tempStr3 + tempStr1;
 			//Printing the result
