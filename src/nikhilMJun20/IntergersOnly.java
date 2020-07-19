@@ -22,8 +22,7 @@ import java.util.InputMismatchException;
 public class IntergersOnly {
 	void acceptAndAddintegers() {
 		int[] intArray = new int[3];
-		int integerCounter = 0;
-		int sum = 0;
+		int integerCounter = 0, sum = 0;
 		//Creating Scanner class object
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter ONLY integer numbers:-");
@@ -39,7 +38,7 @@ public class IntergersOnly {
 				scanner.next();
 			}
 		}
-		System.out.println("You have entered following 3 integer numbers:-\n"+Arrays.toString(intArray)+"\nSum ofthe entered integer numbers = "+sum);
+		System.out.println("First 3 integer numbers you entered --> "+Arrays.toString(intArray).replace("[","").replace("]", "")+"\nSum of the entered integer numbers = "+sum);
 	}
 	
 	public static void main(String[] args) {
