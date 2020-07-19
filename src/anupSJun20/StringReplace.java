@@ -11,24 +11,18 @@ public class StringReplace {
 		String[] newstr = str.split(" ");
 		int count = 0;
 		String finalString = "";
-		for(int index = 0;index<newstr.length;index++) {
+		for(int index=newstr.length-1;index>= 0;index--) {
 			if(newstr[index].equals(replace)) {
 				count++;
+			}
+			if(count == 2) {
+				newstr[index] = "Technocredits";
+				break;
 			}
 		}
 		if(count <2 ) {
 			System.out.println("Can't replace the second last element as there is no sufficient string");
 			return str;
-		}
-		int newcount = 0;
-		for(int index=newstr.length-1;index>= 0;index--) {
-			if(newstr[index].equals(replace)) {
-				newcount++;
-			}
-			if(newcount == 2) {
-				newstr[index] = "Technocredits";
-				break;
-			}
 		}
 		for(int index = 0;index<newstr.length;index++) {
 			finalString += newstr[index]+ " ";
