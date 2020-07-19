@@ -39,6 +39,7 @@ public class IntergersOnly {
 			}
 		}
 		System.out.println("First 3 integer numbers you entered --> "+Arrays.toString(intArray).replace("[","").replace("]", "")+"\nSum of the entered integer numbers = "+sum);
+		scanner.close();
 	}
 	
 	public static void main(String[] args) {
