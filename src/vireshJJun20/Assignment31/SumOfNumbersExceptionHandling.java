@@ -45,12 +45,10 @@ public class SumOfNumbersExceptionHandling {
 	// This method accepts int array and will display the sum of each array element. 
 	void displaySumOfNumbers(int[] inputArr) {
 		int sum=0;
+		System.out.print("The numbers entered are: ");
 		for (int index = 0; index < inputArr.length; index++) {
 			sum += inputArr[index];
-		}
-		System.out.print("The numbers entered are: ");
-		for (int numIndex = 0; numIndex < inputArr.length; numIndex++) {
-			System.out.print(" " + inputArr[numIndex] + ",");
+			System.out.print(" " + inputArr[index] + ",");
 		}
 		System.out.print("the sum is: " + sum);
 	}
