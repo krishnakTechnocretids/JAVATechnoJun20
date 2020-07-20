@@ -16,6 +16,7 @@ public class InputNumberExceptionHandling {
 				
 			} catch (InputMismatchException inputMismatchException) {
 				System.out.println("Enter Number input not a string  ");
+				cnt--;
 				scanner.next();
 				
 			}
