@@ -15,7 +15,7 @@ public class ExceptionSumOfNumbersInStatement {
 			try {
 				sum += Integer.parseInt(array[index]);
 			} catch (NumberFormatException nfe) {
-				System.out.print("");
+				
 			}
 		}
 		System.out.println("Input statement is: " + input);
@@ -25,6 +25,5 @@ public class ExceptionSumOfNumbersInStatement {
 	public static void main(String[] args) {
 		String input = "I have 5 Years 6 month of experience.";
 		new ExceptionSumOfNumbersInStatement().findSumOfNumbers(input);
-		;
 	}
 }
