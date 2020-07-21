@@ -10,28 +10,26 @@ TechnoCredits
 Output : values are 10,30,40 and total is 80*/
 package palakSJun20;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExceptionHandlingFirstThreeNumber {
 
 	void findFirstThreeNumberSum() {
+		Scanner sc = new Scanner(System.in);
 		int count = 0, sum = 0;
 		int[] array = new int[3];
 		while (count != 3) {
 			try {
-
 				System.out.println("Enter Number");
-				Scanner sc = new Scanner(System.in);
-				int number = sc.nextInt();
+				int number = Integer.parseInt(sc.nextLine());
 				array[count] = number;
 				sum += number;
 				count++;
-			} catch (InputMismatchException ime) {
+			} catch (NumberFormatException nfe) {
 				System.out.println("Invalid Input Please enter Number");
 			}
 		}
-
+		sc.close();
 		// Printing Array Value and SUm value
 		System.out.print("Values are ");
 		for (int index = 0; index < array.length; index++) {
