@@ -16,16 +16,13 @@ public class SumOfNumbersInGivenStatement {
 			try {
 				int num = Integer.parseInt(array[index]);
 				sum += num;
-			} catch (NumberFormatException e) {
-
-			}
+			} catch (NumberFormatException e) { }
 		}
 		System.out.println("Addition is: " + sum);
 	}
 
 	public static void main(String[] args) {
 		new SumOfNumbersInGivenStatement().findSumOfNumbersInGivenStatement("I have 5 Years 6 month of experience");
-
 	}
 
 }
