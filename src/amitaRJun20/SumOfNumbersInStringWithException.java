@@ -9,10 +9,10 @@ public class SumOfNumbersInStringWithException {
 	
 	int getSumOfNumbersFromString(String inputString){
 		int sum = 0;
-		String[] s = inputString.split(" ");
-		for(int index=0; index<s.length; index++){
+		String[] array = inputString.split(" ");
+		for(int index=0; index<array.length; index++){
 			try{
-				sum += Integer.parseInt(s[index]);			
+				sum += Integer.parseInt(array[index]);			
 			}catch(NumberFormatException ne){
 			}
 		}	
