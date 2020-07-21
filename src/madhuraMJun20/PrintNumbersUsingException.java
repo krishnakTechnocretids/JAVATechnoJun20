@@ -15,15 +15,15 @@ import java.util.Scanner;
 public class PrintNumbersUsingException {
 	void sumOfGivenNumbers() {
 		Scanner scanner = new Scanner(System.in);
-		int[] arr = new int[3];
+		int[] array = new int[3];
 		int count = 0;
 		int sum = 0;
 		String allInputs = "";
 		while (count < 3) {
 			try {
 				System.out.println("Please enter the number " + (count + 1) + " : ");
-				arr[count] = scanner.nextInt();
-				allInputs += arr[count] + ",";
+				array[count] = scanner.nextInt();
+				allInputs += array[count] + ",";
 				count++;
 			} catch (InputMismatchException ie) {
 				System.out.println("**Please provide valid input**");
@@ -34,9 +34,10 @@ public class PrintNumbersUsingException {
 		allInputs = allInputs.substring(0, allInputs.lastIndexOf(",")) + temp;
 		System.out.println("You have Entered following numbers : " + allInputs);
 		for (int index = 0; index < 3; index++) {
-			sum += arr[index];
+			sum += array[index];
 		}
 		System.out.println("Sum of the given numbers is : " + sum);
+		scanner.close();
 	}
 
 	public static void main(String[] args) {
