@@ -8,7 +8,7 @@ public class PrintNumberException{
 		String concatNumber=""; 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter numbers:");
-		while(counter<=2){
+		while(counter<3){
 			try{
 				array[counter] = scanner.nextInt();
 				sum += array[counter];
