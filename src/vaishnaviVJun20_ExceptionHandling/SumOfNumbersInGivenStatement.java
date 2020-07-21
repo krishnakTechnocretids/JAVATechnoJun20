@@ -14,8 +14,7 @@ public class SumOfNumbersInGivenStatement {
 		int sum = 0;
 		for (int index = 0; index < array.length; index++) {
 			try {
-				int num = Integer.parseInt(array[index]);
-				sum += num;
+				sum += Integer.parseInt(array[index]);
 			} catch (NumberFormatException e) { }
 		}
 		System.out.println("Addition is: " + sum);
