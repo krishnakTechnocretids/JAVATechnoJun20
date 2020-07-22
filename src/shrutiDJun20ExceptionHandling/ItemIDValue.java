@@ -20,8 +20,10 @@ public class ItemIDValue {
 				}
 			System.out.println("URL provided: " + url);
 			System.out.println("itemId in given URL is: " + itemId + "\n");
-		} else
+		} else{
+			System.out.println("URL provided: " + url);
 			System.out.println("No itemId present" + "\n");
+	}
 	}
 
 	public static void main(String[] args) {
