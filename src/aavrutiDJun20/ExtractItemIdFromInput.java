@@ -19,16 +19,13 @@ public class ExtractItemIdFromInput {
 
 	public static void main(String[] args) {
 		ExtractItemIdFromInput extractItemIdFromInput = new ExtractItemIdFromInput();
-		String input = "https://www.facebook.com/technocredits/itemId=12345/";
-		extractItemIdFromInput.findItemId(input);
-		System.out.println();
-		input = "https://www.facebook.com/technocredits/empid=123&itemId=12345/";
-		extractItemIdFromInput.findItemId(input);
-		System.out.println();
-		input = "https://www.facebook.com/technocredits/itemId=12345&empid=123/";
-		extractItemIdFromInput.findItemId(input);
-		System.out.println();
-		input = "https://www.facebook.com/technocredits/empid=123/";
-		extractItemIdFromInput.findItemId(input);
+		String[] input = {"https://www.facebook.com/technocredits/itemId=12345/",
+		"https://www.facebook.com/technocredits/empid=123&itemId=12345/",
+		"https://www.facebook.com/technocredits/itemId=12345&empid=123/",
+		"https://www.facebook.com/technocredits/empid=123/"};
+		for(int index=0;index<input.length;index++) {
+			extractItemIdFromInput.findItemId(input[index]);
+			System.out.println();
+		}
 	}
 }
