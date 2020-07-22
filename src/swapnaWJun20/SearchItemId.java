@@ -1,7 +1,5 @@
 package swapnaWJun20;
 
-import javax.jws.Oneway;
-
 public class SearchItemId {
 
 	void findItemID(String input) {
