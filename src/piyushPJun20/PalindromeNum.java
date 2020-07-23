@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class PalindromeNum {
 	void palindromeNumber(int num) {

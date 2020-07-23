@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class SecondClass {
 	void m3() {

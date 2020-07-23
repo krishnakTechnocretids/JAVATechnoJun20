@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class Swap {
 	static void swapNum(int num1, int num2) {

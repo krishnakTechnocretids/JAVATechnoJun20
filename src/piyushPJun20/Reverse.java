@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class Reverse {
 	void display(String input) {

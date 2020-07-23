@@ -1,4 +1,3 @@
-package piyushPJun20;
 public class SumOfNumInStringException {
 	void sumOfNum(String input) {
 		String[] arr = input.split(" ");

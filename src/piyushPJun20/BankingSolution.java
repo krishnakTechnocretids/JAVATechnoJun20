@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class BankingSolution {
 	static double iciciBal, hdfcBal, bobBal, sbiBal;

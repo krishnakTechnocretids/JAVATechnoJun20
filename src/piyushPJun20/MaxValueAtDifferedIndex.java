@@ -1,4 +1,3 @@
-package piyushPJun20;
 /* 
 Find max value at differed index.
 i/p:- arr1: {10,2,9,14,3}

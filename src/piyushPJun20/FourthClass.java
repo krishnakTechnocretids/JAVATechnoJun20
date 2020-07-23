@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class FourthClass {
 	static void m1() {

@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class Area {
 	void rectangle(int l, int b){

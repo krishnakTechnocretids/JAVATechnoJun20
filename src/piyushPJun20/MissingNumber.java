@@ -1,4 +1,3 @@
-package piyushPJun20;
 public class MissingNumber {
 
 	void displayMissingNum(int[] intArr) {

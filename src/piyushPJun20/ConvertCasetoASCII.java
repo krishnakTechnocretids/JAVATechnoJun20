@@ -1,4 +1,3 @@
-package piyushPJun20;
 public class ConvertCasetoASCII {
 	void convertCase(String[] inputArray) {
 		for (int index = 0; index < inputArray.length; index++) {

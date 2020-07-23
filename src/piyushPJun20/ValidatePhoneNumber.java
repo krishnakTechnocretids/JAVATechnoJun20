@@ -1,4 +1,3 @@
-package piyushPJun20;
 class ValidatePhoneNumber {
 
 	void verifyPhoneNumber(String phoneNo) {

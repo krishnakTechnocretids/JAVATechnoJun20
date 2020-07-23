@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class FirstClass {
 	void m1() {

@@ -1,4 +1,3 @@
-package piyushPJun20;
 /* 
  Find all differ index from given arrays. 
 i/p:- arr1: {10,2,9,14,3}

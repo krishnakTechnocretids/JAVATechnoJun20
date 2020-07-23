@@ -1,4 +1,3 @@
-package piyushPJun20;
 /* P1
 Create a class to satisfy below requirements. 
   a) Given number is prime or not. 

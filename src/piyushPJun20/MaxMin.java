@@ -1,4 +1,3 @@
-package piyushPJun20;
 import java.util.Scanner;
 
 public class MaxMin {

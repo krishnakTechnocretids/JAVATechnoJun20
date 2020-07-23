@@ -1,4 +1,3 @@
-package piyushPJun20;
 
 public class ThirdClass {
 	static void m5() {
