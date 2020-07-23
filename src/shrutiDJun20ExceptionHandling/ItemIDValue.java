@@ -10,7 +10,7 @@ public class ItemIDValue {
 		String urlafterId = "";
 		String itemId = "";
 		if (url.contains("itemId=")) {
-			urlafterId = url.substring((url.lastIndexOf(iD) + iD.length()));
+			urlafterId = url.substring((url.indexOf(iD) + iD.length()));
 
 			for (int index = 0; index < urlafterId.length(); index++)
 				if (Character.isDigit(urlafterId.charAt(index))) {
