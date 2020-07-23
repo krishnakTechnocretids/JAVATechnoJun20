@@ -1,3 +1,4 @@
+package piyushPJun20;
 public class CountDigits {
 	void charFreq(String input){
 		int digit=0, uCase=0, lCase=0, specialChar=0;

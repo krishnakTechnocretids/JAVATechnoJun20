@@ -5,7 +5,7 @@ Create a class to satisfy below requirements.
   c) Find sum of all prime numbers between 2->100
   d) Find avg of prime numbers between 2->100
 */
-
+package piyushPJun20;
 public class PrimeNumber {
 
 	int primeNumber(int num) {

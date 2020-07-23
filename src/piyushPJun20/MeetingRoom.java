@@ -1,3 +1,4 @@
+package piyushPJun20;
 public class MeetingRoom {
 	static boolean nalandaBookingStatus, takshashilaBookingStatus, agraFortBookingStatus, pratapGadhBookingStatus;
 	static int nalandaBookingHours, takshashilaBookingHours, agraFortBookingHours, pratapGadhBookingHours;

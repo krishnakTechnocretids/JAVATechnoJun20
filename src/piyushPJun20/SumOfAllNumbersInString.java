@@ -1,3 +1,4 @@
+package piyushPJun20;
 class SumOfAllNumbersInString {
 	void findSumOfAllNumbers(String input) {
 		int sum = 0;

@@ -1,4 +1,4 @@
-
+package piyushPJun20;
 public class SumExam3 {
 
 	void findSum(int[] array,int num) {

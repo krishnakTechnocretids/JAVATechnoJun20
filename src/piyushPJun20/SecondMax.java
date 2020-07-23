@@ -1,3 +1,4 @@
+package piyushPJun20;
 public class SecondMax {
 
 	void displaySecondMax(int[] number) {

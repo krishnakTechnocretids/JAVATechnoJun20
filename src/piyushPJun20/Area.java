@@ -1,4 +1,4 @@
-
+package piyushPJun20;
 public class Area {
 	void rectangle(int l, int b){
 		System.out.println("Area of Rectangle is " + (l*b)); 

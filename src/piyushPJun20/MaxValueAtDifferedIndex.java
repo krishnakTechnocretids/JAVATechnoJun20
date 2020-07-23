@@ -4,7 +4,7 @@ i/p:- arr1: {10,2,9,14,3}
 arr2: {10,2,18,14,3}
 o/p :- Values are not matching at index -> 2, From (9,18) max value is 18
 */
-
+package piyushPJun20;
 public class MaxValueAtDifferedIndex {
 
 	void displayMaxIndex(int[] arr1, int[] arr2) {

@@ -1,3 +1,4 @@
+package piyushPJun20;
 public class SumASCII {
 	void sumOfNumbers(String input) {
 		int sum = 0;

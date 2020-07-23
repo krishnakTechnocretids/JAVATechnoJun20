@@ -1,3 +1,4 @@
+package piyushPJun20;
 public class DuplicateNum {
 
 	void displayDuplicate(int[] intArr) {

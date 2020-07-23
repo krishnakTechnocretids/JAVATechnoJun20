@@ -1,4 +1,4 @@
-
+package piyushPJun20;
 public class StaticNonStatic {
 	
 	double sum(double m1, double m2, double m3) {

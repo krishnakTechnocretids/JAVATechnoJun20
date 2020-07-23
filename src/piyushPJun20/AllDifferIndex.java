@@ -6,6 +6,8 @@ o/p:- Values are not matching at index -> 2
 Values are not matching at index -> 4
 */
 
+package piyushPJun20;
+
 public class AllDifferIndex {
 
 	void displayIndex(int[] arr1, int[] arr2) {
