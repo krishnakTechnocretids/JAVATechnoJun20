@@ -17,22 +17,22 @@ package nikhilMJun20;
 
 public class FindItemId {
 	void displayItemId(String str, String toBeFound) {
-		String itemId = "";
-		for(int index = 0; index < str.length()-toBeFound.length(); index++) {
-			if((str.substring(index, (index+toBeFound.length()))).equals(toBeFound)) {
-				if(str.charAt(index+toBeFound.length()) == '=') {
-					int innerIndex = index+toBeFound.length()+1;
-					while(Character.isDigit(str.charAt(innerIndex))) {
-						itemId += str.charAt(innerIndex);
-						innerIndex++;
-					}
+		System.out.println("\nGiven string:-\n"+str);
+		try {
+			String temp = str.substring(str.indexOf(toBeFound));
+			String itemId = "";
+			if(temp.charAt(toBeFound.length()) == '=') {
+				int index = toBeFound.length()+1;
+				while(Character.isDigit(temp.charAt(index))) {
+					itemId += temp.charAt(index);
+					index++;
 				}
+				System.out.println("Item ID -> "+itemId);
+			}else {
+				System.out.println("Item ID -> Not present");
 			}
-		}
-		if(itemId.length() > 0) {
-			System.out.println("\nGiven string:-\n"+str+"\nItem ID -> "+itemId);
-		}else {
-			System.out.println("\nGiven string:-\n"+str+"\nItem ID -> Not present");
+		}catch(StringIndexOutOfBoundsException siob){
+			System.out.println("Item ID -> Not present");
 		}
 	}
 	
