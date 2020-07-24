@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class FirstLastIndex {
 	void firstLastIndex(String str) {
 		for(int index=0; index<str.length();index++) {

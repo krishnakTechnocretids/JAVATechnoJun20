@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class WordFreq {
 
 	void findFreq(String input) {

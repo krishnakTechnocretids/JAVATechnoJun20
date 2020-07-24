@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class SecondClass {
 	void m3() {
 		System.out.println();

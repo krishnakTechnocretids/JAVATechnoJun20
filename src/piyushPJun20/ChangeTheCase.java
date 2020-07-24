@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class ChangeTheCase {
 	
 		String changeCase(String str) {

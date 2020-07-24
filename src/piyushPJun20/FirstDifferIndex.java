@@ -1,11 +1,10 @@
-package piyushPJun20;
 /* 
 Find first differ index from given arrays. 
 i/p :- arr1: {10,2,9,14,3}
 arr2: {10,2,18,14,3}
 o/p:- Values are not matching at index -> 2
  */
-
+package piyushPJun20;
 public class FirstDifferIndex {
 
 	void displayFirstIndex(int[] arr1, int[] arr2) {

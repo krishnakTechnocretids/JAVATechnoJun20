@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class SumOfAllNumInString {
 	void displaySum(String str) {
 		String temp = "0";

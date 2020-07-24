@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class MiddleChar {
 	void displayMidChar(String name) {
 		String arr[]=name.split(" ");

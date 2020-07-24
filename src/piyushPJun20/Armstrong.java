@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class Armstrong {
 	void ArmstrongNum(int num) {
 

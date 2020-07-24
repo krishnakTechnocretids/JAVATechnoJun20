@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class ReverseNumber {
 	int displayReverseNum(int num) {
 		int rNum = 0;

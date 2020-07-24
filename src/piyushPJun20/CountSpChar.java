@@ -1,5 +1,4 @@
 package piyushPJun20;
-
 public class CountSpChar {
 	void displaySpCharCount(String str) {
 		String str1 = str;

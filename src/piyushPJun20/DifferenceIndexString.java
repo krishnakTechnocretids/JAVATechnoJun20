@@ -1,4 +1,4 @@
-package piyushPJun20;
+
 /* 
 Find all differ index from given arrays.
 i/p:- arr1: {"Maulik", "Harsh", "Krishna", "Technocredits"}
@@ -6,7 +6,7 @@ arr2: {"Maulik","Harsh","Technocredits","Krishna"}
 o/p:- Values are not matching at index -> 2, [arr1 value is Krishna, arr2 value is Technocredits] 
 Values are not matching at index -> 3, [arr1 value is Technocredits, arr2 value is Krishna]
  */
-
+package piyushPJun20;
 public class DifferenceIndexString {
 
 	void displayIndex(String[] arr1, String[] arr2) {

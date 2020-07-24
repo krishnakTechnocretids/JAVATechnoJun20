@@ -1,3 +1,4 @@
+package piyushPJun20;
 public class ReplaceSecondLastString {
 	String replaceSecondLastString(String input, int replaceAtFrequency) {
 		int counter = 0;
