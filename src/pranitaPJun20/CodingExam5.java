@@ -10,10 +10,17 @@ public class CodingExam5 {
 		}
 	}
 
+	void printStringPatternUsingSubstring(String input) {
+		for (int index = 0; index < input.length(); index++) {
+			System.out.println(input.substring(0, input.length() - index));
+		}
+	}
+	
 	public static void main(String[] args) {
 		String input ="Globant";
 		CodingExam5 codingExam5 = new CodingExam5();
 		codingExam5.printStringPattern(input);
+		codingExam5.printStringPatternUsingSubstring(input);
 	}
 }
 
