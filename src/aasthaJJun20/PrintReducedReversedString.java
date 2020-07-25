@@ -3,7 +3,9 @@ package aasthaJJun20;
 public class PrintReducedReversedString {
 	void displayReverseReducedSTring(String input) {
 		for (int index = 0; index < input.length(); index++) {
-			System.out.println(input.substring(index,input.length()));
+			String temp = input.substring(index, input.length());
+			temp = String.valueOf(temp.charAt(0)).toUpperCase() + temp.substring(1);
+			System.out.println(temp);
 		}
 	}
 
