@@ -2,6 +2,7 @@ package pranitaPJun20;
 
 public class CodingExam5 {
 	void printStringPattern(String input) {
+		System.out.println("Using loop");
 		for (int outerIndex = 0; outerIndex < input.length(); outerIndex++) {
 			for (int innerIndex = 0; innerIndex < input.length() - outerIndex; innerIndex++) {
 				System.out.print(input.charAt(innerIndex));
@@ -11,6 +12,7 @@ public class CodingExam5 {
 	}
 
 	void printStringPatternUsingSubstring(String input) {
+		System.out.println("\nUsing substring method");
 		for (int index = 0; index < input.length(); index++) {
 			System.out.println(input.substring(0, input.length() - index));
 		}
