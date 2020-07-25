@@ -12,7 +12,9 @@ public class CodingExam_6 {
 	
 	void printMethod(String input) {
 		for (int index=0; index<input.length(); index++) {
-		System.out.println(input.substring(index, input.length()));
+		String str=input.substring(index, input.length());
+		str=str.replace(str.charAt(0), Character.toUpperCase(str.charAt(0)));
+		System.out.println(str);
 		}
 	}
 	public static void main(String[] args) {
