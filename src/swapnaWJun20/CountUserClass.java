@@ -1,3 +1,25 @@
+/*Q1) class User{
+	
+	void debit(){	
+	}
+	void credit(){
+	}
+	void displayInfo(){
+		debit
+		credit
+	}
+	void displayAllInfo(){
+		totaldebit
+		totalCredit
+		totalUsers
+	}
+}		 
+
+output : Users -> 3
+User1 -> total debit
+User1 -> total credit
+
+Total --> total debit & total credit*/
 package swapnaWJun20;
 
 public class CountUserClass {
