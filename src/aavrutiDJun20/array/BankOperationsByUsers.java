@@ -1,5 +1,6 @@
 package aavrutiDJun20.array;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import javax.transaction.InvalidTransactionException;
@@ -71,7 +72,7 @@ public class BankOperationsByUsers {
 						System.out.println("Would you like to perform more transaction : Yes/No");
 						transactionStatus = scanner.next();
 					}
-					catch(NumberFormatException ne) {
+					catch(InputMismatchException ne) {
 						System.out.println("Invalid selection");
 						transactionStatus = "No";
 						scanner.next();
@@ -84,7 +85,7 @@ public class BankOperationsByUsers {
 						System.out.println("Would you like to perform more transaction : Yes/No");
 						transactionStatus = scanner.next();
 					}
-					catch(NumberFormatException ne) {
+					catch(InputMismatchException ne) {
 						System.out.println("Invalid selection");
 						transactionStatus = "No";
 						scanner.next();
