@@ -24,14 +24,14 @@ public class User {
 	static int objectCount;
 	int userCreditCount, userDebitCount;
 	static int totalCreditCount, totalDebitCount;
-	String type;
-	public User(String type) {
+	String name;
+	public User(String name) {
 		objectCount++;
-		this.type = type;
+		this.name = name;
 	}
 	
 	public String toString() {
-		return this.type;		
+		return this.name;		
 	}
 	
 	void debit() {
