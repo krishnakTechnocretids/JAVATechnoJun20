@@ -17,7 +17,7 @@ public class PrimenumberInArrayList {
 				prime.add(number);
 			}
 		}
-		System.out.println("Array lis of Prime numbers between 1 to 100 : " + prime);
+		System.out.println("Arraylist of Prime numbers between 1 to 100 : " + prime);
 	}
 
 	public static void main(String[] args) {
