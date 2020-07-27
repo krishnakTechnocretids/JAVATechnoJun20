@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RemoveTechnoArrayList {
 
 	void removeWord(ArrayList<String> input, String toBeRemoved) {
-		for (int index = 0; index < input.size(); index++) {
+		while (input.contains(toBeRemoved)) {
 			if (input.contains(toBeRemoved)) {
 				input.remove(toBeRemoved);
 			}
