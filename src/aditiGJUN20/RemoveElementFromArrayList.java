@@ -9,6 +9,7 @@
 package aditiGJUN20;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 // Method to remove given element from String 
 public class RemoveElementFromArrayList {
@@ -46,3 +47,6 @@ public class RemoveElementFromArrayList {
 // ArrayList<String> inputArrayList = new ArrayList<String>();
 // for(int index=0;index<inputArray.length;index++) {
 // inputArrayList.add(index,inputArray[index]);}
+// or
+// ArrayList inputArrayList= new ArrayList(Arrays.asList("Maulik","Techno"
+// ,"Krishna", "Techno", "Credits", "Techno"));
