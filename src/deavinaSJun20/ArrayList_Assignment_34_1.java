@@ -14,21 +14,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayList_Assignment_34_1 {
-	static int count = 0;
+	int count = 0;
 
 	void removeandreplaceElements(ArrayList list) {
 
 		int indexofTechno = 0;
-		if (list.indexOf("Credits") != 0)
-			count++;
+		
+		/*if (list.indexOf("Credits") != 0)
+			count++;*/
 		System.out.println("list of input elements : " + list);
 		System.out.print("Techno word in given arrayList is at index ");
-		for (int index = 0; index <= list.size(); index++) {
+		for (int index = 0; index <list.size(); index++) {
 
-			if (list.contains("Techno")) {
+			if (list.get(index).equals("Techno")) {
 				indexofTechno = list.indexOf("Techno");
 				System.out.print(indexofTechno + " ");
 				list.set(indexofTechno, "Credits");
+				count++;
+			}
+			else if(list.get(index).equals("Credits")) {
 				count++;
 			}
 
