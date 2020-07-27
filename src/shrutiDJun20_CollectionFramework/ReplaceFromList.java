@@ -30,6 +30,11 @@ public class ReplaceFromList {
 			if (nameArrList.contains("Techno")) {
 				System.out.print(nameArrList.indexOf("Techno") + " ");
 				nameArrList.set(nameArrList.indexOf("Techno"), "Credits");
+			}
+		}
+
+		for (int index = 0; index < nameArrList.size(); index++) {
+			if (nameArrList.get(index) == "Credits") {
 				count++;
 			}
 		}
