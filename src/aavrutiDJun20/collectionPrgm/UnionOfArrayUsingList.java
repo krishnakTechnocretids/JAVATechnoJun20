@@ -30,7 +30,6 @@ public class UnionOfArrayUsingList {
 			String name = list1.get(index);
 			if(list1.indexOf(name) != list1.lastIndexOf(name)) {				
 				list1.remove(list1.lastIndexOf(name));
-				continue;
 			}			
 			else {
 				index++;
