@@ -13,10 +13,16 @@ public class RetriveUniqueNames {
 	void retrieveNames(ArrayList<String> namelist1, ArrayList<String> namelist2) {
 		namelist2.removeAll(namelist1);
 		namelist1.addAll(namelist2);
-		System.out.println("\nThe final list after removing unique elements from Two arrays is :- \n" + namelist1);
+		ArrayList<String> newList = new ArrayList<String>();
+        for (String elements : namelist1) {  
+            if (!newList.contains(elements)) {   
+                newList.add(elements); 
+            } 
+        }  
+        System.out.println("\nThe final list after removing unique elements from Two arrays is :- \n"+newList);
 	}
 	public static void main(String[] args) {
-		String[] name1 = {"Palak", "Viresh", "Yash", "Aavruti"};
+		String[] name1 = {"Palak", "Viresh", "Yash", "Aavruti","Palak","Yash"};
 		String[] name2 = {"Deavina","Palak","Viresh", "Nikhil"};
 		ArrayList<String> namelist1 = new ArrayList<String>(Arrays.asList(name1));
 		ArrayList<String> namelist2 = new ArrayList<String>(Arrays.asList(name2));
