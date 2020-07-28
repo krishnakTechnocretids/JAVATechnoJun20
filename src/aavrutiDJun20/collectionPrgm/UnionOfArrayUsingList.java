@@ -22,14 +22,18 @@ public class UnionOfArrayUsingList {
 		System.out.println("Union Array is --> " + unionArray);
 	}*/
 
-	//Union of two Arrays
 	void findUnionOfArray(ArrayList<String> nameList1, ArrayList<String> nameList2) {
-		ArrayList<String> list1 = new ArrayList<String>(nameList1);
-		list1.addAll(nameList2);
-
-		for(int index=0;index<list1.size();index++) {
-			if(list1.indexOf(list1.get(index)) != list1.lastIndexOf(list1.get(index))) {
-				list1.remove(list1.get(index));
+		ArrayList<String> list1 = new ArrayList<String>(nameList1);		
+		list1.addAll(nameList2);		
+		
+		for(int index=0;index<list1.size();) {
+			String name = list1.get(index);
+			if(list1.indexOf(name) != list1.lastIndexOf(name)) {				
+				list1.remove(list1.lastIndexOf(name));
+				continue;
+			}			
+			else {
+				index++;
 			}
 		}
 		System.out.println(list1);
@@ -37,10 +41,11 @@ public class UnionOfArrayUsingList {
 
 	public static void main(String[] args) {
 		UnionOfArrayUsingList unionOfArrayUsingList = new UnionOfArrayUsingList();
-		String[] name1 = {"Palak", "Viresh", "Yash", "Aavruti", "Viresh"};
-		String[] name2 = {"Deavina","Palak","Viresh", "Nikhil", "Nikhil"};		
+		String[] name1 = { "Palak", "Viresh", "Yash", "Aavruti","Palak","Yash", "Yash" }; 
+		String[] name2 = { "Deavina","Palak", "Nikhil", "Palak", "Viresh", "Nikhil", "Nikhil","Yash" };	
 		ArrayList<String> nameList1 = new ArrayList<String>(Arrays.asList(name1));
-		ArrayList<String> nameList2 = new ArrayList<String>(Arrays.asList(name2));		
+		ArrayList<String> nameList2 = new ArrayList<String>(Arrays.asList(name2));	
+		
 		unionOfArrayUsingList.findUnionOfArray(nameList1,nameList2);	
 	}
 }
