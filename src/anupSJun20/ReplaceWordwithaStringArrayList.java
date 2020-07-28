@@ -16,10 +16,9 @@ public class ReplaceWordwithaStringArrayList {
 		int count = 0;
 		System.out.print("The index of " + wordtoRemove + " is : ");
 		while(listofElements.contains(wordtoRemove)) {
-			if(listofElements.contains(wordtoRemove)) {
+			listofElements.contains(wordtoRemove);
 				System.out.print(listofElements.indexOf(wordtoRemove) + " ");
 				listofElements.set(listofElements.indexOf(wordtoRemove), wordtobereplaced);
-			}
 		}
 		for(int index = 0;index<listofElements.size();index++) {
 			if(listofElements.get(index).equals(wordtobereplaced)) {
