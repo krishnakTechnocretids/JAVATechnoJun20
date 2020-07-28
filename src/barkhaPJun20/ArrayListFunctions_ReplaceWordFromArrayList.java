@@ -17,30 +17,26 @@ public class ArrayListFunctions_ReplaceWordFromArrayList {
 	void replaceWordInArrayList(ArrayList<String> arrayList, String removeWord, String replaceWith) {
 		System.out.print("Index of "+removeWord+" in given ArrayList is:");
 		for (int index=0; index<arrayList.size(); index++) {
-			if (arrayList.get(index)==removeWord) {         
+			if (arrayList.get(index).equals(removeWord)) {         
 				System.out.print(index+",");
 			}	
 		}
 		System.out.println();
 		System.out.println("-------------------------------------------------------------------------------------");
 		
-		System.out.println("ArrayList after replacing "+removeWord+" with "+replaceWith +" is:");
-			for (int index=0; index<arrayList.size(); index++) {
-				if (arrayList.get(index)==removeWord) {
-					arrayList.set(index, replaceWith);
-				}
-			}	
-		System.out.println(arrayList);	
-					
-		System.out.println("--------------------------------------------------------------------------------------");	
-		
 		for (int index=0; index<arrayList.size(); index++) {
-			if (arrayList.get(index)==replaceWith)
-				count++;
+		if (arrayList.get(index).equals(removeWord)) {
+			arrayList.set(arrayList.indexOf(removeWord), replaceWith);
+			count++;
+		}else if (arrayList.get(index).equals(replaceWith)) {
+			count++;
+			}
 		}
+		System.out.println("ArrayList after replacing "+removeWord+" with "+replaceWith +" is:"+arrayList);
+		System.out.println("----------------------------------------------------------------------------------------");
 		System.out.println("Count of "+replaceWith+" in new ArrayList is: "+count);
-	}	
-	public static void main(String[] args) {
+	}
+		public static void main(String[] args) {
 		ArrayList<String> arrayList=new ArrayList<String>();
 		arrayList.add("Maulik");
 		arrayList.add("Techno");
@@ -53,4 +49,4 @@ public class ArrayListFunctions_ReplaceWordFromArrayList {
 		String replaceWith="Credits";
 		new ArrayListFunctions_ReplaceWordFromArrayList().replaceWordInArrayList(arrayList, removeWord, replaceWith);
 	}
-}	
+}				

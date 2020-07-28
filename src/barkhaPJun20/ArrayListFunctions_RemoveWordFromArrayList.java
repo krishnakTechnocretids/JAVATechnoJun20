@@ -18,11 +18,11 @@ public class ArrayListFunctions_RemoveWordFromArrayList {
 	//method 2
 	void removeWordfromArrayList1(ArrayList <String>arrayList, String removeWord) {
 		for (int index=0; index<arrayList.size(); index++) {            // will iterate loop till arrayList.size() (6 times)
-			if (arrayList.get(index)==removeWord) {
+			if (arrayList.get(index).equals(removeWord)) {
 				arrayList.remove(removeWord);
 			}
 		}
-		System.out.println("New ArrayList after remving "+removeWord+" is :"+arrayList);
+		System.out.println("New ArrayList after removing "+removeWord+" is :"+arrayList);
 	}
 	public static void main(String[] args) {
 		ArrayList<String> arrayList=new ArrayList<String>();
