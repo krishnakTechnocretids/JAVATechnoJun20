@@ -5,12 +5,16 @@ import java.util.ArrayList;
 public class ReplaceTechnoWithCredits{
 	ArrayList<String> replaceTechnoWithCredits(ArrayList<String> input){
 		System.out.print("Techno word index in given arrayList is  ");
-		for (int index = 0; index < input.size(); index++){
+		while(input.contains("Techno")){
+			System.out.print(input.indexOf("Techno") + ",");
+			input.set(input.indexOf("Techno"), "Credits");
+		}
+		/*for (int index = 0; index < input.size(); index++){
 			if (input.contains("Techno")){
 				System.out.print(input.indexOf("Techno") + ",");
 				input.set(input.indexOf("Techno"), "Credits");
 			}
-		}
+		}*/
 		System.out.println();
 		return input;
 	}
