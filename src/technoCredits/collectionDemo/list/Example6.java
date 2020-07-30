@@ -53,5 +53,6 @@ public class Example6 {
 		//new Example6().removeAllOperation(al1, al2);
 		
 		new Example6().retainAllOperation(al1, al2);
+>>>>>>> e137079a85a382cc87e0c502253dc14e8e486cce
 	}
 }
