@@ -44,5 +44,26 @@ public class Example8 {
 			System.out.println("Not equals");
 		}
 		
+		String[] name1 = {"Palak", "Yash", "Aavruti"};
+		
+		for(String temp1 : name1) {
+			System.out.println(temp1);
+		}
+		
+		int num[] = {10,20,11};
+		int sum = 0;
+		for(int currentNumber : num) {
+			sum += currentNumber;
+		}
+		System.out.println(sum);
+		
+		ArrayList<String> nameList = new ArrayList<String>(Arrays.asList(name1));
+		System.out.println("-------------------");
+		
+		for(String currentName : nameList) {
+			System.out.println(currentName);
+		}
+		
+		// Array // Collection //  Top to Bottom
 	}
 }
