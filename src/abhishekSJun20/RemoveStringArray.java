@@ -17,9 +17,8 @@ Note: Use set interface. */
 
 public class RemoveStringArray {
 	void removeDuplictae(String input[]) {
+		System.out.println("Input String: " + Arrays.asList(input));
 		Set<String> setArray = new LinkedHashSet<>(Arrays.asList(input));
-		System.out.println("String Input:" + setArray);
-
 		System.out.print("Output : ");
 		for (String name : setArray) {
 			System.out.println(name + " -> " + name.length());
