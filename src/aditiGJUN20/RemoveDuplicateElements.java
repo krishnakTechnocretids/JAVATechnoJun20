@@ -21,10 +21,9 @@ import java.util.Set;
 
 public class RemoveDuplicateElements {
 	void printUniqueList(String[] inputArray) {
-		Set<String> uniqueNameList = removeDuplicates(inputArray); 
-				//new LinkedHashSet<String>(removeDuplicates(inputArray));
+		LinkedHashSet<String> uniqueNameList = (LinkedHashSet<String>) removeDuplicates(inputArray);
 		Iterator<String> iterateName = uniqueNameList.iterator();
-		System.out.println("\n--------------------"+"\nUnique String elements for given String Array: ");
+		System.out.println("\n--------------------" + "\nUnique String elements for given String Array: ");
 		while (iterateName.hasNext()) {
 			String name = iterateName.next();
 			System.out.println(name + " -> " + name.length());
@@ -44,6 +43,6 @@ public class RemoveDuplicateElements {
 		String input[] = { "Aashtha", "Kartikey", "Piyush", "Raj", "Suparna", "Piyush", "Aashtha", "Barkha" };
 		System.out.println("Input: " + Arrays.toString(input));
 		removeDuplicateElements.printUniqueList(input);
-		System.out.println("Total Unique Elements are: "+removeDuplicateElements.removeDuplicates(input).size());
+		System.out.println("Total Unique Elements are: " + removeDuplicateElements.removeDuplicates(input).size());
 	}
 }
