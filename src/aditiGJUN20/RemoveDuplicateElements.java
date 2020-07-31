@@ -17,10 +17,12 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class RemoveDuplicateElements {
 	void printUniqueList(String[] inputArray) {
-		LinkedHashSet<String> uniqueNameList = new LinkedHashSet<String>(removeDuplicates(inputArray));
+		Set<String> uniqueNameList = removeDuplicates(inputArray); 
+				//new LinkedHashSet<String>(removeDuplicates(inputArray));
 		Iterator<String> iterateName = uniqueNameList.iterator();
 		System.out.println("\n--------------------"+"\nUnique String elements for given String Array: ");
 		while (iterateName.hasNext()) {
@@ -29,8 +31,8 @@ public class RemoveDuplicateElements {
 		}
 	}
 
-	LinkedHashSet<String> removeDuplicates(String[] inputArray) {
-		LinkedHashSet<String> uniqueNameList = new LinkedHashSet<String>();
+	Set<String> removeDuplicates(String[] inputArray) {
+		Set<String> uniqueNameList = new LinkedHashSet<String>();
 		for (String name : inputArray) {
 			uniqueNameList.add(name);
 		}
