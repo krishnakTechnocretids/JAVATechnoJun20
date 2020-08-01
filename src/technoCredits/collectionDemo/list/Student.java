@@ -7,6 +7,7 @@ public class Student {
 
 	int rno;
 	String name;
+	String sName;
 	
 	public Student(int rno, String name) {
 		this.rno = rno;
