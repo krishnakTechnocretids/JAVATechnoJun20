@@ -2,8 +2,6 @@ package shrutiDJun20Assignments;
 
 import java.util.ArrayList;
 
-import shrutiDJun20_CollectionSFrameworkNew.ReplaceFromList;
-
 public class ReplaceFromList1 {
 
 	void replaceWord() {
