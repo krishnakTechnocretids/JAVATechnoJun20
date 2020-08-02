@@ -45,7 +45,7 @@ public class RemoveDuplicateStrings {
 	public static void main(String[] args) {
 		String input[] = {"Aashtha","Kartikey","Piyush","Raj","Suparna","Piyush","Aashtha", "Barkha"};
 		System.out.println("Given input array is:-\n"+Arrays.toString(input));
-		Set<String> uniqueSet = new LinkedHashSet<String>(new RemoveDuplicateStrings().getUniqueElements(input));
-		display(uniqueSet);
+		//Set<String> uniqueSet = new LinkedHashSet<String>(new RemoveDuplicateStrings().getUniqueElements(input));
+		display(new LinkedHashSet<String>(new RemoveDuplicateStrings().getUniqueElements(input)));
 	}
 }
