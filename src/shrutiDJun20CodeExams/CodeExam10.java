@@ -36,7 +36,7 @@ public class CodeExam10 {
 		}
 	}
 
-	void rotateElementWithoutCollection(String input1, String input2) {
+	/*void rotateElementWithoutCollection(String input1, String input2) {
 		int count = 0;
 		if (input1.length() == input2.length()) {
 			while (!input1.equals(input2)) {
@@ -49,7 +49,7 @@ public class CodeExam10 {
 			System.out.println("Provided inputs are of different length");
 		}
 	}
-
+*/
 	public static void main(String[] args) {
 		String input1 = "abcdef";
 		String input2 = "defabc";
@@ -61,8 +61,8 @@ public class CodeExam10 {
 		ArrayList<String> list2 = new ArrayList<String>(Arrays.asList(arr2));
 
 		CodeExam10 codeExam10 = new CodeExam10();
-		//codeExam10.rotateElemets(list1, list2);
-		codeExam10.rotateElementWithoutCollection(input1, input2);
+		codeExam10.rotateElemets(list1, list2);
+		//codeExam10.rotateElementWithoutCollection(input1, input2);
 		
 	}
 }
