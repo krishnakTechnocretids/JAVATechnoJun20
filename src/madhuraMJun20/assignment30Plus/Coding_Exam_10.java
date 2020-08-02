@@ -25,8 +25,7 @@ public class Coding_Exam_10 {
 		return rotationCount;
 	}
 	public static void main(String[] args) {
-		Coding_Exam_10 coding_Exam_10 = new Coding_Exam_10();
-		
+				
 		String input1 = "abcdef";
 		String input2 = "defabc";
 		System.out.println(getMinimumRotation(input1, input2));
