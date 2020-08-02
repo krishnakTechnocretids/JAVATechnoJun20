@@ -1,27 +1,22 @@
 package shrutiDJun20CodeExams;
-
 /*
  Print minimum rotation required to compare both strings equality.
-
  Example 1  : 
  String input1 = "abcdef";
  String input2 = "defabc";
  output : 3
-
-
  */
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+//import java.util.HashMap;
+//import java.util.Iterator;
+//import java.util.LinkedHashSet;
 
 public class CodeExam10 {
 
 	void rotateElemets(ArrayList<String> list1, ArrayList<String> list2) {
 
 		int count = 0;
-
 		ArrayList<String> tempList1 = new ArrayList<String>(list1);
 		if (list1.size() == list2.size()) {
 			for (String temp : list1) {
@@ -35,14 +30,12 @@ public class CodeExam10 {
 			}
 			System.out.println("No. Of rotation needed for inputs to match--> "
 					+ count);
-		} else{
+		} else {
 			System.out.println("Inputs provided are of diff length");
+		}
 	}
-		
-	}
-
 	public static void main(String[] args) {
-		String input1 = "a1bcdef";
+		String input1 = "abcdef";
 		String input2 = "defabc";
 
 		String[] arr1 = input1.split("");
@@ -53,6 +46,5 @@ public class CodeExam10 {
 
 		CodeExam10 codeExam10 = new CodeExam10();
 		codeExam10.rotateElemets(list1, list2);
-
 	}
 }
