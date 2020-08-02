@@ -21,7 +21,7 @@ public class StringComparison {
 	void findRotationRequired(String str1, String str2) {
 		int count = 0;
 		while(!str1.equalsIgnoreCase(str2)) {
-			str1 = str1.substring(str1.length()-1, str1.length())+str1.substring(0,str1.length()-1);
+			str1 = str1.substring(str1.length()-1)+str1.substring(0,str1.length()-1);
 			//System.out.println(str1);
 			count++;
 		}
