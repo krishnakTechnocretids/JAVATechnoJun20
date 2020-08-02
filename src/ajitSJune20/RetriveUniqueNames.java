@@ -24,11 +24,10 @@ public class RetriveUniqueNames {
 	}
 
 	public static void main(String[] args) {
-		ArrayList<String> namelist1 = new ArrayList<String>(
-				Arrays.asList("Palak", "Viresh", "Yash", "Aavruti", "Palak"));
+		ArrayList<String> namelist1 = new ArrayList<String>(Arrays.asList("Palak", "Viresh", "Yash", "Aavruti", "Palak"));
 		ArrayList<String> namelist2 = new ArrayList<String>(Arrays.asList("Deavina", "Palak", "Viresh", "Nikhil"));
-		System.out.println("ArrayList name lis1 :  " + namelist1);
-		System.out.println("ArrayList name lis2 :  " + namelist2);
+		System.out.println("ArrayList1 :  " + namelist1);
+		System.out.println("ArrayList2 :  " + namelist2);
 		new RetriveUniqueNames().retrieveNames(namelist1, namelist2);
 	}
 }
