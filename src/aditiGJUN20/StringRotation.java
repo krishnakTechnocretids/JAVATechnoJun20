@@ -18,7 +18,7 @@ output : 3*/
 package aditiGJUN20;
 
 public class StringRotation {
-	int isStringRotated(String input1, String input2) {
+	int getStringRotationCount(String input1, String input2) {
 		int count = 0;
 		if (input1.equals(null) || input2.equals(null) || input1.length() != input2.length())
 			System.out.println("Strings are not matching with any rotation");
@@ -35,10 +35,10 @@ public class StringRotation {
 		StringRotation stringRotation = new StringRotation();
 		String input1 = "abcdef";
 		String input2 = "defabc";
-		System.out.println("Total rotation required to match "+input1+" and "+input2+" : "+stringRotation.isStringRotated(input1, input2));
+		System.out.println("Total rotation required to match "+input1+" and "+input2+" : "+stringRotation.getStringRotationCount(input1, input2));
 		String input3 = "abcdef";
 		String input4 = "defabcaa";
-		System.out.println("Total rotation required to match "+input3+" and "+input4+" : "+stringRotation.isStringRotated(input3, input4));
+		System.out.println("Total rotation required to match "+input3+" and "+input4+" : "+stringRotation.getStringRotationCount(input3, input4));
 		
 	}
 }
