@@ -5,7 +5,7 @@ String[] name2 = {"Deavina","Palak","Viresh", "Nikhil"};
 output : [Palak, Viresh, Yash, Aavruti,Deavina,Nikhil]
 
 Note : use collection concepts here and raise PR. For more practice write a code in notepad without using collection. */
-package rachanaGJun20;
+package rachanaGJun20.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
