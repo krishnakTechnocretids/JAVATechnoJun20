@@ -14,18 +14,20 @@ output : 3*/
 package madhuraMJun20.assignment30Plus;
 
 public class Coding_Exam_10 {
-	static int getMinimumRotation(String input1,String input2) {
+	static int getMinimumRotation(String input1, String input2) {
 		int rotationCount = 0;
-		//String temp = "";
-		while(!input1.equals(input2)) {
-		
-			input1 = input1.substring(input1.length()-1) + input1.substring(0,input1.length()-1);
-			rotationCount++;
+		if (input1.length() == input2.length()) {
+			while (!input1.equals(input2)) {
+				input1 = input1.substring(input1.length() - 1) + input1.substring(0, input1.length() - 1);
+				rotationCount++;
+			}
+		} else {
+			System.out.println("Strings are having different number of elements");
 		}
 		return rotationCount;
 	}
+
 	public static void main(String[] args) {
-				
 		String input1 = "abcdef";
 		String input2 = "defabc";
 		System.out.println(getMinimumRotation(input1, input2));
