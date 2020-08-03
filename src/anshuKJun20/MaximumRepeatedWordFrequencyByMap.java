@@ -12,6 +12,8 @@ package anshuKJun20;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class MaximumRepeatedWordFrequencyByMap {
 
@@ -31,8 +33,12 @@ public class MaximumRepeatedWordFrequencyByMap {
 				wordMap.put(word, 1);
 			}
 		}
-		System.out.println(wordMap + "'\n' and maximum frequency word is " + maxFreqWord);
-
+		
+		for( String str :wordMap.keySet()) {
+			System.out.println(str+ " --> "+wordMap.get(str));
+			
+		}
+		System.out.println(" Maximum frequency word is "+maxFreqWord);
 	}
 
 	public static void main(String[] args) {
