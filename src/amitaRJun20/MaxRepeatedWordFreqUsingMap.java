@@ -18,12 +18,13 @@ import java.util.Map;
 import java.util.Set;
 
 public class MaxRepeatedWordFreqUsingMap {
-	static void findAllStringFreq(String[] input) {
-		System.out.println("Input String is : "+Arrays.toString(input));
+	static void findAllStringFreq(String input) {
+		System.out.println("Input String is : "+input);
+		String[] array = input.split(" ");
 		LinkedHashMap<String, Integer> wordMap = new LinkedHashMap<String, Integer>();
 		String temp = "";
 		int count = 0;
-		for (String word : input) {
+		for (String word : array) {
 			if (wordMap.containsKey(word)) {
 				wordMap.put(word, wordMap.get(word) + 1);
 				if (wordMap.get(word) > count) {
@@ -43,7 +44,8 @@ public class MaxRepeatedWordFreqUsingMap {
 	}
 
 	public static void main(String[] args) {
-		String[] array = { "Hi", "Globant", "Techno", "Hi", "Hello", "Globant", "Techno", "Techno", "Globant", "Techno"};
-		findAllStringFreq(array);
+		String input = "Hi Globant techno Hi Hello Globant techno techno Globant techno";
+		//String[] array = { "Hi", "Globant", "Techno", "Hi", "Hello", "Globant", "Techno", "Techno", "Globant", "Techno"};
+		findAllStringFreq(input);
 	}
 }
