@@ -20,26 +20,26 @@ import java.util.Set;
 public class MaxRepeatedWordFreqUsingMap {
 	static void findAllStringFreq(String[] input) {
 		System.out.println("Input String is : "+Arrays.toString(input));
-		LinkedHashMap<String, Integer> hm = new LinkedHashMap<String, Integer>();
+		LinkedHashMap<String, Integer> wordMap = new LinkedHashMap<String, Integer>();
 		String temp = "";
 		int count = 0;
-		for (String str : input) {
-			if (hm.containsKey(str)) {
-				hm.put(str, hm.get(str) + 1);
-				if (hm.get(str) > count) {
-					temp = str;
-					count = hm.get(str);
+		for (String word : input) {
+			if (wordMap.containsKey(word)) {
+				wordMap.put(word, wordMap.get(word) + 1);
+				if (wordMap.get(word) > count) {
+					temp = word;
+					count = wordMap.get(word);
 				}
 			} else {
-				hm.put(str, 1);
+				wordMap.put(word, 1);
 			}
 		}
-		//System.out.println(hm);
+		//System.out.println(wordMap);
 		System.out.println("Output:- ");
-		for(String str : hm.keySet()){
-			System.out.println(str+ " --> "+hm.get(str));
+		for(String inputWord : wordMap.keySet()){
+			System.out.println(inputWord+ " --> "+wordMap.get(inputWord));
 		}
-		System.out.println("Maximum repeated word is " + temp + " having frequency " + count + " timmes ");
+		System.out.println("Maximum repeated word is " + temp + " having frequency " + count + " times ");
 	}
 
 	public static void main(String[] args) {
