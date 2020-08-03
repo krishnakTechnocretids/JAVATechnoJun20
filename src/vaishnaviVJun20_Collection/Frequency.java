@@ -12,7 +12,8 @@ Output :  Hi -> 2
 		Hello -> 1
 Maximum repeated word is techno having frequency 4. */
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Set;
 
 public class Frequency {
 
@@ -20,19 +21,22 @@ public class Frequency {
 		String[] array = str.split(" ");
 		int max = 0;
 		String maxWord = "";
-		HashMap<String, Integer> hsMap = new HashMap<String, Integer>();
+		LinkedHashMap<String, Integer> lhsMap = new LinkedHashMap<String, Integer>();
 		for (String str1 : array) {
-			if (hsMap.containsKey(str1)) {
-				hsMap.put(str1, (hsMap.get(str1) + 1));
-				if (hsMap.get(str1) > max) {
-					max = hsMap.get(str1);
+			if (lhsMap.containsKey(str1)) {
+				lhsMap.put(str1, (lhsMap.get(str1) + 1));
+				if (lhsMap.get(str1) > max) {
+					max = lhsMap.get(str1);
 					maxWord = str1;
 				}
 			} else {
-				hsMap.put(str1, 1);
+				lhsMap.put(str1, 1);
 			}
 		}
-		System.out.println("Frequency is: " + hsMap);
+		Set<String> keys = lhsMap.keySet();
+		for (String name : keys) {
+			System.out.println(name + "-->" + lhsMap.get(name));
+		}
 		System.out.println("Maximum repeated word is " + maxWord + " having frequency " + max);
 	}
 
