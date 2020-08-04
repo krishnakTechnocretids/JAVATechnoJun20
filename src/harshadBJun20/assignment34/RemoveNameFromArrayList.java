@@ -22,11 +22,11 @@ public class RemoveNameFromArrayList {
 		System.out.println("Given Array list:");
 		System.out.println(names);
 		System.out.println();
-		for(int index = 0;index<names.size();index++) {
-			if(names.contains(nameToRemove)) {
-				names.remove(nameToRemove);
-			}			
-		}
+		
+		while(names.contains(nameToRemove)) {
+			names.remove(nameToRemove);
+		}			
+
 		System.out.println("After removing all Techno"+" from Array list:");
 		System.out.println(names);
 	}
