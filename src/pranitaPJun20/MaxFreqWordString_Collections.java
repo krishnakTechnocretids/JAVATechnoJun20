@@ -12,7 +12,6 @@ Maximum repeated word is techno having frequency 4.
 
 package pranitaPJun20;
 
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -21,29 +20,26 @@ public class MaxFreqWordString_Collections {
 
 	void findMaxRepeatedWordFrequency(String input) {
 		String[] inputArray = input.split(" ");
-		int count = 0;
+		int maxCount = 0;
+		String maxFreqword = "";
 		Map<String, Integer> wordMap = new LinkedHashMap<String, Integer>();
 		for (String name : inputArray) {
 			if (wordMap.containsKey(name)) {
 				wordMap.put(name, wordMap.get(name) + 1);
+				maxCount = wordMap.get(name) + 1;
+				if (maxCount >= wordMap.get(name) + 1) {
+					maxFreqword = name;
+				}
 			} else {
 				wordMap.put(name, 1);
 			}
 		}
 		Set<String> nameKey = wordMap.keySet();
-		Iterator<String> itr = nameKey.iterator();
-		String maxFreqword = "";
-		while (itr.hasNext()) {
-			String word = itr.next();
-			System.out.println(word + "-> " + wordMap.get(word));
-			if (count <= wordMap.get(word)) {
-				maxFreqword = word;
-				count = wordMap.get(word);
-			}
+		for (String word : nameKey) {
+			System.out.println(word + " --> " + wordMap.get(word));
 		}
-		System.out.println("\nMaximum repeated word is " + maxFreqword + " having frequency -> " + count);
+		System.out.println("\nMaximum repeated word is " + maxFreqword + " having frequency -> " + wordMap.get(maxFreqword));
 	}
-
 
 	public static void main(String[] args) {
 		MaxFreqWordString_Collections maxFreqWordString_Collections = new MaxFreqWordString_Collections();
