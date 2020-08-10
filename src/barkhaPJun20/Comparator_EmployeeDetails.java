@@ -1,5 +1,5 @@
 package barkhaPJun20;
-
+//getter setter method got from -> right click here ->source-> generate getter setter
 public class Comparator_EmployeeDetails {
 	
 	private int empId;
@@ -31,5 +31,4 @@ public class Comparator_EmployeeDetails {
 	public void setEmpSalary(double empSalary) {
 		this.empSalary = empSalary;
 	}
-
 }

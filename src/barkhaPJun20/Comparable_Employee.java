@@ -33,6 +33,7 @@ public class Comparable_Employee implements Comparable<Comparable_Employee> {
 		else
 			return -1;
 	}
+}
 	/*for name comparison 
 	public int compareTo(Comparator_Comparable_Employee o) {    //compareTo always return integer value
 		//return this.empName.compareTo(o.empName)
@@ -43,5 +44,3 @@ public class Comparable_Employee implements Comparable<Comparable_Employee> {
 		else
 			return -1;
 			*/
-
-}

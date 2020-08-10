@@ -57,9 +57,4 @@ public class Comparator_Client {
 			System.out.println(Employee.getEmpId()+"  :   "+Employee.getEmpName()+"  :   "+Employee.getEmpSalary()+"  :   "+Employee.getDeptId());
 		}
 	}	
-	
-}	
-		
-	
-
-
+}

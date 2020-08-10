@@ -13,5 +13,4 @@ public class Comaparator_EmployeeDetails_empSalary implements Comparator<Compara
 				else
 					return -1;
 	}
-
 }
