@@ -1,8 +1,6 @@
 package madhuraMJun20.assignment30Plus;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 /*Java Programming Test  : 31st Aug 2020
 WAP to validate Pin number.
