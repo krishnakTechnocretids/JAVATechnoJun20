@@ -10,7 +10,6 @@ import java.util.Arrays;
 
 public class MaxSumTriplet {
 	void maxTripletSum(Integer arr[]) {
-
 		ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(arr));
 		int sum = 0;
 		int max = 0;
@@ -32,7 +31,6 @@ public class MaxSumTriplet {
 			System.out.print(list.get(i) + "  ");
 		}
 		System.out.println("->  " + max);
-
 	}
 
 	public static void main(String args[]) {
